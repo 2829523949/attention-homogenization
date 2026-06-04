@@ -1,0 +1,104 @@
+{
+  "CLIP_pooler": {
+    "adj": 0.9752,
+    "far": 0.9293,
+    "mean": 0.9469,
+    "discrim": 0.0459
+  },
+  "CLIP_raw_CLS": {
+    "adj": 1.0,
+    "far": 1.0,
+    "mean": 1.0,
+    "discrim": 0.0
+  },
+  "CLIP_angle_token": {
+    "adj": 0.8243,
+    "far": 0.6225,
+    "mean": 0.7007,
+    "discrim": 0.2018
+  },
+  "CLIP_mean_pool": {
+    "adj": 0.9869,
+    "far": 0.9741,
+    "mean": 0.9788,
+    "discrim": 0.0128
+  },
+  "angle_token": {
+    "Early (L1-3)": {
+      "mean_sim": 0.8452,
+      "adj_sim": 0.8745,
+      "far_sim": 0.8154,
+      "discrim": 0.0591
+    },
+    "Mid (L8-10)": {
+      "mean_sim": 0.793,
+      "adj_sim": 0.8682,
+      "far_sim": 0.7368,
+      "discrim": 0.1313
+    },
+    "Later (L18-20)": {
+      "mean_sim": 0.8887,
+      "adj_sim": 0.9263,
+      "far_sim": 0.856,
+      "discrim": 0.0703
+    },
+    "Last (L25-27)": {
+      "mean_sim": 0.9644,
+      "adj_sim": 0.9775,
+      "far_sim": 0.9521,
+      "discrim": 0.0254
+    }
+  },
+  "mean_pool": {
+    "Early (L1-3)": {
+      "mean_sim": 0.9976,
+      "adj_sim": 0.998,
+      "far_sim": 0.9971,
+      "discrim": 0.001
+    },
+    "Mid (L8-10)": {
+      "mean_sim": 0.9956,
+      "adj_sim": 0.9971,
+      "far_sim": 0.9946,
+      "discrim": 0.0024
+    },
+    "Later (L18-20)": {
+      "mean_sim": 0.9976,
+      "adj_sim": 0.9985,
+      "far_sim": 0.9966,
+      "discrim": 0.002
+    },
+    "Last (L25-27)": {
+      "mean_sim": 0.9995,
+      "adj_sim": 0.9995,
+      "far_sim": 0.999,
+      "discrim": 0.0005
+    }
+  },
+  "last_token": {
+    "Early (L1-3)": {
+      "mean_sim": 1.0,
+      "adj_sim": 1.0,
+      "far_sim": 1.0,
+      "discrim": 0.0
+    },
+    "Mid (L8-10)": {
+      "mean_sim": 1.0,
+      "adj_sim": 1.0,
+      "far_sim": 1.0,
+      "discrim": 0.0
+    },
+    "Later (L18-20)": {
+      "mean_sim": 0.9941,
+      "adj_sim": 0.9966,
+      "far_sim": 0.9917,
+      "discrim": 0.0049
+    },
+    "Last (L25-27)": {
+      "mean_sim": 0.998,
+      "adj_sim": 0.9985,
+      "far_sim": 0.9971,
+      "discrim": 0.0015
+    }
+  }
+}

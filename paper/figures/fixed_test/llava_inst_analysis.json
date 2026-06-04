@@ -1,0 +1,14 @@
+{
+  "spec_within_face": 0.8216,
+  "text_avg_within_face": 0.9932,
+  "inst_avg_within_face": 0.4646,
+  "spec_vs_inst_echo": {
+    "nose": 0.794,
+    "eyes": 0.7106,
+    "mouth": 0.9099,
+    "chin": 0.8243,
+    "forehead": 0.5931,
+    "beard": 0.8474,
+    "mean": 0.7799
+  }
+}

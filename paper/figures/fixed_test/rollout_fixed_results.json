@@ -1,0 +1,158 @@
+{
+  "config": {
+    "method": "cross_layer_attention_consistency",
+    "n_layers": 28,
+    "n_tokens": 256,
+    "data_source": "attention_rollout_results.json (raw keyword-to-image per-layer)"
+  },
+  "metrics": {
+    "adjacent_layer_cosine": {
+      "description": "Cosine similarity between consecutive layers' attention distributions",
+      "per_pair": [
+        {
+          "layer_pair": "L1-L2",
+          "mean": 0.7578
+        },
+        {
+          "layer_pair": "L2-L3",
+          "mean": 0.6991
+        },
+        {
+          "layer_pair": "L3-L4",
+          "mean": 0.609
+        },
+        {
+          "layer_pair": "L4-L5",
+          "mean": 0.7077
+        },
+        {
+          "layer_pair": "L5-L6",
+          "mean": 0.8599
+        },
+        {
+          "layer_pair": "L6-L7",
+          "mean": 0.6692
+        },
+        {
+          "layer_pair": "L7-L8",
+          "mean": 0.7204
+        },
+        {
+          "layer_pair": "L8-L9",
+          "mean": 0.8047
+        },
+        {
+          "layer_pair": "L9-L10",
+          "mean": 0.8264
+        },
+        {
+          "layer_pair": "L10-L11",
+          "mean": 0.8133
+        },
+        {
+          "layer_pair": "L11-L12",
+          "mean": 0.5827
+        },
+        {
+          "layer_pair": "L12-L13",
+          "mean": 0.8531
+        },
+        {
+          "layer_pair": "L13-L14",
+          "mean": 0.8246
+        },
+        {
+          "layer_pair": "L14-L15",
+          "mean": 0.851
+        },
+        {
+          "layer_pair": "L15-L16",
+          "mean": 0.8947
+        },
+        {
+          "layer_pair": "L16-L17",
+          "mean": 0.8509
+        },
+        {
+          "layer_pair": "L17-L18",
+          "mean": 0.9365
+        },
+        {
+          "layer_pair": "L18-L19",
+          "mean": 0.816
+        },
+        {
+          "layer_pair": "L19-L20",
+          "mean": 0.9305
+        },
+        {
+          "layer_pair": "L20-L21",
+          "mean": 0.8945
+        },
+        {
+          "layer_pair": "L21-L22",
+          "mean": 0.9267
+        },
+        {
+          "layer_pair": "L22-L23",
+          "mean": 0.8998
+        },
+        {
+          "layer_pair": "L23-L24",
+          "mean": 0.8399
+        },
+        {
+          "layer_pair": "L24-L25",
+          "mean": 0.8974
+        },
+        {
+          "layer_pair": "L25-L26",
+          "mean": 0.8957
+        },
+        {
+          "layer_pair": "L26-L27",
+          "mean": 0.9342
+        },
+        {
+          "layer_pair": "L27-L28",
+          "mean": 0.7693
+        }
+      ]
+    },
+    "per_layer_within_r": {
+      "0": 0.8500930666923523,
+      "1": 0.9690576752026876,
+      "2": 0.8012986143430074,
+      "3": 0.9187905629475911,
+      "4": 0.843154231707255,
+      "5": 0.9433346430460612,
+      "6": 0.5255805869897207,
+      "7": 0.8363993803660075,
+      "8": 0.9039634784062703,
+      "9": 0.7688023686408997,
+      "10": 0.8799286643664043,
+      "11": 0.21970863888661066,
+      "12": 0.47053804198900856,
+      "13": 0.26264924332499506,
+      "14": 0.21378986438115438,
+      "15": 0.36800026496251426,
+      "16": 0.2349591573079427,
+      "17": 0.3604582111040751,
+      "18": 0.8004976232846578,
+      "19": 0.7915810624758403,
+      "20": 0.605359407265981,
+      "21": 0.6621006806691487,
+      "22": 0.8034589568773906,
+      "23": 0.891366159915924,
+      "24": 0.8127215544382731,
+      "25": 0.9283098936080932,
+      "26": 0.9258912126223247,
+      "27": 0.9670093933741252
+    },
+    "accumulated_within_r": {
+      "raw_last_layer": 0.967,
+      "accumulated_cross_layer": 0.4242,
+      "interpretation": "Element-wise accumulation across layers confirms collapse is not an artifact of single-layer attention measurement"
+    }
+  }
+}

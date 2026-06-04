@@ -1,0 +1,826 @@
+{
+  "config": {
+    "model": "/root/clip-vit-large-patch14",
+    "n_images": 200,
+    "queries": [
+      "nose",
+      "eyes",
+      "mouth",
+      "chin",
+      "forehead",
+      "beard"
+    ],
+    "vis_dim": 1024,
+    "proj_dim": 768,
+    "method": "cosine(text_emb_proj, patch_emb_proj)_L2normed",
+    "dataset": "AFLW2000-3D_crop"
+  },
+  "summary": {
+    "mean_within_r": 0.8313,
+    "std_within_r": 0.053,
+    "min_within_r": 0.6951,
+    "max_within_r": 0.9721
+  },
+  "per_image": [
+    {
+      "image": "image00002.jpg",
+      "within_face_r": 0.8460808475812276
+    },
+    {
+      "image": "image00022.jpg",
+      "within_face_r": 0.7911786476771037
+    },
+    {
+      "image": "image00042.jpg",
+      "within_face_r": 0.8147479693094889
+    },
+    {
+      "image": "image00052.jpg",
+      "within_face_r": 0.8151252826054891
+    },
+    {
+      "image": "image00062.jpg",
+      "within_face_r": 0.8040177345275878
+    },
+    {
+      "image": "image00076.jpg",
+      "within_face_r": 0.8275770545005798
+    },
+    {
+      "image": "image00088.jpg",
+      "within_face_r": 0.7421877066294352
+    },
+    {
+      "image": "image00101.jpg",
+      "within_face_r": 0.8089316169420878
+    },
+    {
+      "image": "image00122.jpg",
+      "within_face_r": 0.9410543799400329
+    },
+    {
+      "image": "image00138.jpg",
+      "within_face_r": 0.7961934844652812
+    },
+    {
+      "image": "image00159.jpg",
+      "within_face_r": 0.8712585171063741
+    },
+    {
+      "image": "image00176.jpg",
+      "within_face_r": 0.7694670160611471
+    },
+    {
+      "image": "image00197.jpg",
+      "within_face_r": 0.8847906271616618
+    },
+    {
+      "image": "image00211.jpg",
+      "within_face_r": 0.929486894607544
+    },
+    {
+      "image": "image00227.jpg",
+      "within_face_r": 0.8352610309918721
+    },
+    {
+      "image": "image00251.jpg",
+      "within_face_r": 0.9147570927937826
+    },
+    {
+      "image": "image00268.jpg",
+      "within_face_r": 0.8460253198941549
+    },
+    {
+      "image": "image00283.jpg",
+      "within_face_r": 0.8312586307525635
+    },
+    {
+      "image": "image00299.jpg",
+      "within_face_r": 0.8328222115834554
+    },
+    {
+      "image": "image00318.jpg",
+      "within_face_r": 0.8130496104558309
+    },
+    {
+      "image": "image00330.jpg",
+      "within_face_r": 0.7378848234812418
+    },
+    {
+      "image": "image00345.jpg",
+      "within_face_r": 0.8922681887944539
+    },
+    {
+      "image": "image00359.jpg",
+      "within_face_r": 0.8942331870396932
+    },
+    {
+      "image": "image00376.jpg",
+      "within_face_r": 0.8412872711817424
+    },
+    {
+      "image": "image00397.jpg",
+      "within_face_r": 0.8541670362154643
+    },
+    {
+      "image": "image00419.jpg",
+      "within_face_r": 0.8418573260307312
+    },
+    {
+      "image": "image00433.jpg",
+      "within_face_r": 0.8994447906812032
+    },
+    {
+      "image": "image00445.jpg",
+      "within_face_r": 0.757575527826945
+    },
+    {
+      "image": "image00466.jpg",
+      "within_face_r": 0.8875237027804057
+    },
+    {
+      "image": "image00481.jpg",
+      "within_face_r": 0.9036280711491903
+    },
+    {
+      "image": "image00497.jpg",
+      "within_face_r": 0.7634228944778443
+    },
+    {
+      "image": "image00512.jpg",
+      "within_face_r": 0.8590113083521526
+    },
+    {
+      "image": "image00527.jpg",
+      "within_face_r": 0.8269885341326396
+    },
+    {
+      "image": "image00544.jpg",
+      "within_face_r": 0.7952970226605733
+    },
+    {
+      "image": "image00557.jpg",
+      "within_face_r": 0.8149780869483948
+    },
+    {
+      "image": "image00571.jpg",
+      "within_face_r": 0.7926170984903972
+    },
+    {
+      "image": "image00591.jpg",
+      "within_face_r": 0.8599059700965881
+    },
+    {
+      "image": "image00606.jpg",
+      "within_face_r": 0.7832375725110372
+    },
+    {
+      "image": "image00617.jpg",
+      "within_face_r": 0.7687522053718567
+    },
+    {
+      "image": "image00642.jpg",
+      "within_face_r": 0.8633494138717651
+    },
+    {
+      "image": "image00665.jpg",
+      "within_face_r": 0.8379467805226644
+    },
+    {
+      "image": "image00684.jpg",
+      "within_face_r": 0.8189152797063192
+    },
+    {
+      "image": "image00696.jpg",
+      "within_face_r": 0.8697570403416951
+    },
+    {
+      "image": "image00719.jpg",
+      "within_face_r": 0.816776426633199
+    },
+    {
+      "image": "image00731.jpg",
+      "within_face_r": 0.7883001049359639
+    },
+    {
+      "image": "image00748.jpg",
+      "within_face_r": 0.8364720265070598
+    },
+    {
+      "image": "image00774.jpg",
+      "within_face_r": 0.7972079674402873
+    },
+    {
+      "image": "image00785.jpg",
+      "within_face_r": 0.8411830345789592
+    },
+    {
+      "image": "image00802.jpg",
+      "within_face_r": 0.8459026058514912
+    },
+    {
+      "image": "image00824.jpg",
+      "within_face_r": 0.7364462812741598
+    },
+    {
+      "image": "image00839.jpg",
+      "within_face_r": 0.8019547899564107
+    },
+    {
+      "image": "image00850.jpg",
+      "within_face_r": 0.8166751901308695
+    },
+    {
+      "image": "image00872.jpg",
+      "within_face_r": 0.8339608709017435
+    },
+    {
+      "image": "image00894.jpg",
+      "within_face_r": 0.7804304877916972
+    },
+    {
+      "image": "image00908.jpg",
+      "within_face_r": 0.8293144106864929
+    },
+    {
+      "image": "image00931.jpg",
+      "within_face_r": 0.8247511744499206
+    },
+    {
+      "image": "image00943.jpg",
+      "within_face_r": 0.8449559966723125
+    },
+    {
+      "image": "image00963.jpg",
+      "within_face_r": 0.8961414694786072
+    },
+    {
+      "image": "image00978.jpg",
+      "within_face_r": 0.8600694974263509
+    },
+    {
+      "image": "image00998.jpg",
+      "within_face_r": 0.7313104132811229
+    },
+    {
+      "image": "image01014.jpg",
+      "within_face_r": 0.7245313843091329
+    },
+    {
+      "image": "image01034.jpg",
+      "within_face_r": 0.8145103693008423
+    },
+    {
+      "image": "image01058.jpg",
+      "within_face_r": 0.8501386642456055
+    },
+    {
+      "image": "image01071.jpg",
+      "within_face_r": 0.8758042732874552
+    },
+    {
+      "image": "image01089.jpg",
+      "within_face_r": 0.8015027840932211
+    },
+    {
+      "image": "image01109.jpg",
+      "within_face_r": 0.8253183762232462
+    },
+    {
+      "image": "image01126.jpg",
+      "within_face_r": 0.815946106115977
+    },
+    {
+      "image": "image01147.jpg",
+      "within_face_r": 0.7849071423212687
+    },
+    {
+      "image": "image01168.jpg",
+      "within_face_r": 0.8817409435908
+    },
+    {
+      "image": "image01189.jpg",
+      "within_face_r": 0.8294687271118164
+    },
+    {
+      "image": "image01210.jpg",
+      "within_face_r": 0.852447243531545
+    },
+    {
+      "image": "image01233.jpg",
+      "within_face_r": 0.9057556708653768
+    },
+    {
+      "image": "image01260.jpg",
+      "within_face_r": 0.9118405103683471
+    },
+    {
+      "image": "image01286.jpg",
+      "within_face_r": 0.7827325304349263
+    },
+    {
+      "image": "image01306.jpg",
+      "within_face_r": 0.8107703685760498
+    },
+    {
+      "image": "image01323.jpg",
+      "within_face_r": 0.7475744048754375
+    },
+    {
+      "image": "image01346.jpg",
+      "within_face_r": 0.8795081734657287
+    },
+    {
+      "image": "image01377.jpg",
+      "within_face_r": 0.9308096090952556
+    },
+    {
+      "image": "image01404.jpg",
+      "within_face_r": 0.8811972260475158
+    },
+    {
+      "image": "image01431.jpg",
+      "within_face_r": 0.8276503761609395
+    },
+    {
+      "image": "image01466.jpg",
+      "within_face_r": 0.8337295333544413
+    },
+    {
+      "image": "image01477.jpg",
+      "within_face_r": 0.8463012456893921
+    },
+    {
+      "image": "image01506.jpg",
+      "within_face_r": 0.8729898571968079
+    },
+    {
+      "image": "image01565.jpg",
+      "within_face_r": 0.8603472272555034
+    },
+    {
+      "image": "image01591.jpg",
+      "within_face_r": 0.8079280296961466
+    },
+    {
+      "image": "image01622.jpg",
+      "within_face_r": 0.7243464489777883
+    },
+    {
+      "image": "image01642.jpg",
+      "within_face_r": 0.8394300103187561
+    },
+    {
+      "image": "image01657.jpg",
+      "within_face_r": 0.7988235632578532
+    },
+    {
+      "image": "image01688.jpg",
+      "within_face_r": 0.7248932083447774
+    },
+    {
+      "image": "image01717.jpg",
+      "within_face_r": 0.7527896046638489
+    },
+    {
+      "image": "image01749.jpg",
+      "within_face_r": 0.6951419870058696
+    },
+    {
+      "image": "image01775.jpg",
+      "within_face_r": 0.8213298241297404
+    },
+    {
+      "image": "image01791.jpg",
+      "within_face_r": 0.7906272371610006
+    },
+    {
+      "image": "image01811.jpg",
+      "within_face_r": 0.9540981570879619
+    },
+    {
+      "image": "image01829.jpg",
+      "within_face_r": 0.8831892887751261
+    },
+    {
+      "image": "image01850.jpg",
+      "within_face_r": 0.8357855677604675
+    },
+    {
+      "image": "image01870.jpg",
+      "within_face_r": 0.8494206508000691
+    },
+    {
+      "image": "image01900.jpg",
+      "within_face_r": 0.8193958957990011
+    },
+    {
+      "image": "image01927.jpg",
+      "within_face_r": 0.8471338947614034
+    },
+    {
+      "image": "image01944.jpg",
+      "within_face_r": 0.8494356592496236
+    },
+    {
+      "image": "image01973.jpg",
+      "within_face_r": 0.8259873390197754
+    },
+    {
+      "image": "image01989.jpg",
+      "within_face_r": 0.81227126121521
+    },
+    {
+      "image": "image02016.jpg",
+      "within_face_r": 0.8708497563997905
+    },
+    {
+      "image": "image02032.jpg",
+      "within_face_r": 0.9062572320302328
+    },
+    {
+      "image": "image02046.jpg",
+      "within_face_r": 0.7969037214914958
+    },
+    {
+      "image": "image02064.jpg",
+      "within_face_r": 0.9250050028165181
+    },
+    {
+      "image": "image02083.jpg",
+      "within_face_r": 0.7643464605013529
+    },
+    {
+      "image": "image02116.jpg",
+      "within_face_r": 0.8421504815419515
+    },
+    {
+      "image": "image02138.jpg",
+      "within_face_r": 0.8227920214335124
+    },
+    {
+      "image": "image02166.jpg",
+      "within_face_r": 0.8072518189748128
+    },
+    {
+      "image": "image02196.jpg",
+      "within_face_r": 0.852177623907725
+    },
+    {
+      "image": "image02213.jpg",
+      "within_face_r": 0.8016033450762431
+    },
+    {
+      "image": "image02242.jpg",
+      "within_face_r": 0.8517263491948446
+    },
+    {
+      "image": "image02256.jpg",
+      "within_face_r": 0.8850279490152995
+    },
+    {
+      "image": "image02277.jpg",
+      "within_face_r": 0.8954357902208964
+    },
+    {
+      "image": "image02295.jpg",
+      "within_face_r": 0.8379818995793661
+    },
+    {
+      "image": "image02319.jpg",
+      "within_face_r": 0.7975149512290954
+    },
+    {
+      "image": "image02346.jpg",
+      "within_face_r": 0.7890339891115824
+    },
+    {
+      "image": "image02373.jpg",
+      "within_face_r": 0.9373248616854349
+    },
+    {
+      "image": "image02406.jpg",
+      "within_face_r": 0.7106117983659108
+    },
+    {
+      "image": "image02424.jpg",
+      "within_face_r": 0.9049762487411499
+    },
+    {
+      "image": "image02455.jpg",
+      "within_face_r": 0.8849770426750183
+    },
+    {
+      "image": "image02488.jpg",
+      "within_face_r": 0.8278012077013651
+    },
+    {
+      "image": "image02530.jpg",
+      "within_face_r": 0.7983190615971884
+    },
+    {
+      "image": "image02548.jpg",
+      "within_face_r": 0.8587671359380086
+    },
+    {
+      "image": "image02592.jpg",
+      "within_face_r": 0.7495338678359985
+    },
+    {
+      "image": "image02612.jpg",
+      "within_face_r": 0.6958315928777059
+    },
+    {
+      "image": "image02630.jpg",
+      "within_face_r": 0.7979124387105306
+    },
+    {
+      "image": "image02646.jpg",
+      "within_face_r": 0.8665361245473225
+    },
+    {
+      "image": "image02673.jpg",
+      "within_face_r": 0.7715692083040874
+    },
+    {
+      "image": "image02695.jpg",
+      "within_face_r": 0.856315286954244
+    },
+    {
+      "image": "image02721.jpg",
+      "within_face_r": 0.9361923495928447
+    },
+    {
+      "image": "image02744.jpg",
+      "within_face_r": 0.8083718498547872
+    },
+    {
+      "image": "image02759.jpg",
+      "within_face_r": 0.8651848793029785
+    },
+    {
+      "image": "image02781.jpg",
+      "within_face_r": 0.7967929363250732
+    },
+    {
+      "image": "image02801.jpg",
+      "within_face_r": 0.829117214679718
+    },
+    {
+      "image": "image02824.jpg",
+      "within_face_r": 0.801980217297872
+    },
+    {
+      "image": "image02841.jpg",
+      "within_face_r": 0.8014780203501384
+    },
+    {
+      "image": "image02857.jpg",
+      "within_face_r": 0.7660353183746338
+    },
+    {
+      "image": "image02889.jpg",
+      "within_face_r": 0.8863332907358805
+    },
+    {
+      "image": "image02938.jpg",
+      "within_face_r": 0.8978193839391072
+    },
+    {
+      "image": "image02959.jpg",
+      "within_face_r": 0.8136215527852376
+    },
+    {
+      "image": "image02989.jpg",
+      "within_face_r": 0.8349779963493347
+    },
+    {
+      "image": "image03009.jpg",
+      "within_face_r": 0.8657035191853841
+    },
+    {
+      "image": "image03021.jpg",
+      "within_face_r": 0.8934990922609966
+    },
+    {
+      "image": "image03047.jpg",
+      "within_face_r": 0.7402894496917725
+    },
+    {
+      "image": "image03075.jpg",
+      "within_face_r": 0.7779289801915487
+    },
+    {
+      "image": "image03109.jpg",
+      "within_face_r": 0.8306572238604227
+    },
+    {
+      "image": "image03149.jpg",
+      "within_face_r": 0.8160900990168254
+    },
+    {
+      "image": "image03179.jpg",
+      "within_face_r": 0.8281849185625713
+    },
+    {
+      "image": "image03209.jpg",
+      "within_face_r": 0.8570149183273316
+    },
+    {
+      "image": "image03236.jpg",
+      "within_face_r": 0.8364741603533427
+    },
+    {
+      "image": "image03263.jpg",
+      "within_face_r": 0.7614416956901551
+    },
+    {
+      "image": "image03283.jpg",
+      "within_face_r": 0.85532519419988
+    },
+    {
+      "image": "image03350.jpg",
+      "within_face_r": 0.8120249946912129
+    },
+    {
+      "image": "image03376.jpg",
+      "within_face_r": 0.8375552614529927
+    },
+    {
+      "image": "image03414.jpg",
+      "within_face_r": 0.7826364358266195
+    },
+    {
+      "image": "image03452.jpg",
+      "within_face_r": 0.7207355121771495
+    },
+    {
+      "image": "image03472.jpg",
+      "within_face_r": 0.889998443921407
+    },
+    {
+      "image": "image03515.jpg",
+      "within_face_r": 0.8752143184343973
+    },
+    {
+      "image": "image03543.jpg",
+      "within_face_r": 0.8434755365053813
+    },
+    {
+      "image": "image03559.jpg",
+      "within_face_r": 0.7960449576377868
+    },
+    {
+      "image": "image03572.jpg",
+      "within_face_r": 0.8444254120190938
+    },
+    {
+      "image": "image03589.jpg",
+      "within_face_r": 0.8026926477750143
+    },
+    {
+      "image": "image03625.jpg",
+      "within_face_r": 0.8642636815706889
+    },
+    {
+      "image": "image03641.jpg",
+      "within_face_r": 0.8357749621073405
+    },
+    {
+      "image": "image03662.jpg",
+      "within_face_r": 0.8753054300944011
+    },
+    {
+      "image": "image03673.jpg",
+      "within_face_r": 0.8782596270243327
+    },
+    {
+      "image": "image03703.jpg",
+      "within_face_r": 0.9073291222254435
+    },
+    {
+      "image": "image03715.jpg",
+      "within_face_r": 0.8515113552411397
+    },
+    {
+      "image": "image03727.jpg",
+      "within_face_r": 0.868972118695577
+    },
+    {
+      "image": "image03740.jpg",
+      "within_face_r": 0.8121065298716227
+    },
+    {
+      "image": "image03752.jpg",
+      "within_face_r": 0.865752124786377
+    },
+    {
+      "image": "image03765.jpg",
+      "within_face_r": 0.9203859368960062
+    },
+    {
+      "image": "image03778.jpg",
+      "within_face_r": 0.8089814941088359
+    },
+    {
+      "image": "image03788.jpg",
+      "within_face_r": 0.8667215943336487
+    },
+    {
+      "image": "image03800.jpg",
+      "within_face_r": 0.8614654779434204
+    },
+    {
+      "image": "image03812.jpg",
+      "within_face_r": 0.7696413358052572
+    },
+    {
+      "image": "image03826.jpg",
+      "within_face_r": 0.8099320967992146
+    },
+    {
+      "image": "image03842.jpg",
+      "within_face_r": 0.8903752326965332
+    },
+    {
+      "image": "image03869.jpg",
+      "within_face_r": 0.8287023981412251
+    },
+    {
+      "image": "image03888.jpg",
+      "within_face_r": 0.8273292024930318
+    },
+    {
+      "image": "image03907.jpg",
+      "within_face_r": 0.9720587174097697
+    },
+    {
+      "image": "image03936.jpg",
+      "within_face_r": 0.8288103262583415
+    },
+    {
+      "image": "image03958.jpg",
+      "within_face_r": 0.8330051978429158
+    },
+    {
+      "image": "image03974.jpg",
+      "within_face_r": 0.8142285585403443
+    },
+    {
+      "image": "image04004.jpg",
+      "within_face_r": 0.8422377745310465
+    },
+    {
+      "image": "image04036.jpg",
+      "within_face_r": 0.8881352225939433
+    },
+    {
+      "image": "image04088.jpg",
+      "within_face_r": 0.8024336059888204
+    },
+    {
+      "image": "image04114.jpg",
+      "within_face_r": 0.918753449122111
+    },
+    {
+      "image": "image04151.jpg",
+      "within_face_r": 0.8649670163790385
+    },
+    {
+      "image": "image04182.jpg",
+      "within_face_r": 0.7040406346321106
+    },
+    {
+      "image": "image04207.jpg",
+      "within_face_r": 0.7237655997276307
+    },
+    {
+      "image": "image04229.jpg",
+      "within_face_r": 0.7826300660769144
+    },
+    {
+      "image": "image04244.jpg",
+      "within_face_r": 0.8546537081400554
+    },
+    {
+      "image": "image04271.jpg",
+      "within_face_r": 0.8786570588747661
+    },
+    {
+      "image": "image04285.jpg",
+      "within_face_r": 0.8389484167099
+    },
+    {
+      "image": "image04301.jpg",
+      "within_face_r": 0.7324561595916748
+    },
+    {
+      "image": "image04324.jpg",
+      "within_face_r": 0.9255030552546183
+    },
+    {
+      "image": "image04344.jpg",
+      "within_face_r": 0.7649134556452434
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathptmx}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+
+% ---------- Formatting ----------
+\setlength{\columnsep}{0.25in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+
+\title{\vspace{-0.5in}Attention Collapse in Vision-Language Models:\\ A Case Study on 3D Face Understanding}
+
+\author{
+  Junhao Zhang \\
+  University of Chinese Academy of Sciences (UCAS) \\
+  \texttt{zhangjunhao256@mails.ucas.ac.cn}
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+Vision-Language Models (VLMs) combine visual encoders with large language models for multimodal understanding, with self-attention mechanisms determining how each token (text or visual) relates to others in the sequence. For fine-grained tasks like face editing, where the model must localize specific features (nose, eyes, mouth), the spatial precision of this attention is critical. In this paper, we present a systematic analysis of VLM self-attention for facial feature localization. Using a 4-bit quantized Qwen3-VL-2B and EG3D-generated face images as our testbed, we demonstrate a surprising finding: \textbf{VLM self-attention maps are highly similar across facial feature queries}, with high cross-query similarity (mean r = 0.996 within face features) extending even to contrastive control phrases like ``whole image'' and ``bottom-left area''. This insufficient spatial differentiation renders VLM attention unreliable for fine-grained face localization. We further show that this limitation extends to the embedding space---LLM hidden states for prompts differing only in angle achieve a discriminability of only 0.0028, 16.4$\times$ worse than CLIP embeddings. These findings have direct practical implications: on a 3D face camera control task, the 4-bit Qwen3-VL-2B (1224M parameters) is outperformed by CLIP (63M parameters) in accuracy while CLIP is 10.8$\times$ faster and 18$\times$ smaller. Our results reveal a fundamental limitation of current VLMs for fine-grained face understanding and suggest that lightweight encoders remain a more reliable choice for tasks requiring spatial precision.
+
+\end{abstract}
+
+% =====================================================================
+\section{Introduction}
+\label{sec:intro}
+% =====================================================================
+
+Vision-Language Models (VLMs) have emerged as powerful tools at the intersection of computer vision and natural language processing. By combining a visual encoder with a large language model (LLM), these models can process images alongside text, enabling tasks such as visual question answering, image captioning, and multimodal reasoning~\cite{LLaVA,Qwen3VL}.
+
+A critical mechanism underlying VLM capability is \textbf{self-attention}, which determines how each token---whether text or visual---attends to every other token in the sequence. For tasks requiring fine-grained spatial understanding---such as face editing, where the model must locate and modify specific features like the nose, eyes, or mouth---the spatial precision of this attention mechanism is paramount.
+
+But can current VLMs actually localize facial features through their attention? This question has significant implications for applications in computer graphics, virtual avatars, and human-computer interaction, yet it remains unexplored. Prior work has analyzed attention patterns in vision transformers~\cite{CLIP}, and recent methods have used both CLIP~\cite{CLIP} and large VLMs~\cite{Next3D,FaceGPT} for face-related tasks, but the specific question of VLM attention precision for facial feature localization has not been systematically addressed.
+
+In this paper, we present an in-depth analysis of VLM self-attention for facial feature localization. Using a 4-bit quantized Qwen3-VL-2B as our representative VLM and the EG3D~\cite{EG3D} face generator to produce controlled test images, we make three key contributions:
+
+\noindent\textbf{1. Limited spatial differentiation in attention.} We show that VLM self-attention maps exhibit high cross-query similarity (mean r = 0.996) for queries targeting different facial features---nose, eyes, mouth, chin, forehead, beard---as well as control queries (``whole image'', ``bottom-left area''). This pattern is consistent across multiple viewing angles, affecting all 8$\times$8 = 64 query pairs across 3 test images. The minimum observed correlation between face and control queries is 0.956, indicating that even the most dissimilar query pair shares substantial attention structure.
+
+\noindent\textbf{2. Embedding space collapse.} The attention collapse is not an isolated phenomenon---it extends to the LLM's representation space. Using prompts that differ only in the target angle (0$^\circ$ to 90$^\circ$), we measure that VLM hidden states achieve a mean pairwise similarity of 0.9962 and a discriminability of only 0.0028. CLIP embeddings, despite being 4$\times$ lower-dimensional and trained on a simpler contrastive objective, achieve 16.4$\times$ better discriminability (0.0459).
+
+\noindent\textbf{3. Practical implications for 3D face control.} The attention and embedding collapse manifest in downstream performance. In a fair comparison on the same test set, CLIP (63M parameters) outperforms Qwen3-VL-2B (1224M parameters) in camera pose accuracy (yaw error 3.58$^\circ$ vs. 3.84$^\circ$, pitch 4.60$^\circ$ vs. 5.60$^\circ$), while being 10.8$\times$ faster and 18$\times$ smaller. VLM performance further degrades under language mismatch (10.10$^\circ$ yaw error with Chinese prompts).
+
+These findings reveal a fundamental limitation of current VLMs: their self-attention provides insufficient spatial differentiation for facial feature localization, and their embedding space collapses fine-grained numerical information. For 3D face understanding tasks, lightweight encoders like CLIP remain not only sufficient but superior.
+
+% =====================================================================
+\section{Related Work}
+\label{sec:related}
+% =====================================================================
+
+\textbf{VLM attention analysis.} Prior work has analyzed attention patterns in vision transformers, noting that deeper layers tend to produce more uniform distributions~\cite{CLIP}. Studies of attention collapse in large language models have documented similar phenomena in text-only settings. However, the specific behavior of VLM attention for facial feature localization has not been investigated.
+
+\textbf{Text-driven 3D face generation.} EG3D~\cite{EG3D} introduced efficient tri-plane representations for 3D-aware face generation. StyleNeRF~\cite{StyleNeRF} and Next3D~\cite{Next3D} extended this to editable avatars. Some works incorporate CLIP~\cite{CLIP} for text-driven editing. Most recently, FaceGPT~\cite{FaceGPT} embeds 3DMM parameters directly into VLM space for reconstruction. These works focus on \emph{enabling} face tasks rather than analyzing \emph{whether} the chosen encoder is appropriate.
+
+\textbf{Text encoders in generative models.} CLIP~\cite{CLIP} provides a shared vision-language space widely used in generation. BERT~\cite{BERT} offers bidirectional language understanding. Large VLMs~\cite{LLaVA,Qwen3VL} extend this with multimodal reasoning. Comparative studies of their suitability for continuous face control are lacking.
+
+% =====================================================================
+\section{Attention Collapse Analysis}
+\label{sec:attn}
+% =====================================================================
+
+We begin by investigating the spatial precision of VLM self-attention when queried for different facial features.
+
+\textbf{Setup.} Using the EG3D generator pretrained on FFHQ~\cite{StyleGAN2}, we render face images at three viewing angles (15$^\circ$, 30$^\circ$, 45$^\circ$ right). For each image, we construct eight textual queries: six targeting facial features (``nose'', ``eyes'', ``mouth'', ``chin'', ``forehead'', ``beard'' in Chinese) and two control queries (``whole image'', ``bottom-left area''). We input both image and text to Qwen3-VL-2B, extract self-attention weights from the last three LLM layers, average across heads, and measure the attention distribution from the query tokens to the 16$\times$16 visual token grid.
+
+\subsection{Qualitative Results}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/heatmap_right15.png}
+    \caption{VLM self-attention maps for eight queries on the same face image. All queries produce visually similar heatmaps, indicating limited spatial differentiation of facial features.}
+    \label{fig:heatmap}
+\end{figure}
+
+Figure~\ref{fig:heatmap} visualizes the 16$\times$16 attention maps for all eight queries on one test image. The heatmaps are visually highly similar---whether the model is asked to attend to the nose, the eyes, or the entire image, the attention distribution remains largely the same.
+
+\subsection{Quantitative Analysis}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/similarity_right15.png}
+    \caption{Cross-query Pearson correlation matrix. Face features show mean r = 0.996; face vs. control mean r = 0.970.}
+    \label{fig:sim}
+\end{figure}
+
+Figure~\ref{fig:sim} shows the Pearson correlation matrix across all query pairs for one test image. The similarity matrix reveals a clear structure: face features are highly correlated (mean r = 0.996), while face vs. control queries show lower but still substantial correlation (mean r = 0.970). Table~\ref{tab:sim_stats} summarizes results across all three test images.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Cross-query attention similarity statistics across three test images.}
+\label{tab:sim_stats}
+\begin{tabular}{lccc}
+\toprule
+Query group & Mean r & Min r \\
+\midrule
+Within face features & 0.996 & 0.992 \\
+Face vs. control & 0.970 & 0.956 \\
+Within control & 0.969 & 0.969 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The minimum correlation between face and control queries is 0.956 (beard vs.\ bottom-left), indicating some query sensitivity but insufficient spatial granularity. Critically, the control queries (``whole image'', ``bottom-left area'') produce attention distributions nearly identical to those for specific facial features---the model shows only marginal differentiation between spatially specific and global queries.
+
+\subsection{Consistency Across Viewing Angles}
+
+This finding is robust across different viewing angles. The same highly similar attention maps appear at 15$^\circ$, 30$^\circ$, and 45$^\circ$ rightward rotations, as shown by the consistent statistics in Table~\ref{tab:sim_stats}. The attention collapse is not an artifact of a specific pose or image.
+
+\subsection{Summary}
+
+Our results strongly suggest that Qwen3-VL-2B's self-attention mechanisms provide insufficient spatial differentiation for fine-grained facial feature localization. This raises a natural question: does this attention-level limitation extend to the model's representation space?
+
+% =====================================================================
+\section{Embedding Space Analysis}
+\label{sec:emb}
+% =====================================================================
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/encoding_sensitivity.png}
+    \caption{Pairwise cosine similarity matrices for VLM hidden states and CLIP embeddings across 10 angle prompts (0$^\circ$ to 90$^\circ$). CLIP shows clearly more discriminative structure.}
+    \label{fig:sensitivity}
+\end{figure}
+
+To investigate whether the LLM embedding space suffers from similar collapse, we design a controlled sensitivity test. We generate 10 prompts that differ only in the target angle: ``A person looking to the right at $X$ degrees'' for $X \in \{0, 10, \ldots, 90\}$. For each prompt, we extract the VLM hidden state (2048-dim) and the CLIP embedding (512-dim) and compute pairwise cosine similarity matrices.
+
+Figure~\ref{fig:sensitivity} visualizes the similarity matrices, and Table~\ref{tab:sensitivity} reports quantitative metrics.
+
+\begin{table}[t]
+\centering
+\caption{Embedding sensitivity to fine-grained angle descriptions.}
+\label{tab:sensitivity}
+\begin{tabular}{lcc}
+\toprule
+Metric & Qwen3-VL-2B (4-bit) & CLIP 63M \\
+\midrule
+Mean pairwise similarity & 0.9962 & 0.9469 \\
+Adjacent (10$^\circ$) similarity & 0.9976 & 0.9752 \\
+Far (40$^\circ$+) similarity & 0.9948 & 0.9293 \\
+Discriminability (adj. $-$ far) & \textbf{0.0028} & \textbf{0.0459} \\
+Embedding dimension & 2048 & 512 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+VLM hidden states exhibit a mean pairwise similarity of 0.9962, meaning that all 10 angle descriptions map to nearly identical representations. The discriminability---the difference between adjacent-angle and far-angle similarity---is only 0.0028. By contrast, CLIP embeddings achieve a discriminability of 0.0459, a 16.4$\times$ improvement despite being 4$\times$ lower-dimensional.
+
+This finding reveals that the attention collapse documented in Section~\ref{sec:attn} is not an isolated phenomenon in the attention layers---it reflects a broader representational collapse in the LLM's hidden space. The VLM compresses fine-grained continuous attributes (angles) into a discrete, semantically-oriented representation that cannot distinguish subtle numerical differences.
+
+% =====================================================================
+\section{Practical Verification: Camera Pose Control}
+\label{sec:practical}
+% =====================================================================
+
+We now verify that the attention and embedding collapse translates to measurable degradation in a downstream task: text-driven 3D face camera pose control.
+
+\textbf{Framework.} We build two bridges connecting text encoders to the EG3D generator, using the same 4-bit quantized Qwen3-VL-2B as in our attention and embedding analyses for consistency. Both bridges share an identical pose mapping MLP (2048 $\to$ 1024 $\to$ 512 $\to$ 6) that predicts 6D pose parameters (yaw, pitch, radius, fov, lateral shifts), converted to EG3D camera parameters following the polar angle convention~\cite{EG3D}. The VLM branch extracts the last-token hidden state from the 4-bit model ($h \in \mathbb{R}^{2048}$). The CLIP branch projects CLIP-ViT-B/32 text embeddings ($\mathbb{R}^{512}$) through a learned linear layer to $\mathbb{R}^{2048}$.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/architecture.png}
+    \caption{Overview of our text encoder comparison framework.}
+    \label{fig:arch}
+\end{figure}
+
+\textbf{Training.} We train on 21 camera pose templates with 5 text templates each plus 500 diverse descriptions per epoch, using circular L1 loss for yaw and standard L1 for other parameters. Both bridges are trained for 80 epochs with Adam (lr=$10^{-4}$). The encoder is frozen in both cases.
+
+\subsection{Accuracy Comparison}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Pose control accuracy on the same English test set.}
+\label{tab:pose_acc}
+\begin{tabular}{lccc}
+\toprule
+Model & Params & Yaw ($^\circ$) & Pitch ($^\circ$) \\
+\midrule
+Qwen3-VL-2B (CN) & 1224M & 10.10 & 4.66 \\
+Qwen3-VL-2B (EN) & 1224M & 3.84 & 5.60 \\
+CLIP 63M (EN) & 67M & \textbf{3.58} & \textbf{4.60} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:pose_acc} shows that the lightweight CLIP (63M) outperforms VLM 2B (1224M) in both yaw and pitch accuracy, despite using 18$\times$ fewer parameters. Language mismatch further degrades VLM performance (10.10$^\circ$ yaw with Chinese vs. 3.84$^\circ$ with English).
+
+\subsection{Speed and Model Size}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/speed_benchmark.png}
+    \caption{Inference speed benchmark. CLIP is 10.8$\times$ faster.}
+    \label{fig:speed}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Inference speed and model size.}
+\label{tab:speed}
+\begin{tabular}{lccc}
+\toprule
+Metric & Qwen3-VL-2B (4-bit) & CLIP 63M & Speedup \\
+\midrule
+Latency (mean) & 75.7ms & 7.0ms & 10.8$\times$ \\
+Throughput & 13.2/s & 143.0/s & 10.8$\times$ \\
+Peak VRAM & 2.12GB & 2.09GB & 1.01$\times$ \\
+Parameters & 1224M & 67M & 18.3$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+CLIP achieves 10.8$\times$ lower latency and higher throughput. The 75.7ms latency of the 4-bit Qwen3-VL-2B is dominated by the LLM forward pass (the pose MLP contributes $<$1ms), meaning scaling the VLM further would linearly increase latency without accuracy benefits.
+
+\subsection{Summary}
+
+The downstream task confirms what the attention and embedding analyses predict: the 4-bit VLM's representational deficiencies translate to measurable performance disadvantages. CLIP, despite its simplicity, provides a more discriminative representation space that is better suited for precise 3D face control.
+
+% =====================================================================
+\section{Discussion}
+\label{sec:disc}
+% =====================================================================
+
+\textbf{Why does VLM attention show limited spatial differentiation?} One possible explanation is rooted in the decoder-only architecture of modern VLMs. Unlike encoder-decoder models, decoder-only VLMs process visual and text tokens through a single self-attention mechanism. Since visual tokens constitute a large portion of the sequence, they may dominate the attention distribution, with text tokens providing relatively limited modulation. This architectural design may prioritize global multimodal understanding over precise spatial grounding of individual features, though direct measurement of token-level attention contributions is left for future work.
+
+\textbf{Relation to FaceGPT.} Concurrent work FaceGPT~\cite{FaceGPT} demonstrates that VLMs can be trained to predict 3DMM parameters for face reconstruction. This does not conflict with our findings---3DMM parameters are global attributes that do not require spatial attention localization. Our analysis shows that VLM attention distinguishes face regions from background only coarsely (r = 0.970), and cannot differentiate individual facial features (r = 0.996). This insufficient spatial precision specifically impacts \emph{localized} face understanding.
+
+\textbf{Limitations.} (1) Our analysis uses one VLM (4-bit quantized Qwen3-VL-2B) and one lightweight encoder. Other VLMs, or the full-precision version of the same model, may exhibit different attention behavior. (2) We study only camera pose as the downstream task; semantic attribute editing may reveal different patterns. (3) Our attention analysis uses self-attention from the LLM layers, as Qwen3-VL is decoder-only. (4) All experiments use a 4-bit quantized model; the observed attention and embedding patterns may differ in the full-precision version.
+
+% =====================================================================
+\section{Conclusion}
+\label{sec:conc}
+% =====================================================================
+
+In this paper, we presented a systematic analysis of VLM self-attention for facial feature localization. We demonstrated that Qwen3-VL-2B's attention maps show high similarity across facial feature queries (mean r = 0.996), with insufficient spatial differentiation for fine-grained localization. This limitation extends to the embedding space, where LLM hidden states achieve only 0.0028 discriminability compared to CLIP's 0.0459. A downstream camera control task confirms the practical impact: the 4-bit Qwen3-VL-2B (1224M) is outperformed by CLIP (63M) in accuracy while CLIP is 10.8$\times$ faster and 18$\times$ smaller. Our findings challenge the assumption that larger VLMs are universally better and suggest that lightweight encoders remain the more reliable choice for tasks requiring precise spatial understanding of faces.
+
+{\small
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+}
+
+\end{document}

@@ -1,0 +1,318 @@
+{
+  "L1-3": {
+    "layers": [
+      0,
+      1,
+      2
+    ],
+    "spec_within_face": 0.9989123582839966,
+    "avg_within_face": 0.9999732891718547,
+    "spec_face_ctrl": 0.9958574821551641,
+    "avg_face_ctrl": 0.9997694889704386,
+    "spec_peaks": {
+      "nose": [
+        16,
+        4
+      ],
+      "eyes": [
+        16,
+        4
+      ],
+      "mouth": [
+        16,
+        4
+      ],
+      "chin": [
+        16,
+        4
+      ],
+      "forehead": [
+        16,
+        4
+      ],
+      "beard": [
+        16,
+        4
+      ],
+      "whole image": [
+        16,
+        4
+      ],
+      "bottom-left area": [
+        16,
+        4
+      ]
+    },
+    "avg_peaks": {
+      "nose": [
+        16,
+        4
+      ],
+      "eyes": [
+        16,
+        4
+      ],
+      "mouth": [
+        16,
+        4
+      ],
+      "chin": [
+        16,
+        4
+      ],
+      "forehead": [
+        16,
+        4
+      ],
+      "beard": [
+        16,
+        4
+      ],
+      "whole image": [
+        16,
+        4
+      ],
+      "bottom-left area": [
+        16,
+        4
+      ]
+    }
+  },
+  "L8-10": {
+    "layers": [
+      7,
+      8,
+      9
+    ],
+    "spec_within_face": 0.9776970585187276,
+    "avg_within_face": 0.9991482257843017,
+    "spec_face_ctrl": 0.9033823311328888,
+    "avg_face_ctrl": 0.9973023434480032,
+    "spec_peaks": {
+      "nose": [
+        19,
+        6
+      ],
+      "eyes": [
+        19,
+        6
+      ],
+      "mouth": [
+        19,
+        6
+      ],
+      "chin": [
+        19,
+        6
+      ],
+      "forehead": [
+        19,
+        6
+      ],
+      "beard": [
+        19,
+        6
+      ],
+      "whole image": [
+        19,
+        6
+      ],
+      "bottom-left area": [
+        19,
+        6
+      ]
+    },
+    "avg_peaks": {
+      "nose": [
+        19,
+        6
+      ],
+      "eyes": [
+        19,
+        6
+      ],
+      "mouth": [
+        19,
+        6
+      ],
+      "chin": [
+        19,
+        6
+      ],
+      "forehead": [
+        19,
+        6
+      ],
+      "beard": [
+        19,
+        6
+      ],
+      "whole image": [
+        20,
+        22
+      ],
+      "bottom-left area": [
+        19,
+        6
+      ]
+    }
+  },
+  "L18-20": {
+    "layers": [
+      17,
+      18,
+      19
+    ],
+    "spec_within_face": 0.8216403841972351,
+    "avg_within_face": 0.9932362516721089,
+    "spec_face_ctrl": 0.7696569512287775,
+    "avg_face_ctrl": 0.9864030331373215,
+    "spec_peaks": {
+      "nose": [
+        19,
+        6
+      ],
+      "eyes": [
+        19,
+        6
+      ],
+      "mouth": [
+        19,
+        6
+      ],
+      "chin": [
+        19,
+        6
+      ],
+      "forehead": [
+        19,
+        6
+      ],
+      "beard": [
+        19,
+        6
+      ],
+      "whole image": [
+        19,
+        6
+      ],
+      "bottom-left area": [
+        19,
+        6
+      ]
+    },
+    "avg_peaks": {
+      "nose": [
+        19,
+        6
+      ],
+      "eyes": [
+        19,
+        6
+      ],
+      "mouth": [
+        19,
+        6
+      ],
+      "chin": [
+        19,
+        6
+      ],
+      "forehead": [
+        19,
+        6
+      ],
+      "beard": [
+        19,
+        6
+      ],
+      "whole image": [
+        19,
+        6
+      ],
+      "bottom-left area": [
+        19,
+        6
+      ]
+    }
+  },
+  "L29-31": {
+    "layers": [
+      28,
+      29,
+      30
+    ],
+    "spec_within_face": 0.907568355401357,
+    "avg_within_face": 0.9974482734998067,
+    "spec_face_ctrl": 0.8510312040646871,
+    "avg_face_ctrl": 0.9903808087110519,
+    "spec_peaks": {
+      "nose": [
+        19,
+        6
+      ],
+      "eyes": [
+        19,
+        6
+      ],
+      "mouth": [
+        19,
+        6
+      ],
+      "chin": [
+        19,
+        6
+      ],
+      "forehead": [
+        19,
+        6
+      ],
+      "beard": [
+        19,
+        6
+      ],
+      "whole image": [
+        19,
+        6
+      ],
+      "bottom-left area": [
+        19,
+        6
+      ]
+    },
+    "avg_peaks": {
+      "nose": [
+        19,
+        6
+      ],
+      "eyes": [
+        19,
+        6
+      ],
+      "mouth": [
+        19,
+        6
+      ],
+      "chin": [
+        19,
+        6
+      ],
+      "forehead": [
+        19,
+        6
+      ],
+      "beard": [
+        19,
+        6
+      ],
+      "whole image": [
+        19,
+        6
+      ],
+      "bottom-left area": [
+        19,
+        6
+      ]
+    }
+  }
+}

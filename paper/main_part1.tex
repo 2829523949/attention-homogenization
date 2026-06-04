@@ -1,0 +1,38 @@
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+
+% ---------- WACV-like formatting ----------
+\setlength{\columnsep}{0.25in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+
+\title{\vspace{-0.5in}Revisiting Text Encoders for 3D Face Camera Control}
+
+\author{
+  Junhao Zhang \\
+  University of Chinese Academy of Sciences (UCAS) \\
+  \texttt{zhangjunhao@example.com}
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+Text-driven 3D face generation has achieved remarkable progress, with methods using either lightweight encoders (e.g., CLIP) or large vision-language models (VLMs) as text conditioners. However, the choice of text encoder is typically treated as an implementation detail rather than a design decision. In this paper, we systematically investigate whether large VLMs are necessary for text-driven 3D face camera control. Using Qwen3-VL-2B and CLIP-ViT-B/32 as representatives, we conduct experiments on the EG3D face generator. Our key findings are threefold. First, we show that VLM cross-attention cannot spatially localize facial features---attention maps for different queries (nose, eyes, mouth, etc.) are nearly identical (Pearson r > 0.9999). Second, we find that VLM's LLM hidden states collapse fine-grained angle information, achieving a discriminability score of only 0.0028 between adjacent and distant angles, compared to CLIP's 0.0459 (16.4x better). Third, in a fair comparison on the same test set, CLIP (63M parameters) outperforms VLM (1224M parameters) in pose accuracy (yaw 3.58{\textdegree} vs. 3.84{\textdegree}, pitch 4.60{\textdegree} vs. 5.60{\textdegree}) while being 10.8x faster in inference and 18x smaller. Our results demonstrate that lightweight text encoders are not only sufficient but superior for 3D face camera control, suggesting that the trend toward increasingly large VLMs may be unnecessary for this task.
+\end{abstract}

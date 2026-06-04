@@ -1,0 +1,595 @@
+{
+  "config": {
+    "n_images": 200,
+    "n_test": 40,
+    "train_fractions": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "n_seeds": 3,
+    "n_epochs": 100,
+    "lr": 0.001,
+    "layer_groups": {
+      "L1-3": [
+        0,
+        1,
+        2
+      ],
+      "L18-20": [
+        17,
+        18,
+        19
+      ],
+      "Last": [
+        27
+      ]
+    }
+  },
+  "geometry_homogenization": {
+    "L1-3": {
+      "adj_sim_mean": 0.7766,
+      "adj_sim_std": 0.0218,
+      "eff_rank_mean": 34.4,
+      "eff_rank_std": 1.0,
+      "top3_energy_ratio_mean": 0.8002,
+      "top3_energy_ratio_std": 0.0184
+    },
+    "L18-20": {
+      "adj_sim_mean": 0.8494,
+      "adj_sim_std": 0.0168,
+      "eff_rank_mean": 32.39,
+      "eff_rank_std": 1.39,
+      "top3_energy_ratio_mean": 0.8602,
+      "top3_energy_ratio_std": 0.0136
+    },
+    "Last": {
+      "adj_sim_mean": 0.4809,
+      "adj_sim_std": 0.0289,
+      "eff_rank_mean": 43.29,
+      "eff_rank_std": 1.63,
+      "top3_energy_ratio_mean": 0.583,
+      "top3_energy_ratio_std": 0.0438
+    }
+  },
+  "probe_results": {
+    "ConvNet": {
+      "L1-3": {
+        "frac_0.1": {
+          "pck_mean": 44.2,
+          "pck_std": 3.7,
+          "pck_per_seed": [
+            49.3,
+            40.6,
+            42.8
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 61.4,
+          "pck_std": 3.1,
+          "pck_per_seed": [
+            62.7,
+            57.1,
+            64.4
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 66.4,
+          "pck_std": 2.0,
+          "pck_per_seed": [
+            63.7,
+            66.9,
+            68.6
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 74.0,
+          "pck_std": 1.5,
+          "pck_per_seed": [
+            72.6,
+            76.1,
+            73.3
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      },
+      "L18-20": {
+        "frac_0.1": {
+          "pck_mean": 33.2,
+          "pck_std": 4.2,
+          "pck_per_seed": [
+            38.3,
+            33.4,
+            28.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 58.6,
+          "pck_std": 3.1,
+          "pck_per_seed": [
+            59.9,
+            54.3,
+            61.5
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 67.0,
+          "pck_std": 0.7,
+          "pck_per_seed": [
+            66.3,
+            66.8,
+            67.9
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 73.1,
+          "pck_std": 1.8,
+          "pck_per_seed": [
+            70.6,
+            73.9,
+            74.8
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      },
+      "Last": {
+        "frac_0.1": {
+          "pck_mean": 19.9,
+          "pck_std": 5.8,
+          "pck_per_seed": [
+            27.2,
+            19.4,
+            13.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 45.4,
+          "pck_std": 3.0,
+          "pck_per_seed": [
+            48.3,
+            41.3,
+            46.7
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 56.3,
+          "pck_std": 1.9,
+          "pck_per_seed": [
+            56.7,
+            58.3,
+            53.9
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 66.9,
+          "pck_std": 1.0,
+          "pck_per_seed": [
+            67.7,
+            65.5,
+            67.5
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "PoolMLP": {
+      "L1-3": {
+        "frac_0.1": {
+          "pck_mean": 3.6,
+          "pck_std": 2.0,
+          "pck_per_seed": [
+            2.1,
+            2.3,
+            6.4
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 7.6,
+          "pck_std": 1.4,
+          "pck_per_seed": [
+            6.1,
+            9.6,
+            7.3
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 11.2,
+          "pck_std": 0.8,
+          "pck_per_seed": [
+            11.0,
+            12.3,
+            10.3
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 15.2,
+          "pck_std": 0.3,
+          "pck_per_seed": [
+            14.8,
+            15.5,
+            15.4
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      },
+      "L18-20": {
+        "frac_0.1": {
+          "pck_mean": 6.7,
+          "pck_std": 2.9,
+          "pck_per_seed": [
+            4.6,
+            4.7,
+            10.7
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 7.4,
+          "pck_std": 1.9,
+          "pck_per_seed": [
+            7.9,
+            4.9,
+            9.3
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 14.1,
+          "pck_std": 1.5,
+          "pck_per_seed": [
+            13.5,
+            12.6,
+            16.1
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 18.0,
+          "pck_std": 1.0,
+          "pck_per_seed": [
+            19.0,
+            18.3,
+            16.7
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      },
+      "Last": {
+        "frac_0.1": {
+          "pck_mean": 4.1,
+          "pck_std": 2.1,
+          "pck_per_seed": [
+            3.2,
+            2.2,
+            7.1
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 7.3,
+          "pck_std": 0.8,
+          "pck_per_seed": [
+            8.4,
+            7.1,
+            6.4
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 12.0,
+          "pck_std": 3.6,
+          "pck_per_seed": [
+            16.3,
+            12.1,
+            7.6
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 15.9,
+          "pck_std": 2.1,
+          "pck_per_seed": [
+            13.5,
+            18.7,
+            15.6
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      }
+    },
+    "PoolLinear": {
+      "L1-3": {
+        "frac_0.1": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      },
+      "L18-20": {
+        "frac_0.1": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      },
+      "Last": {
+        "frac_0.1": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.25": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_0.5": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        },
+        "frac_1.0": {
+          "pck_mean": 0.0,
+          "pck_std": 0.0,
+          "pck_per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "best_epochs": [
+            100,
+            100,
+            100
+          ]
+        }
+      }
+    }
+  },
+  "baseline_per_landmark_mean": {
+    "mean": 28.6,
+    "std": 0.8,
+    "per_seed": {
+      "seed_0": 29.0,
+      "seed_1": 29.3,
+      "seed_2": 27.4
+    }
+  }
+}

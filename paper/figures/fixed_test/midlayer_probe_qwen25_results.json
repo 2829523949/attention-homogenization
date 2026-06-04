@@ -1,0 +1,267 @@
+{
+  "config": {
+    "model": "Qwen2.5-VL-3B",
+    "n_images": 500,
+    "n_train": 400,
+    "n_val": 100,
+    "train_fractions": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "layer_conditions": [
+      "L23-25",
+      "L32-34",
+      "Last"
+    ]
+  },
+  "results": {
+    "L23-25": {
+      "frac_0.1": {
+        "best_val_loss": 8.739712,
+        "best_epoch": 86,
+        "pck": {
+          "0.03": 15.0,
+          "0.05": 33.9,
+          "0.1": 74.1,
+          "0.2": 97.2
+        },
+        "mean_distance_heatmap_px": 3.5,
+        "median_distance_heatmap_px": 3.03,
+        "query_pck": {
+          "nose": 96.0,
+          "eyes": 98.8,
+          "mouth": 99.4,
+          "chin": 98.0,
+          "forehead": 95.6,
+          "beard": 97.7
+        }
+      },
+      "frac_0.25": {
+        "best_val_loss": 6.112467,
+        "best_epoch": 83,
+        "pck": {
+          "0.03": 26.1,
+          "0.05": 50.0,
+          "0.1": 83.4,
+          "0.2": 98.0
+        },
+        "mean_distance_heatmap_px": 2.8,
+        "median_distance_heatmap_px": 2.26,
+        "query_pck": {
+          "nose": 98.0,
+          "eyes": 99.5,
+          "mouth": 99.3,
+          "chin": 97.0,
+          "forehead": 97.3,
+          "beard": 98.0
+        }
+      },
+      "frac_0.5": {
+        "best_val_loss": 4.753024,
+        "best_epoch": 86,
+        "pck": {
+          "0.03": 31.6,
+          "0.05": 58.7,
+          "0.1": 88.3,
+          "0.2": 98.6
+        },
+        "mean_distance_heatmap_px": 2.44,
+        "median_distance_heatmap_px": 1.92,
+        "query_pck": {
+          "nose": 98.0,
+          "eyes": 99.0,
+          "mouth": 99.3,
+          "chin": 99.0,
+          "forehead": 98.7,
+          "beard": 99.0
+        }
+      },
+      "frac_1.0": {
+        "best_val_loss": 3.560015,
+        "best_epoch": 74,
+        "pck": {
+          "0.03": 37.1,
+          "0.05": 66.3,
+          "0.1": 91.5,
+          "0.2": 99.7
+        },
+        "mean_distance_heatmap_px": 2.13,
+        "median_distance_heatmap_px": 1.72,
+        "query_pck": {
+          "nose": 99.0,
+          "eyes": 99.9,
+          "mouth": 100.0,
+          "chin": 99.0,
+          "forehead": 99.5,
+          "beard": 99.0
+        }
+      }
+    },
+    "L32-34": {
+      "frac_0.1": {
+        "best_val_loss": 10.595055,
+        "best_epoch": 90,
+        "pck": {
+          "0.03": 11.2,
+          "0.05": 27.0,
+          "0.1": 65.7,
+          "0.2": 96.7
+        },
+        "mean_distance_heatmap_px": 3.94,
+        "median_distance_heatmap_px": 3.62,
+        "query_pck": {
+          "nose": 89.0,
+          "eyes": 98.8,
+          "mouth": 99.0,
+          "chin": 99.0,
+          "forehead": 94.5,
+          "beard": 98.7
+        }
+      },
+      "frac_0.25": {
+        "best_val_loss": 6.884685,
+        "best_epoch": 93,
+        "pck": {
+          "0.03": 20.7,
+          "0.05": 42.2,
+          "0.1": 81.4,
+          "0.2": 97.8
+        },
+        "mean_distance_heatmap_px": 3.04,
+        "median_distance_heatmap_px": 2.6,
+        "query_pck": {
+          "nose": 97.0,
+          "eyes": 99.5,
+          "mouth": 99.0,
+          "chin": 97.0,
+          "forehead": 97.2,
+          "beard": 97.3
+        }
+      },
+      "frac_0.5": {
+        "best_val_loss": 5.701058,
+        "best_epoch": 62,
+        "pck": {
+          "0.03": 24.8,
+          "0.05": 49.9,
+          "0.1": 86.8,
+          "0.2": 98.1
+        },
+        "mean_distance_heatmap_px": 2.72,
+        "median_distance_heatmap_px": 2.26,
+        "query_pck": {
+          "nose": 98.0,
+          "eyes": 99.3,
+          "mouth": 99.0,
+          "chin": 98.0,
+          "forehead": 97.7,
+          "beard": 98.7
+        }
+      },
+      "frac_1.0": {
+        "best_val_loss": 3.888401,
+        "best_epoch": 58,
+        "pck": {
+          "0.03": 29.6,
+          "0.05": 60.3,
+          "0.1": 91.7,
+          "0.2": 99.3
+        },
+        "mean_distance_heatmap_px": 2.29,
+        "median_distance_heatmap_px": 1.92,
+        "query_pck": {
+          "nose": 99.0,
+          "eyes": 99.9,
+          "mouth": 99.2,
+          "chin": 99.0,
+          "forehead": 99.1,
+          "beard": 99.0
+        }
+      }
+    },
+    "Last": {
+      "frac_0.1": {
+        "best_val_loss": 12.78271,
+        "best_epoch": 47,
+        "pck": {
+          "0.03": 11.6,
+          "0.05": 26.5,
+          "0.1": 57.5,
+          "0.2": 95.4
+        },
+        "mean_distance_heatmap_px": 4.3,
+        "median_distance_heatmap_px": 3.93,
+        "query_pck": {
+          "nose": 76.0,
+          "eyes": 97.8,
+          "mouth": 97.6,
+          "chin": 96.0,
+          "forehead": 94.2,
+          "beard": 97.3
+        }
+      },
+      "frac_0.25": {
+        "best_val_loss": 9.09026,
+        "best_epoch": 100,
+        "pck": {
+          "0.03": 15.3,
+          "0.05": 33.9,
+          "0.1": 73.4,
+          "0.2": 96.7
+        },
+        "mean_distance_heatmap_px": 3.55,
+        "median_distance_heatmap_px": 3.05,
+        "query_pck": {
+          "nose": 96.0,
+          "eyes": 98.7,
+          "mouth": 98.3,
+          "chin": 97.0,
+          "forehead": 95.2,
+          "beard": 97.7
+        }
+      },
+      "frac_0.5": {
+        "best_val_loss": 6.091043,
+        "best_epoch": 58,
+        "pck": {
+          "0.03": 23.1,
+          "0.05": 46.7,
+          "0.1": 84.8,
+          "0.2": 98.2
+        },
+        "mean_distance_heatmap_px": 2.84,
+        "median_distance_heatmap_px": 2.38,
+        "query_pck": {
+          "nose": 98.0,
+          "eyes": 99.5,
+          "mouth": 98.9,
+          "chin": 98.0,
+          "forehead": 98.2,
+          "beard": 98.7
+        }
+      },
+      "frac_1.0": {
+        "best_val_loss": 4.447346,
+        "best_epoch": 59,
+        "pck": {
+          "0.03": 31.3,
+          "0.05": 60.5,
+          "0.1": 90.5,
+          "0.2": 98.7
+        },
+        "mean_distance_heatmap_px": 2.36,
+        "median_distance_heatmap_px": 1.9,
+        "query_pck": {
+          "nose": 99.0,
+          "eyes": 99.8,
+          "mouth": 98.8,
+          "chin": 98.0,
+          "forehead": 98.5,
+          "beard": 98.7
+        }
+      }
+    }
+  }
+}

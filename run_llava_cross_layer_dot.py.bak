@@ -1,0 +1,184 @@
+"""
+LLaVA-NeXT Cross-layer Dot Test: run dot attention at 4 layer groups.
+Adapted from run_cross_layer_dot.py for LLaVA's token structure.
+Usage: python run_llava_cross_layer_dot.py
+"""
+import os, sys, math, torch, numpy as np
+from PIL import Image, ImageDraw
+import matplotlib; matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
+import json
+sys.path.insert(0, "/root/Qwen3-VL")
+os.environ["TRANSFORMERS_OFFLINE"] = "1"; os.environ["HF_HUB_OFFLINE"] = "1"
+OUT_DIR = "/root/Qwen3-VL/paper/figures/dot_test"; os.makedirs(OUT_DIR, exist_ok=True)
+
+# LLaVA layer groups (32 layers, 0-indexed)
+LAYER_GROUPS = {
+    "L1-3":  [0, 1, 2],
+    "L8-10": [7, 8, 9],
+    "L18-20":[17, 18, 19],
+    "L29-31":[28, 29, 30],
+}
+
+# 256x256 image with 16x16 color blocks
+SIZE = 256; CELL = 16
+img = Image.new("RGB", (SIZE, SIZE), (0, 0, 0)); draw = ImageDraw.Draw(img)
+blocks = {"red":(1,1), "green":(7,7), "blue":(14,14)}
+colors = {"red":(255,0,0), "green":(0,255,0), "blue":(0,0,255)}
+for n, (gx, gy) in blocks.items():
+    x, y = gx*CELL, gy*CELL; draw.rectangle([x, y, x+CELL-1, y+CELL-1], fill=colors[n])
+img.save(f"{OUT_DIR}/synthetic_dots.png")
+print(f"Image: {SIZE}x{SIZE}")
+
+# Load LLaVA
+print("Loading LLaVA-NeXT-7B (4-bit)...")
+from transformers import LlavaNextForConditionalGeneration, AutoProcessor, BitsAndBytesConfig
+
+bnb = BitsAndBytesConfig(
+    load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16,
+    bnb_4bit_use_double_quant=True, bnb_4bit_quant_type="nf4")
+model = LlavaNextForConditionalGeneration.from_pretrained(
+    "/root/Qwen3-VL", quantization_config=bnb, device_map="auto",
+    attn_implementation="eager", local_files_only=True, trust_remote_code=True,
+    torch_dtype=torch.bfloat16)
+model.config.image_grid_pinpoints = [[336, 336]]  # disable anyres
+
+proc = AutoProcessor.from_pretrained(
+    "/root/Qwen3-VL", local_files_only=True, trust_remote_code=True)
+MISTRAL_TMPL = ("{{ bos_token }}{% for message in messages %}"
+    "{% if (message['role'] == 'user') != (loop.index0%2==0) %}{{ raise_exception('') }}{% endif %}"
+    "{% if message['role'] == 'user' %}{{ '[INST] '+message['content']|trim+' [/INST]' }}"
+    "{% elif message['role'] == 'assistant' %}{{ ' '+message['content']|trim+' '+eos_token }}{% endif %}{% endfor %}")
+proc.chat_template = MISTRAL_TMPL
+
+lm = model.model.language_model
+
+IMAGE_TOKEN_ID = 32000
+QUERIES = {"red":"red", "green":"green", "blue":"blue", "image":None}
+results = {}
+
+def find_keyword_pos(tok_strs, keyword):
+    positions = []
+    for j, t in enumerate(tok_strs):
+        clean_t = t.replace("\u0120","").replace("\u2581","").strip()
+        if keyword.lower() in clean_t.lower():
+            positions.append(j)
+    return positions
+
+for gk, LAYERS in LAYER_GROUPS.items():
+    print(f"\n{'='*60}")
+    print(f"Layer group: {gk} {LAYERS}")
+    print(f"{'='*60}")
+    
+    for l in LAYERS: lm.layers[l].self_attn.output_attentions = True
+    
+    group_results = {}
+    
+    for q_text, color_word in QUERIES.items():
+        msg = [{"role":"user","content":f"<image>\ndescribe the {q_text}"}]
+        pr = proc.apply_chat_template(msg, tokenize=False, add_generation_prompt=True)
+        inp = proc(text=pr, images=img, return_tensors="pt").to("cuda")
+        ids = inp["input_ids"][0]
+        
+        # LLaVA token structure
+        ip = (ids==IMAGE_TOKEN_ID).nonzero(as_tuple=True)[0]
+        vs = int(ip[0])      # first image token
+        ve = int(ip[-1]) + 1  # after last image token
+        nvt = ve - vs
+        txt = ids[ve:]
+        toks = proc.tokenizer.convert_ids_to_tokens(txt.tolist())
+        
+        # Find keyword
+        kw = color_word if color_word else q_text
+        spec_positions = []
+        if color_word:
+            spec_positions = find_keyword_pos(toks, kw)
+            spec_global = [ve + p for p in spec_positions] if spec_positions else []
+        
+        # Register hooks
+        attn_maps = []
+        def make_hook():
+            def hook(m, i, o):
+                if isinstance(o, tuple) and len(o) > 1 and o[1] is not None:
+                    attn_maps.append(o[1].detach())
+            return hook
+        
+        hooks = [lm.layers[l].self_attn.register_forward_hook(make_hook()) for l in LAYERS]
+        with torch.no_grad():
+            out = model(**inp)
+        for h in hooks: h.remove()
+        
+        if attn_maps:
+            a = torch.stack(attn_maps).mean(dim=0).mean(dim=[0,1])
+            
+            # spec: from keyword token
+            if spec_positions:
+                spec = a[spec_global, vs:ve].mean(dim=0).cpu().float().numpy()
+            else:
+                spec = a[ve:, vs:ve].mean(dim=(0,1)).cpu().float().numpy()
+            
+            # avg: from all query tokens
+            avg = a[ve:, vs:ve].mean(dim=0).cpu().float().numpy()
+            
+            # last: from last token
+            last = a[-1, vs:ve].cpu().float().numpy()
+            
+            # Reshape to grid
+            grid_sz = int(math.sqrt(nvt))
+            spec_map = spec.reshape(grid_sz, grid_sz)
+            avg_map = avg.reshape(grid_sz, grid_sz)
+            last_map = last.reshape(grid_sz, grid_sz)
+            
+            spec_peak = [int(x) for x in np.unravel_index(spec_map.argmax(), spec_map.shape)]
+            avg_peak = [int(x) for x in np.unravel_index(avg_map.argmax(), avg_map.shape)]
+            last_peak = [int(x) for x in np.unravel_index(last_map.argmax(), last_map.shape)]
+            
+            print(f"  {q_text:>10s}: spec={spec_peak} avg={avg_peak} last={last_peak}, nvt={nvt}, grid={grid_sz}x{grid_sz}")
+            
+            group_results[q_text] = {
+                "spec_peak": spec_peak, "avg_peak": avg_peak, "last_peak": last_peak,
+                "spec_map": spec_map.tolist(), "avg_map": avg_map.tolist(),
+            }
+        
+        torch.cuda.empty_cache()
+    
+    results[gk] = group_results
+    for l in LAYERS: lm.layers[l].self_attn.output_attentions = False
+
+# Cross-r
+print(f"\n{'='*60}")
+print(f"{'CROSS-R (lower = better differentiation)':^60s}")
+print(f"{'='*60}")
+for gk in LAYER_GROUPS:
+    if gk not in results: continue
+    r = results[gk]
+    if "red" in r and "green" in r and "blue" in r:
+        rg = np.corrcoef(np.array(r["red"]["spec_map"]).flatten(), np.array(r["green"]["spec_map"]).flatten())[0,1]
+        rb = np.corrcoef(np.array(r["red"]["spec_map"]).flatten(), np.array(r["blue"]["spec_map"]).flatten())[0,1]
+        gb = np.corrcoef(np.array(r["green"]["spec_map"]).flatten(), np.array(r["blue"]["spec_map"]).flatten())[0,1]
+        print(f"  {gk}: r_red-green={rg:.4f}  r_red-blue={rb:.4f}  r_green-blue={gb:.4f}")
+        results[gk]["cross_r"] = {
+            "red_green": round(float(rg), 4),
+            "red_blue": round(float(rb), 4),
+            "green_blue": round(float(gb), 4),
+        }
+
+# Summary
+print(f"\n{'='*70}")
+print(f"{'LLAVA CROSS-LAYER DOT TEST SUMMARY':^70s}")
+print(f"{'='*70}")
+print(f"{'Group':<10s} {'Red spec':>10s} {'Green spec':>10s} {'Blue spec':>10s}")
+print("  " + "-" * 42)
+for gk in LAYER_GROUPS:
+    if gk not in results: continue
+    r = results[gk]
+    red = str(tuple(r["red"]["spec_peak"]))
+    grn = str(tuple(r["green"]["spec_peak"]))
+    blu = str(tuple(r["blue"]["spec_peak"]))
+    print(f"  {gk:<10s} {red:>10s} {grn:>10s} {blu:>10s}")
+
+with open(f"{OUT_DIR}/llava_cross_layer_dot_results.json", "w") as f:
+    json.dump(results, f, indent=2)
+print(f"\nSaved: {OUT_DIR}/llava_cross_layer_dot_results.json")
+print("DONE!")

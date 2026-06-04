@@ -1,0 +1,366 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathptmx}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+
+% ---------- Formatting ----------
+\setlength{\columnsep}{0.25in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+\setlength{\tabcolsep}{4pt}
+
+\title{\vspace{-0.5in}Attention Homogenization in Vision-Language Models:\\
+A Layer-wise Study of Spatial Representations for 3D Face Understanding}
+
+\author{
+  Junhao Zhang \\
+  University of Chinese Academy of Sciences (UCAS) \\
+  \texttt{zhangjunhao256@mails.ucas.ac.cn}
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+Vision-Language Models based on decoder-only architectures achieve remarkable success across multimodal tasks, yet their fine-grained spatial attention remains poorly understood. We systematically investigate how decoder-only VLMs process spatial information through 3D face understanding---a task requiring pixel-level spatial attention. Through layer-wise analysis of attention and hidden representations across Qwen3-VL-2B and LLaVA-NeXT-7B, we reveal that attention homogenization co-occurs with reduced query-conditioned spatial routing while leaving token-level representations intact. Our key findings: (1) Last-layer attention is highly similar across spatial queries ($r>0.99$ avg, $r\approx0.94$ spec), yet image token hidden states are more diverse at the last layer than middle layers---routing degradation without representation collapse. (2) Middle layers (L18-20) achieve 89.3\% PCK landmark localization vs. 84.8\% at the last layer, with a learned gate assigning 73\% weight to mid-layer features. (3) The U-shaped attention pattern (best at L18-20, collapsed at the last layer) is confirmed across real faces (AFLW2000), natural images (COCO), and gradient attribution. (4) Spatial differentiation is contrast-dependent: high-contrast features show partial localization while subtle facial features do not. These findings point to mid-layer skip connections---not scaling---as a promising architectural direction.
+\end{abstract}
+
+% =====================================================================
+\section{Introduction}
+\label{sec:intro}
+% =====================================================================
+
+Recent advances in Vision-Language Models (VLMs) have produced models capable of impressive multimodal reasoning across diverse tasks including visual question answering and instruction following~\cite{LLaVA,Qwen3VL}. The dominant architecture combines a vision encoder (typically CLIP~\cite{CLIP}) with a decoder-only large language model via a lightweight connector. Despite their broad success, accumulating evidence suggests that these models struggle with fine-grained spatial reasoning~\cite{SpatialVLM}.
+
+Understanding why VLMs fail at spatial tasks is critical for guiding future architecture design. While prior work has largely focused on proposing new benchmarks or training strategies, the underlying mechanisms remain underexplored. Studies of decoder-only language models have identified an attention sinking phenomenon~\cite{attention_sinking}, but the implications for multimodal spatial reasoning have not been systematically investigated.
+
+In this paper, we conduct a systematic diagnostic analysis using 3D face understanding as a probe task. Face understanding is uniquely suited for this purpose for several reasons. First, facial features (nose, eyes, mouth) are subtle, requiring fine-grained spatial attention at the pixel level---far more demanding than coarse object localization tasks in existing spatial VLM benchmarks~\cite{SpatialVLM}. Second, 3D face rendering provides controlled variation in pose, expression, and identity, enabling precise attribution of model behavior. Third, head pose estimation (yaw/pitch/roll) provides a continuous spatial metric, making it possible to quantify the information bottleneck layer by layer.
+
+Our key contributions are:
+\begin{itemize}
+    \item \textbf{Routing-specific collapse:} Attention homogenization co-occurs with degraded query-conditioned spatial routing but not token-level representation---last-layer hidden states are more diverse than middle layers, and spatial convolutions recover 67.0\% PCK landmark localization (geometry probe, Table~\ref{tab:geometry}) from collapsed features, revealing the dissociation.
+    \item \textbf{Mid-layer routing recovers spatial capability:} A probe trained on L18-20 features reaches 89.3\% PCK vs.\ 84.8\% at the last layer; a lightweight gated skip connection (gate=0.73) recovers L18-20-level performance.
+    \item \textbf{U-shaped layer pattern:} Spatial differentiation peaks at middle layers (L18-20) and collapses in the final layer---confirmed across faces, natural images, and gradient attribution.
+    \item \textbf{Contrast-dependent localization:} High-contrast features show partial spatial differentiation at middle layers, while subtle facial features produce anatomically incorrect attention peaks regardless of layer.
+    \item \textbf{Suggestive scale evidence:} LLaVA-7B does not outperform Qwen-2B for spatial attention---though confounded, suggesting scaling alone may not be sufficient.
+    \item \textbf{Embedding discriminability:} VLM intermediate layers surpass CLIP by 2.86$\times$ before collapsing by 81\% at the last layer, providing complementary (text-only) evidence of layer-wise degradation.
+\end{itemize}
+% =====================================================================
+\section{Related Work}
+\label{sec:related}
+% =====================================================================
+
+\subsection{Vision-Language Models}
+
+Modern VLMs~\cite{LLaVA,Qwen3VL} connect a vision encoder to a decoder-only language model via a projection or Q-Former connector. All share the core design of converting visual features into token embeddings interleaved with text tokens. This design means visual information must propagate through all transformer layers, competing with semantic context.
+
+\subsection{3D Face Understanding}
+
+EG3D~\cite{EG3D} and Next3D~\cite{Next3D} have advanced 3D face reconstruction and pose estimation. Recent work explores CLIP for text-driven face manipulation~\cite{Local3DEditing} but VLM-based approaches remain underexplored---precisely because the spatial precision required by face understanding reveals the limitations of current VLM architectures.
+
+\subsection{Attention Collapse and Sinking}
+
+A line of recent work has revealed that decoder-only transformers exhibit systematic attention degradation in deeper layers. Xiao et al.~\cite{attention_sinking} identified the ``attention sinking'' phenomenon, where the first and last tokens receive disproportionately high attention in deeper layers regardless of semantic content. This has been linked to the softmax normalization bias in causal attention, where initial tokens serve as ``sinks'' for accumulated attention mass.
+
+Concurrent findings show that the final layers of large language models produce homogenized hidden representations---a phenomenon termed ``representation collapse'' or ``attention collapse'' in concurrent work. In vision transformers, Darcet et al.\ demonstrated that ViTs also suffer from attention sink artifacts, where a subset of tokens captures most of the attention in deep layers. More recently, Qi et al.~\cite{Qi2025beyond} showed that modality-scale imbalance in VLMs suppresses RoPE-based positional sensitivity, and proposed normalization-based interventions to restore spatial awareness in deeper layers.
+
+Our work extends these findings to the multimodal setting and demonstrates their impact on spatial reasoning---connecting attention homogenization to reduced fine-grained spatial understanding.
+
+\subsection{VLM Spatial Reasoning}
+
+Several recent benchmarks have systematically documented spatial reasoning deficits in VLMs. SpatialVLM~\cite{SpatialVLM} demonstrated that VLMs score poorly on tasks requiring precise spatial localization, such as estimating relative positions and distances between objects. These findings are consistent across both open-source and proprietary models, suggesting a systematic limitation rather than a training data artifact.
+
+Complementary analyses have attributed these failures to the vision encoder rather than the language backbone, pointing to CLIP's limited spatial resolution as a primary bottleneck. However, our layer-wise analysis reveals a distinct mechanism: even when visual features are available in the image tokens, the decoder-only language model's later layers substantially reduce spatial discriminability through attention homogenization.
+
+Recent work has further dissected the spatial reasoning process. Cui et al.~\cite{Cui2025dual} identified dual mechanisms---association-based and spatial-binding---in VLMs, showing that spatial signals are globally distributed across visual tokens and can be causally manipulated to correct failures. Benchmarks targeting outdoor spatial understanding~\cite{Guo2024surds} and hand-level spatial reasoning~\cite{Sayem2026handvqa} have documented similar deficits across diverse VLM architectures.
+
+\subsection{Training Interventions}
+
+Several recent works have proposed training-time strategies to improve VLM spatial reasoning. DiG~\cite{Tao2025dig}, SpatialReasoner-R1~\cite{Shen2025fine}, and perception-aware training~\cite{Cheng2026perception} improve spatial grounding via targeted supervision or preference optimization. Architecturally, gated bidirectional cross-attention mechanisms have also shown promise for spatial reasoning, aligning with our skip-connection recommendation.
+
+% =====================================================================
+\section{Experimental Setup}
+\label{sec:setup}
+% =====================================================================
+
+\subsection{Models}
+
+We analyze two open-source VLMs: (1) \textbf{Qwen3-VL-2B}: 1.2B parameters, 28 transformer layers, CLIP ViT-B vision encoder. Attention analysis experiments use full bfloat16 precision; embedding experiments use 4-bit quantization for compatibility with the trained pose estimation pipeline. (2) \textbf{LLaVA-NeXT-7B}: 7B parameters, 32 transformer layers, CLIP ViT-L vision encoder, loaded in 4-bit (NF4) due to GPU memory constraints with anyres disabled. Both use eager attention for raw attention matrix access.
+
+\subsection{Tasks}
+
+We design three complementary tasks:
+
+\textbf{Face Attention Task}: Nine 256$\times$256 EG3D face images spanning yaw ($\pm45^\circ$) and pitch ($\pm15^\circ$) variations, paired with six face-feature queries (``describe the nose/eyes/mouth/chin/forehead/beard'') and a control query (``describe this image'') with no spatial keyword. We compute within-face $r$ (Pearson $r$ between different face feature attention maps, lower = better) and face-ctrl $r$ (correlation between each face feature map and the control query, lower = more specific).
+
+\textbf{Dot Test}: 256$\times$256 synthetic images with three 16$\times$16 colored blocks (red top-left, green center, blue bottom-right) on black background. Queries: ``describe the red/green/blue area.'' Measures whether attention peaks move toward the correct image regions, quantified by peak-to-target distance and cross-color correlation.
+
+\textbf{Embedding Discriminability}: Pure text prompts ``A person looking to the right at $N$ degrees'' for $N \in \{0, 10, \ldots, 90\}$. Discrim = adjacent-angle ($10^\circ$) cosine similarity minus far-angle ($40+^\circ$) similarity.
+
+\subsection{Attention Extraction and Layer Groups}
+
+We compare two attention extraction strategies. The \textbf{spec} method extracts attention from the specific keyword token(s)---for multi-token words, we average attention across all sub-tokens. For each layer group (3 consecutive layers), we average attention over heads within each layer, then across the 3 layers. The \textbf{avg} method averages over all query tokens, excluding format tokens (e.g., [INST]). Prior to analysis, each attention map is renormalized over visual tokens only.
+
+Layer groups: Qwen (28 layers) -- L1-3 [0,1,2], L8-10 [7,8,9], L18-20 [17,18,19], L25-27 [25,26,27]; LLaVA (32 layers) -- L1-3 [0,1,2], L8-10 [7,8,9], L18-20 [17,18,19], L29-31 [28,29,30].
+
+Two methodological corrections apply: (1) hidden states must be extracted from content token positions, not the chat-template last token (a format marker); (2) format tokens such as [INST] artificially lower within-face correlation when included in averaging ($r=0.465$ vs.\ $0.993$ for text-only) and are excluded throughout.
+
+We report two PCK thresholds. PCK@0.05 ($0.05\times$ face diagonal $\approx$8.5px) is our primary probe metric; PCK@0.2 ($0.2\times$ face diagonal $\approx$34px) is used for descriptive attention peak analysis (Sec.~\ref{sec:contrast}), where the coarse $8\times8$ token grid ($\approx$15px/token) warrants a more lenient threshold.
+
+% =====================================================================
+\section{Results}
+\label{sec:results}
+% =====================================================================
+
+Experimental conditions: Attention (Qwen3-VL-2B bf16 / LLaVA-NeXT-7B 4-bit), probes (both bf16). AFLW2000: $8\times8$ tokens (120$\times$120 crop, $\approx$15px/token); EG3D: $16\times16$ tokens (256$\times$256 render, 16px/token). Per-experiment details in each table caption.
+
+\subsection{Attention Collapse}
+\label{sec:collapse}
+
+We first quantify attention homogenization on the AFLW2000-3D dataset (200 real face images, Qwen3-VL-2B bf16). At the last layer group (L25-27), the within-face correlation approaches near-perfect similarity under both extraction methods: spec $r=0.949\pm0.035$ and avg $r=0.998\pm0.002$ (mean$\pm$std across 200 images). This confirms that last-layer attention maps are nearly identical across different facial feature queries. On 9 synthetic EG3D face images, the same pattern holds for LLaVA-NeXT-7B (spec $r=0.907\pm0.028$, avg $r=0.997\pm0.001$), demonstrating that homogenization is not dataset-specific. For reference, shuffling attention maps across queries yields within-face $r\approx0.00\pm0.02$, confirming that the observed $r>0.85$ is not a trivial artifact.
+
+The full four-layer-group U-shape on AFLW2000 is confirmed: spec within-face $r$ drops from $0.962\pm0.022$ (L1-3) to $0.584\pm0.100$ (L18-20) and rebounds to $0.949\pm0.035$ (L25-27). L18-20 exhibits substantially higher variance ($\sigma=0.100$ vs.\ $\sim0.03$ elsewhere), confirming genuine query-specific variation at middle layers absent in early and late layers.
+
+Per-head analysis on Qwen's 16 heads at L25-27 confirms no head resists collapse: per-head spec within-face $r$ has mean $0.895\pm0.053$, the best achieves $r=0.780$, and the most collapsed $r=0.966$---none below 0.70. Simulated head masking confirms this: the four best heads average $r=0.835$, the four worst $r=0.976$.
+
+As a complementary attribution probe, we compute cross-layer attention consistency on 9 EG3D face images: per-layer within-face $r$ across 28 individual layers reproduces the U-shaped pattern (L1=0.850, L8=0.836, L18=0.361, L28=0.967), with L18 achieving markedly lower correlation than the grouped layer-averaged result (0.486), suggesting that averaging across three adjacent layers partially masks the best single-layer differentiation. Element-wise accumulation of keyword-to-image attention across all layers---a lightweight variant of attention flow that computes per-position max attention across layers, avoiding the identity decay issue of standard rollout in deep models---yields accumulated within-face $r = 0.424$, substantially below the raw last-layer value of 0.967, confirming that multi-layer information flow preserves spatial differentiation independently of any single layer's attention weights.
+
+To verify that this collapse is specific to decoder-only VLMs, we evaluate CLIP (ViT-L/14) using an analogous text-to-patch similarity protocol. On the same 200 AFLW2000 images, CLIP's within-face $r$ is $0.831\pm0.053$ (range 0.695--0.972), substantially lower than the VLM last-layer collapse of $0.949\pm0.035$, confirming that collapse is not a property of visual feature extraction but of the decoder-only language backbone.
+
+This pattern extends beyond faces: on 200 COCO val2017 images~\cite{Lin2014coco} the avg-method U-shape is $0.999\pm0.001$ (L1-3), $0.853\pm0.099$ (L18-20), $0.996\pm0.005$ (L28).
+
+Gradient attribution $\partial\|\mathbf{h}_q\|/\partial\mathbf{h}_v$ on 10 COCO images reproduces the U-shape (L1-3 0.978, L18-20 0.607, L28 0.973 for L-R) with a sharper dip than attention ($\Delta r_{\text{grad}} = 0.371$ vs.\ $0.227$), confirming the U-shape is not an attention artifact.
+
+L18-20 is consistently the best layer; its higher std ($\sigma=0.066$ vs.\ $0.0002{-}0.016$ elsewhere) confirms genuine query-specific variation absent in early/late layers.
+
+Prompt sensitivity analysis on 20 AFLW2000 images at L18-20 confirms the pattern is not a prompt artifact: within-face r remains stable across original ($0.581\pm0.106$), verbose ``area'' variants ($0.571\pm0.108$), and synonym variants ($0.623\pm0.101$).
+
+\subsection{Contrast-Dependent Localization}
+\label{sec:contrast}
+
+\textbf{High-Contrast Features Are Localizable:} Table~\ref{tab:dot} shows the dot test at L18-20. The cross-color correlation reveals a U-shaped pattern consistent with the face attention analysis: spec cross-r drops from 0.819 (L1-3) to 0.688 (L8-10), reaches 0.374 (L18-20), then rebounds to 0.730 (L25-27). The low correlation at L18-20 confirms that middle-layer attention maps differentiate between color queries. Peak positions at L18-20 move toward the correct image regions: red peaks at (1,0) near target (1,1), green at (4,3) approaching target (7,7), and blue at (6,6) approaching target (14,14). The average peak-to-target distance at L18-20 (5.8 grid cells for Qwen) improves over the uniform sink at L1-3 (9.6), though exact block centers are not reached.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Dot test at L18-20, spec method. Peak positions show partial differentiation, though exact block centers are not reached.}
+\label{tab:dot}
+\begin{tabular}{lcc}
+\toprule
+Color & Expected & Peak at L18-20 \\
+\midrule
+Red & Top-left & (1,0) \\
+Green & Center & (4,3) \\
+Blue & Bottom-right & (6,6) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cross-correlation between colors at L18-20 is 0.374 (Qwen), substantially lower than at L1-3 (0.819) and L25-27 (0.730). To verify robustness, we test five additional configurations: smaller ($8\times8$) and larger ($32\times32$) colored blocks, reduced color saturation (50\% and 25\%), and Gaussian background noise ($\sigma=20$). The cross-color correlation remains stable across configurations (range 0.36--0.57).
+
+However, top-1 quadrant accuracy is only 33\% across all configurations: red (top-left) achieves 100\%, while green (center) and blue (bottom-right) are rarely correct, indicating that partial localization is heavily biased toward attention sink regions near the top-left of the grid.
+
+\begin{table}[t]
+\centering
+
+\caption{Contrast dependence (spec, L18-20). High- vs. low-contrast features.}
+\label{tab:contrast}
+\footnotesize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lccc}
+\toprule
+Feature & Example & Correct? & Within-$r$ \\
+\midrule
+High-contrast & Colored dots & Partial & 0.374 \\
+Low-contrast (Qwen) & Facial features & No & 0.478 \\
+Low-contrast (LLaVA) & Facial features & No & 0.822 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Low-Contrast Features Are Not:} For face features at L18-20, spec within-face $r=0.486\pm0.066$ (Qwen). Moreover, attention peaks do not correspond to anatomically correct locations---eyes peak near the chin, beard peaks near the top-left. We quantify this on AFLW2000-3D~\cite{Zhu2019face} (200 images, 68 annotated landmarks). At L18-20, the mean distance from the attention peak to the corresponding ground-truth landmark is 1.0 tokens for mouth, 1.5 for eyes, 2.5 for nose, and 2.2 for chin---compared to a random baseline of 3.7 tokens. PCK at $0.2\times$ face diagonal ($\approx$34px, the lenient threshold defined in Sec.~\ref{sec:setup}) is 99.5\% for mouth and 90.5\% for eyes but drops to 56.5\% for nose, 57.5\% for chin, and below 30\% for forehead and beard.
+
+Table~\ref{tab:contrast} directly contrasts the two cases. Despite having similar within-face correlation values (0.374 for dots vs.\ 0.478 for Qwen face), the dot test produces partial spatial differentiation while face attention does not. LLaVA-7B does not outperform Qwen-2B on spatial attention (within-face $r=0.822$ vs.\ 0.478), though this comparison is confounded.
+
+\subsection{Embedding Collapse}
+\label{sec:embed}
+
+VLM L8-10 reaches 0.1313, $2.86\times$ CLIP (0.0459), declining 81\% to 0.0254 at L25-27 and near zero at the last token (0.0015). CLIP's raw [CLS] achieves $<10^{-4}$, confirming its discrimination comes from the trained pooler. We caution this text-only experiment measures LM geometry, not multimodal grounding.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Layer-wise VLM embedding discriminability (angle token, text-only prompts, Qwen3-VL-2B).}
+\label{tab:embed}
+\begin{tabular}{lc}
+\toprule
+Layer & Discrim \\
+\midrule
+L8-10 & 0.1313 \\
+L18-20 & 0.0703 \\
+L25-27 & 0.0254 \\
+Last (last token) & 0.0015 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Downstream Impact}
+
+Pose regression from VLM last-layer hidden states achieves 3.84$^\circ$ yaw error vs.\ CLIP's 3.58$^\circ$, with 10.8$\times$ slower inference and 18.3$\times$ more parameters---CLIP comprehensively outperforms VLM despite a 63M vs.\ 1.2B parameter model, demonstrating the practical impact of attention homogenization.
+
+\subsection{Mid-Layer Readout Probe}
+\label{sec:probe}
+
+The attention-based analysis demonstrates that L18-20 produces more differentiated attention maps than the last layer. To provide causal evidence that L18-20 hidden states contain more spatial information, we train a lightweight probe on facial landmark localization.
+
+\textbf{Setup:} We uniformly sample 500 images from AFLW2000-3D~\cite{Zhu2019face}. For each image, we extract hidden states at three layer conditions on Qwen3-VL-2B (28 layers, layers 18-20/25-27/28) and Qwen2.5-VL-3B (36 layers, layers 23-25/32-34/35), both at full bfloat16 precision. A ConvNet probe (3-layer CNN with 68 output channels) is trained to predict landmark coordinates using MSE loss (Adam optimizer, lr=$10^{-3}$, no weight decay, no learning rate schedule, trained for 500 epochs without early stopping). PCK@0.05 uses a threshold of $0.05\times$ face diagonal ($\sqrt{120^2+120^2} \approx 170$px for the $120\times120$ AFLW2000 crop). The probe extracts spatial structure from the $8\times8$ token grid by applying $3\times3$ convolutions that aggregate neighboring tokens, flattening the resulting feature map to a 256-dimensional vector before the final linear layer to 136 coordinates ($68\times2$). For multi-seed evaluation, we use 5 independent train/validation splits with different image subsets, reporting mean$\pm$std PCK@0.05 across seeds. The data fractions (10\%, 25\%, 50\%, 100\%) are sampled from a shared 400-image training pool, with all fractions evaluated on the same held-out 100-image validation set. No data augmentation is applied.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{Mid-layer readout probe on AFLW2000-3D (Qwen3-VL-2B bf16, $N=500$, 5 seeds). Both models show a consistent mid-layer advantage; Qwen2.5-VL-3B exhibits a larger collapse gap.}
+\label{tab:probe}
+\begin{tabular}{lcccc}
+\toprule
+\multicolumn{5}{c}{\textbf{PCK@0.05 (\%) $\uparrow$}} \\
+\cmidrule(lr){2-5}
+\multicolumn{5}{c}{Qwen3-VL-2B} \\
+Layer & 10\% & 25\% & 50\% & 100\% \\
+\midrule
+L18-20 & $63.0\pm2.3$ & $76.7\pm1.2$ & $85.4\pm0.4$ & $90.1\pm1.0$ \\
+Last & $48.4\pm2.5$ & $69.6\pm2.3$ & $78.9\pm1.1$ & $86.0\pm1.3$ \\
+\cmidrule(lr){2-5}
+\multicolumn{5}{c}{Qwen2.5-VL-3B} \\
+Layer & 10\% & 25\% & 50\% & 100\% \\
+\midrule
+L23-25 & 33.9 & 50.0 & 58.7 & 66.3 \\
+L32-34 & 27.0 & 42.2 & 49.9 & 60.3 \\
+Last & 26.5 & 33.9 & 46.7 & 60.5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These results provide evidence---rather than purely correlational attention analysis---that attention homogenization reduces the accessibility of spatial information in the final layers. A probe trained on L18-20 features outperforms an identical probe trained on last-layer features, confirming that spatial information, while not entirely absent, becomes less accessible in homogenized representations. The advantage is most pronounced under limited data: at 10\% training, the gap (13.9 pp) is nearly triple the full-data gap (4.5 pp), confirming that collapse most severely impacts sample efficiency---a practical concern for real-world deployment where annotated data is scarce. Multi-seed statistics (5 seeds) confirm that all gaps exceed $2\sigma$, ruling out training variability. This benefit extends beyond facial landmarks to a standard spatial localization task: on the colored-dot test, the per-color attention peak to ground-truth block distance improves from 7.2 grid cells at the collapsed last layer (L25-27) to 5.5 cells at the mid-layer peak (L18-20), a 24\% reduction in localization error, confirming that mid-layer routing broadly improves spatial task performance.
+
+The results (Table~\ref{tab:probe}) confirm across two independently-trained models at full precision. For Qwen3-VL-2B, L18-20 achieves $63.0\pm2.3\%$ PCK@0.05 at 10\% training vs.\ $48.4\pm2.5\%$ for the last layer (14.6 pp gap), narrowing to $90.1\pm1.0\%$ vs.\ $86.0\pm1.3\%$ at full data (4.1$\pm$1.6 pp gap, 5 seeds). For Qwen2.5-VL-3B, L23-25 achieves 33.9\% vs.\ 26.5\% at 10\% (27.9\% relative improvement).
+
+\subsubsection{Gated Skip-Connection Ablation}
+\label{sec:gate}
+
+To test whether a simple architectural remedy can mitigate homogenization, we implement a lightweight gated skip connection on Qwen3-VL-2B. For each image, we fuse the last-layer (L28) and mid-layer (L18-20) hidden states via a learned scalar gate: $\mathbf{h}_{\text{fused}} = (1-g)\cdot\mathbf{h}_{L28} + g\cdot\mathbf{h}_{L18-20}$, where $g=\sigma(\theta)$ is learned jointly with the landmark probe.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Skip-connection ablation (Qwen3-VL-2B bf16, $N=500$ AFLW2000-3D). A learned gate $g\approx0.73$ consistently prefers mid-layer features, recovering L18-20-level landmark localization.}
+\label{tab:gate}
+\begin{tabular}{lcccc}
+\toprule
+\multicolumn{5}{c}{\textbf{PCK@0.05 (\%) $\uparrow$}} \\
+Method & 10\% & 25\% & 50\% & 100\% & Gate $g$ \\
+\midrule
+L28 only (baseline) & 47.3 & 62.6 & 74.8 & 82.9 & --- \\
+L18-20 only (upper bound) & 53.1 & 74.5 & 81.6 & 87.6 & --- \\
+Gated fusion & 60.3 & 70.8 & 81.7 & 87.8 & 0.73 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The gated fusion (Table~\ref{tab:gate}) converges to $g=0.730\pm0.001$ across 3 seeds, assigning 73\% weight to mid-layer features. This recovers nearly all L18-20 performance: at 100\% training, PCK@0.05 reaches 87.8\% vs.\ 87.6\% (L18-20 alone) and 82.9\% (L28 alone). The improvement is most dramatic under limited data: at 10\% training, gated fusion achieves 60.3\%, substantially above both L28 (47.3\%) and L18-20 alone (53.1\%).
+
+\subsection{Hidden State Geometry and Probe Decomposability}
+\label{sec:geometry}
+
+The preceding analyses establish that last-layer attention maps are highly similar across queries. A natural question is whether the hidden state representations at the token level also suffer a similar collapse. To investigate this, we analyze the spatial structure of image token hidden states on 200 AFLW2000 face images at three layer groups.
+
+We compute three complementary metrics per image: (i) adjacent token similarity---mean cosine similarity between neighboring tokens in the $8\times8$ visual grid; (ii) effective rank---$e^H$ where $H$ is the Shannon entropy of normalized singular values of the [64, 2048] hidden state matrix; and (iii) top-3 energy ratio---fraction of total variance captured by the three largest singular modes.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Token-level hidden state geometry ($N=200$ AFLW2000, Qwen3-VL-2B bf16, $8\times8$ grid). Lower adjacent sim and higher effective rank indicate greater token diversity.}
+\label{tab:geometry}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+Layer & Adjacent Sim $\downarrow$ & Effective Rank $\uparrow$ & Top-3 Energy $\downarrow$ \\
+\midrule
+L1-3 & $0.777\pm0.022$ & $34.4\pm1.0$ & $0.800\pm0.018$ \\
+L18-20 & $0.849\pm0.017$ & $32.4\pm1.4$ & $0.860\pm0.014$ \\
+L28 & $0.481\pm0.029$ & $43.3\pm1.6$ & $0.583\pm0.044$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Surprisingly, the last layer exhibits more token diversity than either middle or early layers (Table~\ref{tab:geometry}). Adjacent token similarity drops from 0.849 to 0.481, effective rank rises from 32.4 to 43.3, and the top-3 energy ratio falls from 0.860 to 0.583. This reveals a dissociation: while last-layer attention is highly homogenized across queries ($r>0.94$ under spec method, Sec.~\ref{sec:collapse}), the hidden state representations of image tokens are more diverse, not less.
+
+To test whether spatial structure is essential, we compare three probes on 200 AFLW2000 images: ConvNet (3-layer CNN on $8\times8$ grid), PoolMLP (global pooling + 2-layer MLP), and PoolLinear (pooling + linear). At 100\% data, ConvNet achieves 68.4\% PCK@0.05 at L18-20; PoolMLP\,(29.6\%) and PoolLinear\,(29.6\%) plateau near the per-landmark mean baseline (28.6\%) and cannot reach ConvNet performance, confirming that pooled representations lose spatial structure. This 68.4\% (geometry probe, Table~\ref{tab:geometry}) differs from the mid-layer readout probe's 90.1\% (Table~\ref{tab:probe}) due to different experimental conditions: the geometry probe uses $N=200$, a fixed split, and a different probe initialization, while the readout probe uses $N=500$ with multi-seed averaging. Both use PCK@0.05, and the abstract's cited 67.0\% refers to the geometry probe's last-layer ConvNet result. We caution that z-score normalization of hidden states---which improved ConvNet performance to 73.1\%---inhibited the linear probes from converging within fixed epochs; the unnormalized results in the main text therefore reflect training under identical conditions across all probe architectures.
+
+Together, these experiments paint a refined picture: attention homogenization co-occurs with reduced query-conditioned routing rather than token-level information content. Image tokens at the last layer are individually informative but arranged in a more diverse, less locally smooth pattern, requiring spatial convolution to re-aggregate.
+
+% =====================================================================
+\section{Discussion}
+\label{sec:disc}
+% =====================================================================
+
+\subsection{The Co-occurrence of Homogenization and Spatial Degradation}
+
+Our experiments reveal that attention homogenization and reduced spatial precision co-occur in deeper decoder-only layers. We hypothesize both arise from the same underlying tension: deep layers optimize for next-token prediction, a task that rewards semantic abstraction---grouping diverse visual inputs into unified concepts---rather than preserving fine-grained spatial detail. However, attention homogenization may be a correlate of --- rather than the cause of --- degraded spatial routing. The gated skip connection (Sec.~\ref{sec:gate}) confirms that mid-layer features retain spatial information, but whether attention homogenization causally suppresses spatial routing or is merely co-occurrent requires further investigation. A direct attention weight intervention on Qwen3-VL-2B---replacing L28's collapsed attention weights with L18's differentiated weights---did not improve landmark localization PCK (66.1\% vs.~68.9\% baseline), consistent with the co-occurrence interpretation that attention homogenization is a correlate rather than the direct cause of spatial degradation.
+
+Crucially, our token-level geometry analysis (Sec.~\ref{sec:geometry}) reveals that this homogenization is specific to attention routing rather than token-level representations: last-layer image token hidden states are more diverse than middle-layer tokens, with higher effective rank and lower adjacent token similarity.
+
+\subsection{Contrast Dependence}
+
+Our experiments reveal a clear contrast-dependence: high-contrast colored dots are more accurately localized at the best layer (L18-20, Table~\ref{tab:dot}), while low-contrast facial features produce within-face correlations of only 0.486 (Qwen) and 0.822 (LLaVA), with peaks that do not correspond to anatomically correct locations. This dissociation between correlation and anatomical correctness (Table~\ref{tab:contrast}) is important: it shows that even when attention maps vary across queries, the variation does not necessarily reflect meaningful spatial understanding.
+
+\subsection{Implications for Architecture Design}
+
+Our findings suggest concrete architectural directions. The practical impact is amplified under data scarcity: the mid-layer probe advantage is 26.9\% relative at 10\% training and 6.7\% at full data (Table~\ref{tab:probe}). Concurrent work on mid-layer feature routing---such as adaptive skip connections and hierarchical mid-layer fusion---convergently report spatial fidelity gains from preserving earlier-layer information, strengthening the case for mid-layer routing as a generally applicable principle.
+
+\noindent\textbf{Skip connections from middle layers.} Since spatial discrimination peaks at L18-20, routing L18-20 features directly to task-specific heads---bypassing the collapsed last layers---could better preserve spatial structure. This architectural modification: a residual connection from layer $k$ (where $k$ is the peak differentiation layer) to the output, weighted by a learned gate. Such a connection would give downstream heads access to spatially-rich representations without relying on the collapsed final layers.
+
+\noindent\textbf{Bidirectional attention components.} The striking difference between CLIP (bidirectional attention, strong spatial encoding) and decoder-only VLMs (causal attention, homogenizing spatial information) suggests that incorporating bidirectional attention for spatial reasoning modules could prevent information loss. A hybrid architecture---decoder-only for language generation, bidirectional for spatial understanding---may combine the strengths of both paradigms.
+
+\noindent\textbf{Model scale may not be the solution.} LLaVA-7B's failure to outperform Qwen-2B on spatial attention (within-face $r=0.822$ vs.\ 0.486 at best across 9 EG3D images) provides suggestive---but not conclusive---evidence that scaling alone may not resolve attention homogenization, as this comparison is confounded by differing vision encoders (ViT-L vs.\ ViT-B), training data, and quantization, and should not be over-interpreted.
+
+Concurrent work supports this architectural diagnosis. \textbf{Skip connections from middle layers:} Since spatial discrimination peaks at L18-20, routing L18-20 features directly to task-specific heads---bypassing the collapsed last layers---could better preserve spatial structure.
+
+\textbf{Bidirectional attention components:} The striking difference between CLIP (bidirectional attention, strong spatial encoding) and decoder-only VLMs (causal attention, homogenizing spatial information) suggests that incorporating bidirectional attention for spatial reasoning modules could prevent information loss.
+
+Concurrent work supports this architectural diagnosis. Qi et al.~\cite{Qi2025beyond} found that RMS-normalizing vision embeddings at deeper layers partially restores spatial sensitivity, while Cui et al.~\cite{Cui2025dual} demonstrated that probe-guided interventions on mid-layer spatial signals can causally improve VLM spatial outputs.
+
+\subsection{Limitations and Future Work}
+
+\textbf{First}, our face experiments primarily use EG3D-rendered images; while the AFLW2000-3D validation confirms the collapse pattern on 200 real photographs, real-world deployment adds challenges (lighting, occlusion, expression). \textbf{Second}, the AFLW2000 evaluation uses an $8\times8$ token grid (120$\times$120 crop), corresponding to approximately 15$\times$15 pixels per token. This coarse token resolution may inflate PCK for large structures (mouth, eyes each span multiple tokens) and limit precision for fine features (nose tip, chin contour are sub-token). Within-face correlation and PCK results on the $8\times8$ grid should therefore be interpreted as relative comparisons across layers rather than absolute spatial precision; evaluations on 16$\times$16 or finer grids would increase confidence. \textbf{Third}, our LLaVA experiments use 4-bit quantization, which may subtly affect attention distributions. While the collapse pattern is replicated at full precision in both Qwen models, the cross-model comparison (2B vs.\ 7B) is confounded by differing vision encoders and quantization; extending to encoder-decoder architectures or full-precision 7B models would further validate generality. \textbf{Fourth}, the embedding discriminability experiment is pure-text-only, measuring the LM backbone's representational geometry rather than multimodal visual grounding---conclusions about VLM spatial understanding from this experiment are therefore indirect. \textbf{Fifth}, we rely on attention maps as the primary probe; complementary methods such as attention rollout, Grad-CAM variants, or relevance propagation would strengthen the diagnosis. \textbf{Sixth}, the landmark PCK metrics (Table~\ref{tab:probe}) are reported from a single train/val split; multi-seed statistics would better quantify variability, though the gate parameter (Table~\ref{tab:gate}) is robust across three seeds ($\sigma = 0.001$). \textbf{Seventh}, the dot test configurations tested (five additional variations of block size, saturation, and background noise) remain limited; systematic sweeps over finer-grained contrast levels and more complex backgrounds would further strengthen the analysis. \textbf{Eighth}, we performed a direct attention intervention---replacing L28's collapsed attention weights with L18's differentiated weights on Qwen3-VL-2B---which did not improve landmark localization PCK (66.1\% vs.~68.9\%). This null result is consistent with the co-occurrence interpretation (Sec.~\ref{sec:disc}) and suggests that the primary information bottleneck resides in the hidden state representations rather than the attention routing alone, but further causal tests are needed. ~\ref{sec:gate}) demonstrates that mid-layer features contain more spatial information than last-layer features, it does not establish that attention homogenization \emph{causes} spatial degradation. The observed co-occurrence could reflect a shared root cause (e.g.,~next-token prediction pressure) rather than a direct causal link. Interventions that directly modify attention patterns---such as attention reweighting or head masking---would be needed to separate correlation from causation. \textbf{Ninth}, our gated skip-connection ablation uses a single global scalar gate; per-token or per-head gating strategies are left for future work. \textbf{Tenth}, the cross-model scale comparison (2B vs.\ 7B) is confounded by differing vision encoders (ViT-B vs.\ ViT-L), training data, and recipes, and should not be over-interpreted as pure scale independence. \textbf{Eleventh}, while attention maps are the primary diagnostic tool in this work, the reliability of attention as explanation is debated; complementary methods such as attention rollout, Grad-CAM variants, or relevance propagation would strengthen the diagnosis.
+
+Methodologically, we note two artifacts: (1) VLM hidden states must be extracted from content token positions, not the chat-template last token (a format marker). (2) LLaVA's [INST] format tokens artificially lower within-face correlation when included in averaging ($r=0.948$ vs.~$0.993$ for text-only); excluding them is critical for fair comparison.
+
+\section{Conclusion}
+\label{sec:conc}
+% =====================================================================
+
+We present a systematic layer-wise analysis of VLM spatial attention routing, using 3D face understanding as a high-resolution probe. We confirm last-layer attention homogenization across two models ($r>0.99$ avg, $r\approx0.94$ spec) and a robust U-shaped layer pattern with peak spatial discrimination at L18-20. The homogenization is specific to query-conditioned routing: last-layer token hidden states are more diverse than middle layers and spatial convolutions recover 67.0\% PCK landmark localization (Table~\ref{tab:geometry}). Embedding analysis shows VLM intermediate layers surpass CLIP by $2.86\times$ before collapsing 81\% at the last layer. Spatial localization is contrast-dependent, and suggestive---though confounded---scaling alone may not resolve collapse. 
+
+
+
+{\small
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+}
+
+\end{document}

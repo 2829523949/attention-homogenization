@@ -1,0 +1,134 @@
+{
+  "config": {
+    "model": "Qwen3-VL-2B",
+    "n_images": 500,
+    "probe": "Linear(2048->136)",
+    "layer_conditions": [
+      "L18-20",
+      "L25-27",
+      "Last"
+    ],
+    "train_fractions": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ]
+  },
+  "results": {
+    "L18-20": {
+      "frac_0.01": {
+        "pck_005": 0.0,
+        "mean_dist": 23.32,
+        "n_train": 4
+      },
+      "frac_0.02": {
+        "pck_005": 0.0,
+        "mean_dist": 23.33,
+        "n_train": 8
+      },
+      "frac_0.05": {
+        "pck_005": 0.0,
+        "mean_dist": 23.3,
+        "n_train": 20
+      },
+      "frac_0.1": {
+        "pck_005": 0.0,
+        "mean_dist": 20.98,
+        "n_train": 40
+      },
+      "frac_0.25": {
+        "pck_005": 1.0,
+        "mean_dist": 14.97,
+        "n_train": 100
+      },
+      "frac_0.5": {
+        "pck_005": 17.6,
+        "mean_dist": 4.98,
+        "n_train": 200
+      },
+      "frac_1.0": {
+        "pck_005": 39.1,
+        "mean_dist": 3.29,
+        "n_train": 400
+      }
+    },
+    "L25-27": {
+      "frac_0.01": {
+        "pck_005": 0.0,
+        "mean_dist": 23.33,
+        "n_train": 4
+      },
+      "frac_0.02": {
+        "pck_005": 0.0,
+        "mean_dist": 23.33,
+        "n_train": 8
+      },
+      "frac_0.05": {
+        "pck_005": 0.0,
+        "mean_dist": 20.81,
+        "n_train": 20
+      },
+      "frac_0.1": {
+        "pck_005": 0.0,
+        "mean_dist": 23.24,
+        "n_train": 40
+      },
+      "frac_0.25": {
+        "pck_005": 0.8,
+        "mean_dist": 15.38,
+        "n_train": 100
+      },
+      "frac_0.5": {
+        "pck_005": 14.7,
+        "mean_dist": 5.53,
+        "n_train": 200
+      },
+      "frac_1.0": {
+        "pck_005": 29.5,
+        "mean_dist": 3.89,
+        "n_train": 400
+      }
+    },
+    "Last": {
+      "frac_0.01": {
+        "pck_005": 0.0,
+        "mean_dist": 23.32,
+        "n_train": 4
+      },
+      "frac_0.02": {
+        "pck_005": 0.0,
+        "mean_dist": 23.34,
+        "n_train": 8
+      },
+      "frac_0.05": {
+        "pck_005": 0.0,
+        "mean_dist": 23.32,
+        "n_train": 20
+      },
+      "frac_0.1": {
+        "pck_005": 0.0,
+        "mean_dist": 20.89,
+        "n_train": 40
+      },
+      "frac_0.25": {
+        "pck_005": 0.9,
+        "mean_dist": 14.97,
+        "n_train": 100
+      },
+      "frac_0.5": {
+        "pck_005": 16.5,
+        "mean_dist": 5.45,
+        "n_train": 200
+      },
+      "frac_1.0": {
+        "pck_005": 29.1,
+        "mean_dist": 3.85,
+        "n_train": 400
+      }
+    }
+  }
+}

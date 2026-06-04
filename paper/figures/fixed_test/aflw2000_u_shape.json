@@ -1,0 +1,3266 @@
+{
+  "config": {
+    "n_images": 200,
+    "n_sampled": 200,
+    "queries": [
+      "nose",
+      "eyes",
+      "mouth",
+      "chin",
+      "forehead",
+      "beard"
+    ],
+    "layer_groups": [
+      "L1-3",
+      "L8-10",
+      "L18-20",
+      "L25-27"
+    ],
+    "models": [
+      "Qwen3-VL-2B"
+    ],
+    "model_precision": "bfloat16",
+    "dataset": "AFLW2000-3D_crop",
+    "image_size": "120x120"
+  },
+  "summary": {
+    "L1-3": {
+      "spec_mean": 0.9623,
+      "spec_std": 0.0223,
+      "avg_mean": 0.999,
+      "avg_std": 0.0007,
+      "n_images": 200
+    },
+    "L8-10": {
+      "spec_mean": 0.8489,
+      "spec_std": 0.036,
+      "avg_mean": 0.9874,
+      "avg_std": 0.0056,
+      "n_images": 200
+    },
+    "L18-20": {
+      "spec_mean": 0.5842,
+      "spec_std": 0.0996,
+      "avg_mean": 0.9259,
+      "avg_std": 0.0318,
+      "n_images": 200
+    },
+    "L25-27": {
+      "spec_mean": 0.9485,
+      "spec_std": 0.0347,
+      "avg_mean": 0.9978,
+      "avg_std": 0.0022,
+      "n_images": 200
+    }
+  },
+  "per_image": {
+    "L1-3": {
+      "image00002.jpg": {
+        "spec_within": 0.9544041792551676,
+        "avg_within": 0.9986532211303711
+      },
+      "image00022.jpg": {
+        "spec_within": 0.951675279935201,
+        "avg_within": 0.9988723595937093
+      },
+      "image00042.jpg": {
+        "spec_within": 0.9666299223899841,
+        "avg_within": 0.9993401765823364
+      },
+      "image00052.jpg": {
+        "spec_within": 0.9794095238049825,
+        "avg_within": 0.9994690736134847
+      },
+      "image00062.jpg": {
+        "spec_within": 0.9776360948880514,
+        "avg_within": 0.9993588407834371
+      },
+      "image00076.jpg": {
+        "spec_within": 0.9697816570599874,
+        "avg_within": 0.9992829481760661
+      },
+      "image00088.jpg": {
+        "spec_within": 0.9534893155097961,
+        "avg_within": 0.998785916964213
+      },
+      "image00101.jpg": {
+        "spec_within": 0.9739249110221863,
+        "avg_within": 0.9994066437085469
+      },
+      "image00122.jpg": {
+        "spec_within": 0.9535929004351298,
+        "avg_within": 0.9987643082936605
+      },
+      "image00138.jpg": {
+        "spec_within": 0.9230713764826457,
+        "avg_within": 0.9982373674710592
+      },
+      "image00159.jpg": {
+        "spec_within": 0.977323075135549,
+        "avg_within": 0.99939440091451
+      },
+      "image00176.jpg": {
+        "spec_within": 0.9486976106961568,
+        "avg_within": 0.9988359014193217
+      },
+      "image00197.jpg": {
+        "spec_within": 0.970763071378072,
+        "avg_within": 0.9994390328725179
+      },
+      "image00211.jpg": {
+        "spec_within": 0.9698671142260233,
+        "avg_within": 0.9992714961369832
+      },
+      "image00227.jpg": {
+        "spec_within": 0.9247538646062216,
+        "avg_within": 0.9980563203493754
+      },
+      "image00251.jpg": {
+        "spec_within": 0.941287346680959,
+        "avg_within": 0.9986049890518188
+      },
+      "image00268.jpg": {
+        "spec_within": 0.9522918105125427,
+        "avg_within": 0.9989813446998597
+      },
+      "image00283.jpg": {
+        "spec_within": 0.9748700459798177,
+        "avg_within": 0.9992978056271871
+      },
+      "image00299.jpg": {
+        "spec_within": 0.9646294991175334,
+        "avg_within": 0.9989920655886332
+      },
+      "image00318.jpg": {
+        "spec_within": 0.9714400331179301,
+        "avg_within": 0.9993528207143147
+      },
+      "image00330.jpg": {
+        "spec_within": 0.9747342228889465,
+        "avg_within": 0.9994789918263753
+      },
+      "image00345.jpg": {
+        "spec_within": 0.9740739305814107,
+        "avg_within": 0.9993776241938274
+      },
+      "image00359.jpg": {
+        "spec_within": 0.9843560934066773,
+        "avg_within": 0.9995912233988444
+      },
+      "image00376.jpg": {
+        "spec_within": 0.9689994017283122,
+        "avg_within": 0.9990870952606201
+      },
+      "image00397.jpg": {
+        "spec_within": 0.9697847167650858,
+        "avg_within": 0.9991437077522278
+      },
+      "image00419.jpg": {
+        "spec_within": 0.9744245052337647,
+        "avg_within": 0.9993318359057108
+      },
+      "image00433.jpg": {
+        "spec_within": 0.9431461811065673,
+        "avg_within": 0.998762329419454
+      },
+      "image00445.jpg": {
+        "spec_within": 0.9708142638206482,
+        "avg_within": 0.999362579981486
+      },
+      "image00466.jpg": {
+        "spec_within": 0.9251763621966044,
+        "avg_within": 0.9980198820432027
+      },
+      "image00481.jpg": {
+        "spec_within": 0.9518618583679199,
+        "avg_within": 0.999216628074646
+      },
+      "image00497.jpg": {
+        "spec_within": 0.9499550064404806,
+        "avg_within": 0.9988815506299337
+      },
+      "image00512.jpg": {
+        "spec_within": 0.9584943334261576,
+        "avg_within": 0.9989273389180501
+      },
+      "image00527.jpg": {
+        "spec_within": 0.9792226473490397,
+        "avg_within": 0.9995202978452047
+      },
+      "image00544.jpg": {
+        "spec_within": 0.9643005569775899,
+        "avg_within": 0.9993396321932475
+      },
+      "image00557.jpg": {
+        "spec_within": 0.9639673034350077,
+        "avg_within": 0.9991412401199341
+      },
+      "image00571.jpg": {
+        "spec_within": 0.9758697787920634,
+        "avg_within": 0.9993514657020569
+      },
+      "image00591.jpg": {
+        "spec_within": 0.9760123689969381,
+        "avg_within": 0.99938991467158
+      },
+      "image00606.jpg": {
+        "spec_within": 0.9853710134824117,
+        "avg_within": 0.9996758858362834
+      },
+      "image00617.jpg": {
+        "spec_within": 0.9463163097699483,
+        "avg_within": 0.9988247712453207
+      },
+      "image00642.jpg": {
+        "spec_within": 0.9787908395131429,
+        "avg_within": 0.9994810620943705
+      },
+      "image00665.jpg": {
+        "spec_within": 0.9772805015246073,
+        "avg_within": 0.9996135632197062
+      },
+      "image00684.jpg": {
+        "spec_within": 0.9772992253303527,
+        "avg_within": 0.9995114803314209
+      },
+      "image00696.jpg": {
+        "spec_within": 0.9580052336057027,
+        "avg_within": 0.9989203810691833
+      },
+      "image00719.jpg": {
+        "spec_within": 0.9689320882161458,
+        "avg_within": 0.9990030209223429
+      },
+      "image00731.jpg": {
+        "spec_within": 0.9435582041740418,
+        "avg_within": 0.9983267347017925
+      },
+      "image00748.jpg": {
+        "spec_within": 0.9526853680610656,
+        "avg_within": 0.9988259355227153
+      },
+      "image00774.jpg": {
+        "spec_within": 0.9803086837132772,
+        "avg_within": 0.9994653701782227
+      },
+      "image00785.jpg": {
+        "spec_within": 0.9812328497568766,
+        "avg_within": 0.9994474887847901
+      },
+      "image00802.jpg": {
+        "spec_within": 0.9821048736572265,
+        "avg_within": 0.9996330976486206
+      },
+      "image00824.jpg": {
+        "spec_within": 0.9709124684333801,
+        "avg_within": 0.999279769261678
+      },
+      "image00839.jpg": {
+        "spec_within": 0.9851013422012329,
+        "avg_within": 0.9995373209317525
+      },
+      "image00850.jpg": {
+        "spec_within": 0.960622266928355,
+        "avg_within": 0.9989672303199768
+      },
+      "image00872.jpg": {
+        "spec_within": 0.9637239257494609,
+        "avg_within": 0.9989522894223531
+      },
+      "image00894.jpg": {
+        "spec_within": 0.9772661368052165,
+        "avg_within": 0.9992416779200236
+      },
+      "image00908.jpg": {
+        "spec_within": 0.9705051978429159,
+        "avg_within": 0.9991088390350342
+      },
+      "image00931.jpg": {
+        "spec_within": 0.9662250081698099,
+        "avg_within": 0.9991355180740357
+      },
+      "image00943.jpg": {
+        "spec_within": 0.9789229909578959,
+        "avg_within": 0.9994364102681478
+      },
+      "image00963.jpg": {
+        "spec_within": 0.9603973348935445,
+        "avg_within": 0.9991361975669861
+      },
+      "image00978.jpg": {
+        "spec_within": 0.976451822121938,
+        "avg_within": 0.9994913816452027
+      },
+      "image00998.jpg": {
+        "spec_within": 0.9761676867802938,
+        "avg_within": 0.9994640390078227
+      },
+      "image01014.jpg": {
+        "spec_within": 0.911528221766154,
+        "avg_within": 0.9966906229654948
+      },
+      "image01034.jpg": {
+        "spec_within": 0.9705325961112976,
+        "avg_within": 0.999236253897349
+      },
+      "image01058.jpg": {
+        "spec_within": 0.9782759745915731,
+        "avg_within": 0.9993501941363017
+      },
+      "image01071.jpg": {
+        "spec_within": 0.982629676659902,
+        "avg_within": 0.9995098908742269
+      },
+      "image01089.jpg": {
+        "spec_within": 0.9804595430692037,
+        "avg_within": 0.99947749376297
+      },
+      "image01109.jpg": {
+        "spec_within": 0.971231202284495,
+        "avg_within": 0.9992959419886271
+      },
+      "image01126.jpg": {
+        "spec_within": 0.9460016926129658,
+        "avg_within": 0.998624841372172
+      },
+      "image01147.jpg": {
+        "spec_within": 0.9803077022234599,
+        "avg_within": 0.9995010296503702
+      },
+      "image01168.jpg": {
+        "spec_within": 0.9684781670570374,
+        "avg_within": 0.9991193930308024
+      },
+      "image01189.jpg": {
+        "spec_within": 0.9518785079320272,
+        "avg_within": 0.9986515641212463
+      },
+      "image01210.jpg": {
+        "spec_within": 0.9552106142044068,
+        "avg_within": 0.9990780313809713
+      },
+      "image01233.jpg": {
+        "spec_within": 0.9722195426623027,
+        "avg_within": 0.9994770606358846
+      },
+      "image01260.jpg": {
+        "spec_within": 0.9844669222831726,
+        "avg_within": 0.9995959798494974
+      },
+      "image01286.jpg": {
+        "spec_within": 0.938900625705719,
+        "avg_within": 0.9981958945592244
+      },
+      "image01306.jpg": {
+        "spec_within": 0.958729088306427,
+        "avg_within": 0.998803706963857
+      },
+      "image01323.jpg": {
+        "spec_within": 0.9344160040219625,
+        "avg_within": 0.9980055848757426
+      },
+      "image01346.jpg": {
+        "spec_within": 0.9786401351292928,
+        "avg_within": 0.9994164784749349
+      },
+      "image01377.jpg": {
+        "spec_within": 0.9787301659584046,
+        "avg_within": 0.9993329962094625
+      },
+      "image01404.jpg": {
+        "spec_within": 0.9849939544995626,
+        "avg_within": 0.9994740923245747
+      },
+      "image01431.jpg": {
+        "spec_within": 0.9852369666099549,
+        "avg_within": 0.9997512976328532
+      },
+      "image01466.jpg": {
+        "spec_within": 0.9734125892321269,
+        "avg_within": 0.999445637067159
+      },
+      "image01477.jpg": {
+        "spec_within": 0.9494466344515483,
+        "avg_within": 0.9985090613365173
+      },
+      "image01506.jpg": {
+        "spec_within": 0.9045042872428894,
+        "avg_within": 0.9976695299148559
+      },
+      "image01565.jpg": {
+        "spec_within": 0.9780545632044474,
+        "avg_within": 0.9995125651359558
+      },
+      "image01591.jpg": {
+        "spec_within": 0.9531563321749369,
+        "avg_within": 0.9988362272580464
+      },
+      "image01622.jpg": {
+        "spec_within": 0.9621620217959086,
+        "avg_within": 0.9991576910018921
+      },
+      "image01642.jpg": {
+        "spec_within": 0.9239955147107443,
+        "avg_within": 0.9981042345364889
+      },
+      "image01657.jpg": {
+        "spec_within": 0.911658505598704,
+        "avg_within": 0.9972789724667867
+      },
+      "image01688.jpg": {
+        "spec_within": 0.9653067509333293,
+        "avg_within": 0.999280579884847
+      },
+      "image01717.jpg": {
+        "spec_within": 0.9637761990229289,
+        "avg_within": 0.9991178512573242
+      },
+      "image01749.jpg": {
+        "spec_within": 0.9629013737042745,
+        "avg_within": 0.9991198062896729
+      },
+      "image01775.jpg": {
+        "spec_within": 0.9758541504542033,
+        "avg_within": 0.9993131120999654
+      },
+      "image01791.jpg": {
+        "spec_within": 0.9165369510650635,
+        "avg_within": 0.9969839374224345
+      },
+      "image01811.jpg": {
+        "spec_within": 0.9816725452740988,
+        "avg_within": 0.9995241602261861
+      },
+      "image01829.jpg": {
+        "spec_within": 0.9394577980041504,
+        "avg_within": 0.9984912554423014
+      },
+      "image01850.jpg": {
+        "spec_within": 0.9624078591664632,
+        "avg_within": 0.9991621534029643
+      },
+      "image01870.jpg": {
+        "spec_within": 0.934221355120341,
+        "avg_within": 0.9983830173810323
+      },
+      "image01900.jpg": {
+        "spec_within": 0.9560127655665079,
+        "avg_within": 0.9988486687342326
+      },
+      "image01927.jpg": {
+        "spec_within": 0.9534711043039957,
+        "avg_within": 0.9987979531288147
+      },
+      "image01944.jpg": {
+        "spec_within": 0.9424066344896952,
+        "avg_within": 0.9984174688657125
+      },
+      "image01973.jpg": {
+        "spec_within": 0.9636259039243062,
+        "avg_within": 0.999209996064504
+      },
+      "image01989.jpg": {
+        "spec_within": 0.9814790050188701,
+        "avg_within": 0.9995551745096842
+      },
+      "image02016.jpg": {
+        "spec_within": 0.9777012785275777,
+        "avg_within": 0.9993142684300741
+      },
+      "image02032.jpg": {
+        "spec_within": 0.9631983439127604,
+        "avg_within": 0.9989485899607341
+      },
+      "image02046.jpg": {
+        "spec_within": 0.9656962911287944,
+        "avg_within": 0.9991837422053019
+      },
+      "image02064.jpg": {
+        "spec_within": 0.9467565417289734,
+        "avg_within": 0.9985665480295817
+      },
+      "image02083.jpg": {
+        "spec_within": 0.9823878328005473,
+        "avg_within": 0.9996403813362121
+      },
+      "image02116.jpg": {
+        "spec_within": 0.9671894868214925,
+        "avg_within": 0.9991351882616679
+      },
+      "image02138.jpg": {
+        "spec_within": 0.9760815938313802,
+        "avg_within": 0.9994013746579488
+      },
+      "image02166.jpg": {
+        "spec_within": 0.933009147644043,
+        "avg_within": 0.9984076182047527
+      },
+      "image02196.jpg": {
+        "spec_within": 0.9400914947191874,
+        "avg_within": 0.997665011882782
+      },
+      "image02213.jpg": {
+        "spec_within": 0.9663602113723755,
+        "avg_within": 0.9992637991905212
+      },
+      "image02242.jpg": {
+        "spec_within": 0.9396588404973348,
+        "avg_within": 0.9985052347183228
+      },
+      "image02256.jpg": {
+        "spec_within": 0.8657647887865703,
+        "avg_within": 0.9932010491689046
+      },
+      "image02277.jpg": {
+        "spec_within": 0.9450555761655172,
+        "avg_within": 0.9986500819524129
+      },
+      "image02295.jpg": {
+        "spec_within": 0.9631619572639465,
+        "avg_within": 0.9991349697113037
+      },
+      "image02319.jpg": {
+        "spec_within": 0.9721031506856282,
+        "avg_within": 0.9993053913116455
+      },
+      "image02346.jpg": {
+        "spec_within": 0.9805079023043315,
+        "avg_within": 0.9993812004725139
+      },
+      "image02373.jpg": {
+        "spec_within": 0.9528244415918986,
+        "avg_within": 0.9990128993988037
+      },
+      "image02406.jpg": {
+        "spec_within": 0.9763954440752666,
+        "avg_within": 0.9995333353678385
+      },
+      "image02424.jpg": {
+        "spec_within": 0.9693823059399923,
+        "avg_within": 0.9992100397745768
+      },
+      "image02455.jpg": {
+        "spec_within": 0.9436954379081726,
+        "avg_within": 0.9988617022832235
+      },
+      "image02488.jpg": {
+        "spec_within": 0.9450595299402873,
+        "avg_within": 0.9987006624539693
+      },
+      "image02530.jpg": {
+        "spec_within": 0.919231895605723,
+        "avg_within": 0.9976640502611797
+      },
+      "image02548.jpg": {
+        "spec_within": 0.9805670817693074,
+        "avg_within": 0.999431844552358
+      },
+      "image02592.jpg": {
+        "spec_within": 0.9727586150169373,
+        "avg_within": 0.9991600275039673
+      },
+      "image02612.jpg": {
+        "spec_within": 0.887857719262441,
+        "avg_within": 0.9976104974746705
+      },
+      "image02630.jpg": {
+        "spec_within": 0.9754649440447489,
+        "avg_within": 0.9994155565897623
+      },
+      "image02646.jpg": {
+        "spec_within": 0.9796967109044393,
+        "avg_within": 0.9993754108746846
+      },
+      "image02673.jpg": {
+        "spec_within": 0.9441016395886739,
+        "avg_within": 0.9985069712003072
+      },
+      "image02695.jpg": {
+        "spec_within": 0.9812555472056071,
+        "avg_within": 0.9994884371757508
+      },
+      "image02721.jpg": {
+        "spec_within": 0.9364609559377034,
+        "avg_within": 0.998226797580719
+      },
+      "image02744.jpg": {
+        "spec_within": 0.9747586011886596,
+        "avg_within": 0.9994680722554524
+      },
+      "image02759.jpg": {
+        "spec_within": 0.9597244183222453,
+        "avg_within": 0.9991389354070027
+      },
+      "image02781.jpg": {
+        "spec_within": 0.9824449300765992,
+        "avg_within": 0.9994747440020243
+      },
+      "image02801.jpg": {
+        "spec_within": 0.9526442408561706,
+        "avg_within": 0.9989474097887675
+      },
+      "image02824.jpg": {
+        "spec_within": 0.9671024322509766,
+        "avg_within": 0.9992722153663636
+      },
+      "image02841.jpg": {
+        "spec_within": 0.9706271568934123,
+        "avg_within": 0.9993018349011739
+      },
+      "image02857.jpg": {
+        "spec_within": 0.9373157580693563,
+        "avg_within": 0.9990382552146911
+      },
+      "image02889.jpg": {
+        "spec_within": 0.9316759069760641,
+        "avg_within": 0.9984349211057028
+      },
+      "image02938.jpg": {
+        "spec_within": 0.920099937915802,
+        "avg_within": 0.9980191906293233
+      },
+      "image02959.jpg": {
+        "spec_within": 0.8854573051134745,
+        "avg_within": 0.996360719203949
+      },
+      "image02989.jpg": {
+        "spec_within": 0.9797551989555359,
+        "avg_within": 0.9994548400243123
+      },
+      "image03009.jpg": {
+        "spec_within": 0.9824657559394836,
+        "avg_within": 0.9996712684631348
+      },
+      "image03021.jpg": {
+        "spec_within": 0.982797634601593,
+        "avg_within": 0.9996458331743876
+      },
+      "image03047.jpg": {
+        "spec_within": 0.971876589457194,
+        "avg_within": 0.9993305802345276
+      },
+      "image03075.jpg": {
+        "spec_within": 0.9498770316441854,
+        "avg_within": 0.9988719582557678
+      },
+      "image03109.jpg": {
+        "spec_within": 0.9490209698677063,
+        "avg_within": 0.9988362669944764
+      },
+      "image03149.jpg": {
+        "spec_within": 0.9471647500991821,
+        "avg_within": 0.9988355914751689
+      },
+      "image03179.jpg": {
+        "spec_within": 0.9729580084482828,
+        "avg_within": 0.9995088338851928
+      },
+      "image03209.jpg": {
+        "spec_within": 0.9601036548614502,
+        "avg_within": 0.9989408055941263
+      },
+      "image03236.jpg": {
+        "spec_within": 0.964268167813619,
+        "avg_within": 0.9993475993474324
+      },
+      "image03263.jpg": {
+        "spec_within": 0.9634199420611064,
+        "avg_within": 0.9989439765612285
+      },
+      "image03283.jpg": {
+        "spec_within": 0.9141353448232015,
+        "avg_within": 0.9979657451311748
+      },
+      "image03350.jpg": {
+        "spec_within": 0.9384198824564616,
+        "avg_within": 0.9984978238741556
+      },
+      "image03376.jpg": {
+        "spec_within": 0.9639225681622823,
+        "avg_within": 0.9987706104914348
+      },
+      "image03414.jpg": {
+        "spec_within": 0.9538822293281555,
+        "avg_within": 0.9990449865659078
+      },
+      "image03452.jpg": {
+        "spec_within": 0.8641626318295796,
+        "avg_within": 0.996609091758728
+      },
+      "image03472.jpg": {
+        "spec_within": 0.9820291479428609,
+        "avg_within": 0.9995947877566019
+      },
+      "image03515.jpg": {
+        "spec_within": 0.9776398539543152,
+        "avg_within": 0.9994230190912883
+      },
+      "image03543.jpg": {
+        "spec_within": 0.9807068824768066,
+        "avg_within": 0.9996307849884033
+      },
+      "image03559.jpg": {
+        "spec_within": 0.9654552936553955,
+        "avg_within": 0.9991954525311788
+      },
+      "image03572.jpg": {
+        "spec_within": 0.9767749389012654,
+        "avg_within": 0.9995262821515402
+      },
+      "image03589.jpg": {
+        "spec_within": 0.9773712436358134,
+        "avg_within": 0.9994508941968282
+      },
+      "image03625.jpg": {
+        "spec_within": 0.9839487632115682,
+        "avg_within": 0.9995136618614197
+      },
+      "image03641.jpg": {
+        "spec_within": 0.9855826616287231,
+        "avg_within": 0.9996785839398702
+      },
+      "image03662.jpg": {
+        "spec_within": 0.9851016243298848,
+        "avg_within": 0.9996442874272664
+      },
+      "image03673.jpg": {
+        "spec_within": 0.9806899150212606,
+        "avg_within": 0.9995662967363993
+      },
+      "image03703.jpg": {
+        "spec_within": 0.9838069200515747,
+        "avg_within": 0.9995734333992005
+      },
+      "image03715.jpg": {
+        "spec_within": 0.9797502080599467,
+        "avg_within": 0.9995130141576131
+      },
+      "image03727.jpg": {
+        "spec_within": 0.9837489446004232,
+        "avg_within": 0.9996866901715596
+      },
+      "image03740.jpg": {
+        "spec_within": 0.982587464650472,
+        "avg_within": 0.9996269981066386
+      },
+      "image03752.jpg": {
+        "spec_within": 0.9777475953102112,
+        "avg_within": 0.9996459086736044
+      },
+      "image03765.jpg": {
+        "spec_within": 0.9845262249310811,
+        "avg_within": 0.9997366984685262
+      },
+      "image03778.jpg": {
+        "spec_within": 0.9831547260284423,
+        "avg_within": 0.9996413667996724
+      },
+      "image03788.jpg": {
+        "spec_within": 0.9846577564875285,
+        "avg_within": 0.999589474995931
+      },
+      "image03800.jpg": {
+        "spec_within": 0.9826581835746765,
+        "avg_within": 0.9996616045633951
+      },
+      "image03812.jpg": {
+        "spec_within": 0.9838716944058736,
+        "avg_within": 0.9996811270713806
+      },
+      "image03826.jpg": {
+        "spec_within": 0.9853209813435873,
+        "avg_within": 0.9997087836265564
+      },
+      "image03842.jpg": {
+        "spec_within": 0.9787823001543681,
+        "avg_within": 0.9994676073392232
+      },
+      "image03869.jpg": {
+        "spec_within": 0.9784936944643656,
+        "avg_within": 0.9996291995048523
+      },
+      "image03888.jpg": {
+        "spec_within": 0.9753544926643372,
+        "avg_within": 0.9994739452997844
+      },
+      "image03907.jpg": {
+        "spec_within": 0.9766975124677022,
+        "avg_within": 0.9993930737177531
+      },
+      "image03936.jpg": {
+        "spec_within": 0.9836665232976277,
+        "avg_within": 0.9996584773063659
+      },
+      "image03958.jpg": {
+        "spec_within": 0.9673203070958455,
+        "avg_within": 0.9992246508598328
+      },
+      "image03974.jpg": {
+        "spec_within": 0.9751654227574666,
+        "avg_within": 0.9995061993598938
+      },
+      "image04004.jpg": {
+        "spec_within": 0.9603135625521342,
+        "avg_within": 0.9989323099454244
+      },
+      "image04036.jpg": {
+        "spec_within": 0.9754935264587402,
+        "avg_within": 0.9995728810628255
+      },
+      "image04088.jpg": {
+        "spec_within": 0.9352561513582865,
+        "avg_within": 0.9985445578893025
+      },
+      "image04114.jpg": {
+        "spec_within": 0.9613211154937744,
+        "avg_within": 0.999175751209259
+      },
+      "image04151.jpg": {
+        "spec_within": 0.9723107814788818,
+        "avg_within": 0.9994030396143595
+      },
+      "image04182.jpg": {
+        "spec_within": 0.9744607448577881,
+        "avg_within": 0.999277945359548
+      },
+      "image04207.jpg": {
+        "spec_within": 0.9572937409083049,
+        "avg_within": 0.9991570154825846
+      },
+      "image04229.jpg": {
+        "spec_within": 0.9568742593129476,
+        "avg_within": 0.998785404364268
+      },
+      "image04244.jpg": {
+        "spec_within": 0.9603298465410869,
+        "avg_within": 0.9989598472913106
+      },
+      "image04271.jpg": {
+        "spec_within": 0.892454735438029,
+        "avg_within": 0.9975159724553426
+      },
+      "image04285.jpg": {
+        "spec_within": 0.9800614198048909,
+        "avg_within": 0.9995198090871175
+      },
+      "image04301.jpg": {
+        "spec_within": 0.9769114176432292,
+        "avg_within": 0.9991654237111409
+      },
+      "image04324.jpg": {
+        "spec_within": 0.9494228760401408,
+        "avg_within": 0.9987078825632731
+      },
+      "image04344.jpg": {
+        "spec_within": 0.9772840936978658,
+        "avg_within": 0.9995869914690654
+      }
+    },
+    "L8-10": {
+      "image00002.jpg": {
+        "spec_within": 0.775105349222819,
+        "avg_within": 0.9831722656885783
+      },
+      "image00022.jpg": {
+        "spec_within": 0.8186425844828288,
+        "avg_within": 0.9855455716451009
+      },
+      "image00042.jpg": {
+        "spec_within": 0.852513055006663,
+        "avg_within": 0.9895939310391744
+      },
+      "image00052.jpg": {
+        "spec_within": 0.8732598741849263,
+        "avg_within": 0.990440285205841
+      },
+      "image00062.jpg": {
+        "spec_within": 0.8640580534934997,
+        "avg_within": 0.9886903723080953
+      },
+      "image00076.jpg": {
+        "spec_within": 0.8414888262748719,
+        "avg_within": 0.9896440823872884
+      },
+      "image00088.jpg": {
+        "spec_within": 0.8643473982810974,
+        "avg_within": 0.9834897319475809
+      },
+      "image00101.jpg": {
+        "spec_within": 0.8626634200414022,
+        "avg_within": 0.989746872584025
+      },
+      "image00122.jpg": {
+        "spec_within": 0.8806917031606039,
+        "avg_within": 0.9897930264472962
+      },
+      "image00138.jpg": {
+        "spec_within": 0.8162252982457479,
+        "avg_within": 0.9767955263455709
+      },
+      "image00159.jpg": {
+        "spec_within": 0.8387173175811767,
+        "avg_within": 0.9927599946657817
+      },
+      "image00176.jpg": {
+        "spec_within": 0.8596512715021769,
+        "avg_within": 0.9853142857551574
+      },
+      "image00197.jpg": {
+        "spec_within": 0.8510434031486511,
+        "avg_within": 0.9929612080256144
+      },
+      "image00211.jpg": {
+        "spec_within": 0.8770002126693726,
+        "avg_within": 0.9879495620727539
+      },
+      "image00227.jpg": {
+        "spec_within": 0.8962433258692424,
+        "avg_within": 0.9817970037460327
+      },
+      "image00251.jpg": {
+        "spec_within": 0.8260697444279989,
+        "avg_within": 0.9776392539342245
+      },
+      "image00268.jpg": {
+        "spec_within": 0.8596354603767395,
+        "avg_within": 0.9911674300829569
+      },
+      "image00283.jpg": {
+        "spec_within": 0.8582895358403524,
+        "avg_within": 0.9890658100446065
+      },
+      "image00299.jpg": {
+        "spec_within": 0.8903180162111918,
+        "avg_within": 0.9900319695472717
+      },
+      "image00318.jpg": {
+        "spec_within": 0.8138322631518046,
+        "avg_within": 0.9890201290448507
+      },
+      "image00330.jpg": {
+        "spec_within": 0.8556384166081746,
+        "avg_within": 0.9899113893508911
+      },
+      "image00345.jpg": {
+        "spec_within": 0.8943425218264262,
+        "avg_within": 0.9942741433779398
+      },
+      "image00359.jpg": {
+        "spec_within": 0.8666990558306377,
+        "avg_within": 0.9945249478022258
+      },
+      "image00376.jpg": {
+        "spec_within": 0.8509901762008667,
+        "avg_within": 0.9822527686754863
+      },
+      "image00397.jpg": {
+        "spec_within": 0.8409603079160054,
+        "avg_within": 0.9867240985234579
+      },
+      "image00419.jpg": {
+        "spec_within": 0.8960576971371969,
+        "avg_within": 0.9864099343617757
+      },
+      "image00433.jpg": {
+        "spec_within": 0.7671189308166504,
+        "avg_within": 0.9833028197288514
+      },
+      "image00445.jpg": {
+        "spec_within": 0.7979029734929403,
+        "avg_within": 0.9868636767069499
+      },
+      "image00466.jpg": {
+        "spec_within": 0.8068509737650553,
+        "avg_within": 0.9813622395197551
+      },
+      "image00481.jpg": {
+        "spec_within": 0.8542032718658448,
+        "avg_within": 0.9926861802736918
+      },
+      "image00497.jpg": {
+        "spec_within": 0.818845796585083,
+        "avg_within": 0.9860771377881368
+      },
+      "image00512.jpg": {
+        "spec_within": 0.8627774477005005,
+        "avg_within": 0.9797533830006917
+      },
+      "image00527.jpg": {
+        "spec_within": 0.8590227762858073,
+        "avg_within": 0.9890817443529765
+      },
+      "image00544.jpg": {
+        "spec_within": 0.8083814382553101,
+        "avg_within": 0.9899522225062053
+      },
+      "image00557.jpg": {
+        "spec_within": 0.7869832217693329,
+        "avg_within": 0.9810842871665955
+      },
+      "image00571.jpg": {
+        "spec_within": 0.8620021899541219,
+        "avg_within": 0.9900165319442749
+      },
+      "image00591.jpg": {
+        "spec_within": 0.8228974600632986,
+        "avg_within": 0.9881268501281738
+      },
+      "image00606.jpg": {
+        "spec_within": 0.8881884018580118,
+        "avg_within": 0.9937667846679688
+      },
+      "image00617.jpg": {
+        "spec_within": 0.8325293858846029,
+        "avg_within": 0.9885372996330262
+      },
+      "image00642.jpg": {
+        "spec_within": 0.8898367722829182,
+        "avg_within": 0.9927413582801818
+      },
+      "image00665.jpg": {
+        "spec_within": 0.8595260143280029,
+        "avg_within": 0.9933738748232523
+      },
+      "image00684.jpg": {
+        "spec_within": 0.8563639044761657,
+        "avg_within": 0.9895554542541504
+      },
+      "image00696.jpg": {
+        "spec_within": 0.8468451340993245,
+        "avg_within": 0.9888766090075175
+      },
+      "image00719.jpg": {
+        "spec_within": 0.8781951626141866,
+        "avg_within": 0.987025010585785
+      },
+      "image00731.jpg": {
+        "spec_within": 0.8867991328239441,
+        "avg_within": 0.9880974411964416
+      },
+      "image00748.jpg": {
+        "spec_within": 0.8116205135981241,
+        "avg_within": 0.9836753924687703
+      },
+      "image00774.jpg": {
+        "spec_within": 0.8602078080177307,
+        "avg_within": 0.9903342008590699
+      },
+      "image00785.jpg": {
+        "spec_within": 0.7936664720376333,
+        "avg_within": 0.988508117198944
+      },
+      "image00802.jpg": {
+        "spec_within": 0.8753653208414713,
+        "avg_within": 0.992334242661794
+      },
+      "image00824.jpg": {
+        "spec_within": 0.8426442901293437,
+        "avg_within": 0.9799676577250163
+      },
+      "image00839.jpg": {
+        "spec_within": 0.8810849746068319,
+        "avg_within": 0.9935707728068034
+      },
+      "image00850.jpg": {
+        "spec_within": 0.8361459891001384,
+        "avg_within": 0.9860961238543192
+      },
+      "image00872.jpg": {
+        "spec_within": 0.8837722460428874,
+        "avg_within": 0.9909429788589478
+      },
+      "image00894.jpg": {
+        "spec_within": 0.8763076543807984,
+        "avg_within": 0.9925020813941956
+      },
+      "image00908.jpg": {
+        "spec_within": 0.8516608635584514,
+        "avg_within": 0.9876353899637859
+      },
+      "image00931.jpg": {
+        "spec_within": 0.8105950951576233,
+        "avg_within": 0.9871690511703491
+      },
+      "image00943.jpg": {
+        "spec_within": 0.8611100792884827,
+        "avg_within": 0.9923400521278382
+      },
+      "image00963.jpg": {
+        "spec_within": 0.8639693657557169,
+        "avg_within": 0.986436680952708
+      },
+      "image00978.jpg": {
+        "spec_within": 0.8478537956873576,
+        "avg_within": 0.9913680831591288
+      },
+      "image00998.jpg": {
+        "spec_within": 0.8276062488555909,
+        "avg_within": 0.9888795773188274
+      },
+      "image01014.jpg": {
+        "spec_within": 0.8894005616505941,
+        "avg_within": 0.9832055966059366
+      },
+      "image01034.jpg": {
+        "spec_within": 0.8673165837923685,
+        "avg_within": 0.9874318718910218
+      },
+      "image01058.jpg": {
+        "spec_within": 0.8461485107739767,
+        "avg_within": 0.989932115872701
+      },
+      "image01071.jpg": {
+        "spec_within": 0.8847431063652038,
+        "avg_within": 0.990841809908549
+      },
+      "image01089.jpg": {
+        "spec_within": 0.8377542336781819,
+        "avg_within": 0.9899585008621216
+      },
+      "image01109.jpg": {
+        "spec_within": 0.8156906048456828,
+        "avg_within": 0.9886231621106466
+      },
+      "image01126.jpg": {
+        "spec_within": 0.8644564469655355,
+        "avg_within": 0.9859657843907674
+      },
+      "image01147.jpg": {
+        "spec_within": 0.8868530511856079,
+        "avg_within": 0.9907971700032552
+      },
+      "image01168.jpg": {
+        "spec_within": 0.8652258555094401,
+        "avg_within": 0.9918678681055705
+      },
+      "image01189.jpg": {
+        "spec_within": 0.82379043896993,
+        "avg_within": 0.9905617078145345
+      },
+      "image01210.jpg": {
+        "spec_within": 0.7309768358866374,
+        "avg_within": 0.9824276248613993
+      },
+      "image01233.jpg": {
+        "spec_within": 0.8621989369392395,
+        "avg_within": 0.9915226380030314
+      },
+      "image01260.jpg": {
+        "spec_within": 0.8912659804026286,
+        "avg_within": 0.9952375809351603
+      },
+      "image01286.jpg": {
+        "spec_within": 0.8294227043787639,
+        "avg_within": 0.9772898236910502
+      },
+      "image01306.jpg": {
+        "spec_within": 0.8326770106951396,
+        "avg_within": 0.9840193549791972
+      },
+      "image01323.jpg": {
+        "spec_within": 0.8320957064628601,
+        "avg_within": 0.9759885311126709
+      },
+      "image01346.jpg": {
+        "spec_within": 0.8956831097602844,
+        "avg_within": 0.9948635578155518
+      },
+      "image01377.jpg": {
+        "spec_within": 0.845336651802063,
+        "avg_within": 0.9871488571166992
+      },
+      "image01404.jpg": {
+        "spec_within": 0.8988043785095214,
+        "avg_within": 0.9943372050921122
+      },
+      "image01431.jpg": {
+        "spec_within": 0.9161904136339823,
+        "avg_within": 0.9941660443941752
+      },
+      "image01466.jpg": {
+        "spec_within": 0.8054285208384196,
+        "avg_within": 0.9883859117825826
+      },
+      "image01477.jpg": {
+        "spec_within": 0.8518391609191894,
+        "avg_within": 0.9846081296602885
+      },
+      "image01506.jpg": {
+        "spec_within": 0.7520533899466196,
+        "avg_within": 0.976054334640503
+      },
+      "image01565.jpg": {
+        "spec_within": 0.9114370624224345,
+        "avg_within": 0.9920901616414388
+      },
+      "image01591.jpg": {
+        "spec_within": 0.8766065955162048,
+        "avg_within": 0.9875234802563985
+      },
+      "image01622.jpg": {
+        "spec_within": 0.8953564206759135,
+        "avg_within": 0.9925550818443298
+      },
+      "image01642.jpg": {
+        "spec_within": 0.7416272362073263,
+        "avg_within": 0.9802531599998474
+      },
+      "image01657.jpg": {
+        "spec_within": 0.873144261042277,
+        "avg_within": 0.9837786277135213
+      },
+      "image01688.jpg": {
+        "spec_within": 0.8650324424107869,
+        "avg_within": 0.9920520901679992
+      },
+      "image01717.jpg": {
+        "spec_within": 0.9009412129720052,
+        "avg_within": 0.9914599219957988
+      },
+      "image01749.jpg": {
+        "spec_within": 0.8527990500132243,
+        "avg_within": 0.9834622542063395
+      },
+      "image01775.jpg": {
+        "spec_within": 0.8678798158963521,
+        "avg_within": 0.9881149768829346
+      },
+      "image01791.jpg": {
+        "spec_within": 0.7934247175852458,
+        "avg_within": 0.9727435270945232
+      },
+      "image01811.jpg": {
+        "spec_within": 0.8818756381670634,
+        "avg_within": 0.9912836829821269
+      },
+      "image01829.jpg": {
+        "spec_within": 0.8515272855758667,
+        "avg_within": 0.9869800647099812
+      },
+      "image01850.jpg": {
+        "spec_within": 0.8981184800465901,
+        "avg_within": 0.9869027853012085
+      },
+      "image01870.jpg": {
+        "spec_within": 0.8140264372030894,
+        "avg_within": 0.9772231380144755
+      },
+      "image01900.jpg": {
+        "spec_within": 0.7982119878133138,
+        "avg_within": 0.9790688792864481
+      },
+      "image01927.jpg": {
+        "spec_within": 0.8520567655563355,
+        "avg_within": 0.9903744180997213
+      },
+      "image01944.jpg": {
+        "spec_within": 0.8434747695922852,
+        "avg_within": 0.9847985148429871
+      },
+      "image01973.jpg": {
+        "spec_within": 0.8520571827888489,
+        "avg_within": 0.9906377633412679
+      },
+      "image01989.jpg": {
+        "spec_within": 0.8252400000890096,
+        "avg_within": 0.9906738638877869
+      },
+      "image02016.jpg": {
+        "spec_within": 0.8848433891932169,
+        "avg_within": 0.9928589502970377
+      },
+      "image02032.jpg": {
+        "spec_within": 0.8595414519309997,
+        "avg_within": 0.9874079942703247
+      },
+      "image02046.jpg": {
+        "spec_within": 0.8527375340461731,
+        "avg_within": 0.9896759748458862
+      },
+      "image02064.jpg": {
+        "spec_within": 0.849000068505605,
+        "avg_within": 0.9822346568107605
+      },
+      "image02083.jpg": {
+        "spec_within": 0.8451267719268799,
+        "avg_within": 0.9915693759918213
+      },
+      "image02116.jpg": {
+        "spec_within": 0.8303330063819885,
+        "avg_within": 0.9847523848215739
+      },
+      "image02138.jpg": {
+        "spec_within": 0.859382422765096,
+        "avg_within": 0.9907042702039083
+      },
+      "image02166.jpg": {
+        "spec_within": 0.7758502701918284,
+        "avg_within": 0.9682582020759583
+      },
+      "image02196.jpg": {
+        "spec_within": 0.7819101889928182,
+        "avg_within": 0.9767749865849813
+      },
+      "image02213.jpg": {
+        "spec_within": 0.8284689664840699,
+        "avg_within": 0.9903251091639201
+      },
+      "image02242.jpg": {
+        "spec_within": 0.854141906897227,
+        "avg_within": 0.9859233617782592
+      },
+      "image02256.jpg": {
+        "spec_within": 0.867099138100942,
+        "avg_within": 0.969459060827891
+      },
+      "image02277.jpg": {
+        "spec_within": 0.8490808089574178,
+        "avg_within": 0.9891477902730306
+      },
+      "image02295.jpg": {
+        "spec_within": 0.8839943091074626,
+        "avg_within": 0.9886618336041768
+      },
+      "image02319.jpg": {
+        "spec_within": 0.8572781920433045,
+        "avg_within": 0.9896888653437297
+      },
+      "image02346.jpg": {
+        "spec_within": 0.8827678203582764,
+        "avg_within": 0.9891044338544209
+      },
+      "image02373.jpg": {
+        "spec_within": 0.8671779751777648,
+        "avg_within": 0.983755624294281
+      },
+      "image02406.jpg": {
+        "spec_within": 0.8731681267420451,
+        "avg_within": 0.9905799428621928
+      },
+      "image02424.jpg": {
+        "spec_within": 0.8452143828074138,
+        "avg_within": 0.9892980615297954
+      },
+      "image02455.jpg": {
+        "spec_within": 0.866497528553009,
+        "avg_within": 0.98991938829422
+      },
+      "image02488.jpg": {
+        "spec_within": 0.8470757524172465,
+        "avg_within": 0.9864390254020691
+      },
+      "image02530.jpg": {
+        "spec_within": 0.7797364036242167,
+        "avg_within": 0.9794236898422242
+      },
+      "image02548.jpg": {
+        "spec_within": 0.8685932556788126,
+        "avg_within": 0.9902581135431926
+      },
+      "image02592.jpg": {
+        "spec_within": 0.8441479523976644,
+        "avg_within": 0.9881557504336039
+      },
+      "image02612.jpg": {
+        "spec_within": 0.7992241024971009,
+        "avg_within": 0.980621071656545
+      },
+      "image02630.jpg": {
+        "spec_within": 0.8541217645009359,
+        "avg_within": 0.9895637790362041
+      },
+      "image02646.jpg": {
+        "spec_within": 0.8977030237515767,
+        "avg_within": 0.9939432303110759
+      },
+      "image02673.jpg": {
+        "spec_within": 0.8083712081114451,
+        "avg_within": 0.970376185576121
+      },
+      "image02695.jpg": {
+        "spec_within": 0.8712106704711914,
+        "avg_within": 0.9910809199015299
+      },
+      "image02721.jpg": {
+        "spec_within": 0.8018291314442952,
+        "avg_within": 0.9710664947827657
+      },
+      "image02744.jpg": {
+        "spec_within": 0.8602614800135294,
+        "avg_within": 0.9926551024119059
+      },
+      "image02759.jpg": {
+        "spec_within": 0.8069246530532836,
+        "avg_within": 0.9853949268658956
+      },
+      "image02781.jpg": {
+        "spec_within": 0.8914509614308676,
+        "avg_within": 0.9897720535596212
+      },
+      "image02801.jpg": {
+        "spec_within": 0.8150941888491313,
+        "avg_within": 0.9865691343943278
+      },
+      "image02824.jpg": {
+        "spec_within": 0.8741121888160706,
+        "avg_within": 0.9887249350547791
+      },
+      "image02841.jpg": {
+        "spec_within": 0.8234129548072815,
+        "avg_within": 0.9874116023381551
+      },
+      "image02857.jpg": {
+        "spec_within": 0.8684249838193258,
+        "avg_within": 0.9848538915316264
+      },
+      "image02889.jpg": {
+        "spec_within": 0.7939807216326396,
+        "avg_within": 0.9810410539309183
+      },
+      "image02938.jpg": {
+        "spec_within": 0.805860819419225,
+        "avg_within": 0.9844232281049092
+      },
+      "image02959.jpg": {
+        "spec_within": 0.7522594471772511,
+        "avg_within": 0.9659785151481628
+      },
+      "image02989.jpg": {
+        "spec_within": 0.8372907916704814,
+        "avg_within": 0.9911449909210205
+      },
+      "image03009.jpg": {
+        "spec_within": 0.8714283347129822,
+        "avg_within": 0.9898210763931274
+      },
+      "image03021.jpg": {
+        "spec_within": 0.852530058224996,
+        "avg_within": 0.9880407214164734
+      },
+      "image03047.jpg": {
+        "spec_within": 0.8235243578751882,
+        "avg_within": 0.9874583880106608
+      },
+      "image03075.jpg": {
+        "spec_within": 0.7839007159074147,
+        "avg_within": 0.9711198131243388
+      },
+      "image03109.jpg": {
+        "spec_within": 0.8456910212834676,
+        "avg_within": 0.9893054087956746
+      },
+      "image03149.jpg": {
+        "spec_within": 0.8565677603085836,
+        "avg_within": 0.9871155937512716
+      },
+      "image03179.jpg": {
+        "spec_within": 0.8627222339312236,
+        "avg_within": 0.9930521806081136
+      },
+      "image03209.jpg": {
+        "spec_within": 0.8633432666460673,
+        "avg_within": 0.9887787659962972
+      },
+      "image03236.jpg": {
+        "spec_within": 0.8345263282457988,
+        "avg_within": 0.9900286833445231
+      },
+      "image03263.jpg": {
+        "spec_within": 0.8340531984965006,
+        "avg_within": 0.9831916888554891
+      },
+      "image03283.jpg": {
+        "spec_within": 0.8314763804276785,
+        "avg_within": 0.9784339070320129
+      },
+      "image03350.jpg": {
+        "spec_within": 0.8052401860555013,
+        "avg_within": 0.9873467644055685
+      },
+      "image03376.jpg": {
+        "spec_within": 0.8338924924532573,
+        "avg_within": 0.9909220655759176
+      },
+      "image03414.jpg": {
+        "spec_within": 0.8559840043385823,
+        "avg_within": 0.9938217123349508
+      },
+      "image03452.jpg": {
+        "spec_within": 0.7032925407091777,
+        "avg_within": 0.9711883624394735
+      },
+      "image03472.jpg": {
+        "spec_within": 0.8557863156000773,
+        "avg_within": 0.9921669483184814
+      },
+      "image03515.jpg": {
+        "spec_within": 0.9119894146919251,
+        "avg_within": 0.9943238457043966
+      },
+      "image03543.jpg": {
+        "spec_within": 0.8248558561007182,
+        "avg_within": 0.9861248572667439
+      },
+      "image03559.jpg": {
+        "spec_within": 0.8357157429059346,
+        "avg_within": 0.9832420388857523
+      },
+      "image03572.jpg": {
+        "spec_within": 0.8164992332458496,
+        "avg_within": 0.9842951178550721
+      },
+      "image03589.jpg": {
+        "spec_within": 0.8455213864644369,
+        "avg_within": 0.9857662876447042
+      },
+      "image03625.jpg": {
+        "spec_within": 0.9104021310806274,
+        "avg_within": 0.9953435182571411
+      },
+      "image03641.jpg": {
+        "spec_within": 0.8479395985603333,
+        "avg_within": 0.9937539418538411
+      },
+      "image03662.jpg": {
+        "spec_within": 0.8672758062680562,
+        "avg_within": 0.9902766227722168
+      },
+      "image03673.jpg": {
+        "spec_within": 0.8828485131263732,
+        "avg_within": 0.9914902011553447
+      },
+      "image03703.jpg": {
+        "spec_within": 0.9083222389221192,
+        "avg_within": 0.9933062434196472
+      },
+      "image03715.jpg": {
+        "spec_within": 0.8716532707214355,
+        "avg_within": 0.9913148125012715
+      },
+      "image03727.jpg": {
+        "spec_within": 0.8807711442311604,
+        "avg_within": 0.9924641768137614
+      },
+      "image03740.jpg": {
+        "spec_within": 0.8515599449475606,
+        "avg_within": 0.9919433156649272
+      },
+      "image03752.jpg": {
+        "spec_within": 0.8453167716662089,
+        "avg_within": 0.9903029918670654
+      },
+      "image03765.jpg": {
+        "spec_within": 0.8367588122685751,
+        "avg_within": 0.9890330791473388
+      },
+      "image03778.jpg": {
+        "spec_within": 0.8693166335423788,
+        "avg_within": 0.9890104969342549
+      },
+      "image03788.jpg": {
+        "spec_within": 0.8904146075248718,
+        "avg_within": 0.99202880859375
+      },
+      "image03800.jpg": {
+        "spec_within": 0.8729177713394165,
+        "avg_within": 0.9915412863095602
+      },
+      "image03812.jpg": {
+        "spec_within": 0.8965206066767375,
+        "avg_within": 0.9915046374003093
+      },
+      "image03826.jpg": {
+        "spec_within": 0.8977059443791707,
+        "avg_within": 0.9921709616978963
+      },
+      "image03842.jpg": {
+        "spec_within": 0.8697679877281189,
+        "avg_within": 0.9939162611961365
+      },
+      "image03869.jpg": {
+        "spec_within": 0.8877129356066386,
+        "avg_within": 0.9936901489893596
+      },
+      "image03888.jpg": {
+        "spec_within": 0.8467956980069479,
+        "avg_within": 0.9903437614440918
+      },
+      "image03907.jpg": {
+        "spec_within": 0.907359238465627,
+        "avg_within": 0.9946803609530132
+      },
+      "image03936.jpg": {
+        "spec_within": 0.8842034538586935,
+        "avg_within": 0.9922340591748555
+      },
+      "image03958.jpg": {
+        "spec_within": 0.8346018711725871,
+        "avg_within": 0.9877251545588176
+      },
+      "image03974.jpg": {
+        "spec_within": 0.9127524813016256,
+        "avg_within": 0.991544497013092
+      },
+      "image04004.jpg": {
+        "spec_within": 0.8304684281349182,
+        "avg_within": 0.9844589312871297
+      },
+      "image04036.jpg": {
+        "spec_within": 0.8741350889205932,
+        "avg_within": 0.9928008993466695
+      },
+      "image04088.jpg": {
+        "spec_within": 0.8673803726832072,
+        "avg_within": 0.9886967142422994
+      },
+      "image04114.jpg": {
+        "spec_within": 0.800099539756775,
+        "avg_within": 0.9763349731763203
+      },
+      "image04151.jpg": {
+        "spec_within": 0.8599686940511068,
+        "avg_within": 0.9925091743469239
+      },
+      "image04182.jpg": {
+        "spec_within": 0.8760040958722433,
+        "avg_within": 0.9920072078704834
+      },
+      "image04207.jpg": {
+        "spec_within": 0.8356763164202372,
+        "avg_within": 0.9875080585479736
+      },
+      "image04229.jpg": {
+        "spec_within": 0.8316889107227325,
+        "avg_within": 0.9802081068356832
+      },
+      "image04244.jpg": {
+        "spec_within": 0.8615178386370341,
+        "avg_within": 0.9899978041648865
+      },
+      "image04271.jpg": {
+        "spec_within": 0.854531459013621,
+        "avg_within": 0.9831160068511963
+      },
+      "image04285.jpg": {
+        "spec_within": 0.8155655364195505,
+        "avg_within": 0.9877115646998088
+      },
+      "image04301.jpg": {
+        "spec_within": 0.8493555108706157,
+        "avg_within": 0.9875370105107625
+      },
+      "image04324.jpg": {
+        "spec_within": 0.8356982231140136,
+        "avg_within": 0.9852004885673523
+      },
+      "image04344.jpg": {
+        "spec_within": 0.7953102509180705,
+        "avg_within": 0.9872026205062866
+      }
+    },
+    "L18-20": {
+      "image00002.jpg": {
+        "spec_within": 0.3413357146084309,
+        "avg_within": 0.8644663651784261
+      },
+      "image00022.jpg": {
+        "spec_within": 0.5188100655873616,
+        "avg_within": 0.9291843295097351
+      },
+      "image00042.jpg": {
+        "spec_within": 0.5915039281050364,
+        "avg_within": 0.9440393408139547
+      },
+      "image00052.jpg": {
+        "spec_within": 0.6199813425540924,
+        "avg_within": 0.9411332249641419
+      },
+      "image00062.jpg": {
+        "spec_within": 0.611606482664744,
+        "avg_within": 0.9387007633845011
+      },
+      "image00076.jpg": {
+        "spec_within": 0.6601188838481903,
+        "avg_within": 0.9517068306605021
+      },
+      "image00088.jpg": {
+        "spec_within": 0.6760621805985768,
+        "avg_within": 0.9420010248819987
+      },
+      "image00101.jpg": {
+        "spec_within": 0.6614124576250712,
+        "avg_within": 0.9377002239227294
+      },
+      "image00122.jpg": {
+        "spec_within": 0.562588612238566,
+        "avg_within": 0.9211886088053386
+      },
+      "image00138.jpg": {
+        "spec_within": 0.6598615090052287,
+        "avg_within": 0.9132985353469849
+      },
+      "image00159.jpg": {
+        "spec_within": 0.3878295083840688,
+        "avg_within": 0.8869296868642171
+      },
+      "image00176.jpg": {
+        "spec_within": 0.6682513197263081,
+        "avg_within": 0.9314130783081055
+      },
+      "image00197.jpg": {
+        "spec_within": 0.5569006780783335,
+        "avg_within": 0.9331668972969055
+      },
+      "image00211.jpg": {
+        "spec_within": 0.7413551350434621,
+        "avg_within": 0.9482738852500916
+      },
+      "image00227.jpg": {
+        "spec_within": 0.3491271601368984,
+        "avg_within": 0.8303512295087179
+      },
+      "image00251.jpg": {
+        "spec_within": 0.5387803634007772,
+        "avg_within": 0.9036466042200725
+      },
+      "image00268.jpg": {
+        "spec_within": 0.4534796138604482,
+        "avg_within": 0.902523152033488
+      },
+      "image00283.jpg": {
+        "spec_within": 0.565160475174586,
+        "avg_within": 0.9326659719149272
+      },
+      "image00299.jpg": {
+        "spec_within": 0.6131503522396088,
+        "avg_within": 0.9241679787635804
+      },
+      "image00318.jpg": {
+        "spec_within": 0.5134451339642206,
+        "avg_within": 0.9239214261372884
+      },
+      "image00330.jpg": {
+        "spec_within": 0.7044602453708648,
+        "avg_within": 0.9606559832890829
+      },
+      "image00345.jpg": {
+        "spec_within": 0.5719859937826792,
+        "avg_within": 0.9112888177235922
+      },
+      "image00359.jpg": {
+        "spec_within": 0.6298611243565877,
+        "avg_within": 0.9535917282104492
+      },
+      "image00376.jpg": {
+        "spec_within": 0.5152180612087249,
+        "avg_within": 0.9091015895207722
+      },
+      "image00397.jpg": {
+        "spec_within": 0.6496415893236797,
+        "avg_within": 0.9365052421887715
+      },
+      "image00419.jpg": {
+        "spec_within": 0.5628422160943349,
+        "avg_within": 0.885196848710378
+      },
+      "image00433.jpg": {
+        "spec_within": 0.43562561869621275,
+        "avg_within": 0.9218753298123677
+      },
+      "image00445.jpg": {
+        "spec_within": 0.5253296136856079,
+        "avg_within": 0.9062981565793355
+      },
+      "image00466.jpg": {
+        "spec_within": 0.4350800683101018,
+        "avg_within": 0.8929115533828735
+      },
+      "image00481.jpg": {
+        "spec_within": 0.45074805667003,
+        "avg_within": 0.8568915685017904
+      },
+      "image00497.jpg": {
+        "spec_within": 0.49551419019699094,
+        "avg_within": 0.9185121695200602
+      },
+      "image00512.jpg": {
+        "spec_within": 0.38327596882979076,
+        "avg_within": 0.8332980632781982
+      },
+      "image00527.jpg": {
+        "spec_within": 0.6357424020767212,
+        "avg_within": 0.9299829999605814
+      },
+      "image00544.jpg": {
+        "spec_within": 0.2850073017179966,
+        "avg_within": 0.8027371684710185
+      },
+      "image00557.jpg": {
+        "spec_within": 0.5428516149520874,
+        "avg_within": 0.9083734353383383
+      },
+      "image00571.jpg": {
+        "spec_within": 0.4515589858094851,
+        "avg_within": 0.8890727082888286
+      },
+      "image00591.jpg": {
+        "spec_within": 0.6544950842857361,
+        "avg_within": 0.9493124485015869
+      },
+      "image00606.jpg": {
+        "spec_within": 0.6607575635115306,
+        "avg_within": 0.9523784756660462
+      },
+      "image00617.jpg": {
+        "spec_within": 0.40118184983730315,
+        "avg_within": 0.8703072985013326
+      },
+      "image00642.jpg": {
+        "spec_within": 0.6860865592956543,
+        "avg_within": 0.9502084334691365
+      },
+      "image00665.jpg": {
+        "spec_within": 0.6278142472108205,
+        "avg_within": 0.9488865494728088
+      },
+      "image00684.jpg": {
+        "spec_within": 0.5597567578156789,
+        "avg_within": 0.9328997294108073
+      },
+      "image00696.jpg": {
+        "spec_within": 0.6989573021729787,
+        "avg_within": 0.9649617592493693
+      },
+      "image00719.jpg": {
+        "spec_within": 0.5964434723059336,
+        "avg_within": 0.9338358918825785
+      },
+      "image00731.jpg": {
+        "spec_within": 0.707780945301056,
+        "avg_within": 0.9395891189575195
+      },
+      "image00748.jpg": {
+        "spec_within": 0.41564046988884606,
+        "avg_within": 0.8885207096735637
+      },
+      "image00774.jpg": {
+        "spec_within": 0.564911291996638,
+        "avg_within": 0.9134202718734741
+      },
+      "image00785.jpg": {
+        "spec_within": 0.500398936867714,
+        "avg_within": 0.9092852751413981
+      },
+      "image00802.jpg": {
+        "spec_within": 0.6861234128475189,
+        "avg_within": 0.9499654054641724
+      },
+      "image00824.jpg": {
+        "spec_within": 0.5621950666109721,
+        "avg_within": 0.8969456156094869
+      },
+      "image00839.jpg": {
+        "spec_within": 0.6824392199516296,
+        "avg_within": 0.9493356108665466
+      },
+      "image00850.jpg": {
+        "spec_within": 0.5785868128140768,
+        "avg_within": 0.9102261503537495
+      },
+      "image00872.jpg": {
+        "spec_within": 0.62928959329923,
+        "avg_within": 0.9486385265986125
+      },
+      "image00894.jpg": {
+        "spec_within": 0.5956884841124217,
+        "avg_within": 0.9318487087885539
+      },
+      "image00908.jpg": {
+        "spec_within": 0.5561909914016724,
+        "avg_within": 0.9227878491083781
+      },
+      "image00931.jpg": {
+        "spec_within": 0.5458264738321305,
+        "avg_within": 0.9317542672157287
+      },
+      "image00943.jpg": {
+        "spec_within": 0.6444365620613098,
+        "avg_within": 0.9483920534451803
+      },
+      "image00963.jpg": {
+        "spec_within": 0.5287160565455754,
+        "avg_within": 0.8936473170916239
+      },
+      "image00978.jpg": {
+        "spec_within": 0.6319853762785593,
+        "avg_within": 0.9401002764701843
+      },
+      "image00998.jpg": {
+        "spec_within": 0.5262083182732264,
+        "avg_within": 0.9120224555333455
+      },
+      "image01014.jpg": {
+        "spec_within": 0.5383387565612793,
+        "avg_within": 0.897083580493927
+      },
+      "image01034.jpg": {
+        "spec_within": 0.5756572663784028,
+        "avg_within": 0.9370278278986613
+      },
+      "image01058.jpg": {
+        "spec_within": 0.6069914539655049,
+        "avg_within": 0.9409135182698568
+      },
+      "image01071.jpg": {
+        "spec_within": 0.636865629752477,
+        "avg_within": 0.9441143631935119
+      },
+      "image01089.jpg": {
+        "spec_within": 0.6503559907277425,
+        "avg_within": 0.950317903359731
+      },
+      "image01109.jpg": {
+        "spec_within": 0.6016962726910909,
+        "avg_within": 0.9375498970349629
+      },
+      "image01126.jpg": {
+        "spec_within": 0.6109966138998667,
+        "avg_within": 0.9361178557078044
+      },
+      "image01147.jpg": {
+        "spec_within": 0.6693578004837036,
+        "avg_within": 0.9452266931533814
+      },
+      "image01168.jpg": {
+        "spec_within": 0.49130393912394843,
+        "avg_within": 0.9013082146644592
+      },
+      "image01189.jpg": {
+        "spec_within": 0.5598666727542877,
+        "avg_within": 0.935563309987386
+      },
+      "image01210.jpg": {
+        "spec_within": 0.4658614794413249,
+        "avg_within": 0.894263501962026
+      },
+      "image01233.jpg": {
+        "spec_within": 0.5390832702318827,
+        "avg_within": 0.9043416698773702
+      },
+      "image01260.jpg": {
+        "spec_within": 0.6988114436467489,
+        "avg_within": 0.960066270828247
+      },
+      "image01286.jpg": {
+        "spec_within": 0.23560762281219164,
+        "avg_within": 0.7837749044100444
+      },
+      "image01306.jpg": {
+        "spec_within": 0.5883148590723674,
+        "avg_within": 0.9225335399309794
+      },
+      "image01323.jpg": {
+        "spec_within": 0.4302768011887868,
+        "avg_within": 0.8687072157859802
+      },
+      "image01346.jpg": {
+        "spec_within": 0.6266314387321472,
+        "avg_within": 0.9475306113560994
+      },
+      "image01377.jpg": {
+        "spec_within": 0.5471305996179581,
+        "avg_within": 0.9277028401692708
+      },
+      "image01404.jpg": {
+        "spec_within": 0.5900737941265106,
+        "avg_within": 0.9276978850364686
+      },
+      "image01431.jpg": {
+        "spec_within": 0.5944059193134308,
+        "avg_within": 0.9437122027079264
+      },
+      "image01466.jpg": {
+        "spec_within": 0.4987139880657196,
+        "avg_within": 0.9085524956385295
+      },
+      "image01477.jpg": {
+        "spec_within": 0.509040275712808,
+        "avg_within": 0.8732701659202575
+      },
+      "image01506.jpg": {
+        "spec_within": 0.5324399173259735,
+        "avg_within": 0.9010987838109334
+      },
+      "image01565.jpg": {
+        "spec_within": 0.5724034051100413,
+        "avg_within": 0.9351491649945577
+      },
+      "image01591.jpg": {
+        "spec_within": 0.4975320239861806,
+        "avg_within": 0.899221142133077
+      },
+      "image01622.jpg": {
+        "spec_within": 0.4823097825050354,
+        "avg_within": 0.9102042039235433
+      },
+      "image01642.jpg": {
+        "spec_within": 0.5232889950275421,
+        "avg_within": 0.9094244480133057
+      },
+      "image01657.jpg": {
+        "spec_within": 0.5604921877384186,
+        "avg_within": 0.9354193528493245
+      },
+      "image01688.jpg": {
+        "spec_within": 0.5910927633444468,
+        "avg_within": 0.9021172285079956
+      },
+      "image01717.jpg": {
+        "spec_within": 0.6087048252423605,
+        "avg_within": 0.9115658760070801
+      },
+      "image01749.jpg": {
+        "spec_within": 0.7121610522270203,
+        "avg_within": 0.9561182141304017
+      },
+      "image01775.jpg": {
+        "spec_within": 0.44073822995026907,
+        "avg_within": 0.8994263291358948
+      },
+      "image01791.jpg": {
+        "spec_within": 0.512827804684639,
+        "avg_within": 0.899908971786499
+      },
+      "image01811.jpg": {
+        "spec_within": 0.6447936614354451,
+        "avg_within": 0.9642895142237345
+      },
+      "image01829.jpg": {
+        "spec_within": 0.626788341999054,
+        "avg_within": 0.9471118013064067
+      },
+      "image01850.jpg": {
+        "spec_within": 0.633828592300415,
+        "avg_within": 0.9455363670984904
+      },
+      "image01870.jpg": {
+        "spec_within": 0.5612424751122792,
+        "avg_within": 0.9289397716522216
+      },
+      "image01900.jpg": {
+        "spec_within": 0.54714468618234,
+        "avg_within": 0.9469156424204509
+      },
+      "image01927.jpg": {
+        "spec_within": 0.5384143789609274,
+        "avg_within": 0.9325803637504577
+      },
+      "image01944.jpg": {
+        "spec_within": 0.6979345122973124,
+        "avg_within": 0.9476891001065572
+      },
+      "image01973.jpg": {
+        "spec_within": 0.6650943636894227,
+        "avg_within": 0.9542918801307678
+      },
+      "image01989.jpg": {
+        "spec_within": 0.5735743403434753,
+        "avg_within": 0.9333418726921081
+      },
+      "image02016.jpg": {
+        "spec_within": 0.6968241016070048,
+        "avg_within": 0.9586196064949035
+      },
+      "image02032.jpg": {
+        "spec_within": 0.5358870963255564,
+        "avg_within": 0.9160693605740865
+      },
+      "image02046.jpg": {
+        "spec_within": 0.6417406896750132,
+        "avg_within": 0.9454368154207865
+      },
+      "image02064.jpg": {
+        "spec_within": 0.45133698880672457,
+        "avg_within": 0.9109572966893514
+      },
+      "image02083.jpg": {
+        "spec_within": 0.802572758992513,
+        "avg_within": 0.973838730653127
+      },
+      "image02116.jpg": {
+        "spec_within": 0.5794027209281921,
+        "avg_within": 0.9251732587814331
+      },
+      "image02138.jpg": {
+        "spec_within": 0.3707042892773946,
+        "avg_within": 0.9048659483591716
+      },
+      "image02166.jpg": {
+        "spec_within": 0.46239367028077444,
+        "avg_within": 0.9181295911471049
+      },
+      "image02196.jpg": {
+        "spec_within": 0.5259665111700694,
+        "avg_within": 0.8605515042940776
+      },
+      "image02213.jpg": {
+        "spec_within": 0.5659907658894857,
+        "avg_within": 0.9424178163210551
+      },
+      "image02242.jpg": {
+        "spec_within": 0.7041028738021851,
+        "avg_within": 0.9537549614906311
+      },
+      "image02256.jpg": {
+        "spec_within": 0.41470049420992533,
+        "avg_within": 0.8332594354947408
+      },
+      "image02277.jpg": {
+        "spec_within": 0.6651084204514821,
+        "avg_within": 0.937262765566508
+      },
+      "image02295.jpg": {
+        "spec_within": 0.593239821990331,
+        "avg_within": 0.9483499169349671
+      },
+      "image02319.jpg": {
+        "spec_within": 0.6862488249937694,
+        "avg_within": 0.959755806128184
+      },
+      "image02346.jpg": {
+        "spec_within": 0.5814667304356893,
+        "avg_within": 0.9123539328575134
+      },
+      "image02373.jpg": {
+        "spec_within": 0.6286360243956248,
+        "avg_within": 0.9450115283330282
+      },
+      "image02406.jpg": {
+        "spec_within": 0.6444542527198791,
+        "avg_within": 0.9288247068723042
+      },
+      "image02424.jpg": {
+        "spec_within": 0.5261565883954366,
+        "avg_within": 0.9099481542905171
+      },
+      "image02455.jpg": {
+        "spec_within": 0.595438826084137,
+        "avg_within": 0.9496026476224263
+      },
+      "image02488.jpg": {
+        "spec_within": 0.49467002948125205,
+        "avg_within": 0.9072696884473165
+      },
+      "image02530.jpg": {
+        "spec_within": 0.359108546624581,
+        "avg_within": 0.8703232606252035
+      },
+      "image02548.jpg": {
+        "spec_within": 0.6962261080741883,
+        "avg_within": 0.949889874458313
+      },
+      "image02592.jpg": {
+        "spec_within": 0.6906508545080821,
+        "avg_within": 0.9282119512557984
+      },
+      "image02612.jpg": {
+        "spec_within": 0.3389301523566246,
+        "avg_within": 0.8208306034406027
+      },
+      "image02630.jpg": {
+        "spec_within": 0.5251689891020457,
+        "avg_within": 0.9148011763890584
+      },
+      "image02646.jpg": {
+        "spec_within": 0.600829956928889,
+        "avg_within": 0.9340028603871663
+      },
+      "image02673.jpg": {
+        "spec_within": 0.4143313758075237,
+        "avg_within": 0.8413567622502645
+      },
+      "image02695.jpg": {
+        "spec_within": 0.6313794096310933,
+        "avg_within": 0.9369534850120544
+      },
+      "image02721.jpg": {
+        "spec_within": 0.6294860760370891,
+        "avg_within": 0.9296725392341614
+      },
+      "image02744.jpg": {
+        "spec_within": 0.6942823072274525,
+        "avg_within": 0.9523083209991455
+      },
+      "image02759.jpg": {
+        "spec_within": 0.5382659951845805,
+        "avg_within": 0.9289107124010721
+      },
+      "image02781.jpg": {
+        "spec_within": 0.564056184887886,
+        "avg_within": 0.9055780887603759
+      },
+      "image02801.jpg": {
+        "spec_within": 0.5374519983927409,
+        "avg_within": 0.9164464831352234
+      },
+      "image02824.jpg": {
+        "spec_within": 0.4495132689674695,
+        "avg_within": 0.9099744995435078
+      },
+      "image02841.jpg": {
+        "spec_within": 0.6557900091012319,
+        "avg_within": 0.9437510530153911
+      },
+      "image02857.jpg": {
+        "spec_within": 0.6118786454200744,
+        "avg_within": 0.9288076082865397
+      },
+      "image02889.jpg": {
+        "spec_within": 0.5240497291088104,
+        "avg_within": 0.8895219604174296
+      },
+      "image02938.jpg": {
+        "spec_within": 0.5357463280359904,
+        "avg_within": 0.9295135458310445
+      },
+      "image02959.jpg": {
+        "spec_within": 0.6965705156326294,
+        "avg_within": 0.8873877127965292
+      },
+      "image02989.jpg": {
+        "spec_within": 0.5641106545925141,
+        "avg_within": 0.9392054160435994
+      },
+      "image03009.jpg": {
+        "spec_within": 0.6440969944000244,
+        "avg_within": 0.950367784500122
+      },
+      "image03021.jpg": {
+        "spec_within": 0.679073441028595,
+        "avg_within": 0.9507320205370585
+      },
+      "image03047.jpg": {
+        "spec_within": 0.46984846393267315,
+        "avg_within": 0.9091289679209391
+      },
+      "image03075.jpg": {
+        "spec_within": 0.6892956117788951,
+        "avg_within": 0.9292895714441936
+      },
+      "image03109.jpg": {
+        "spec_within": 0.5382802347342174,
+        "avg_within": 0.9347105820973715
+      },
+      "image03149.jpg": {
+        "spec_within": 0.5797030508518219,
+        "avg_within": 0.9370032032330831
+      },
+      "image03179.jpg": {
+        "spec_within": 0.5735619703928629,
+        "avg_within": 0.9175603946050008
+      },
+      "image03209.jpg": {
+        "spec_within": 0.5794004797935486,
+        "avg_within": 0.9372230807940165
+      },
+      "image03236.jpg": {
+        "spec_within": 0.5225400378306707,
+        "avg_within": 0.9247337460517884
+      },
+      "image03263.jpg": {
+        "spec_within": 0.5146556397279104,
+        "avg_within": 0.8969221274058025
+      },
+      "image03283.jpg": {
+        "spec_within": 0.657087790966034,
+        "avg_within": 0.9365826805432638
+      },
+      "image03350.jpg": {
+        "spec_within": 0.546081327398618,
+        "avg_within": 0.9207082947095235
+      },
+      "image03376.jpg": {
+        "spec_within": 0.7596460898717244,
+        "avg_within": 0.9729164481163025
+      },
+      "image03414.jpg": {
+        "spec_within": 0.6067079802354177,
+        "avg_within": 0.9548925320307414
+      },
+      "image03452.jpg": {
+        "spec_within": 0.377609712878863,
+        "avg_within": 0.9035685181617736
+      },
+      "image03472.jpg": {
+        "spec_within": 0.6221094230810801,
+        "avg_within": 0.9577722072601318
+      },
+      "image03515.jpg": {
+        "spec_within": 0.654435948530833,
+        "avg_within": 0.9268305182456971
+      },
+      "image03543.jpg": {
+        "spec_within": 0.7068221131960551,
+        "avg_within": 0.9568196932474772
+      },
+      "image03559.jpg": {
+        "spec_within": 0.716407589117686,
+        "avg_within": 0.9453152179718017
+      },
+      "image03572.jpg": {
+        "spec_within": 0.5988833983739217,
+        "avg_within": 0.9247040073076884
+      },
+      "image03589.jpg": {
+        "spec_within": 0.5972138524055481,
+        "avg_within": 0.9241883595784505
+      },
+      "image03625.jpg": {
+        "spec_within": 0.660857892036438,
+        "avg_within": 0.9618100921312968
+      },
+      "image03641.jpg": {
+        "spec_within": 0.6839678823947907,
+        "avg_within": 0.9660827835400899
+      },
+      "image03662.jpg": {
+        "spec_within": 0.7553877274195353,
+        "avg_within": 0.9747554937998454
+      },
+      "image03673.jpg": {
+        "spec_within": 0.7825662811597188,
+        "avg_within": 0.9717983603477478
+      },
+      "image03703.jpg": {
+        "spec_within": 0.7658474266529083,
+        "avg_within": 0.9699258009592692
+      },
+      "image03715.jpg": {
+        "spec_within": 0.7217615485191345,
+        "avg_within": 0.9663949489593506
+      },
+      "image03727.jpg": {
+        "spec_within": 0.7014366269111634,
+        "avg_within": 0.9671202699343363
+      },
+      "image03740.jpg": {
+        "spec_within": 0.6773049831390381,
+        "avg_within": 0.954197867711385
+      },
+      "image03752.jpg": {
+        "spec_within": 0.6282086213429768,
+        "avg_within": 0.9480248888333639
+      },
+      "image03765.jpg": {
+        "spec_within": 0.6548602104187011,
+        "avg_within": 0.9591318051020304
+      },
+      "image03778.jpg": {
+        "spec_within": 0.7130306760470072,
+        "avg_within": 0.9667328556378683
+      },
+      "image03788.jpg": {
+        "spec_within": 0.7723463892936706,
+        "avg_within": 0.962628173828125
+      },
+      "image03800.jpg": {
+        "spec_within": 0.7232344965140025,
+        "avg_within": 0.9717003663380941
+      },
+      "image03812.jpg": {
+        "spec_within": 0.6485930800437927,
+        "avg_within": 0.9576227784156799
+      },
+      "image03826.jpg": {
+        "spec_within": 0.6894144952297211,
+        "avg_within": 0.9586029966672261
+      },
+      "image03842.jpg": {
+        "spec_within": 0.6403510173161825,
+        "avg_within": 0.9358683705329895
+      },
+      "image03869.jpg": {
+        "spec_within": 0.6549433430035909,
+        "avg_within": 0.9520982662836711
+      },
+      "image03888.jpg": {
+        "spec_within": 0.6155251224835714,
+        "avg_within": 0.9443579991658528
+      },
+      "image03907.jpg": {
+        "spec_within": 0.6761774818102518,
+        "avg_within": 0.9582416653633118
+      },
+      "image03936.jpg": {
+        "spec_within": 0.7226518273353577,
+        "avg_within": 0.9535231828689575
+      },
+      "image03958.jpg": {
+        "spec_within": 0.553424495458603,
+        "avg_within": 0.9356248696645101
+      },
+      "image03974.jpg": {
+        "spec_within": 0.4243179351091385,
+        "avg_within": 0.8889716903368632
+      },
+      "image04004.jpg": {
+        "spec_within": 0.6421992361545563,
+        "avg_within": 0.910753051439921
+      },
+      "image04036.jpg": {
+        "spec_within": 0.6611997981866201,
+        "avg_within": 0.9563153704007467
+      },
+      "image04088.jpg": {
+        "spec_within": 0.5103048423926035,
+        "avg_within": 0.902899440129598
+      },
+      "image04114.jpg": {
+        "spec_within": 0.5602831363677978,
+        "avg_within": 0.9154724995295207
+      },
+      "image04151.jpg": {
+        "spec_within": 0.6366434852282207,
+        "avg_within": 0.9589512268702189
+      },
+      "image04182.jpg": {
+        "spec_within": 0.5416203121344249,
+        "avg_within": 0.9269078652064006
+      },
+      "image04207.jpg": {
+        "spec_within": 0.4100224812825521,
+        "avg_within": 0.9168716351191203
+      },
+      "image04229.jpg": {
+        "spec_within": 0.5377758473157883,
+        "avg_within": 0.8873718460400899
+      },
+      "image04244.jpg": {
+        "spec_within": 0.6136626839637757,
+        "avg_within": 0.9071152885754903
+      },
+      "image04271.jpg": {
+        "spec_within": 0.6531189620494843,
+        "avg_within": 0.9629109104474386
+      },
+      "image04285.jpg": {
+        "spec_within": 0.6433787902196249,
+        "avg_within": 0.9348253448804219
+      },
+      "image04301.jpg": {
+        "spec_within": 0.5838362554709117,
+        "avg_within": 0.9171581149101258
+      },
+      "image04324.jpg": {
+        "spec_within": 0.6671015202999115,
+        "avg_within": 0.9378918687502543
+      },
+      "image04344.jpg": {
+        "spec_within": 0.6648760179678599,
+        "avg_within": 0.9497254411379497
+      }
+    },
+    "L25-27": {
+      "image00002.jpg": {
+        "spec_within": 0.870777948697408,
+        "avg_within": 0.9957247575124105
+      },
+      "image00022.jpg": {
+        "spec_within": 0.9279009699821472,
+        "avg_within": 0.9978622436523438
+      },
+      "image00042.jpg": {
+        "spec_within": 0.9755105336507162,
+        "avg_within": 0.9988808314005534
+      },
+      "image00052.jpg": {
+        "spec_within": 0.9784784436225891,
+        "avg_within": 0.9991938670476278
+      },
+      "image00062.jpg": {
+        "spec_within": 0.9890768488248189,
+        "avg_within": 0.9995539665222168
+      },
+      "image00076.jpg": {
+        "spec_within": 0.9821755250295003,
+        "avg_within": 0.9991464336713155
+      },
+      "image00088.jpg": {
+        "spec_within": 0.9526889324188232,
+        "avg_within": 0.9982876936594646
+      },
+      "image00101.jpg": {
+        "spec_within": 0.972240690390269,
+        "avg_within": 0.9989982724189759
+      },
+      "image00122.jpg": {
+        "spec_within": 0.9576040069262187,
+        "avg_within": 0.9982547124226888
+      },
+      "image00138.jpg": {
+        "spec_within": 0.9251589337984721,
+        "avg_within": 0.9974277337392171
+      },
+      "image00159.jpg": {
+        "spec_within": 0.9108321905136109,
+        "avg_within": 0.9972774545351665
+      },
+      "image00176.jpg": {
+        "spec_within": 0.8840237657229105,
+        "avg_within": 0.9948184251785278
+      },
+      "image00197.jpg": {
+        "spec_within": 0.9371497591336568,
+        "avg_within": 0.9982183098793029
+      },
+      "image00211.jpg": {
+        "spec_within": 0.9498893181482951,
+        "avg_within": 0.9981668869654338
+      },
+      "image00227.jpg": {
+        "spec_within": 0.774027285973231,
+        "avg_within": 0.9805574138959249
+      },
+      "image00251.jpg": {
+        "spec_within": 0.9431581775347392,
+        "avg_within": 0.9975249409675598
+      },
+      "image00268.jpg": {
+        "spec_within": 0.9630741834640503,
+        "avg_within": 0.9985247135162354
+      },
+      "image00283.jpg": {
+        "spec_within": 0.9771724740664164,
+        "avg_within": 0.9987598061561584
+      },
+      "image00299.jpg": {
+        "spec_within": 0.9764163295427958,
+        "avg_within": 0.9994530955950419
+      },
+      "image00318.jpg": {
+        "spec_within": 0.9738189657529195,
+        "avg_within": 0.9990695118904114
+      },
+      "image00330.jpg": {
+        "spec_within": 0.9627859274546305,
+        "avg_within": 0.9987155636151631
+      },
+      "image00345.jpg": {
+        "spec_within": 0.9640490810076395,
+        "avg_within": 0.9987314065297445
+      },
+      "image00359.jpg": {
+        "spec_within": 0.976375675201416,
+        "avg_within": 0.9990277687708536
+      },
+      "image00376.jpg": {
+        "spec_within": 0.9537650068600972,
+        "avg_within": 0.9982860565185547
+      },
+      "image00397.jpg": {
+        "spec_within": 0.9579297065734863,
+        "avg_within": 0.998441489537557
+      },
+      "image00419.jpg": {
+        "spec_within": 0.9358066995938619,
+        "avg_within": 0.9968368212381998
+      },
+      "image00433.jpg": {
+        "spec_within": 0.9454298496246338,
+        "avg_within": 0.9978480656941732
+      },
+      "image00445.jpg": {
+        "spec_within": 0.9515526771545411,
+        "avg_within": 0.997096574306488
+      },
+      "image00466.jpg": {
+        "spec_within": 0.9543761730194091,
+        "avg_within": 0.9983196973800659
+      },
+      "image00481.jpg": {
+        "spec_within": 0.9217804789543151,
+        "avg_within": 0.9971387028694153
+      },
+      "image00497.jpg": {
+        "spec_within": 0.9489159226417542,
+        "avg_within": 0.9977666854858398
+      },
+      "image00512.jpg": {
+        "spec_within": 0.8653176347414653,
+        "avg_within": 0.9946654240290324
+      },
+      "image00527.jpg": {
+        "spec_within": 0.9604569713274638,
+        "avg_within": 0.998466694355011
+      },
+      "image00544.jpg": {
+        "spec_within": 0.7727801938851674,
+        "avg_within": 0.9820277333259583
+      },
+      "image00557.jpg": {
+        "spec_within": 0.9484366019566853,
+        "avg_within": 0.9976863423983257
+      },
+      "image00571.jpg": {
+        "spec_within": 0.9350512464841206,
+        "avg_within": 0.997285000483195
+      },
+      "image00591.jpg": {
+        "spec_within": 0.9527034203211466,
+        "avg_within": 0.9975361148516337
+      },
+      "image00606.jpg": {
+        "spec_within": 0.969400159517924,
+        "avg_within": 0.9992922147115072
+      },
+      "image00617.jpg": {
+        "spec_within": 0.8910337368647258,
+        "avg_within": 0.9967975894610087
+      },
+      "image00642.jpg": {
+        "spec_within": 0.9799224177996317,
+        "avg_within": 0.9991436640421549
+      },
+      "image00665.jpg": {
+        "spec_within": 0.9467159310976664,
+        "avg_within": 0.9976865609486898
+      },
+      "image00684.jpg": {
+        "spec_within": 0.9449460307757059,
+        "avg_within": 0.9973576267560323
+      },
+      "image00696.jpg": {
+        "spec_within": 0.9679357846577962,
+        "avg_within": 0.9989391406377156
+      },
+      "image00719.jpg": {
+        "spec_within": 0.9298281153043111,
+        "avg_within": 0.9977697213490804
+      },
+      "image00731.jpg": {
+        "spec_within": 0.9697238763173421,
+        "avg_within": 0.9990417242050171
+      },
+      "image00748.jpg": {
+        "spec_within": 0.9285306771596272,
+        "avg_within": 0.9970235188802083
+      },
+      "image00774.jpg": {
+        "spec_within": 0.968951416015625,
+        "avg_within": 0.9985363284746805
+      },
+      "image00785.jpg": {
+        "spec_within": 0.9750920255978902,
+        "avg_within": 0.9988238533337911
+      },
+      "image00802.jpg": {
+        "spec_within": 0.9751471320788065,
+        "avg_within": 0.9989205956459045
+      },
+      "image00824.jpg": {
+        "spec_within": 0.9622956236203511,
+        "avg_within": 0.997871482372284
+      },
+      "image00839.jpg": {
+        "spec_within": 0.969226332505544,
+        "avg_within": 0.9988808155059814
+      },
+      "image00850.jpg": {
+        "spec_within": 0.9540136893590291,
+        "avg_within": 0.9982953151067098
+      },
+      "image00872.jpg": {
+        "spec_within": 0.9653089046478271,
+        "avg_within": 0.9989071965217591
+      },
+      "image00894.jpg": {
+        "spec_within": 0.9544705351193746,
+        "avg_within": 0.9979272166887919
+      },
+      "image00908.jpg": {
+        "spec_within": 0.9567447185516358,
+        "avg_within": 0.9980295856793722
+      },
+      "image00931.jpg": {
+        "spec_within": 0.9725487550099691,
+        "avg_within": 0.9990545550982157
+      },
+      "image00943.jpg": {
+        "spec_within": 0.9723645607630412,
+        "avg_within": 0.9989279786745707
+      },
+      "image00963.jpg": {
+        "spec_within": 0.9023510535558065,
+        "avg_within": 0.997094722588857
+      },
+      "image00978.jpg": {
+        "spec_within": 0.9624585032463073,
+        "avg_within": 0.9980628927548726
+      },
+      "image00998.jpg": {
+        "spec_within": 0.9638071139653523,
+        "avg_within": 0.997963531812032
+      },
+      "image01014.jpg": {
+        "spec_within": 0.9011115074157715,
+        "avg_within": 0.9947477817535401
+      },
+      "image01034.jpg": {
+        "spec_within": 0.9485943754514058,
+        "avg_within": 0.9978892564773559
+      },
+      "image01058.jpg": {
+        "spec_within": 0.9615377505620321,
+        "avg_within": 0.998857843875885
+      },
+      "image01071.jpg": {
+        "spec_within": 0.9372672955195109,
+        "avg_within": 0.9978744824727376
+      },
+      "image01089.jpg": {
+        "spec_within": 0.9711651802062988,
+        "avg_within": 0.9989093859990438
+      },
+      "image01109.jpg": {
+        "spec_within": 0.9682287812232971,
+        "avg_within": 0.9987555782000224
+      },
+      "image01126.jpg": {
+        "spec_within": 0.9670458952585856,
+        "avg_within": 0.9989660263061524
+      },
+      "image01147.jpg": {
+        "spec_within": 0.9542630950609843,
+        "avg_within": 0.9982393145561218
+      },
+      "image01168.jpg": {
+        "spec_within": 0.9832588315010071,
+        "avg_within": 0.9993282874425252
+      },
+      "image01189.jpg": {
+        "spec_within": 0.9535060326258341,
+        "avg_within": 0.9984217206637065
+      },
+      "image01210.jpg": {
+        "spec_within": 0.9327649394671123,
+        "avg_within": 0.9975600997606914
+      },
+      "image01233.jpg": {
+        "spec_within": 0.9625680327415467,
+        "avg_within": 0.9983267704645793
+      },
+      "image01260.jpg": {
+        "spec_within": 0.9777271310488383,
+        "avg_within": 0.9992875655492147
+      },
+      "image01286.jpg": {
+        "spec_within": 0.8412254492441813,
+        "avg_within": 0.9915164947509766
+      },
+      "image01306.jpg": {
+        "spec_within": 0.9576785087585449,
+        "avg_within": 0.9974567731221516
+      },
+      "image01323.jpg": {
+        "spec_within": 0.9483220299084981,
+        "avg_within": 0.9973966439565023
+      },
+      "image01346.jpg": {
+        "spec_within": 0.972051203250885,
+        "avg_within": 0.9990447044372559
+      },
+      "image01377.jpg": {
+        "spec_within": 0.9512996117273966,
+        "avg_within": 0.9982572436332703
+      },
+      "image01404.jpg": {
+        "spec_within": 0.9819072008132934,
+        "avg_within": 0.999332590897878
+      },
+      "image01431.jpg": {
+        "spec_within": 0.9494898160298665,
+        "avg_within": 0.9983896017074585
+      },
+      "image01466.jpg": {
+        "spec_within": 0.9565866152445476,
+        "avg_within": 0.9982235670089722
+      },
+      "image01477.jpg": {
+        "spec_within": 0.8903375824292501,
+        "avg_within": 0.9965289870897929
+      },
+      "image01506.jpg": {
+        "spec_within": 0.8813116113344829,
+        "avg_within": 0.9967180848121643
+      },
+      "image01565.jpg": {
+        "spec_within": 0.9625839591026306,
+        "avg_within": 0.9984448154767355
+      },
+      "image01591.jpg": {
+        "spec_within": 0.9281793038050333,
+        "avg_within": 0.9972311536471049
+      },
+      "image01622.jpg": {
+        "spec_within": 0.9750342845916748,
+        "avg_within": 0.9986920873324077
+      },
+      "image01642.jpg": {
+        "spec_within": 0.9100494782129923,
+        "avg_within": 0.996543534596761
+      },
+      "image01657.jpg": {
+        "spec_within": 0.9753871281941732,
+        "avg_within": 0.9990525404612224
+      },
+      "image01688.jpg": {
+        "spec_within": 0.9772603233655294,
+        "avg_within": 0.9991698861122131
+      },
+      "image01717.jpg": {
+        "spec_within": 0.9778089761734009,
+        "avg_within": 0.9993929068247477
+      },
+      "image01749.jpg": {
+        "spec_within": 0.9763000647226969,
+        "avg_within": 0.9990871946016947
+      },
+      "image01775.jpg": {
+        "spec_within": 0.8406518419583638,
+        "avg_within": 0.9920226414998372
+      },
+      "image01791.jpg": {
+        "spec_within": 0.9134380181630453,
+        "avg_within": 0.994934062163035
+      },
+      "image01811.jpg": {
+        "spec_within": 0.9719627936681111,
+        "avg_within": 0.9990390261014302
+      },
+      "image01829.jpg": {
+        "spec_within": 0.9356193304061889,
+        "avg_within": 0.9971548279126485
+      },
+      "image01850.jpg": {
+        "spec_within": 0.9814525922139485,
+        "avg_within": 0.9993582765261332
+      },
+      "image01870.jpg": {
+        "spec_within": 0.9346626321474711,
+        "avg_within": 0.9981319785118103
+      },
+      "image01900.jpg": {
+        "spec_within": 0.9608168363571167,
+        "avg_within": 0.9985970695813496
+      },
+      "image01927.jpg": {
+        "spec_within": 0.9612362623214722,
+        "avg_within": 0.9987934907277425
+      },
+      "image01944.jpg": {
+        "spec_within": 0.9862962325414022,
+        "avg_within": 0.9994780818621317
+      },
+      "image01973.jpg": {
+        "spec_within": 0.9711186488469442,
+        "avg_within": 0.9986641724904378
+      },
+      "image01989.jpg": {
+        "spec_within": 0.9673908869425456,
+        "avg_within": 0.998583193620046
+      },
+      "image02016.jpg": {
+        "spec_within": 0.9704008142153422,
+        "avg_within": 0.9992225766181946
+      },
+      "image02032.jpg": {
+        "spec_within": 0.9344626863797506,
+        "avg_within": 0.9976628661155701
+      },
+      "image02046.jpg": {
+        "spec_within": 0.9759699583053589,
+        "avg_within": 0.9991543412208557
+      },
+      "image02064.jpg": {
+        "spec_within": 0.8920972307523092,
+        "avg_within": 0.9956629236539205
+      },
+      "image02083.jpg": {
+        "spec_within": 0.9485342303911845,
+        "avg_within": 0.9974416176478068
+      },
+      "image02116.jpg": {
+        "spec_within": 0.9459595799446106,
+        "avg_within": 0.998287582397461
+      },
+      "image02138.jpg": {
+        "spec_within": 0.8971498052279154,
+        "avg_within": 0.9969967802365621
+      },
+      "image02166.jpg": {
+        "spec_within": 0.9851641138394673,
+        "avg_within": 0.9992125352223714
+      },
+      "image02196.jpg": {
+        "spec_within": 0.8522669712702433,
+        "avg_within": 0.9933393001556396
+      },
+      "image02213.jpg": {
+        "spec_within": 0.9592851797739664,
+        "avg_within": 0.9983282883961996
+      },
+      "image02242.jpg": {
+        "spec_within": 0.9653091390927633,
+        "avg_within": 0.9982604861259461
+      },
+      "image02256.jpg": {
+        "spec_within": 0.9126134912172953,
+        "avg_within": 0.9969610691070556
+      },
+      "image02277.jpg": {
+        "spec_within": 0.9531478722890218,
+        "avg_within": 0.9983359138170879
+      },
+      "image02295.jpg": {
+        "spec_within": 0.9311668594678243,
+        "avg_within": 0.9976497213045756
+      },
+      "image02319.jpg": {
+        "spec_within": 0.9757303953170776,
+        "avg_within": 0.9989661574363708
+      },
+      "image02346.jpg": {
+        "spec_within": 0.9590563615163167,
+        "avg_within": 0.9985579013824463
+      },
+      "image02373.jpg": {
+        "spec_within": 0.916519554456075,
+        "avg_within": 0.9954313794771831
+      },
+      "image02406.jpg": {
+        "spec_within": 0.979303240776062,
+        "avg_within": 0.9993067304293315
+      },
+      "image02424.jpg": {
+        "spec_within": 0.9728291789690654,
+        "avg_within": 0.998830008506775
+      },
+      "image02455.jpg": {
+        "spec_within": 0.9518850723902385,
+        "avg_within": 0.9982566555341085
+      },
+      "image02488.jpg": {
+        "spec_within": 0.9259152968724569,
+        "avg_within": 0.9976929267247517
+      },
+      "image02530.jpg": {
+        "spec_within": 0.8769454081853231,
+        "avg_within": 0.9950770099957784
+      },
+      "image02548.jpg": {
+        "spec_within": 0.9462903738021851,
+        "avg_within": 0.9984350641568501
+      },
+      "image02592.jpg": {
+        "spec_within": 0.9457197070121766,
+        "avg_within": 0.9978494246800741
+      },
+      "image02612.jpg": {
+        "spec_within": 0.944844384988149,
+        "avg_within": 0.9979521234830221
+      },
+      "image02630.jpg": {
+        "spec_within": 0.9785315275192261,
+        "avg_within": 0.9987945795059204
+      },
+      "image02646.jpg": {
+        "spec_within": 0.8658968567848205,
+        "avg_within": 0.9936858932177226
+      },
+      "image02673.jpg": {
+        "spec_within": 0.8819234013557434,
+        "avg_within": 0.9965736627578735
+      },
+      "image02695.jpg": {
+        "spec_within": 0.9707614660263062,
+        "avg_within": 0.9988560994466146
+      },
+      "image02721.jpg": {
+        "spec_within": 0.9081186970074971,
+        "avg_within": 0.9966977159182231
+      },
+      "image02744.jpg": {
+        "spec_within": 0.9600282192230225,
+        "avg_within": 0.998594077428182
+      },
+      "image02759.jpg": {
+        "spec_within": 0.9403761585553487,
+        "avg_within": 0.9974905212720235
+      },
+      "image02781.jpg": {
+        "spec_within": 0.9567089438438415,
+        "avg_within": 0.9985700090726216
+      },
+      "image02801.jpg": {
+        "spec_within": 0.9470435579617819,
+        "avg_within": 0.9979752739270528
+      },
+      "image02824.jpg": {
+        "spec_within": 0.9292022824287415,
+        "avg_within": 0.9964349746704102
+      },
+      "image02841.jpg": {
+        "spec_within": 0.9743735313415527,
+        "avg_within": 0.9985277493794759
+      },
+      "image02857.jpg": {
+        "spec_within": 0.9446995615959167,
+        "avg_within": 0.9976206024487814
+      },
+      "image02889.jpg": {
+        "spec_within": 0.9561317284901937,
+        "avg_within": 0.9978280027707418
+      },
+      "image02938.jpg": {
+        "spec_within": 0.972687828540802,
+        "avg_within": 0.9990389029184977
+      },
+      "image02959.jpg": {
+        "spec_within": 0.9503105918566386,
+        "avg_within": 0.9965475559234619
+      },
+      "image02989.jpg": {
+        "spec_within": 0.9327322642008463,
+        "avg_within": 0.997891636689504
+      },
+      "image03009.jpg": {
+        "spec_within": 0.9609924912452698,
+        "avg_within": 0.9983266989390055
+      },
+      "image03021.jpg": {
+        "spec_within": 0.9572793245315552,
+        "avg_within": 0.9985375682512919
+      },
+      "image03047.jpg": {
+        "spec_within": 0.9537882447242737,
+        "avg_within": 0.9981929143269856
+      },
+      "image03075.jpg": {
+        "spec_within": 0.9590046922365825,
+        "avg_within": 0.9980114380518595
+      },
+      "image03109.jpg": {
+        "spec_within": 0.9712905526161194,
+        "avg_within": 0.9984754800796509
+      },
+      "image03149.jpg": {
+        "spec_within": 0.9747491200764974,
+        "avg_within": 0.9990152478218078
+      },
+      "image03179.jpg": {
+        "spec_within": 0.939959712823232,
+        "avg_within": 0.9971987644831339
+      },
+      "image03209.jpg": {
+        "spec_within": 0.9709058245023091,
+        "avg_within": 0.998907470703125
+      },
+      "image03236.jpg": {
+        "spec_within": 0.9411667585372925,
+        "avg_within": 0.997576876481374
+      },
+      "image03263.jpg": {
+        "spec_within": 0.8472755750020345,
+        "avg_within": 0.990632418791453
+      },
+      "image03283.jpg": {
+        "spec_within": 0.9434578577677409,
+        "avg_within": 0.9974350730578104
+      },
+      "image03350.jpg": {
+        "spec_within": 0.9654488285382589,
+        "avg_within": 0.9986674229303996
+      },
+      "image03376.jpg": {
+        "spec_within": 0.9783820629119873,
+        "avg_within": 0.9990887920061747
+      },
+      "image03414.jpg": {
+        "spec_within": 0.964875316619873,
+        "avg_within": 0.9988766034444173
+      },
+      "image03452.jpg": {
+        "spec_within": 0.9506844043731689,
+        "avg_within": 0.9984873016675313
+      },
+      "image03472.jpg": {
+        "spec_within": 0.98233509461085,
+        "avg_within": 0.9993877212206522
+      },
+      "image03515.jpg": {
+        "spec_within": 0.9760508934656779,
+        "avg_within": 0.9992004950841268
+      },
+      "image03543.jpg": {
+        "spec_within": 0.9571908871332805,
+        "avg_within": 0.9989319403966268
+      },
+      "image03559.jpg": {
+        "spec_within": 0.9460545937220256,
+        "avg_within": 0.9975961844126383
+      },
+      "image03572.jpg": {
+        "spec_within": 0.9430479407310486,
+        "avg_within": 0.9976194143295288
+      },
+      "image03589.jpg": {
+        "spec_within": 0.9523902416229248,
+        "avg_within": 0.9981247703234355
+      },
+      "image03625.jpg": {
+        "spec_within": 0.9697103897730509,
+        "avg_within": 0.9990201711654663
+      },
+      "image03641.jpg": {
+        "spec_within": 0.9751786231994629,
+        "avg_within": 0.999253261089325
+      },
+      "image03662.jpg": {
+        "spec_within": 0.9700301130612691,
+        "avg_within": 0.9989425063133239
+      },
+      "image03673.jpg": {
+        "spec_within": 0.9576976100603739,
+        "avg_within": 0.9985969662666321
+      },
+      "image03703.jpg": {
+        "spec_within": 0.9567228237787883,
+        "avg_within": 0.998544454574585
+      },
+      "image03715.jpg": {
+        "spec_within": 0.9538754860560099,
+        "avg_within": 0.9985860705375671
+      },
+      "image03727.jpg": {
+        "spec_within": 0.9665646354357401,
+        "avg_within": 0.998987599213918
+      },
+      "image03740.jpg": {
+        "spec_within": 0.9606703877449035,
+        "avg_within": 0.9985827366511028
+      },
+      "image03752.jpg": {
+        "spec_within": 0.9577250202496846,
+        "avg_within": 0.998665968577067
+      },
+      "image03765.jpg": {
+        "spec_within": 0.9700740297635396,
+        "avg_within": 0.9992708563804626
+      },
+      "image03778.jpg": {
+        "spec_within": 0.9623884638150533,
+        "avg_within": 0.9982447544733684
+      },
+      "image03788.jpg": {
+        "spec_within": 0.9881288687388102,
+        "avg_within": 0.9994620879491171
+      },
+      "image03800.jpg": {
+        "spec_within": 0.9615434646606446,
+        "avg_within": 0.9989920377731323
+      },
+      "image03812.jpg": {
+        "spec_within": 0.9589336276054382,
+        "avg_within": 0.9983635425567627
+      },
+      "image03826.jpg": {
+        "spec_within": 0.9602393388748169,
+        "avg_within": 0.9990220030148824
+      },
+      "image03842.jpg": {
+        "spec_within": 0.9706695357958476,
+        "avg_within": 0.9988025585810344
+      },
+      "image03869.jpg": {
+        "spec_within": 0.9742945551872253,
+        "avg_within": 0.9990084807078043
+      },
+      "image03888.jpg": {
+        "spec_within": 0.9498226126035054,
+        "avg_within": 0.9978473067283631
+      },
+      "image03907.jpg": {
+        "spec_within": 0.9791497071584065,
+        "avg_within": 0.9992142955462138
+      },
+      "image03936.jpg": {
+        "spec_within": 0.9834417661031087,
+        "avg_within": 0.9994438211123149
+      },
+      "image03958.jpg": {
+        "spec_within": 0.9786293586095174,
+        "avg_within": 0.999154794216156
+      },
+      "image03974.jpg": {
+        "spec_within": 0.8485945423444112,
+        "avg_within": 0.9937278668085734
+      },
+      "image04004.jpg": {
+        "spec_within": 0.9214116334915161,
+        "avg_within": 0.997231908639272
+      },
+      "image04036.jpg": {
+        "spec_within": 0.9838827172915141,
+        "avg_within": 0.9993819276491801
+      },
+      "image04088.jpg": {
+        "spec_within": 0.9498734831809997,
+        "avg_within": 0.9977050423622131
+      },
+      "image04114.jpg": {
+        "spec_within": 0.9717344125111897,
+        "avg_within": 0.9982139865557352
+      },
+      "image04151.jpg": {
+        "spec_within": 0.952790359656016,
+        "avg_within": 0.9982214371363322
+      },
+      "image04182.jpg": {
+        "spec_within": 0.9316373268763224,
+        "avg_within": 0.9976344545682271
+      },
+      "image04207.jpg": {
+        "spec_within": 0.9478389223416647,
+        "avg_within": 0.9974715391794841
+      },
+      "image04229.jpg": {
+        "spec_within": 0.9446277697881063,
+        "avg_within": 0.9979525566101074
+      },
+      "image04244.jpg": {
+        "spec_within": 0.9300097187360128,
+        "avg_within": 0.9967404683430989
+      },
+      "image04271.jpg": {
+        "spec_within": 0.9649987339973449,
+        "avg_within": 0.9986863255500793
+      },
+      "image04285.jpg": {
+        "spec_within": 0.9725367705027262,
+        "avg_within": 0.9985924045244853
+      },
+      "image04301.jpg": {
+        "spec_within": 0.9356388211250305,
+        "avg_within": 0.9970634539922079
+      },
+      "image04324.jpg": {
+        "spec_within": 0.9793871283531189,
+        "avg_within": 0.9986040472984314
+      },
+      "image04344.jpg": {
+        "spec_within": 0.9616344571113586,
+        "avg_within": 0.9979813893636068
+      }
+    }
+  }
+}

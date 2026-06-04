@@ -1,0 +1,30 @@
+{
+  "Early (L1-3)": {
+    "within_face_mean": 1.0,
+    "within_face_std": 0.0,
+    "face_vs_ctrl_mean": 0.9997,
+    "face_vs_ctrl_std": 0.0002,
+    "ctrl_ctrl_mean": 0.9997
+  },
+  "Mid (L8-10)": {
+    "within_face_mean": 0.9995,
+    "within_face_std": 0.0003,
+    "face_vs_ctrl_mean": 0.998,
+    "face_vs_ctrl_std": 0.0005,
+    "ctrl_ctrl_mean": 0.9993
+  },
+  "Later (L18-20)": {
+    "within_face_mean": 0.9475,
+    "within_face_std": 0.0424,
+    "face_vs_ctrl_mean": 0.9564,
+    "face_vs_ctrl_std": 0.0214,
+    "ctrl_ctrl_mean": 0.9735
+  },
+  "Last (L29-31)": {
+    "within_face_mean": 0.9949,
+    "within_face_std": 0.0035,
+    "face_vs_ctrl_mean": 0.992,
+    "face_vs_ctrl_std": 0.0021,
+    "ctrl_ctrl_mean": 0.9935
+  }
+}

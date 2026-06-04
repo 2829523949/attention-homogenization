@@ -1,0 +1,152 @@
+{
+  "config": {
+    "n_images": 10,
+    "groups_processed": [
+      "L18-20"
+    ],
+    "layer_groups": {
+      "L1-3": [
+        0,
+        1,
+        2
+      ],
+      "L18-20": [
+        17,
+        18,
+        19
+      ],
+      "L28": [
+        27
+      ]
+    },
+    "grad_layers": {
+      "L1-3": [
+        0,
+        1,
+        2
+      ],
+      "L18-20": [
+        17,
+        18,
+        19
+      ],
+      "L28": [
+        26
+      ]
+    },
+    "queries": [
+      "left side",
+      "right side",
+      "top",
+      "bottom"
+    ],
+    "query_pairs": [
+      "left-right",
+      "top-bottom"
+    ]
+  },
+  "aggregated": {
+    "L18-20": {
+      "left-right_attn": {
+        "mean": 0.7712,
+        "std": 0.0875
+      },
+      "left-right_grad": {
+        "mean": 0.6066,
+        "std": 0.1783
+      },
+      "top-bottom_attn": {
+        "mean": 0.7716,
+        "std": 0.1058
+      },
+      "top-bottom_grad": {
+        "mean": 0.398,
+        "std": 0.2087
+      }
+    }
+  },
+  "per_image": {
+    "L18-20": [
+      {
+        "image": "000000495054.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.8889,
+        "left-right_grad_r": 0.873,
+        "top-bottom_attn_r": 0.8063,
+        "top-bottom_grad_r": 0.4629
+      },
+      {
+        "image": "000000276434.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.5978,
+        "left-right_grad_r": 0.4217,
+        "top-bottom_attn_r": 0.9046,
+        "top-bottom_grad_r": 0.8121
+      },
+      {
+        "image": "000000328117.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.7893,
+        "left-right_grad_r": 0.5042,
+        "top-bottom_attn_r": 0.7561,
+        "top-bottom_grad_r": 0.2757
+      },
+      {
+        "image": "000000206994.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.7491,
+        "left-right_grad_r": 0.2423,
+        "top-bottom_attn_r": 0.7366,
+        "top-bottom_grad_r": 0.2326
+      },
+      {
+        "image": "000000102644.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.8456,
+        "left-right_grad_r": 0.7465,
+        "top-bottom_attn_r": 0.8694,
+        "top-bottom_grad_r": 0.4008
+      },
+      {
+        "image": "000000126592.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.7528,
+        "left-right_grad_r": 0.6614,
+        "top-bottom_attn_r": 0.5671,
+        "top-bottom_grad_r": 0.134
+      },
+      {
+        "image": "000000311081.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.6925,
+        "left-right_grad_r": 0.5158,
+        "top-bottom_attn_r": 0.6261,
+        "top-bottom_grad_r": 0.1553
+      },
+      {
+        "image": "000000507575.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.7677,
+        "left-right_grad_r": 0.6774,
+        "top-bottom_attn_r": 0.738,
+        "top-bottom_grad_r": 0.3494
+      },
+      {
+        "image": "000000563349.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.9039,
+        "left-right_grad_r": 0.7876,
+        "top-bottom_attn_r": 0.8985,
+        "top-bottom_grad_r": 0.6823
+      },
+      {
+        "image": "000000383337.jpg",
+        "group": "L18-20",
+        "left-right_attn_r": 0.7244,
+        "left-right_grad_r": 0.6362,
+        "top-bottom_attn_r": 0.8131,
+        "top-bottom_grad_r": 0.4745
+      }
+    ]
+  }
+}

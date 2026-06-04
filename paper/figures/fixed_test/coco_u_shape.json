@@ -1,0 +1,61 @@
+{
+  "config": {
+    "n_images": 200,
+    "queries": [
+      "left side",
+      "right side",
+      "top",
+      "bottom",
+      "person",
+      "animal"
+    ],
+    "layer_groups": {
+      "L1-3": [
+        0,
+        1,
+        2
+      ],
+      "L18-20": [
+        17,
+        18,
+        19
+      ],
+      "L28": [
+        27
+      ]
+    },
+    "dataset": "COCO val2017"
+  },
+  "results": {
+    "L1-3": {
+      "top-bottom": {
+        "mean": 0.9869,
+        "std": 0.011
+      },
+      "person-animal": {
+        "mean": 0.9674,
+        "std": 0.0167
+      }
+    },
+    "L18-20": {
+      "top-bottom": {
+        "mean": 0.277,
+        "std": 0.161
+      },
+      "person-animal": {
+        "mean": 0.6351,
+        "std": 0.231
+      }
+    },
+    "L28": {
+      "top-bottom": {
+        "mean": 0.9464,
+        "std": 0.033
+      },
+      "person-animal": {
+        "mean": 0.9563,
+        "std": 0.0371
+      }
+    }
+  }
+}

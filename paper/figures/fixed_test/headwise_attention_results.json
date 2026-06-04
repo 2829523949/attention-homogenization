@@ -1,0 +1,64 @@
+{
+  "n_heads": 16,
+  "n_layers": [
+    25,
+    26,
+    27
+  ],
+  "mean_r": 0.9118,
+  "std_r": 0.0523,
+  "best_head": 5,
+  "best_r": 0.7998,
+  "worst_head": 0,
+  "worst_r": 0.9721,
+  "per_head": {
+    "head_0": {
+      "mean_within_r": 0.9721
+    },
+    "head_1": {
+      "mean_within_r": 0.9485
+    },
+    "head_2": {
+      "mean_within_r": 0.9601
+    },
+    "head_3": {
+      "mean_within_r": 0.8997
+    },
+    "head_4": {
+      "mean_within_r": 0.9032
+    },
+    "head_5": {
+      "mean_within_r": 0.7998
+    },
+    "head_6": {
+      "mean_within_r": 0.8887
+    },
+    "head_7": {
+      "mean_within_r": 0.8843
+    },
+    "head_8": {
+      "mean_within_r": 0.9433
+    },
+    "head_9": {
+      "mean_within_r": 0.9588
+    },
+    "head_10": {
+      "mean_within_r": 0.9468
+    },
+    "head_11": {
+      "mean_within_r": 0.8445
+    },
+    "head_12": {
+      "mean_within_r": 0.9128
+    },
+    "head_13": {
+      "mean_within_r": 0.9697
+    },
+    "head_14": {
+      "mean_within_r": 0.8155
+    },
+    "head_15": {
+      "mean_within_r": 0.9403
+    }
+  }
+}

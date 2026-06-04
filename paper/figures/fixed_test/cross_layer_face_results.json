@@ -1,0 +1,426 @@
+{
+  "L1-3": {
+    "corrs": {
+      "spec_within_face": 0.9558534622192383,
+      "spec_face_ctrl": 0.913579523563385,
+      "avg_within_face": 0.9985411167144775,
+      "avg_face_ctrl": 0.9931589961051941
+    },
+    "peaks": {
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/nose": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/eyes": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/mouth": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/chin": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/forehead": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/beard": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/whole image": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/nose": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/eyes": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/mouth": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/chin": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/forehead": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/beard": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/whole image": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/nose": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/eyes": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/mouth": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/chin": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/forehead": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/beard": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/whole image": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        13,
+        15
+      ]
+    }
+  },
+  "L8-10": {
+    "corrs": {
+      "spec_within_face": 0.8534796237945557,
+      "spec_face_ctrl": 0.4289598762989044,
+      "avg_within_face": 0.9793813824653625,
+      "avg_face_ctrl": 0.9324352741241455
+    },
+    "peaks": {
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/nose": [
+        1,
+        2
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/eyes": [
+        7,
+        5
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/mouth": [
+        1,
+        2
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/chin": [
+        7,
+        5
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/forehead": [
+        1,
+        2
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/beard": [
+        2,
+        2
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/whole image": [
+        1,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/nose": [
+        1,
+        3
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/eyes": [
+        1,
+        3
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/mouth": [
+        1,
+        3
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/chin": [
+        1,
+        3
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/forehead": [
+        1,
+        3
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/beard": [
+        2,
+        8
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/whole image": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/nose": [
+        1,
+        13
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/eyes": [
+        8,
+        8
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/mouth": [
+        11,
+        5
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/chin": [
+        11,
+        4
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/forehead": [
+        1,
+        13
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/beard": [
+        12,
+        10
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/whole image": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        0,
+        15
+      ]
+    }
+  },
+  "L18-20": {
+    "corrs": {
+      "spec_within_face": 0.4780184328556061,
+      "spec_face_ctrl": 0.2510490417480469,
+      "avg_within_face": 0.9230836629867554,
+      "avg_face_ctrl": 0.8038301467895508
+    },
+    "peaks": {
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/nose": [
+        7,
+        7
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/eyes": [
+        15,
+        9
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/mouth": [
+        11,
+        8
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/chin": [
+        11,
+        9
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/forehead": [
+        4,
+        7
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/beard": [
+        2,
+        2
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/whole image": [
+        1,
+        2
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/nose": [
+        7,
+        7
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/eyes": [
+        6,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/mouth": [
+        10,
+        2
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/chin": [
+        11,
+        9
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/forehead": [
+        4,
+        9
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/beard": [
+        11,
+        9
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/whole image": [
+        1,
+        3
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/nose": [
+        7,
+        6
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/eyes": [
+        6,
+        8
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/mouth": [
+        9,
+        8
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/chin": [
+        12,
+        6
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/forehead": [
+        6,
+        5
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/beard": [
+        1,
+        10
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/whole image": [
+        1,
+        13
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        15,
+        0
+      ]
+    }
+  },
+  "L25-27": {
+    "corrs": {
+      "spec_within_face": 0.9369730353355408,
+      "spec_face_ctrl": 0.8725942373275757,
+      "avg_within_face": 0.9949413537979126,
+      "avg_face_ctrl": 0.9625342488288879
+    },
+    "peaks": {
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/nose": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/eyes": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/mouth": [
+        2,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/chin": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/forehead": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/beard": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/whole image": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/nose": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/eyes": [
+        13,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/mouth": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/chin": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/forehead": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/beard": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/whole image": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/nose": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/eyes": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/mouth": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/chin": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/forehead": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/beard": [
+        15,
+        0
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/whole image": [
+        0,
+        15
+      ],
+      "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png/bottom-left area": [
+        15,
+        0
+      ]
+    }
+  }
+}

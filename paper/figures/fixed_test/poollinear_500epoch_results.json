@@ -1,0 +1,122 @@
+{
+  "config": {
+    "n_epochs": 500,
+    "n_seeds": 3
+  },
+  "results": {
+    "L1-3": {
+      "frac_0.1": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_0.25": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_0.5": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_1.0": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "L18-20": {
+      "frac_0.1": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.03676470660138875,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_0.25": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_0.5": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_1.0": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "Last": {
+      "frac_0.1": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_0.25": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_0.5": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "frac_1.0": {
+        "pck_mean": 0.0,
+        "pck_std": 0.0,
+        "pck_per_seed": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  }
+}

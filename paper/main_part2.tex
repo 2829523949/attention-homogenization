@@ -1,0 +1,51 @@
+
+% =====================================================================
+\section{Introduction}
+\label{sec:intro}
+% =====================================================================
+
+Text-driven 3D face generation has emerged as a compelling research direction, enabling controllable synthesis of photorealistic face images from natural language descriptions. A core component of any such system is the text encoder---a model that converts free-form text into a representation that can condition the face generator. Recent works have explored a spectrum of encoders, from lightweight contrastive models like CLIP~\cite{CLIP} to large vision-language models (VLMs)~\cite{Qwen3VL,LLaVA}. Yet, an important question remains unanswered: \emph{does scaling up the text encoder lead to better control?}
+
+Existing methods typically adopt a single text encoder without justification for their choice. Some works~\cite{CLIPFaceGAN,Text2Face} use CLIP for its efficiency, while others leverage large VLMs~\cite{Next3D} for their rich multimodal representations. However, no study has systematically compared the suitability of different encoder classes for 3D face control, leaving practitioners to rely on intuition rather than evidence.
+
+In this paper, we conduct the first systematic comparison between a large VLM (Qwen3-VL-2B, 1224M trainable parameters) and a lightweight encoder (CLIP-ViT-B/32, 67M parameters) for text-driven 3D face camera pose control using the EG3D~\cite{EG3D} generator. We make three key contributions:
+
+\noindent\textbf{1. Cross-attention spatial grounding failure.} We analyze Qwen3-VL's self-attention maps across different facial feature queries (nose, eyes, mouth, chin, forehead, beard) and control queries (``whole image'', ``bottom-left''). All queries produce near-identical attention distributions (Pearson r $>$ 0.9999). This demonstrates that VLM attention cannot spatially localize facial features, undermining its suitability for fine-grained face control.
+
+\noindent\textbf{2. Embedding space collapse.} Using prompts that differ only in angle (0{\textdegree} to 90{\textdegree}), we measure how well each encoder distinguishes fine-grained pose descriptions. VLM hidden states exhibit a mean pairwise similarity of 0.9962 and a discriminability (adjacent vs. far similarity difference) of only 0.0028. CLIP embeddings, despite being 4x lower-dimensional, achieve 0.0459---a 16.4x improvement.
+
+\noindent\textbf{3. Comprehensive empirical comparison.} On the same test set with English prompts, CLIP achieves superior pose accuracy (yaw error 3.58{\textdegree} vs. 3.84{\textdegree}, pitch error 4.60{\textdegree} vs. 5.60{\textdegree}) while being 10.8x faster (7.0ms vs. 75.7ms per inference) and 18x smaller in parameter count. We also show that VLM performance degrades significantly under language mismatch (yaw error increases from 3.84{\textdegree} to 10.10{\textdegree} when using Chinese prompts).
+
+These findings challenge the assumption that larger text encoders are always better. On the contrary, they suggest that for 3D face camera control, a lightweight encoder is not only sufficient but superior across all practical metrics.
+
+% =====================================================================
+\section{Related Work}
+\label{sec:related}
+% =====================================================================
+
+\textbf{Text-driven 3D face generation.} A line of work uses text to control 3D-aware face generators. EG3D~\cite{EG3D} introduced a tri-plane representation for efficient 3D-aware generation. StyleNeRF~\cite{StyleNeRF} and Next3D~\cite{Next3D} extended this to editable avatars. Recent works incorporate CLIP~\cite{CLIPFaceGAN,Text2Face} for text-driven editing. These works typically focus on \emph{how} to achieve editing, without systematically analyzing the encoder choice.
+
+\textbf{Text encoders in generative models.} CLIP~\cite{CLIP} provides a shared vision-language embedding space and is widely used in text-to-image generation. BERT~\cite{BERT} offers bidirectional language understanding. Large VLMs such as LLaVA~\cite{LLaVA} and Qwen3-VL~\cite{Qwen3VL} extend this with multimodal reasoning. While each has been used individually for generation tasks, comparative studies of their suitability for continuous control are lacking.
+
+\textbf{Attention analysis in VLMs.} Prior work~\cite{AttentionSurvey} has analyzed attention patterns in vision transformers, noting that deeper layers tend to produce more uniform attention distributions. However, the specific failure case of VLM attention for facial feature localization has not been documented.
+
+% =====================================================================
+\section{Methodology}
+\label{sec:method}
+% =====================================================================
+
+We build two bridges connecting text encoders to the EG3D face generator, differing only in the encoder while sharing the same pose mapping and camera projection.
+
+\textbf{Preliminary: EG3D.} EG3D~\cite{EG3D} generates 3D-consistent face images using a tri-plane representation. It requires a 25-dimensional camera parameter vector (16 for camera-to-world matrix, 9 for intrinsics). Given a latent code $z \in \mathbb{R}^{512}$, the mapping network produces style codes $w \in \mathbb{R}^{16 \times 512}$, which condition the synthesis network.
+
+\textbf{Pose mapping.} Both bridges share identical pose mapping: a three-layer MLP ($2048 \to 1024 \to 512 \to 6$) producing a 6D pose vector $p = [\text{yaw}, \text{pitch}, \text{radius}, \text{fov}, l_x, l_z]$. The 6D pose is converted to EG3D's 25D camera parameters following~\cite{EG3D}'s conventions:
+\begin{equation}
+\text{cam} = \text{pose\_6d\_to\_camera}(p)
+\end{equation}
+where the projection follows the polar angle convention ($\pi/2 =$ forward-facing) and normalized intrinsics.
+
+\textbf{VLM bridge.} For the VLM branch, we use Qwen3-VL-2B-Instruct in 4-bit quantization. Given a text prompt, we extract the last-token hidden state from the LLM's final layer ($h_{\text{VLM}} \in \mathbb{R}^{2048}$), which we project to 6D via the pose MLP. The vision modality is deliberately excluded to create a fair text-only comparison.
+
+\textbf{CLIP bridge.} For the CLIP branch, we use CLIP-ViT-B/32. Given a text prompt, we obtain the pooled text embedding ($e_{\text{CLIP}} \in \mathbb{R}^{512}$), pass it through a learned linear projection ($512 \to 2048$) to match the VLM's hidden dimension, then apply the shared pose MLP.
+
+\textbf{Training.} We train on a dataset of 21 template camera poses (varying yaw and pitch) with 5 text templates each, plus 500 diverse descriptions per epoch. Training uses a hybrid yaw loss---circular L1 for yaw (respecting the periodic boundary) and standard L1 for other parameters. Both bridges are trained for 80 epochs with the Adam optimizer ($\text{lr}=1\times10^{-4}$). The text encoder is frozen in both cases.

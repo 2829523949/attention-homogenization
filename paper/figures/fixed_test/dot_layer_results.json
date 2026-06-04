@@ -1,0 +1,262 @@
+{
+  "config": {
+    "layer_groups": {
+      "L1-3": [
+        0,
+        1,
+        2
+      ],
+      "L8-10": [
+        7,
+        8,
+        9
+      ],
+      "L18-20": [
+        17,
+        18,
+        19
+      ],
+      "L25-27": [
+        25,
+        26,
+        27
+      ]
+    },
+    "colors": [
+      "red",
+      "green",
+      "blue"
+    ],
+    "grid_size": 16
+  },
+  "results": {
+    "L1-3": {
+      "cross_color_r": 0.8189,
+      "pair_r": {
+        "red_green": 0.8715,
+        "red_blue": 0.8008,
+        "green_blue": 0.7845
+      },
+      "peaks": {
+        "red": [
+          7,
+          0
+        ],
+        "green": [
+          7,
+          0
+        ],
+        "blue": [
+          7,
+          0
+        ]
+      },
+      "peak_distances": {
+        "red": {
+          "peak": [
+            7,
+            0
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "dist": 6.08
+        },
+        "green": {
+          "peak": [
+            7,
+            0
+          ],
+          "expected": [
+            7,
+            7
+          ],
+          "dist": 7.0
+        },
+        "blue": {
+          "peak": [
+            7,
+            0
+          ],
+          "expected": [
+            14,
+            14
+          ],
+          "dist": 15.65
+        }
+      }
+    },
+    "L8-10": {
+      "cross_color_r": 0.6875,
+      "pair_r": {
+        "red_green": 0.7811,
+        "red_blue": 0.7251,
+        "green_blue": 0.5563
+      },
+      "peaks": {
+        "red": [
+          7,
+          6
+        ],
+        "green": [
+          3,
+          2
+        ],
+        "blue": [
+          7,
+          6
+        ]
+      },
+      "peak_distances": {
+        "red": {
+          "peak": [
+            7,
+            6
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "dist": 7.81
+        },
+        "green": {
+          "peak": [
+            3,
+            2
+          ],
+          "expected": [
+            7,
+            7
+          ],
+          "dist": 6.4
+        },
+        "blue": {
+          "peak": [
+            7,
+            6
+          ],
+          "expected": [
+            14,
+            14
+          ],
+          "dist": 10.63
+        }
+      }
+    },
+    "L18-20": {
+      "cross_color_r": 0.3737,
+      "pair_r": {
+        "red_green": 0.2771,
+        "red_blue": 0.5827,
+        "green_blue": 0.2613
+      },
+      "peaks": {
+        "red": [
+          1,
+          0
+        ],
+        "green": [
+          4,
+          3
+        ],
+        "blue": [
+          6,
+          6
+        ]
+      },
+      "peak_distances": {
+        "red": {
+          "peak": [
+            1,
+            0
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "dist": 1.0
+        },
+        "green": {
+          "peak": [
+            4,
+            3
+          ],
+          "expected": [
+            7,
+            7
+          ],
+          "dist": 5.0
+        },
+        "blue": {
+          "peak": [
+            6,
+            6
+          ],
+          "expected": [
+            14,
+            14
+          ],
+          "dist": 11.31
+        }
+      }
+    },
+    "L25-27": {
+      "cross_color_r": 0.7304,
+      "pair_r": {
+        "red_green": 0.716,
+        "red_blue": 0.7902,
+        "green_blue": 0.6849
+      },
+      "peaks": {
+        "red": [
+          1,
+          0
+        ],
+        "green": [
+          4,
+          3
+        ],
+        "blue": [
+          5,
+          7
+        ]
+      },
+      "peak_distances": {
+        "red": {
+          "peak": [
+            1,
+            0
+          ],
+          "expected": [
+            1,
+            1
+          ],
+          "dist": 1.0
+        },
+        "green": {
+          "peak": [
+            4,
+            3
+          ],
+          "expected": [
+            7,
+            7
+          ],
+          "dist": 5.0
+        },
+        "blue": {
+          "peak": [
+            5,
+            7
+          ],
+          "expected": [
+            14,
+            14
+          ],
+          "dist": 11.4
+        }
+      }
+    }
+  }
+}

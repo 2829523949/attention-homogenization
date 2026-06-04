@@ -1,0 +1,135 @@
+{
+  "config": {
+    "model": "Qwen3-VL-2B",
+    "n_images": 500,
+    "task": "yaw_3class (left/frontal/right)",
+    "probe": "mean_pool -> Linear(2048 -> 3)",
+    "layer_conditions": [
+      "L18-20",
+      "L25-27",
+      "Last"
+    ],
+    "train_fractions": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ]
+  },
+  "results": {
+    "L18-20": {
+      "frac_0.01": {
+        "accuracy": 41.0,
+        "random_baseline": 33.3,
+        "n_train": 4
+      },
+      "frac_0.02": {
+        "accuracy": 47.0,
+        "random_baseline": 33.3,
+        "n_train": 8
+      },
+      "frac_0.05": {
+        "accuracy": 47.0,
+        "random_baseline": 33.3,
+        "n_train": 20
+      },
+      "frac_0.1": {
+        "accuracy": 49.0,
+        "random_baseline": 33.3,
+        "n_train": 40
+      },
+      "frac_0.25": {
+        "accuracy": 56.0,
+        "random_baseline": 33.3,
+        "n_train": 100
+      },
+      "frac_0.5": {
+        "accuracy": 56.0,
+        "random_baseline": 33.3,
+        "n_train": 200
+      },
+      "frac_1.0": {
+        "accuracy": 75.0,
+        "random_baseline": 33.3,
+        "n_train": 400
+      }
+    },
+    "L25-27": {
+      "frac_0.01": {
+        "accuracy": 39.0,
+        "random_baseline": 33.3,
+        "n_train": 4
+      },
+      "frac_0.02": {
+        "accuracy": 44.0,
+        "random_baseline": 33.3,
+        "n_train": 8
+      },
+      "frac_0.05": {
+        "accuracy": 39.0,
+        "random_baseline": 33.3,
+        "n_train": 20
+      },
+      "frac_0.1": {
+        "accuracy": 55.0,
+        "random_baseline": 33.3,
+        "n_train": 40
+      },
+      "frac_0.25": {
+        "accuracy": 60.0,
+        "random_baseline": 33.3,
+        "n_train": 100
+      },
+      "frac_0.5": {
+        "accuracy": 49.0,
+        "random_baseline": 33.3,
+        "n_train": 200
+      },
+      "frac_1.0": {
+        "accuracy": 67.0,
+        "random_baseline": 33.3,
+        "n_train": 400
+      }
+    },
+    "Last": {
+      "frac_0.01": {
+        "accuracy": 39.0,
+        "random_baseline": 33.3,
+        "n_train": 4
+      },
+      "frac_0.02": {
+        "accuracy": 41.0,
+        "random_baseline": 33.3,
+        "n_train": 8
+      },
+      "frac_0.05": {
+        "accuracy": 41.0,
+        "random_baseline": 33.3,
+        "n_train": 20
+      },
+      "frac_0.1": {
+        "accuracy": 57.0,
+        "random_baseline": 33.3,
+        "n_train": 40
+      },
+      "frac_0.25": {
+        "accuracy": 58.0,
+        "random_baseline": 33.3,
+        "n_train": 100
+      },
+      "frac_0.5": {
+        "accuracy": 51.0,
+        "random_baseline": 33.3,
+        "n_train": 200
+      },
+      "frac_1.0": {
+        "accuracy": 63.0,
+        "random_baseline": 33.3,
+        "n_train": 400
+      }
+    }
+  }
+}

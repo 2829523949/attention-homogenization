@@ -1,0 +1,25 @@
+
+% =====================================================================
+\section{Discussion}
+\label{sec:disc}
+% =====================================================================
+
+\textbf{Why does VLM underperform?} Our experiments point to a consistent explanation. At the attention level (Section~\ref{sec:exp_attention}), VLM's self-attention cannot differentiate spatial locations corresponding to different facial features. At the representation level (Section~\ref{sec:exp_emb}), the LLM hidden states collapse fine-grained numerical differences. These two phenomena are complementary: the LLM processes text descriptions through a high-capacity but spatially-agnostic mechanism that compresses precise continuous attributes (angles) into its discrete, semantically-oriented representation space. CLIP's contrastively-trained embedding, by contrast, natively aligns with visual properties, making it better suited for tasks requiring precise visual attribute control.
+
+\textbf{Implications for face editing.} While our study is limited to camera pose control, the attention collapse finding has direct implications for face editing. If the VLM cannot spatially distinguish different facial features in attention space, it cannot perform localized editing operations (e.g., ``make the nose smaller'' vs. ``change the eye color'') without additional mechanisms. We leave this verification to future work.
+
+\textbf{Limitations.} (1) Our comparison is limited to one VLM (Qwen3-VL-2B) and one lightweight encoder (CLIP-ViT-B/32). Other VLMs or CLIP variants may yield different results. (2) We study only camera pose control; semantic attribute editing may favor different encoder architectures. (3) Our attention analysis uses self-attention from the LLM layers rather than dedicated cross-attention, as Qwen3-VL is decoder-only.
+
+% =====================================================================
+\section{Conclusion}
+\label{sec:conc}
+% =====================================================================
+
+In this paper, we presented the first systematic comparison between a large vision-language model and a lightweight text encoder for 3D face camera control. Through attention analysis, embedding space analysis, and comprehensive accuracy/speed benchmarks, we demonstrated that CLIP (63M parameters) consistently outperforms Qwen3-VL-2B (1224M parameters) across all metrics. The VLM's failure is rooted in two fundamental issues: spatial attention collapse (r $>$ 0.9999 across different queries) and embedding sensitivity collapse (discriminability 0.0028 vs. CLIP's 0.0459). Our results suggest that for 3D face camera control, lightweight text encoders are not merely sufficient but superior, challenging the prevailing trend toward increasingly large vision-language models for this task. We hope our findings guide practitioners in making informed encoder choices and inspire future work on efficient text-driven face control.
+
+{\small
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+}
+
+\end{document}

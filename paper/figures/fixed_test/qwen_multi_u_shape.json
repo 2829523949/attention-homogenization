@@ -1,0 +1,154 @@
+{
+  "L1-3": {
+    "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9571289221445719,
+      "avg_within": 0.9985787947972615
+    },
+    "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9603366176287333,
+      "avg_within": 0.9987851738929748
+    },
+    "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.950094465414683,
+      "avg_within": 0.9982593735059102
+    },
+    "\u5de6\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9538203676541647,
+      "avg_within": 0.9984649896621705
+    },
+    "\u5de6\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9667036851247152,
+      "avg_within": 0.9989427208900452
+    },
+    "\u5de6\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9577078302701314,
+      "avg_within": 0.9986657659212749
+    },
+    "\u6b63\u9762\u4ef0\u89c6.png": {
+      "spec_within": 0.9552485744158427,
+      "avg_within": 0.9986533284187317
+    },
+    "\u6b63\u9762\u4fef\u89c6.png": {
+      "spec_within": 0.9598658442497253,
+      "avg_within": 0.9988304813702901
+    },
+    "\u6b63\u9762\u5e73\u89c6.png": {
+      "spec_within": 0.9583806355794271,
+      "avg_within": 0.9988494674364726
+    }
+  },
+  "L8-10": {
+    "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.86195836464564,
+      "avg_within": 0.9825002829233805
+    },
+    "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.8317850510279338,
+      "avg_within": 0.9738242944081624
+    },
+    "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.8666954636573792,
+      "avg_within": 0.9818196415901184
+    },
+    "\u5de6\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.834760860602061,
+      "avg_within": 0.9763242721557617
+    },
+    "\u5de6\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.8414290110270183,
+      "avg_within": 0.9769792119661967
+    },
+    "\u5de6\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.8378361781438192,
+      "avg_within": 0.9734997828801473
+    },
+    "\u6b63\u9762\u4ef0\u89c6.png": {
+      "spec_within": 0.834986670811971,
+      "avg_within": 0.982705827554067
+    },
+    "\u6b63\u9762\u4fef\u89c6.png": {
+      "spec_within": 0.8710485617319743,
+      "avg_within": 0.9846863985061646
+    },
+    "\u6b63\u9762\u5e73\u89c6.png": {
+      "spec_within": 0.8676767865816752,
+      "avg_within": 0.9850263118743896
+    }
+  },
+  "L18-20": {
+    "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.49284718235333763,
+      "avg_within": 0.9437018116315206
+    },
+    "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.3492690920829773,
+      "avg_within": 0.8757242679595947
+    },
+    "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.5919392307599386,
+      "avg_within": 0.9498250285784403
+    },
+    "\u5de6\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.4343655874331792,
+      "avg_within": 0.892241895198822
+    },
+    "\u5de6\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.45781490008036296,
+      "avg_within": 0.9086479067802429
+    },
+    "\u5de6\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.4839121679464976,
+      "avg_within": 0.9189682801564535
+    },
+    "\u6b63\u9762\u4ef0\u89c6.png": {
+      "spec_within": 0.5114431430896124,
+      "avg_within": 0.9288301388422648
+    },
+    "\u6b63\u9762\u4fef\u89c6.png": {
+      "spec_within": 0.5579794218142827,
+      "avg_within": 0.9252349495887756
+    },
+    "\u6b63\u9762\u5e73\u89c6.png": {
+      "spec_within": 0.4953900744517644,
+      "avg_within": 0.9296106497446696
+    }
+  },
+  "L25-27": {
+    "\u53f3\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9471758246421814,
+      "avg_within": 0.995848830540975
+    },
+    "\u53f3\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9164368152618408,
+      "avg_within": 0.9934922337532044
+    },
+    "\u53f3\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9473066131273905,
+      "avg_within": 0.9954829533894857
+    },
+    "\u5de6\u4fa715\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9440301934878031,
+      "avg_within": 0.9951408306757609
+    },
+    "\u5de6\u4fa730\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9237080494562785,
+      "avg_within": 0.9933280348777771
+    },
+    "\u5de6\u4fa745\u5ea6\u5e73\u89c6.png": {
+      "spec_within": 0.9171816945075989,
+      "avg_within": 0.9934888084729513
+    },
+    "\u6b63\u9762\u4ef0\u89c6.png": {
+      "spec_within": 0.9543789227803549,
+      "avg_within": 0.9961883425712585
+    },
+    "\u6b63\u9762\u4fef\u89c6.png": {
+      "spec_within": 0.9489567081133524,
+      "avg_within": 0.9963418126106263
+    },
+    "\u6b63\u9762\u5e73\u89c6.png": {
+      "spec_within": 0.9515243728955587,
+      "avg_within": 0.9970052361488342
+    }
+  }
+}

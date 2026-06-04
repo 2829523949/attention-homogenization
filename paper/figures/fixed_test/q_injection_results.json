@@ -1,0 +1,22 @@
+{
+  "config": {
+    "n_images": 30,
+    "capture": [
+      17,
+      18,
+      19
+    ],
+    "inject": 27
+  },
+  "face": {
+    "baseline_mean": 0.9809,
+    "baseline_std": 0.0092,
+    "injected_mean": 0.9809,
+    "injected_std": 0.0092,
+    "delta": 0.0
+  },
+  "dot": {
+    "baseline": 0.983,
+    "injected": 0.983
+  }
+}

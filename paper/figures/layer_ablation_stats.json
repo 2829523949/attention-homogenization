@@ -1,0 +1,50 @@
+{
+  "A_Early (L1-3)": {
+    "layers": [
+      0,
+      1,
+      2
+    ],
+    "within_face_mean": 0.9985411140653823,
+    "within_face_std": 0.0004943881108942771,
+    "face_vs_ctrl_mean": 0.9931590523984697,
+    "face_vs_ctrl_std": 0.0035391622504738745,
+    "ctrl_ctrl_mean": 0.9955394864082336
+  },
+  "B_Mid (L8-10)": {
+    "layers": [
+      7,
+      8,
+      9
+    ],
+    "within_face_mean": 0.9793814063072205,
+    "within_face_std": 0.013437257777666385,
+    "face_vs_ctrl_mean": 0.9324352542559305,
+    "face_vs_ctrl_std": 0.021843382676024568,
+    "ctrl_ctrl_mean": 0.9564878940582275
+  },
+  "C_Later (L18-20)": {
+    "layers": [
+      17,
+      18,
+      19
+    ],
+    "within_face_mean": 0.9230837027231852,
+    "within_face_std": 0.04416534938101616,
+    "face_vs_ctrl_mean": 0.8038301120201746,
+    "face_vs_ctrl_std": 0.11520986800749033,
+    "ctrl_ctrl_mean": 0.7856888969739279
+  },
+  "D_Last (L25-27)": {
+    "layers": [
+      25,
+      26,
+      27
+    ],
+    "within_face_mean": 0.9949413392278883,
+    "within_face_std": 0.0025651032454619264,
+    "face_vs_ctrl_mean": 0.9625342190265656,
+    "face_vs_ctrl_std": 0.010664700468528332,
+    "ctrl_ctrl_mean": 0.9568896691004435
+  }
+}

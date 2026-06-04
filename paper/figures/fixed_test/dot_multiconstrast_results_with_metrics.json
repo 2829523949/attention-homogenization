@@ -1,0 +1,250 @@
+{
+  "metrics": {
+    "baseline": {
+      "red": {
+        "peak": [
+          0,
+          1
+        ],
+        "gt": [
+          1,
+          1
+        ],
+        "dist_grid_cells": 1.0,
+        "norm_dist": 0.062,
+        "correct_quadrant": 1
+      },
+      "green": {
+        "peak": [
+          3,
+          4
+        ],
+        "gt": [
+          7,
+          7
+        ],
+        "dist_grid_cells": 5.0,
+        "norm_dist": 0.312,
+        "correct_quadrant": 0
+      },
+      "blue": {
+        "peak": [
+          7,
+          6
+        ],
+        "gt": [
+          14,
+          14
+        ],
+        "dist_grid_cells": 10.63,
+        "norm_dist": 0.664,
+        "correct_quadrant": 0
+      }
+    },
+    "small_blocks": {
+      "red": {
+        "peak": [
+          0,
+          1
+        ],
+        "gt": [
+          1,
+          1
+        ],
+        "dist_grid_cells": 1.0,
+        "norm_dist": 0.062,
+        "correct_quadrant": 1
+      },
+      "green": {
+        "peak": [
+          3,
+          4
+        ],
+        "gt": [
+          7,
+          7
+        ],
+        "dist_grid_cells": 5.0,
+        "norm_dist": 0.312,
+        "correct_quadrant": 0
+      },
+      "blue": {
+        "peak": [
+          6,
+          7
+        ],
+        "gt": [
+          14,
+          14
+        ],
+        "dist_grid_cells": 10.63,
+        "norm_dist": 0.664,
+        "correct_quadrant": 0
+      }
+    },
+    "large_blocks": {
+      "red": {
+        "peak": [
+          0,
+          2
+        ],
+        "gt": [
+          1,
+          1
+        ],
+        "dist_grid_cells": 1.41,
+        "norm_dist": 0.088,
+        "correct_quadrant": 1
+      },
+      "green": {
+        "peak": [
+          5,
+          3
+        ],
+        "gt": [
+          7,
+          7
+        ],
+        "dist_grid_cells": 4.47,
+        "norm_dist": 0.28,
+        "correct_quadrant": 0
+      },
+      "blue": {
+        "peak": [
+          7,
+          7
+        ],
+        "gt": [
+          14,
+          14
+        ],
+        "dist_grid_cells": 9.9,
+        "norm_dist": 0.619,
+        "correct_quadrant": 0
+      }
+    },
+    "sat_50pct": {
+      "red": {
+        "peak": [
+          6,
+          4
+        ],
+        "gt": [
+          1,
+          1
+        ],
+        "dist_grid_cells": 5.83,
+        "norm_dist": 0.364,
+        "correct_quadrant": 0
+      },
+      "green": {
+        "peak": [
+          6,
+          4
+        ],
+        "gt": [
+          7,
+          7
+        ],
+        "dist_grid_cells": 3.16,
+        "norm_dist": 0.198,
+        "correct_quadrant": 1
+      },
+      "blue": {
+        "peak": [
+          7,
+          6
+        ],
+        "gt": [
+          14,
+          14
+        ],
+        "dist_grid_cells": 10.63,
+        "norm_dist": 0.664,
+        "correct_quadrant": 0
+      }
+    },
+    "sat_25pct": {
+      "red": {
+        "peak": [
+          1,
+          0
+        ],
+        "gt": [
+          1,
+          1
+        ],
+        "dist_grid_cells": 1.0,
+        "norm_dist": 0.062,
+        "correct_quadrant": 1
+      },
+      "green": {
+        "peak": [
+          3,
+          3
+        ],
+        "gt": [
+          7,
+          7
+        ],
+        "dist_grid_cells": 5.66,
+        "norm_dist": 0.354,
+        "correct_quadrant": 0
+      },
+      "blue": {
+        "peak": [
+          7,
+          6
+        ],
+        "gt": [
+          14,
+          14
+        ],
+        "dist_grid_cells": 10.63,
+        "norm_dist": 0.664,
+        "correct_quadrant": 0
+      }
+    },
+    "noise_bg": {
+      "red": {
+        "peak": [
+          3,
+          0
+        ],
+        "gt": [
+          1,
+          1
+        ],
+        "dist_grid_cells": 2.24,
+        "norm_dist": 0.14,
+        "correct_quadrant": 1
+      },
+      "green": {
+        "peak": [
+          3,
+          3
+        ],
+        "gt": [
+          7,
+          7
+        ],
+        "dist_grid_cells": 5.66,
+        "norm_dist": 0.354,
+        "correct_quadrant": 0
+      },
+      "blue": {
+        "peak": [
+          7,
+          7
+        ],
+        "gt": [
+          14,
+          14
+        ],
+        "dist_grid_cells": 9.9,
+        "norm_dist": 0.619,
+        "correct_quadrant": 0
+      }
+    }
+  }
+}

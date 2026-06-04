@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Model weights (太大)
+model-*.safetensors
+*.safetensors.index.json
+
+# Checkpoints & data
+checkpoints/
+val2017.zip
+paper/figures/*.npy
+
+# Windows 垃圾文件
+*:Zone.Identifier
+
+# 压缩包
+paper.zip
+paper_v1_camera.zip
+
+# Config / tokenizer（来自原始模型）
+config.json
+generation_config.json
+preprocessor_config.json
+processor_config.json
+tokenizer.json
+tokenizer_config.json
+special_tokens_map.json
+
+# Docker
+docker/
+
+# Paper build artifacts
+paper/main.pdf
+paper/*.log
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.brf

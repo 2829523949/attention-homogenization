@@ -1,0 +1,152 @@
+{
+  "config": {
+    "n_images": 10,
+    "groups_processed": [
+      "L1-3"
+    ],
+    "layer_groups": {
+      "L1-3": [
+        0,
+        1,
+        2
+      ],
+      "L18-20": [
+        17,
+        18,
+        19
+      ],
+      "L28": [
+        27
+      ]
+    },
+    "grad_layers": {
+      "L1-3": [
+        0,
+        1,
+        2
+      ],
+      "L18-20": [
+        17,
+        18,
+        19
+      ],
+      "L28": [
+        26
+      ]
+    },
+    "queries": [
+      "left side",
+      "right side",
+      "top",
+      "bottom"
+    ],
+    "query_pairs": [
+      "left-right",
+      "top-bottom"
+    ]
+  },
+  "aggregated": {
+    "L1-3": {
+      "left-right_attn": {
+        "mean": 0.9979,
+        "std": 0.0006
+      },
+      "left-right_grad": {
+        "mean": 0.9775,
+        "std": 0.0133
+      },
+      "top-bottom_attn": {
+        "mean": 0.999,
+        "std": 0.0011
+      },
+      "top-bottom_grad": {
+        "mean": 0.798,
+        "std": 0.1238
+      }
+    }
+  },
+  "per_image": {
+    "L1-3": [
+      {
+        "image": "000000495054.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9972,
+        "left-right_grad_r": 0.9924,
+        "top-bottom_attn_r": 0.9993,
+        "top-bottom_grad_r": 0.9063
+      },
+      {
+        "image": "000000276434.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9974,
+        "left-right_grad_r": 0.9473,
+        "top-bottom_attn_r": 0.9995,
+        "top-bottom_grad_r": 0.8411
+      },
+      {
+        "image": "000000328117.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9986,
+        "left-right_grad_r": 0.9836,
+        "top-bottom_attn_r": 0.9995,
+        "top-bottom_grad_r": 0.7312
+      },
+      {
+        "image": "000000206994.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9977,
+        "left-right_grad_r": 0.9829,
+        "top-bottom_attn_r": 0.9991,
+        "top-bottom_grad_r": 0.8857
+      },
+      {
+        "image": "000000102644.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.999,
+        "left-right_grad_r": 0.9907,
+        "top-bottom_attn_r": 0.9993,
+        "top-bottom_grad_r": 0.8637
+      },
+      {
+        "image": "000000126592.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9979,
+        "left-right_grad_r": 0.9777,
+        "top-bottom_attn_r": 0.9958,
+        "top-bottom_grad_r": 0.5031
+      },
+      {
+        "image": "000000311081.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9972,
+        "left-right_grad_r": 0.9796,
+        "top-bottom_attn_r": 0.9996,
+        "top-bottom_grad_r": 0.8891
+      },
+      {
+        "image": "000000507575.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9979,
+        "left-right_grad_r": 0.9594,
+        "top-bottom_attn_r": 0.9994,
+        "top-bottom_grad_r": 0.7209
+      },
+      {
+        "image": "000000563349.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9975,
+        "left-right_grad_r": 0.9852,
+        "top-bottom_attn_r": 0.9993,
+        "top-bottom_grad_r": 0.9223
+      },
+      {
+        "image": "000000383337.jpg",
+        "group": "L1-3",
+        "left-right_attn_r": 0.9985,
+        "left-right_grad_r": 0.9763,
+        "top-bottom_attn_r": 0.9995,
+        "top-bottom_grad_r": 0.7169
+      }
+    ]
+  }
+}

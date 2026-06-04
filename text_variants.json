@@ -1,0 +1,1652 @@
+[
+  {
+    "text": "相机在背面平视拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看正后方",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在正后方进行水平拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从背面水平拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从后脑勺方向平视拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在脑后方向进行水平拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从脑后方向视角平视",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从背面视角水平",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从后脑勺方向视角水平",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "脑后方向方向的平视角度",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在背面进行水平拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄脑后方向并水平",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在脑后方向水平拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄后脑勺方向并平视",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在正后方水平拍摄",
+    "yaw": -3.14,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "俯视看左后方",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左后方俯视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在左后方从上往下拍摄",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从上往下看左后方偏上",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左肩后方视角从上往下",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄左肩后方并俯视",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在左后方偏上俯视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左肩后方从上往下拍摄",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "俯视看左肩后方",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从上往下看左后方",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左后方偏上视角俯视",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左后方偏上视角从上往下",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左后方视角从上往下",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在左后方进行俯视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左肩后方视角俯视",
+    "yaw": -2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左后方平视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "平视看左后方水平",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左后方视角水平",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在左后方进行平视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在左后方水平进行平视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左后方水平视角水平",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄左后方水平并水平",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄左肩后方并水平",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左后方水平视角平视",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "左后方方向的水平角度",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于左后方水平水平拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左后方视角平视",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在左后方平视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看左肩后方",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "左肩后方方向的平视角度",
+    "yaw": -2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄左后方偏下并仰视",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从左后方偏下视角从下往上",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "仰视看左后方偏下",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "左后方方向的从下往上角度",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "镜头位于左肩后方仰视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "镜头位于左肩后方从下往上拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "左肩后方方向的仰视角度",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从左后方偏下从下往上拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在左后方仰视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "左后方偏下方向的从下往上角度",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄左后方偏下并从下往上",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄左后方并仰视",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在左后方进行从下往上拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "镜头位于左后方仰视拍摄",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "左后方偏下方向的仰视角度",
+    "yaw": -2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "俯视看正左侧",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "拍摄正左侧并从上往下",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从正左侧从上往下拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "左侧偏上方向的俯视角度",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "拍摄左侧偏上并从上往下",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "在左侧90度进行俯视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "相机在左侧偏上俯视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "相机在左侧偏上从上往下拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "相机在正左侧俯视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从上往下看正左侧",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从左侧90度俯视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "相机在左侧90度俯视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从上往下看左侧偏上",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从上往下看左侧90度",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "在左侧偏上进行从上往下拍摄",
+    "yaw": -1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "平视看正左侧",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在正左侧进行平视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在正左侧进行水平拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看正左侧",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "左侧90度方向的平视角度",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "左侧90度方向的水平角度",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左侧水平平视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看左侧90度",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于左侧水平水平拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左侧水平水平拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "正左侧方向的水平角度",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从正左侧视角平视",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "平视看左侧水平",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于左侧水平平视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左侧水平视角平视",
+    "yaw": -1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "左侧90度仰视",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从正左侧从下往上拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从左侧90度仰视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "仰视看左侧偏下",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "左侧90度方向的仰视角度",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "拍摄左侧90度并仰视",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "镜头位于左侧偏下仰视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "拍摄正左侧并仰视",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "正左侧方向的从下往上角度",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "在左侧偏下进行仰视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "镜头位于正左侧仰视拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "仰视看左侧90度",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从左侧偏下视角从下往上",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "镜头位于左侧偏下从下往上拍摄",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "拍摄左侧偏下并从下往上",
+    "yaw": -1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从左前方视角从上往下",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "俯视看左前上方",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左前上方视角从上往下",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "左前方方向的从上往下角度",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左侧45度从上往下拍摄",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从上往下看左侧45度",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "左前上方方向的从上往下角度",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "左侧45度俯视",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "镜头位于左前上方从上往下拍摄",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在左前上方从上往下拍摄",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左前方俯视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在左前方从上往下拍摄",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "镜头位于左前上方俯视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄左侧45度并俯视",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄左前上方并从上往下",
+    "yaw": -0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从左侧45度视角平视",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄左前水平并水平",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左侧45度平视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从左前水平水平拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在左前方进行平视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于左前方平视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于左前水平平视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄左前方并平视",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于左侧45度平视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "平视看左前水平",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在左前水平进行水平拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "左前方方向的水平角度",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在左侧45度进行水平拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在左前水平平视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在左侧45度进行平视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于左前下方从下往上拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从左前下方视角仰视",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在左侧45度进行仰视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从下往上看左前下方",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从左前下方视角从下往上",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从左侧45度仰视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从左前下方仰视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "左侧45度仰视",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从左前方视角仰视",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在左前方进行仰视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄左前方并仰视",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄左侧45度并从下往上",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄左前下方并从下往上",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "仰视看左前方",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在左侧45度仰视拍摄",
+    "yaw": -0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从上往下看正前上方",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "正面方向的从上往下角度",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄正前方并俯视",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在正前上方进行从上往下拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从正前上方视角俯视",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从正面视角俯视",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "镜头位于正前上方俯视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从正前上方俯视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从正面从上往下拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "镜头位于正面从上往下拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从上往下看正前方",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在正前上方俯视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在正前上方进行俯视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "镜头位于正前方从上往下拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从正前方俯视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在正面水平拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在正前水平水平拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从正面平视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于正面水平拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于正前水平平视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在正前方平视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "正面方向的平视角度",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄正面并水平",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看正前方",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄正面并平视",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在正前方水平拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于正前方平视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "平视看正前方",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从正前方水平拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄正前方并平视",
+    "yaw": 0.0,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在正前下方从下往上拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从正前下方仰视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从正前下方从下往上拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "正面仰视",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在正前下方进行仰视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从正前下方视角仰视",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从正面视角仰视",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "正面方向的从下往上角度",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在正前下方仰视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "仰视看正前下方",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄正前下方并仰视",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从正面仰视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "镜头位于正面仰视拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在正前下方进行从下往上拍摄",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "正前方方向的仰视角度",
+    "yaw": 0.0,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从上往下看右前方",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从上往下看右前上方",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "镜头位于右前上方俯视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "右侧45度方向的俯视角度",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从右前上方俯视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在右前上方进行从上往下拍摄",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在右前上方从上往下拍摄",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "右侧45度方向的从上往下角度",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "镜头位于右前上方从上往下拍摄",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄右前上方并从上往下",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "右前上方方向的从上往下角度",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "右前方方向的从上往下角度",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄右侧45度并从上往下",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从右侧45度俯视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在右前方俯视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在右前方进行水平拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于右侧45度平视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄右前水平并平视",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "右前水平方向的平视角度",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "右侧45度平视",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在右前水平平视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在右前水平进行平视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于右前方平视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看右前方",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从右侧45度视角平视",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从右前水平视角平视",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于右侧45度水平拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在右侧45度进行水平拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从右前水平平视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看右前水平",
+    "yaw": 0.79,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在右侧45度仰视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从下往上看右前方",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在右侧45度从下往上拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "右侧45度方向的从下往上角度",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "镜头位于右前下方从下往上拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "右前方方向的从下往上角度",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄右前下方并仰视",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在右前方进行仰视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从右侧45度视角从下往上",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄右前方并从下往上",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "右前方方向的仰视角度",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在右前方仰视拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄右前方并仰视",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从右前下方从下往上拍摄",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "仰视看右前方",
+    "yaw": 0.79,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "正右侧方向的俯视角度",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "在右侧偏上进行俯视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "镜头位于右侧90度俯视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "镜头位于正右侧从上往下拍摄",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "在右侧90度进行俯视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "拍摄右侧90度并俯视",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "拍摄右侧偏上并从上往下",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "右侧90度俯视",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从右侧偏上视角俯视",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从右侧90度视角俯视",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从右侧90度俯视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从正右侧从上往下拍摄",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "拍摄正右侧并俯视",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "在正右侧进行从上往下拍摄",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "右侧90度方向的从上往下角度",
+    "yaw": 1.57,
+    "pitch_offset": -0.4
+  },
+  {
+    "text": "从右侧水平视角平视",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从正右侧水平拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从右侧90度平视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看正右侧",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在右侧水平水平拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从正右侧视角水平",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄右侧90度并水平",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在右侧水平进行平视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "右侧90度方向的水平角度",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在右侧水平进行水平拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄正右侧并水平",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从右侧90度水平拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在正右侧进行水平拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在右侧90度进行水平拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄右侧水平并水平",
+    "yaw": 1.57,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄右侧90度并仰视",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "相机在正右侧从下往上拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "在右侧90度进行从下往上拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从右侧90度从下往上拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从右侧偏下视角仰视",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从右侧偏下从下往上拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "正右侧方向的从下往上角度",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "右侧偏下方向的从下往上角度",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "在正右侧进行仰视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "相机在正右侧仰视拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "右侧偏下方向的仰视角度",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从正右侧从下往上拍摄",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "仰视看正右侧",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "拍摄右侧90度并从下往上",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从下往上看右侧偏下",
+    "yaw": 1.57,
+    "pitch_offset": 0.4
+  },
+  {
+    "text": "从右后方视角从上往下",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "右肩后方方向的俯视角度",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "右后方偏上方向的从上往下角度",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄右后方并从上往下",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从上往下看右肩后方",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在右后方进行从上往下拍摄",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄右后方偏上并俯视",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从右后方偏上视角从上往下",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在右肩后方进行从上往下拍摄",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "俯视看右后方偏上",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "拍摄右后方并俯视",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在右后方偏上从上往下拍摄",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "从右后方视角俯视",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "右后方偏上方向的俯视角度",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "相机在右肩后方俯视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": -0.35
+  },
+  {
+    "text": "在右后方水平进行水平拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄右肩后方并水平",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看右肩后方",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看右后方水平",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于右后方水平水平拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "水平看右后方",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在右后方进行水平拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从右后方水平拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "右后方方向的平视角度",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄右后方并平视",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从右肩后方视角水平",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "在右肩后方进行水平拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "镜头位于右肩后方水平拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "相机在右肩后方水平拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "拍摄右后方并水平",
+    "yaw": 2.36,
+    "pitch_offset": 0.0
+  },
+  {
+    "text": "从下往上看右后方",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "右后方偏下方向的从下往上角度",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在右肩后方仰视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在右后方偏下进行仰视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在右后方仰视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "仰视看右后方偏下",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄右后方偏下并仰视",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在右后方偏下仰视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄右后方并仰视",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从右肩后方仰视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "相机在右后方偏下从下往上拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从右后方仰视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "拍摄右后方偏下并从下往上",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "从右后方视角仰视",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  },
+  {
+    "text": "在右后方进行仰视拍摄",
+    "yaw": 2.36,
+    "pitch_offset": 0.35
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "Early (L1-3)": {
+    "layers": [
+      0,
+      1,
+      2
+    ],
+    "within_face_mean": 0.9985,
+    "within_face_std": 0.0005,
+    "face_vs_ctrl_mean": 0.9932,
+    "face_vs_ctrl_std": 0.0035,
+    "ctrl_ctrl_mean": 0.9955
+  },
+  "Mid (L8-10)": {
+    "layers": [
+      7,
+      8,
+      9
+    ],
+    "within_face_mean": 0.9794,
+    "within_face_std": 0.0134,
+    "face_vs_ctrl_mean": 0.9324,
+    "face_vs_ctrl_std": 0.0218,
+    "ctrl_ctrl_mean": 0.9565
+  },
+  "Later (L18-20)": {
+    "layers": [
+      17,
+      18,
+      19
+    ],
+    "within_face_mean": 0.9231,
+    "within_face_std": 0.0442,
+    "face_vs_ctrl_mean": 0.8038,
+    "face_vs_ctrl_std": 0.1152,
+    "ctrl_ctrl_mean": 0.7857
+  },
+  "Last (L25-27)": {
+    "layers": [
+      25,
+      26,
+      27
+    ],
+    "within_face_mean": 0.9949,
+    "within_face_std": 0.0026,
+    "face_vs_ctrl_mean": 0.9625,
+    "face_vs_ctrl_std": 0.0107,
+    "ctrl_ctrl_mean": 0.9569
+  }
+}
