@@ -10,12 +10,16 @@
    workspace if reproducing 40-case development diagnostics.
 5. Run `python scripts/audit_dataset.py --data-root /path/to/RealBind_v2`.
 
-The current construction snapshot at packaging time contains 1,400
-`AUTO_VALID` families and 973 unique Visual Genome source image IDs. It has no
-`HUMAN_ACCEPTED` or `FROZEN` families. Complete the existing audit/import/export
-workflow before formal evaluation; do not synthesize an export from the
-`AUTO_VALID` rows.
+The certified frozen release contains 1,400 families and 973 unique source
+images. Copy the complete `frozen/` directory outside Git and verify it with:
+
+```bash
+python scripts/verify_frozen_export.py --dataset-root /path/to/RealBind_v2
+```
+
+Do not rerun the builder export against the already-frozen database: the
+historical exporter selects only `HUMAN_ACCEPTED` rows and would produce an
+empty export after those rows have become `FROZEN`.
 
 Model weights, RealBind images, masks, caches, SQLite state, and raw outputs are
 ignored by Git. Git LFS is intentionally not used.
-

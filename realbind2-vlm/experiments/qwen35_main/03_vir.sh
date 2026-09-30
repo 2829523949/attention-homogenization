@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 python scripts/verify_hashes.py --root .
-echo "VIR_BLOCKED_DATASET_NOT_FROZEN: historical DEFOCUS is certified, but formal VIR requires a human-accepted frozen RealBind2 export." >&2
+echo "VIR_BLOCKED_EXECUTOR_UNCERTIFIED: dataset and historical DEFOCUS are certified; the dataset-scale VIR executor still requires certification." >&2
 exit 2

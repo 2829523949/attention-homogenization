@@ -1,0 +1,22 @@
+{
+  "dataset_frozen_event_verified": true,
+  "human_decision_events_verified": true,
+  "image_hashes_verified": 973,
+  "manifest_file_sha256": "8e1108c65fe2f2d64734f2d0d292744a4d266ec236d40fd075f873450e27ec67",
+  "num_composition": 2800,
+  "num_families": 1400,
+  "num_qa": 9800,
+  "num_unique_images": 973,
+  "passed": true,
+  "qa_regeneration_exact": true,
+  "qa_types": {
+    "I2C_A": 1400,
+    "I2C_B": 1400,
+    "PAIR_REL_A_TO_B": 1400,
+    "REL2C_LEFT": 1400,
+    "REL2C_RIGHT": 1400,
+    "REL2I_LEFT": 1400,
+    "REL2I_RIGHT": 1400
+  },
+  "split_leakage": false
+}

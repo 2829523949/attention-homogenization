@@ -4,13 +4,15 @@ Date: 2026-09-30 CST.
 
 ## Data
 
-- Current construction snapshot: 1,400 `AUTO_VALID` families on 973 unique
+- Frozen release: 1,400 `FROZEN` families on 973 unique
   source images.
 - QA reconstruction: 9,800 total; 2,800 composition; every family has exactly
   seven distinct, dependency-complete QA rows.
 - Duplicate family, entity-pair, and QA IDs: zero.
-- Human accepted: zero. Frozen: zero. Freeze events: zero.
-- Decision: `REALBIND2_DATASET_BLOCKED` pending human audit/export.
+- Human acceptance decisions imported: 1,400, based on explicit project-owner
+  confirmation recorded in `data_audit/human_acceptance_basis.json`.
+- Frozen: 1,400. Freeze events: one. All 973 image hashes verified.
+- Decision: `REALBIND2_DATASET_CERTIFIED`.
 
 ## DEFOCUS
 
@@ -35,10 +37,10 @@ Date: 2026-09-30 CST.
 Local certification uses the existing `next3d_qwen` Python environment, since
 the default base Python has no pytest installation. No model was loaded.
 
-- `pytest`: 21 passed, 1 skipped (`live_gpu`)
+- `pytest`: 23 passed, 1 skipped (`live_gpu`)
 - `python -m compileall`: pass
 - shell syntax: pass
-- repository hash verification: PASS, 18 protected files
+- repository hash verification: PASS, 23 protected files
 - dataset schema audit: pass, 1,400/1,400
 - DEFOCUS regression: pass, 5/5 exact pixels and bytes
 - artifact-backed smoke: `SMOKE_PASS`
@@ -47,6 +49,6 @@ the default base Python has no pytest installation. No model was loaded.
 
 The live bundle is statically prepared, and all live model/API behavior remains
 pending server execution. Dataset-scale VIR, causal, and retrospective runners
-retain their fail-closed gates. No formal release hash is created while human
-acceptance/export is incomplete. Runtime profiles will be generated only by
-actual server execution.
+retain their fail-closed gates. Formal release hashes are recorded in
+`data/REALBIND2_FROZEN.sha256` and the manifest. Runtime profiles will be
+generated only by actual server execution.

@@ -1,8 +1,8 @@
 # Server handoff
 
-This is the primary operator guide for the 2 × NVIDIA L20 server. The current
-dataset is not frozen; complete the human audit/export before step 6. Do not
-substitute the current `AUTO_VALID` database for a frozen export.
+This is the primary operator guide for the 2 × NVIDIA L20 server. RealBind2 is
+now frozen and hash-certified: 1,400 families on 973 unique images. Copy the
+actual frozen release; do not re-export or substitute construction candidates.
 
 ## 1. Clone
 
@@ -43,9 +43,9 @@ frozen/construction_stats.json
 frozen/<paths named by family image_path>
 ```
 
-The release manifest must be certified and committed with `frozen=true` before
-live certification. This checkout deliberately has `frozen=false`; changing
-that flag alone is insufficient. Follow `DATASET_FREEZE_BLOCKERS.md`.
+Copy all files and images under the release's `frozen/` directory. The committed
+manifest has `frozen=true` and binds their exact hashes. Freeze provenance is
+in `FREEZE_REPORT.md`.
 
 ## 4. Configure paths
 
@@ -60,9 +60,10 @@ $EDITOR configs/server_paths.yaml
 
 ```bash
 python scripts/verify_hashes.py --root .
+python scripts/verify_frozen_export.py --paths configs/server_paths.yaml
 ```
 
-Expected: `HASH_PASS`.
+Expected: `HASH_PASS` and `FROZEN_EXPORT_HASH_PASS images=973 QA=9800`.
 
 ## 6. Run live certification
 

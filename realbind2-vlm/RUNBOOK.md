@@ -119,8 +119,8 @@ PASS: paired injected-text hashes match, 8,400 new rows are unique, and summary
 reports VIR, fact rescue, image-induced regression, competitor-attribute,
 third-value, and invalid/error rates. Historical DEFOCUS is now recovered,
 hashed, and exact-regression certified; see `DEFOCUS_CERTIFICATION.md`.
-This formal step remains blocked by the missing human-accepted frozen dataset
-and the uncertified dataset-scale VIR execution path.
+The dataset is now frozen and certified. This formal step remains blocked by
+the uncertified dataset-scale VIR execution path.
 
 ## 8. Qwen3.5 causal mechanism
 

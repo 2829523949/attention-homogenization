@@ -74,6 +74,8 @@ def check_paths(config: dict[str, Any]) -> None:
     manifest = json.loads((ROOT / "data" / "realbind2_manifest.json").read_text())
     if not manifest.get("frozen"):
         raise RuntimeError("DATASET_NOT_FROZEN: complete human acceptance/export and certify release manifest first")
+    from scripts.verify_frozen_export import verify_export
+    verify_export(frozen_dataset_root(config), manifest)
     mandatory_models = ("qwen35_4b", "mm_gdino_l", "sam3")
     missing = [key for key in mandatory_models if not Path(config["models"][key]).expanduser().is_dir()]
     missing_python = [key for key, value in config["python"].items() if not Path(value).expanduser().is_file()]

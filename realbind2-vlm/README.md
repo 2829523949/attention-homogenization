@@ -6,9 +6,10 @@ repair retrospective, and the frozen Strong Integrated repair.
 
 RealBind2 has seven deterministic questions per benchmark item: two I2C, one
 pair relation, two REL2I, and two REL2C. The formal target is 1,400 items,
-9,800 QA rows, and 2,800 composition rows. The current local construction
-snapshot has 1,400 `AUTO_VALID` families but has **not** completed human review
-or frozen export. Formal commands fail closed until that export exists.
+9,800 QA rows, and 2,800 composition rows. The frozen release contains
+1,400 families on 973 unique source images. Explicit project-owner acceptance,
+builder export, exact QA regeneration, and all image hashes are recorded in
+[FREEZE_REPORT.md](FREEZE_REPORT.md).
 
 ## Experiment groups
 
@@ -43,8 +44,8 @@ bash experiments/qwen35_main/00_smoke.sh
 ```
 
 Artifact smoke is self-contained. Server setup and live certification are in
-[SERVER_HANDOFF.md](SERVER_HANDOFF.md). The current dataset remains blocked
-pending human acceptance and frozen export; see
+[SERVER_HANDOFF.md](SERVER_HANDOFF.md). The dataset is certified and live GPU
+certification remains pending; see
 [PRE_SERVER_STATUS.md](PRE_SERVER_STATUS.md).
 
 For two L20 GPUs, launch the paired scripts under

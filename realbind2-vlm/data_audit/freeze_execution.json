@@ -1,0 +1,49 @@
+{
+  "acceptance_basis": {
+    "acceptance_basis": "explicit_project_owner_user_attestation",
+    "attested_at_utc": "2026-09-30T08:04:26.566958+00:00",
+    "candidate_family_ids_sha256": "7000af148bc71fef54966ee9993cb4b43ad1c4898106d649ee53780739581974",
+    "decision_file_sha256": "95309a1b751486bf92a6b50ec6ad51b62acda7e8ce8ae1b07e7071cbb055fc6e",
+    "independent_per_case_visual_review_verified": false,
+    "num_families": 1400,
+    "pre_freeze_database_sha256": "3e1981cdf2cd4a81c714954069e7e2d1f6722936d7f2c6f93e7b2240ddc030c0",
+    "scope": "all current 1400 audited AUTO_VALID candidate-family IDs",
+    "user_statements": [
+      "human acceptance已经完成，进行freeze",
+      "数据无误，直接进行freeze"
+    ]
+  },
+  "builder_validation": {
+    "errors": [],
+    "families": 1400,
+    "ok": true,
+    "questions": 9800,
+    "split_image_leakage": false,
+    "unique_images": 973
+  },
+  "export_stats": {
+    "cross_category": 1195,
+    "families": 1400,
+    "hashes": {
+      "dependency_graph_sha256": "96b725fda62374332a6543889e0f065db81f2270db0062575ca5a38612f04a08",
+      "family_manifest_sha256": "0cf3359f7c75b80c650e9bbaf7e0c74b28af50ec72b1f2bf69c007830943abd4",
+      "image_manifest_sha256": "674d99bf1857a4e241bf20548b962b6efb3f1f7b98ccc2a715ce0d2da5051b72",
+      "protocol_config_sha256": "60fa92790a1db45740ca05f8f1790939ecdd6154d710e41409db7ac36333193f",
+      "question_manifest_sha256": "9950ccd8339db78683b8af2e4fa7cf72cf6c87618e20a7a8ae90e41896b0ee93"
+    },
+    "no_vlm_performance_used": true,
+    "questions": 9800,
+    "same_category": 205,
+    "unique_images": 973
+  },
+  "family_states": {
+    "FROZEN": 1400,
+    "METADATA_VALID": 11902
+  },
+  "freeze_events": 1,
+  "import_result": {
+    "decisions_imported": 1400,
+    "errors": []
+  },
+  "post_freeze_database_sha256": "3ed756df4cf205fc8a64107a21ec3773e62fbdd721dbe440cde2b5f5952b7a57"
+}

@@ -1,5 +1,12 @@
 # Packaging report
 
+> Update, 2026-09-30: the owner explicitly confirmed acceptance of the audited
+> 1,400-family set. The original builder imported those decisions and froze
+> 1,400 families / 973 images / 9,800 QA / 2,800 composition. Exact export and
+> image-hash certification passed. See FREEZE_REPORT.md. Prior unfrozen
+> findings below are retained as historical evidence and are superseded.
+
+
 Generated: 2026-09-30 CST.
 
 ## Repository

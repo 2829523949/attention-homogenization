@@ -29,6 +29,11 @@ FILES = (
     "configs/server_paths.example.yaml",
     "scripts/server_live_certification.py",
     "scripts/build_realbind2_cohorts.py",
+    "data/REALBIND2_FROZEN.sha256",
+    "data_audit/human_acceptance_basis.json",
+    "data_audit/human_acceptance_decisions.jsonl",
+    "scripts/certify_frozen_realbind2.py",
+    "scripts/verify_frozen_export.py",
 )
 
 
