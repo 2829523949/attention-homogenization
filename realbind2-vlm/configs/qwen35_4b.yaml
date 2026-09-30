@@ -1,0 +1,15 @@
+model_id: Qwen3.5-4B
+adapter: qwen35
+path_key: qwen35_4b
+role: primary
+runtime:
+  device: cuda
+  dtype: bfloat16
+  use_cache: false
+  max_new_tokens: 16
+protocol:
+  baseline: full
+  vir: full
+  causal: full
+  strong_integrated_final: true
+

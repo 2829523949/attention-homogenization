@@ -1,0 +1,109 @@
+{
+  "schema_version": "realbind_referent_interface_audit_v1",
+  "audit_date": "2026-09-23",
+  "status": "AUDITED",
+  "source_paths": {
+    "families": "/mnt/d/datasets/RealBind/realbind/families/dryrun_100_pair_direct_v1_1_frozen.jsonl",
+    "qa": "/mnt/d/datasets/RealBind/realbind/qa/dryrun_100_pair_direct_v1_1.jsonl",
+    "historical_qa": "/mnt/d/datasets/RealBind/realbind/qa/dryrun_100_qa.jsonl",
+    "dependency": "/mnt/d/datasets/RealBind/realbind/qa/pair_direct_v1_1_dependency_spec.json",
+    "v11_generator": "/root/Qwen3-VL/experiments/realbind_phase2/scripts/generate_pair_direct_qa_v1_1.py",
+    "legacy_harness": "/mnt/d/vlm_repair_v2/harness"
+  },
+  "source_hashes": {
+    "families": "b8d366c296403646a8c9a71c09cf8dd8ba007eea2d1d7a3c930cd95edd1816ee",
+    "qa": "433ccc24f7a7070ae56f756e8936f10c181105e6fa31b3fa9bf206fcf06c3c87",
+    "dependency": "9238308038aa552f307b8cbb25058a373e0d979dd408656dacc82ace7e57cdf9",
+    "scorer": "841f6b0dfbbd1710e9c1e74ed583fc609a5113740ad83cf9090ad71bc237f18e"
+  },
+  "dataset_counts": {
+    "families": 100,
+    "qa": 700,
+    "composition_cases": 200,
+    "by_task_type": {
+      "I2C_A": 100,
+      "I2C_B": 100,
+      "PAIR_REL_A_TO_B": 100,
+      "REL2C_LEFT": 100,
+      "REL2C_RIGHT": 100,
+      "REL2I_LEFT": 100,
+      "REL2I_RIGHT": 100
+    },
+    "split_counts": {"test": 623, "val": 77},
+    "all_referential_identity_valid": true,
+    "all_object_nouns_unique": true,
+    "literal_A_in_questions": 0,
+    "literal_B_in_questions": 0
+  },
+  "task_types": {
+    "REL2C_LEFT": {
+      "legal_inference_inputs": ["image", "question text", "protocol task type if supplied"],
+      "visible_question": {"category_nouns": 2, "selection_side": "left", "attribute_requested": "color"},
+      "hidden_evaluator_only": ["gt_bbox", "gt_category", "gt_color", "gt_relation", "instance_id", "left_is_A", "ground_truth", "target_identity"],
+      "referent_specs": {"A": "first category noun from QUESTION_TEXT", "B": "second category noun from QUESTION_TEXT"},
+      "resolution_status": "RESOLVABLE_FROM_TEXT",
+      "main_smoke_eligible": true
+    },
+    "REL2C_RIGHT": {
+      "legal_inference_inputs": ["image", "question text", "protocol task type if supplied"],
+      "visible_question": {"category_nouns": 2, "selection_side": "right", "attribute_requested": "color"},
+      "hidden_evaluator_only": ["gt_bbox", "gt_category", "gt_color", "gt_relation", "instance_id", "left_is_A", "ground_truth", "target_identity"],
+      "referent_specs": {"A": "first category noun from QUESTION_TEXT", "B": "second category noun from QUESTION_TEXT"},
+      "resolution_status": "RESOLVABLE_FROM_TEXT",
+      "main_smoke_eligible": true
+    },
+    "REL2I_LEFT": {
+      "legal_inference_inputs": ["image", "question text", "protocol task type if supplied"],
+      "visible_question": {"category_nouns": 2, "selection_side": "left", "attribute_requested": null},
+      "hidden_evaluator_only": ["gt_bbox", "gt_category", "gt_color", "gt_relation", "instance_id", "left_is_A", "ground_truth", "target_identity"],
+      "referent_specs": {"A": "first category noun from QUESTION_TEXT", "B": "second category noun from QUESTION_TEXT"},
+      "resolution_status": "RESOLVABLE_FROM_TEXT",
+      "main_smoke_eligible": false
+    },
+    "REL2I_RIGHT": {
+      "legal_inference_inputs": ["image", "question text", "protocol task type if supplied"],
+      "visible_question": {"category_nouns": 2, "selection_side": "right", "attribute_requested": null},
+      "hidden_evaluator_only": ["gt_bbox", "gt_category", "gt_color", "gt_relation", "instance_id", "left_is_A", "ground_truth", "target_identity"],
+      "referent_specs": {"A": "first category noun from QUESTION_TEXT", "B": "second category noun from QUESTION_TEXT"},
+      "resolution_status": "RESOLVABLE_FROM_TEXT",
+      "main_smoke_eligible": false
+    },
+    "PAIR_REL_A_TO_B": {
+      "legal_inference_inputs": ["image", "question text", "protocol task type if supplied"],
+      "visible_question": {"category_nouns": 2, "ordered_relation": "first relative to second"},
+      "hidden_evaluator_only": ["gt_bbox", "gt_category", "gt_color", "gt_relation", "instance_id", "left_is_A", "ground_truth"],
+      "referent_specs": {"A": "first category noun from QUESTION_TEXT", "B": "second category noun from QUESTION_TEXT"},
+      "resolution_status": "RESOLVABLE_FROM_TEXT",
+      "main_smoke_eligible": false
+    },
+    "I2C_A": {
+      "legal_inference_inputs": ["image", "question text", "explicit protocol role I2C_A"],
+      "visible_question": {"category_nouns": 1, "selection_side": null, "attribute_requested": "color"},
+      "hidden_evaluator_only": ["gt_bbox", "gt_category", "gt_color", "gt_relation", "instance_id", "ground_truth"],
+      "referent_specs": {"A": "target noun from QUESTION_TEXT plus protocol role I2C_A", "TARGET": "target noun from QUESTION_TEXT when role omitted"},
+      "resolution_status": "RESOLVABLE_WITH_PROTOCOL_ROLE",
+      "raw_question_only_status": "REFERENT_INTERFACE_UNDERSPECIFIED",
+      "scoped_blocker": "docs/REFERENT_INTERFACE_BLOCKER.md",
+      "main_smoke_eligible": false
+    },
+    "I2C_B": {
+      "legal_inference_inputs": ["image", "question text", "explicit protocol role I2C_B"],
+      "visible_question": {"category_nouns": 1, "selection_side": null, "attribute_requested": "color"},
+      "hidden_evaluator_only": ["gt_bbox", "gt_category", "gt_color", "gt_relation", "instance_id", "ground_truth"],
+      "referent_specs": {"B": "target noun from QUESTION_TEXT plus protocol role I2C_B", "TARGET": "target noun from QUESTION_TEXT when role omitted"},
+      "resolution_status": "RESOLVABLE_WITH_PROTOCOL_ROLE",
+      "raw_question_only_status": "REFERENT_INTERFACE_UNDERSPECIFIED",
+      "scoped_blocker": "docs/REFERENT_INTERFACE_BLOCKER.md",
+      "main_smoke_eligible": false
+    }
+  },
+  "legacy_findings": {
+    "old_harness_dataset_joins_hidden_family_fields": true,
+    "old_generic_florence_route": "LEGACY_GENERIC_PROPOSAL_BASELINE",
+    "historical_stage1_stage2_metadata_mapping": "evaluator/historical only"
+  },
+  "critical_stop_condition": {
+    "triggered_for_rel2c": false,
+    "policy": "If a future prompt lacks a visible noun, marker, or legally acquired entity state, mark REFERENT_INTERFACE_UNDERSPECIFIED and stop automatic grounding for that task; do not use hidden annotations."
+  }
+}

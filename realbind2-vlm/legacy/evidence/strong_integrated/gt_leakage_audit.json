@@ -1,0 +1,24 @@
+{
+  "evaluator_joined_artifacts": [
+    "qa_results.jsonl",
+    "minimal_state_results.jsonl",
+    "failure_attribution.json",
+    "clean_vs_raw_accuracy.json"
+  ],
+  "final_reasoner_image_present": [
+    false
+  ],
+  "final_reasoner_state_hash_matches": true,
+  "final_reasoner_vision_encoder_called": [
+    false
+  ],
+  "forbidden_key_hits_in_pure_inference_artifacts": [],
+  "gt_used_only_after_inference_for_evaluation": true,
+  "pass": true,
+  "pure_inference_artifacts_scanned": [
+    "grounding_results.jsonl",
+    "binding_results.jsonl",
+    "mask_results.jsonl",
+    "attribute_results.jsonl"
+  ]
+}

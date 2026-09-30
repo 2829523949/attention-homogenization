@@ -1,0 +1,285 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2316210_2316210004_2316210002__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2316210_2316210004_2316210002__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2316723_2316723000_2316723002__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2316723_2316723000_2316723002__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2319488_2319488001_2319488002__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2319488_2319488001_2319488002__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2327340_2327340003_2327340002__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2327340_2327340003_2327340002__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2347354_2347354005_2347354023__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2347354_2347354005_2347354023__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2362197_2362197010_2362197013__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2362197_2362197010_2362197013__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2366164_2366164002_2366164000__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2366164_2366164002_2366164000__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2368070_2368070003_2368070008__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2368070_2368070003_2368070008__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2373801_2373801029_2373801022__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2373801_2373801029_2373801022__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2374119_2374119000_2374119004__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2374119_2374119000_2374119004__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2380660_2380660001_2380660004__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2380660_2380660001_2380660004__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2381705_2381705000_2381705006__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2381705_2381705000_2381705006__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2381904_2381904006_2381904002__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2381904_2381904006_2381904002__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2383540_2383540002_2383540001__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2383540_2383540002_2383540001__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2384340_2384340003_2384340005__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2384340_2384340003_2384340005__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2386641_2386641002_2386641000__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2386641_2386641002_2386641000__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2397782_2397782000_2397782007__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2397782_2397782000_2397782007__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2408386_2408386004_2408386009__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2408386_2408386004_2408386009__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2413686_2413686004_2413686003__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_test_2413686_2413686004_2413686003__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_val_2369344_2369344002_2369344001__REL2C_LEFT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    },
+    {
+      "image_present": false,
+      "qa_id": "realbind_val_2369344_2369344002_2369344001__REL2C_RIGHT",
+      "route": "STRONG_INTEGRATED_REPAIR",
+      "state_sha256_matches": true,
+      "vision_encoder_called": false
+    }
+  ]
+}

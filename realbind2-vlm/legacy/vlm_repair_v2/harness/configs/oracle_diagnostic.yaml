@@ -1,0 +1,8 @@
+schema_version: realbind_oracle_diagnostic_config_v1
+method_id: F_ORACLE_CERTIFIED_STATE
+primary: false
+default: false
+namespace: ORACLE_DIAGNOSTIC_ONLY
+gt_allowed: true
+main_method_compatible: false
+purpose: evaluator-only upper-bound diagnostics; never pass oracle fields to automatic processors or serialize them into inference state

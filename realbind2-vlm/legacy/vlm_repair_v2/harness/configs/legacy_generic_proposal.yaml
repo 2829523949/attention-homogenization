@@ -1,0 +1,8 @@
+schema_version: realbind_legacy_route_config_v1
+method_id: LEGACY_GENERIC_PROPOSAL_BASELINE
+primary: false
+default: false
+status: preserved_for_historical_engineering_only
+route: image -> Florence_generic_OD_or_REGION_PROPOSAL -> anonymous_proposals -> heuristic_A_B_selection -> attribute_readers -> reasoning
+warning: Logical A/B symbols are not semantic detector queries. This route is not the corrected research interface.
+allow_in_main_method: false

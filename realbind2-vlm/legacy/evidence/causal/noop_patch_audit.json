@@ -1,0 +1,8 @@
+{
+  "expected_rows": 576,
+  "failures": [],
+  "generated_output_exact_rate": 1.0,
+  "max_abs_first_token_logit_difference": 0.0,
+  "passed": true,
+  "rows": 576
+}

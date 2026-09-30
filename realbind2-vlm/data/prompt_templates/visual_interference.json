@@ -1,0 +1,10 @@
+{
+  "fact_line_A": "The {A} is {color_A}.",
+  "fact_line_B": "The {B} is {color_B}.",
+  "relation_line": "The {A} is to the {relation} of the {B}.",
+  "join": "{fact_A}\n{fact_B}\n{fact_relation}\n\n{question}",
+  "conditions": ["original", "facts_only", "image_correct_facts", "defocus_correct_facts"],
+  "paired_text_requirement": "facts_only, image_correct_facts, and defocus_correct_facts must have identical text hashes",
+  "defocus_policy": "HISTORICAL_IMPLEMENTATION_HASH_REQUIRED_BEFORE_FORMAL_RUN"
+}
+

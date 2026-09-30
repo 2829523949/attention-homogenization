@@ -1,0 +1,23 @@
+{
+  "forbidden_keys": [
+    "EVALUATOR_ONLY",
+    "evaluator_only",
+    "final_correct",
+    "ground_truth",
+    "gt_bbox",
+    "gt_bbox_xyxy_pixels",
+    "gt_color",
+    "iou_with_gt",
+    "qa_id",
+    "question",
+    "true_target"
+  ],
+  "notes": [
+    "Evaluator annotations were opened only after independent_binding_results.jsonl and joint_binding_results.jsonl had been written.",
+    "Consolidation uses only raw SAM3 proposals, masks, native ranks/scores, and fixed thresholds.",
+    "No GT/IoU/correctness field is used by clustering, representative selection, hypothesis scoring, or joint assignment."
+  ],
+  "passed": true,
+  "scanned_values": 273674,
+  "violations": []
+}

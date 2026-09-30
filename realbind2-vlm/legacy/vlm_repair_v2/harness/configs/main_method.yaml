@@ -1,0 +1,45 @@
+schema_version: realbind_corrected_main_method_v1
+method_id: MAIN_HARD_HANDOFF
+route: DECOMPOSE -> ACQUIRE -> COUNTERFACTUAL_VIEWS -> CERTIFY -> MINIMAL_PROOF_STATE -> HARD_HANDOFF -> REASON
+default: true
+legacy_route: LEGACY_GENERIC_PROPOSAL_BASELINE
+legacy_route_enabled: false
+inference:
+  accepts_gt_bbox: false
+  accepts_gt_category: false
+  accepts_gt_color: false
+  accepts_gt_relation: false
+  final_reasoner_accepts_image: false
+  qwen_model_path: /root/Qwen3-VL/models/Qwen3.5-4B
+  qwen_enable_thinking: false
+  qwen_use_cache: false
+referent_interface:
+  source: question_text_and_explicit_protocol_task_type
+  underspecified_policy: abstain_and_record_blocker
+processors:
+  acquisition_backend: florence2
+  grounding: florence2_query_grounding
+  grounding_acquisition_only: true
+  grounding_certification_score: CERTIFICATION_SCORE_UNSUPPORTED
+  grounding_score_processor: null   # no locally available score-capable full-identity grounding backend
+  region_query_evidence: siglip2_region_query
+  region_query_evidence_layer: SEMANTIC_REGION_SUPPORT
+  region_query_evidence_full_identity: false
+  color: siglip2_color
+  color_acquisition_only: pixel_lab_hsv
+  geometry: deterministic_center_x_v1
+  segmentation: disabled_unless_region_exists
+views:
+  raw: unaltered_input
+  focus: target_preserving_gaussian_defocus_outside_predicted_region_v2
+  remove: target_region_neutral_fill_ablation_v2
+certification:
+  calibration_mode: UNCALIBRATED_DIAGNOSTIC
+  epsilon_focus: -0.05
+  tau_remove: 0.10
+  minimum_base_score: 0.40
+  threshold_status: hand_set_diagnostic_placeholder_uncalibrated
+  calibration_artifact_id: null
+smoke:
+  max_cases: 2
+  full_benchmark_allowed: false

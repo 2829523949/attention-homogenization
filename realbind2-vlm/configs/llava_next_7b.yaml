@@ -1,0 +1,12 @@
+model_id: LLaVA-NeXT-7B
+adapter: llava_next
+path_key: llava_next_7b
+role: cross_model
+runtime: {device: cuda, dtype: float16, use_cache: true, max_new_tokens: 16}
+protocol:
+  baseline: full
+  vir: full
+  causal: reduced_normalized_depths
+  normalized_depths: [0.25, 0.5, 0.75, 1.0]
+  strong_integrated_final: optional
+

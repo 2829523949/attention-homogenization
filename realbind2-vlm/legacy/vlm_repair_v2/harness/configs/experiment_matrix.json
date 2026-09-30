@@ -1,0 +1,17 @@
+{
+  "dah": {
+    "original": {"image": "original", "facts": false, "defocus": false, "handoff": false, "gt_localization": false},
+    "oracle_full_dah": {"image": "oracle defocus/target lock", "facts": false, "defocus": true, "handoff": true, "gt_localization": true, "diagnostic_only": true},
+    "auto_blur": {"image": "predicted-region defocus", "facts": false, "defocus": true, "handoff": false, "gt_localization": false},
+    "auto_handoff": {"image": "original", "facts": false, "defocus": false, "handoff": true, "gt_localization": false},
+    "auto_full_dah": {"image": "predicted-target defocus", "facts": false, "defocus": true, "handoff": true, "gt_localization": false}
+  },
+  "fact_compiler": {
+    "original": {"image": "original", "facts": false, "handoff": false},
+    "auto_facts_only": {"image": null, "facts": true, "handoff": false},
+    "image_plus_auto_facts": {"image": "original", "facts": true, "handoff": false},
+    "auto_defocus_plus_auto_facts": {"image": "predicted-region defocus", "facts": true, "handoff": false},
+    "auto_facts_plus_handoff": {"image": null, "facts": true, "handoff": true},
+    "full_automatic_pipeline": {"image": "predicted-region defocus", "facts": true, "handoff": true}
+  }
+}

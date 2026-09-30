@@ -1,0 +1,33 @@
+schema_version: realbind_ablation_conditions_v1
+conditions:
+  A_ORIGINAL:
+    image: original
+    observations: none
+    certified_state: false
+    hard_handoff: false
+  B_IMAGE_RAW_OBSERVATIONS:
+    image: original
+    observations: raw_specialist_observations
+    certified_state: false
+    hard_handoff: false
+  C_IMAGE_STRUCTURED_FACTS:
+    image: original
+    observations: structured_facts
+    certified_state: false
+    hard_handoff: false
+  D_CERTIFIED_FACTS_IMAGE:
+    image: original
+    observations: certified_facts
+    certified_state: true
+    hard_handoff: false
+  E_MAIN_HARD_HANDOFF:
+    image: none
+    observations: minimal_certified_proof_state
+    certified_state: true
+    hard_handoff: true
+  F_ORACLE_CERTIFIED_STATE:
+    image: none
+    observations: oracle_certified_state
+    certified_state: true
+    hard_handoff: true
+    namespace: ORACLE_DIAGNOSTIC_ONLY

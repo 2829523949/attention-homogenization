@@ -1,0 +1,20 @@
+{
+  "schema_version": "acquisition_backend_registry_v1",
+  "default_backend": "florence2",
+  "backends": {
+    "florence2": {
+      "processor": "florence2_query_grounding",
+      "role": "LEGACY_BASELINE",
+      "candidate_contract": "CandidateSet"
+    },
+    "grounding_dino": {
+      "processor": "grounding_dino",
+      "role": "PILOT",
+      "candidate_contract": "CandidateSet",
+      "box_threshold": 0.25,
+      "text_threshold": 0.25,
+      "nms_iou_threshold": null,
+      "threshold_policy": "standard_transformers_defaults_unoptimized_pilot"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "I2C_A": "What color is {A}? Answer with one color.",
+  "I2C_B": "What color is {B}? Answer with one color.",
+  "PAIR_REL_A_TO_B": "Is {A} to the LEFT or RIGHT of {B}? Answer LEFT or RIGHT.",
+  "REL2C_LEFT": "Between {A} and {B}, what color is the one on the LEFT? Answer with one color.",
+  "REL2C_RIGHT": "Between {A} and {B}, what color is the one on the RIGHT? Answer with one color.",
+  "REL2I_LEFT": "Between {A} and {B}, which one is on the LEFT? Answer A or B.",
+  "REL2I_RIGHT": "Between {A} and {B}, which one is on the RIGHT? Answer A or B."
+}
+

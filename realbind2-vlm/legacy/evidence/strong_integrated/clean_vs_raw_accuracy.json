@@ -1,0 +1,22 @@
+{
+  "historical_r4": {
+    "clean_final_correct": 16,
+    "grounded_target_correct": 25,
+    "logical_target_correct": 34,
+    "minimal_state_sufficient": 16,
+    "raw_final_correct": 21,
+    "target_attribute_correct": 21
+  },
+  "n": 40,
+  "strong_integrated_repair": {
+    "clean_final_correct": 20,
+    "compensating_error_correct": 5,
+    "grounded_target_correct": 26,
+    "logical_target_correct": 36,
+    "minimal_state_sufficient": 20,
+    "raw_final_correct": 25,
+    "target_attribute_correct": 25,
+    "target_isolated": 23
+  },
+  "vanilla_vlm_locked": 20
+}

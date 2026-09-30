@@ -1,0 +1,37 @@
+{
+  "schema_version": "vlm_repair_v2_assets_v1",
+  "cache_environment": {
+    "HF_HOME": "/mnt/d/vlm_repair_v2/hf_cache",
+    "HUGGINGFACE_HUB_CACHE": "/mnt/d/vlm_repair_v2/hf_cache/hub",
+    "TORCH_HOME": "/mnt/d/vlm_repair_v2/torch_cache",
+    "PIP_CACHE_DIR": "/mnt/d/vlm_repair_v2/pip_cache",
+    "XDG_CACHE_HOME": "/mnt/d/vlm_repair_v2/cache/xdg",
+    "TMPDIR": "/mnt/d/vlm_repair_v2/tmp"
+  },
+  "downloaded_models": [
+    {
+      "repo": "microsoft/Florence-2-base-ft",
+      "path": "/mnt/d/vlm_repair_v2/models/florence2/Florence-2-base-ft",
+      "dry_run_estimate_bytes": 930300000,
+      "model_safetensors_bytes": 463221266,
+      "model_safetensors_sha256": "58757d657ff44051314c8030b68e04cb1bb618ca9a4885418f111f6fb708185a",
+      "pytorch_model_bin_bytes": 464421315
+    },
+    {
+      "repo": "google/siglip2-base-patch16-224",
+      "path": "/mnt/d/vlm_repair_v2/models/siglip2/siglip2-base-patch16-224",
+      "dry_run_estimate_bytes": 1500000000,
+      "model_safetensors_bytes": 1500800904,
+      "model_safetensors_sha256": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b"
+    }
+  ],
+  "not_downloaded": [
+    "SAM2 checkpoint (optional; bbox path sufficient for this smoke test)",
+    "IDEA-Research/grounding-dino-base (optional; frozen prompts had text identities and Florence query fallback was available)"
+  ],
+  "isolated_packages": {
+    "/mnt/d/vlm_repair_v2/external/florence_pydeps": ["transformers==4.49.0", "tokenizers==0.21.4", "huggingface-hub==0.36.2", "einops==0.8.1", "timm==1.0.20", "sentencepiece==0.2.1"],
+    "/mnt/d/vlm_repair_v2/external/siglip_pydeps": ["sentencepiece==0.2.1", "protobuf==6.32.1"]
+  },
+  "existing_environment_modified": false
+}

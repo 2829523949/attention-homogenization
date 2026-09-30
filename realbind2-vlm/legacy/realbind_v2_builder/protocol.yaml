@@ -1,0 +1,33 @@
+protocol_version: RealBind-v2.0-construction-pre1
+benchmark_name: RealBind-v2
+construction_claim: family-structured prerequisite-controlled benchmark for visual compositional binding
+sources: [VAW, Visual Genome]
+v1_1_development_image_exclusion: true
+relations: [LEFT, RIGHT]
+attribute: COLOR
+color_vocabulary: [red, orange, yellow, green, blue, purple, pink, brown, black, white, gray]
+color_aliases: {grey: gray}
+bbox_min_area_ratio: 0.02
+minimum_normalized_center_dx: 0.20
+maximum_bbox_iou: 0.10
+maximum_families_per_image: 2
+family_ranking: [center_separation_desc, min_object_area_ratio_desc, bbox_iou_asc, category_diversity_tiebreak, candidate_family_id_asc]
+referent_template: "the <category> [with <non-target VAW positive attribute>]"
+referent_forbidden_tokens: [canonical_color, left, right, leftmost, rightmost, east, west, tested_answer]
+referent_uniqueness: HUMAN_UNIQUENESS_CHECK_REQUIRED
+qa_order: [I2C_A, I2C_B, PAIR_REL_A_TO_B, REL2I_LEFT, REL2I_RIGHT, REL2C_LEFT, REL2C_RIGHT]
+atomic_prerequisites: [I2C_A, I2C_B, PAIR_REL_A_TO_B]
+binding_prerequisites: [REL2I_LEFT, REL2I_RIGHT]
+PCFR_atomic: "P(REL2C_LEFT_or_RIGHT fail | I2C_A correct AND I2C_B correct AND PAIR_REL_A_TO_B correct); report LEFT, RIGHT, pooled"
+PCFR_binding_LEFT: "P(REL2C_LEFT fail | AtomicReady AND REL2I_LEFT correct)"
+PCFR_binding_RIGHT: "P(REL2C_RIGHT fail | AtomicReady AND REL2I_RIGHT correct)"
+family_success: "all seven QA correct"
+max_working_gb: 10
+min_free_gb: 10
+download_retry_limit: 3
+auto_accepted_family_target: 1400
+human_audit_target_approx: 1000
+split_policy: group_by_visual_genome_image_id; validation_20_percent; test_80_percent; no_train_split
+v1_1_split: development_only_excluded_from_realbind_v2
+model_performance_filtering: forbidden
+freeze_version: RealBind-v2.0

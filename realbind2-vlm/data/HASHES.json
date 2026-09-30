@@ -1,0 +1,17 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "configs/internvl35_8b.yaml": "d46dcb5b0bc7284ff63d2bd3a569047441516ce49b014447cc5d2be231f04449",
+    "configs/llava_next_7b.yaml": "d9a88a4fa1f2892764839bf0fc189614e2c513f831ce188354855174acbb84a5",
+    "configs/qwen35_4b.yaml": "182013af39752b6772c644481b0a97efa00b7e6ace8a3d64983a691178c12510",
+    "configs/qwen35_9b.yaml": "c9a8abbe619c313d82f38e9fe2119816ba038d6bcee83240620c79b101ee5b9c",
+    "configs/qwen3vl_4b.yaml": "834e883a2782fe7c280b93140df9ca7e40c57afcb9eda9c50d4fd4af60034dbe",
+    "configs/qwen3vl_8b.yaml": "1232f99acc0c4a078bd7c584ca613a9c7cc2dafeb939086706088b7a84834266",
+    "data/prompt_templates/realbind2.json": "213fb50e03034146b832c6bde95478776316008f64fd1992912d6d33164e783e",
+    "data/prompt_templates/visual_interference.json": "40ac587bdcf212ea6db6fa44b1434f590aee1e5916743f9344a43852cfee26db",
+    "data/realbind2_manifest.json": "bee5058761c13221bb778d669e06668bbddcdde3e3fb6fb5dea8e9544b7b47d0",
+    "src/common/prompts.py": "d5e8be404bc97fb86579f8177d69cae8e42b91dd940936e7f0301f3742e2e005",
+    "src/common/scorer.py": "cb8eae53264f5448b06600c6d3ff8bf8bcbb7e2d31d6b6777ff1e68565536cb3",
+    "src/repair/strong_integrated/pipeline.py": "e0c2f1c06b484bb73b036d168c4cb84c08d5b6e02c904e4f1e07dd6bfee5c42d"
+  }
+}

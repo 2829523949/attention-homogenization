@@ -1,0 +1,17 @@
+models:
+  qwen35_4b: /path/to/Qwen3.5-4B
+  qwen35_9b: /path/to/Qwen3.5-9B
+  qwen3vl_4b: /path/to/Qwen3-VL-4B
+  qwen3vl_8b: /path/to/Qwen3-VL-8B
+  internvl35_8b: /path/to/InternVL3.5-8B
+  llava_next_7b: /path/to/LLaVA-NeXT-7B
+  mm_gdino_l: /path/to/MM-Grounding-DINO-L
+  sam3: /path/to/SAM3
+data:
+  realbind2: /path/to/RealBind_v2
+  historical_realbind: /path/to/RealBind
+historical:
+  repair_assets_root: /path/to/vlm_repair_v2
+output:
+  root: /path/to/outputs
+

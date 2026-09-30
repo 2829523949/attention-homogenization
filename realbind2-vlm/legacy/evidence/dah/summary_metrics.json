@@ -1,0 +1,3386 @@
+{
+  "ablation_comparisons": {
+    "blur_only_vs_full_dah": {
+      "baseline_accuracy": 0.595,
+      "baseline_variant": "blur_only",
+      "comparison_accuracy": 0.62,
+      "comparison_variant": "full_dah",
+      "delta_comparison_minus_baseline": 0.025000000000000022,
+      "question": "full method versus pair blur"
+    },
+    "decompose_only_vs_handoff_targetlock": {
+      "baseline_accuracy": 0.58,
+      "baseline_variant": "decompose_only",
+      "comparison_accuracy": 0.61,
+      "comparison_variant": "handoff_targetlock",
+      "delta_comparison_minus_baseline": 0.030000000000000027,
+      "question": "target visual restriction"
+    },
+    "handoff_targetlock_vs_full_dah": {
+      "baseline_accuracy": 0.61,
+      "baseline_variant": "handoff_targetlock",
+      "comparison_accuracy": 0.62,
+      "comparison_variant": "full_dah",
+      "delta_comparison_minus_baseline": 0.010000000000000009,
+      "question": "pair-defocus Stage 1"
+    },
+    "original_vs_blur_only": {
+      "baseline_accuracy": 0.49,
+      "baseline_variant": "original",
+      "comparison_accuracy": 0.595,
+      "comparison_variant": "blur_only",
+      "delta_comparison_minus_baseline": 0.10499999999999998,
+      "question": "background/non-candidate defocus"
+    },
+    "original_vs_decompose_only": {
+      "baseline_accuracy": 0.49,
+      "baseline_variant": "original",
+      "comparison_accuracy": 0.58,
+      "comparison_variant": "decompose_only",
+      "delta_comparison_minus_baseline": 0.08999999999999997,
+      "question": "two-stage decomposition and explicit handoff"
+    }
+  },
+  "data": {
+    "composition_cases": 200,
+    "families": 100,
+    "left_cases": 100,
+    "right_cases": 100
+  },
+  "decomposed": {
+    "decompose_only": {
+      "N": 200,
+      "final": {
+        "N": 200,
+        "accuracy": 0.58,
+        "correct": 116,
+        "format_violation_count": 8,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 8,
+        "truncation_count": 0
+      },
+      "final_composition_accuracy": {
+        "denominator": 200,
+        "numerator": 116,
+        "rate": 0.58
+      },
+      "pipeline_failure_categories": {
+        "BIND_CORRECT_ATTR_CORRECT": 111,
+        "BIND_CORRECT_ATTR_WRONG": 45,
+        "BIND_WRONG_ATTR_CORRECT_FOR_WRONG_ENTITY": 25,
+        "BIND_WRONG_ATTR_OTHER": 19
+      },
+      "stage1_binding_accuracy": {
+        "denominator": 200,
+        "numerator": 156,
+        "rate": 0.78
+      },
+      "stage1_valid_rate": {
+        "denominator": 200,
+        "numerator": 200,
+        "rate": 1.0
+      },
+      "stage2_attribute_accuracy_given_binding_correct": {
+        "denominator": 156,
+        "numerator": 111,
+        "rate": 0.7115384615384616
+      },
+      "stage2_attribute_accuracy_given_binding_wrong": {
+        "denominator": 44,
+        "numerator": 25,
+        "rate": 0.5681818181818182
+      },
+      "wrong_binding_final_correct_count": 5,
+      "wrong_binding_final_correct_different_color_count": 5,
+      "wrong_binding_same_color_accidentally_correct_count": 0
+    },
+    "full_dah": {
+      "N": 200,
+      "final": {
+        "N": 200,
+        "accuracy": 0.62,
+        "correct": 124,
+        "format_violation_count": 3,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 3,
+        "truncation_count": 0
+      },
+      "final_composition_accuracy": {
+        "denominator": 200,
+        "numerator": 124,
+        "rate": 0.62
+      },
+      "pipeline_failure_categories": {
+        "BIND_CORRECT_ATTR_CORRECT": 118,
+        "BIND_CORRECT_ATTR_WRONG": 46,
+        "BIND_WRONG_ATTR_CORRECT_FOR_WRONG_ENTITY": 21,
+        "BIND_WRONG_ATTR_OTHER": 15
+      },
+      "stage1_binding_accuracy": {
+        "denominator": 200,
+        "numerator": 164,
+        "rate": 0.82
+      },
+      "stage1_valid_rate": {
+        "denominator": 200,
+        "numerator": 200,
+        "rate": 1.0
+      },
+      "stage2_attribute_accuracy_given_binding_correct": {
+        "denominator": 164,
+        "numerator": 118,
+        "rate": 0.7195121951219512
+      },
+      "stage2_attribute_accuracy_given_binding_wrong": {
+        "denominator": 36,
+        "numerator": 21,
+        "rate": 0.5833333333333334
+      },
+      "wrong_binding_final_correct_count": 6,
+      "wrong_binding_final_correct_different_color_count": 6,
+      "wrong_binding_same_color_accidentally_correct_count": 0
+    },
+    "handoff_targetlock": {
+      "N": 200,
+      "final": {
+        "N": 200,
+        "accuracy": 0.61,
+        "correct": 122,
+        "format_violation_count": 3,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 3,
+        "truncation_count": 0
+      },
+      "final_composition_accuracy": {
+        "denominator": 200,
+        "numerator": 122,
+        "rate": 0.61
+      },
+      "pipeline_failure_categories": {
+        "BIND_CORRECT_ATTR_CORRECT": 116,
+        "BIND_CORRECT_ATTR_WRONG": 40,
+        "BIND_WRONG_ATTR_CORRECT_FOR_WRONG_ENTITY": 25,
+        "BIND_WRONG_ATTR_OTHER": 19
+      },
+      "stage1_binding_accuracy": {
+        "denominator": 200,
+        "numerator": 156,
+        "rate": 0.78
+      },
+      "stage1_valid_rate": {
+        "denominator": 200,
+        "numerator": 200,
+        "rate": 1.0
+      },
+      "stage2_attribute_accuracy_given_binding_correct": {
+        "denominator": 156,
+        "numerator": 116,
+        "rate": 0.7435897435897436
+      },
+      "stage2_attribute_accuracy_given_binding_wrong": {
+        "denominator": 44,
+        "numerator": 25,
+        "rate": 0.5681818181818182
+      },
+      "wrong_binding_final_correct_count": 6,
+      "wrong_binding_final_correct_different_color_count": 6,
+      "wrong_binding_same_color_accidentally_correct_count": 0
+    }
+  },
+  "error_source_full_dah": {
+    "failure_due_to_attribute_given_correct_binding_count": 46,
+    "failure_due_to_attribute_given_correct_binding_percent_of_all_cases": 0.23,
+    "failure_due_to_attribute_given_correct_binding_percent_of_full_dah_failures": 0.6052631578947368,
+    "failure_due_to_binding_count": 30,
+    "failure_due_to_binding_percent_of_all_cases": 0.15,
+    "failure_due_to_binding_percent_of_full_dah_failures": 0.39473684210526316,
+    "full_dah_failures": 76
+  },
+  "experiment": "REALBIND DaH ORACLE PILOT",
+  "historical_baseline": {
+    "protocol": {
+      "analysis": {
+        "bootstrap_replicates": 10000,
+        "bootstrap_seed": 42,
+        "bootstrap_unit": "family_id",
+        "minimum_dependency": "PAIR_REL_A_TO_B plus side-selected target I2C",
+        "path_diagnostic": "PAIR_REL correct plus side REL2I correct plus target I2C correct",
+        "strict_dependency": "PAIR_REL_A_TO_B plus I2C_A plus I2C_B"
+      },
+      "data": {
+        "dataset_audit": "/mnt/d/datasets/RealBind/realbind/audit/dryrun_100_pair_direct_v1_1_audit.json",
+        "dependency": "/mnt/d/datasets/RealBind/realbind/qa/pair_direct_v1_1_dependency_spec.json",
+        "families": "/mnt/d/datasets/RealBind/realbind/families/dryrun_100_pair_direct_v1_1_frozen.jsonl",
+        "family_count": 100,
+        "generate_images": false,
+        "modify_dataset": false,
+        "qa": "/mnt/d/datasets/RealBind/realbind/qa/dryrun_100_pair_direct_v1_1.jsonl",
+        "qa_count": 700,
+        "regenerate_families": false,
+        "regenerate_qa": false
+      },
+      "experiment": "RealBind pair-direct v1.1 Qwen3.5-4B baseline",
+      "forbidden": [
+        "A/B options",
+        "CoT",
+        "visual prompting",
+        "subquestion prompting",
+        "SFT",
+        "LoRA",
+        "DPO",
+        "RL",
+        "activation intervention",
+        "KV intervention",
+        "external LLM API",
+        "dataset changes",
+        "image generation"
+      ],
+      "generation": {
+        "batch_size": 1,
+        "do_sample": false,
+        "independent_query": true,
+        "max_new_tokens": 16,
+        "other_answers_in_prompt": false,
+        "prompt_suffix": "",
+        "use_cache": false
+      },
+      "input_hashes": {
+        "candidates": {
+          "exists": true,
+          "path": "/mnt/d/datasets/RealBind/realbind/candidates/all_candidates.jsonl",
+          "sha256": "3bd413102d60f9aae71e15cc0eae006a10ec1a241fd5561b181d1be5b10d3e0c",
+          "size_bytes": 2876176
+        },
+        "dataset_audit": {
+          "exists": true,
+          "path": "/mnt/d/datasets/RealBind/realbind/audit/dryrun_100_pair_direct_v1_1_audit.json",
+          "sha256": "576eb3c4eb7da3f2a251aa804478434fdfd6514fe9553c0eaa8bfea49e460b8c",
+          "size_bytes": 14856
+        },
+        "dataset_report": {
+          "exists": true,
+          "path": "/mnt/d/datasets/RealBind/realbind/reports/pair_direct_v1_1_report.md",
+          "sha256": "f43f6936e0759f7ace9fb4960ec8aa67aeb827b0d2de174f256f22e55a7483d8",
+          "size_bytes": 6441
+        },
+        "dependency": {
+          "exists": true,
+          "path": "/mnt/d/datasets/RealBind/realbind/qa/pair_direct_v1_1_dependency_spec.json",
+          "sha256": "9238308038aa552f307b8cbb25058a373e0d979dd408656dacc82ace7e57cdf9",
+          "size_bytes": 130804
+        },
+        "families": {
+          "exists": true,
+          "path": "/mnt/d/datasets/RealBind/realbind/families/dryrun_100_pair_direct_v1_1_frozen.jsonl",
+          "sha256": "b8d366c296403646a8c9a71c09cf8dd8ba007eea2d1d7a3c930cd95edd1816ee",
+          "size_bytes": 201345
+        },
+        "qa": {
+          "exists": true,
+          "path": "/mnt/d/datasets/RealBind/realbind/qa/dryrun_100_pair_direct_v1_1.jsonl",
+          "sha256": "433ccc24f7a7070ae56f756e8936f10c181105e6fa31b3fa9bf206fcf06c3c87",
+          "size_bytes": 1470339
+        }
+      },
+      "measurement_only": true,
+      "model": {
+        "chat_template": "official project template, enable_thinking=False",
+        "identifier": "Qwen/Qwen3.5-4B",
+        "loader": "experiments.realbind_phase2.atomic_composition_baseline.load_frozen_model -> qwen35_stage2d_behavior_audit.load_behavior_model",
+        "path": "/root/Qwen3-VL/models/Qwen3.5-4B",
+        "processor_renderer": "qwen35_kv_gdn_factorial_pilot.render_chat + encode_single"
+      },
+      "preflight_passed": true,
+      "schema_version": "realbind_pair_direct_v1_1_baseline_protocol_v1",
+      "scientific_question": "P(REL2C wrong | pair relation correct and target I2C correct), with strict all-facts and REL2I path diagnostics",
+      "scoring": {
+        "embedding_judge": false,
+        "invalid_counts_as_incorrect": true,
+        "llm_judge": false,
+        "method": "deterministic conservative exact semantic parser",
+        "scoring_revision": "realbind_pair_direct_v1_1_semantic_vocab_v2",
+        "semantic_vocabulary": {
+          "color": [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "purple",
+            "pink",
+            "brown",
+            "black",
+            "white",
+            "gray"
+          ],
+          "identity": "all canonical identities appearing in the frozen eval families (not pair-restricted)",
+          "position": [
+            "left",
+            "right"
+          ]
+        },
+        "verbose_rule": "Only an exact first nonempty line or explicit answer prefix can produce a valid normalized answer with format_violation=true; arbitrary explanation-body search is invalid."
+      },
+      "smoke_test": {
+        "families": 4,
+        "max_new_tokens_gate": "stop if semantic truncation occurs or at least half of smoke outputs are unresolved-at-cap/long explanatory responses",
+        "selection": "first four families in frozen family order, all seven QA rows"
+      }
+    },
+    "protocol_path": "/mnt/d/datasets/RealBind/realbind/experiments/pair_direct_v1_1_qwen35_4b_baseline/protocol.json",
+    "protocol_sha256": "90510c771b52cea6eca64af64e67f2b9d39de7ec191116e26d1edf6d5be0efe8",
+    "results_path": "/mnt/d/datasets/RealBind/realbind/experiments/pair_direct_v1_1_qwen35_4b_baseline/inference_results.jsonl",
+    "results_sha256": "fc92376837a1eac4c079c5c53b30977f416782257e5647673787e099120950af"
+  },
+  "historical_vs_rerun_audit": {
+    "N": 200,
+    "correctness_agreement_count": 200,
+    "correctness_agreement_rate": 1.0,
+    "normalized_prediction_agreement_count": 200,
+    "normalized_prediction_agreement_rate": 1.0,
+    "raw_response_agreement_count": 200,
+    "raw_response_agreement_rate": 1.0,
+    "rows": [
+      {
+        "case_id": "realbind_test_2368070_2368070003_2368070008__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2368070_2368070003_2368070008__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2397782_2397782000_2397782007__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2397782_2397782000_2397782007__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_val_2369344_2369344002_2369344001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_val_2369344_2369344002_2369344001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2316723_2316723000_2316723002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2316723_2316723000_2316723002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2380660_2380660001_2380660004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2380660_2380660001_2380660004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2347354_2347354005_2347354023__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "yellow",
+        "historical_raw_response": "yellow\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "yellow",
+        "rerun_raw_response": "yellow\n"
+      },
+      {
+        "case_id": "realbind_test_2347354_2347354005_2347354023__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2366164_2366164002_2366164000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2366164_2366164002_2366164000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2381705_2381705000_2381705006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2381705_2381705000_2381705006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2316210_2316210004_2316210002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2316210_2316210004_2316210002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2362197_2362197010_2362197013__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2362197_2362197010_2362197013__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2327340_2327340003_2327340002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2327340_2327340003_2327340002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2374119_2374119000_2374119004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2374119_2374119000_2374119004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2381904_2381904006_2381904002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2381904_2381904006_2381904002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2383540_2383540002_2383540001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2383540_2383540002_2383540001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "gray",
+        "historical_raw_response": "gray\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "gray",
+        "rerun_raw_response": "gray\n"
+      },
+      {
+        "case_id": "realbind_test_2319488_2319488001_2319488002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2319488_2319488001_2319488002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "yellow",
+        "historical_raw_response": "yellow\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "yellow",
+        "rerun_raw_response": "yellow\n"
+      },
+      {
+        "case_id": "realbind_test_2384340_2384340003_2384340005__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2384340_2384340003_2384340005__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2373801_2373801029_2373801022__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2373801_2373801029_2373801022__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2386641_2386641002_2386641000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2386641_2386641002_2386641000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2408386_2408386004_2408386009__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2408386_2408386004_2408386009__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2413686_2413686004_2413686003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2413686_2413686004_2413686003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "gray",
+        "historical_raw_response": "gray\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "gray",
+        "rerun_raw_response": "gray\n"
+      },
+      {
+        "case_id": "realbind_val_2393055_2393055014_2393055013__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_val_2393055_2393055014_2393055013__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2361895_2361895002_2361895000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "yellow",
+        "historical_raw_response": "yellow\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "yellow",
+        "rerun_raw_response": "yellow\n"
+      },
+      {
+        "case_id": "realbind_test_2361895_2361895002_2361895000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2412260_2412260032_2412260024__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2412260_2412260032_2412260024__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2407121_2407121001_2407121005__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2407121_2407121001_2407121005__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2396584_2396584004_2396584000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2396584_2396584004_2396584000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2412954_2412954000_2412954001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2412954_2412954000_2412954001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2318609_2318609003_2318609004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2318609_2318609003_2318609004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2353142_2353142011_2353142000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2353142_2353142011_2353142000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2395239_2395239000_2395239001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2395239_2395239000_2395239001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2364809_2364809006_2364809000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2364809_2364809006_2364809000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2393859_2393859003_2393859000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2393859_2393859003_2393859000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2385218_2385218002_2385218000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2385218_2385218002_2385218000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2390649_2390649006_2390649002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2390649_2390649006_2390649002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_val_2405476_2405476003_2405476006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_val_2405476_2405476003_2405476006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_1878_1878000_1878007__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_1878_1878000_1878007__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "gray",
+        "historical_raw_response": "gray\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "gray",
+        "rerun_raw_response": "gray\n"
+      },
+      {
+        "case_id": "realbind_test_2370499_2370499002_2370499001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2370499_2370499002_2370499001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2385829_2385829000_2385829002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "yellow",
+        "historical_raw_response": "yellow\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "yellow",
+        "rerun_raw_response": "yellow\n"
+      },
+      {
+        "case_id": "realbind_test_2385829_2385829000_2385829002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2371198_2371198000_2371198002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2371198_2371198000_2371198002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2396310_2396310006_2396310002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "orange",
+        "historical_raw_response": "orange\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "orange",
+        "rerun_raw_response": "orange\n"
+      },
+      {
+        "case_id": "realbind_test_2396310_2396310006_2396310002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_716_716004_716008__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_716_716004_716008__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2372914_2372914004_2372914001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2372914_2372914004_2372914001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2392842_2392842001_2392842000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2392842_2392842001_2392842000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2376371_2376371002_2376371000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2376371_2376371002_2376371000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2402473_2402473004_2402473002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2402473_2402473004_2402473002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2387210_2387210001_2387210003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2387210_2387210001_2387210003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2390136_2390136001_2390136000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2390136_2390136001_2390136000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2400051_2400051004_2400051006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "purple",
+        "historical_raw_response": "purple\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "purple",
+        "rerun_raw_response": "purple\n"
+      },
+      {
+        "case_id": "realbind_test_2400051_2400051004_2400051006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "purple",
+        "historical_raw_response": "purple\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "purple",
+        "rerun_raw_response": "purple\n"
+      },
+      {
+        "case_id": "realbind_test_2402723_2402723000_2402723003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2402723_2402723000_2402723003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2397353_2397353002_2397353001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2397353_2397353002_2397353001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2390587_2390587007_2390587004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2390587_2390587007_2390587004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2412078_2412078001_2412078004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2412078_2412078001_2412078004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_933_933001_933002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_933_933001_933002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2379860_2379860005_2379860003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2379860_2379860005_2379860003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_val_2412216_2412216005_2412216004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": null,
+        "historical_raw_response": "tan\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": null,
+        "rerun_raw_response": "tan\n"
+      },
+      {
+        "case_id": "realbind_val_2412216_2412216005_2412216004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2380530_2380530004_2380530000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2380530_2380530004_2380530000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_val_2406078_2406078001_2406078003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_val_2406078_2406078001_2406078003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2380828_2380828000_2380828006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2380828_2380828000_2380828006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_1160043_1160043003_1160043004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_1160043_1160043003_1160043004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_val_2388092_2388092003_2388092005__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_val_2388092_2388092003_2388092005__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2395163_2395163002_2395163005__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2395163_2395163002_2395163005__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2396989_2396989001_2396989000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2396989_2396989001_2396989000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2411911_2411911000_2411911003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2411911_2411911000_2411911003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2385127_2385127004_2385127001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "orange",
+        "historical_raw_response": "orange\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "orange",
+        "rerun_raw_response": "orange\n"
+      },
+      {
+        "case_id": "realbind_test_2385127_2385127004_2385127001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2364553_2364553000_2364553003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2364553_2364553000_2364553003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2397277_2397277002_2397277000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2397277_2397277002_2397277000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2380686_2380686002_2380686000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2380686_2380686002_2380686000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_val_2318614_2318614001_2318614006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_val_2318614_2318614001_2318614006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2394206_2394206000_2394206003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2394206_2394206000_2394206003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2407602_2407602002_2407602000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2407602_2407602002_2407602000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2408290_2408290007_2408290000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2408290_2408290007_2408290000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2372895_2372895006_2372895000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2372895_2372895006_2372895000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2395331_2395331005_2395331006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2395331_2395331005_2395331006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2322361_2322361000_2322361001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2322361_2322361000_2322361001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "gray",
+        "historical_raw_response": "gray\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "gray",
+        "rerun_raw_response": "gray\n"
+      },
+      {
+        "case_id": "realbind_test_107968_107968003_107968000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_107968_107968003_107968000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "orange",
+        "historical_raw_response": "orange\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "orange",
+        "rerun_raw_response": "orange\n"
+      },
+      {
+        "case_id": "realbind_test_2320720_2320720004_2320720002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "orange",
+        "historical_raw_response": "orange\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "orange",
+        "rerun_raw_response": "orange\n"
+      },
+      {
+        "case_id": "realbind_test_2320720_2320720004_2320720002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2395022_2395022012_2395022024__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2395022_2395022012_2395022024__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2376533_2376533006_2376533004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "orange",
+        "historical_raw_response": "orange\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "orange",
+        "rerun_raw_response": "orange\n"
+      },
+      {
+        "case_id": "realbind_test_2376533_2376533006_2376533004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "orange",
+        "historical_raw_response": "orange\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "orange",
+        "rerun_raw_response": "orange\n"
+      },
+      {
+        "case_id": "realbind_test_2397911_2397911001_2397911002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": null,
+        "historical_raw_response": "silver\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": null,
+        "rerun_raw_response": "silver\n"
+      },
+      {
+        "case_id": "realbind_test_2397911_2397911001_2397911002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_val_2383326_2383326001_2383326005__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_val_2383326_2383326001_2383326005__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2410822_2410822000_2410822002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "gray",
+        "historical_raw_response": "gray\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "gray",
+        "rerun_raw_response": "gray\n"
+      },
+      {
+        "case_id": "realbind_test_2410822_2410822000_2410822002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_4299_4299007_4299008__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_4299_4299007_4299008__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2417400_2417400001_2417400002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2417400_2417400001_2417400002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2368658_2368658010_2368658013__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2368658_2368658010_2368658013__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_val_286084_286084005_286084010__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_val_286084_286084005_286084010__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_286008_286008003_286008002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_286008_286008003_286008002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2385540_2385540000_2385540001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2385540_2385540000_2385540001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "pink",
+        "historical_raw_response": "pink\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "pink",
+        "rerun_raw_response": "pink\n"
+      },
+      {
+        "case_id": "realbind_test_2375748_2375748005_2375748004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2375748_2375748005_2375748004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2317947_2317947018_2317947025__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2317947_2317947018_2317947025__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2413840_2413840001_2413840006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2413840_2413840001_2413840006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "white",
+        "historical_raw_response": "white\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "white",
+        "rerun_raw_response": "white\n"
+      },
+      {
+        "case_id": "realbind_test_2407861_2407861000_2407861002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "orange",
+        "historical_raw_response": "orange\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "orange",
+        "rerun_raw_response": "orange\n"
+      },
+      {
+        "case_id": "realbind_test_2407861_2407861000_2407861002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_val_2380915_2380915002_2380915004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_val_2380915_2380915002_2380915004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2383169_2383169003_2383169006__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2383169_2383169003_2383169006__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2325347_2325347004_2325347002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "gray",
+        "historical_raw_response": "gray\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "gray",
+        "rerun_raw_response": "gray\n"
+      },
+      {
+        "case_id": "realbind_test_2325347_2325347004_2325347002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2359610_2359610001_2359610002__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_test_2359610_2359610001_2359610002__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2379634_2379634002_2379634003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2379634_2379634002_2379634003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "red",
+        "historical_raw_response": "red\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "red",
+        "rerun_raw_response": "red\n"
+      },
+      {
+        "case_id": "realbind_test_2384313_2384313002_2384313004__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2384313_2384313002_2384313004__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2322532_2322532004_2322532001__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": null,
+        "historical_raw_response": "beige\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": null,
+        "rerun_raw_response": "beige\n"
+      },
+      {
+        "case_id": "realbind_test_2322532_2322532004_2322532001__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "blue",
+        "historical_raw_response": "blue\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "blue",
+        "rerun_raw_response": "blue\n"
+      },
+      {
+        "case_id": "realbind_val_2387919_2387919000_2387919003__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_val_2387919_2387919000_2387919003__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2318740_2318740001_2318740005__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": false,
+        "historical_normalized_prediction": "black",
+        "historical_raw_response": "black\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": false,
+        "rerun_normalized_prediction": "black",
+        "rerun_raw_response": "black\n"
+      },
+      {
+        "case_id": "realbind_test_2318740_2318740001_2318740005__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "brown",
+        "historical_raw_response": "brown\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "brown",
+        "rerun_raw_response": "brown\n"
+      },
+      {
+        "case_id": "realbind_test_2402726_2402726002_2402726000__REL2C_LEFT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "green",
+        "historical_raw_response": "green\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "green",
+        "rerun_raw_response": "green\n"
+      },
+      {
+        "case_id": "realbind_test_2402726_2402726002_2402726000__REL2C_RIGHT",
+        "correctness_agreement": true,
+        "historical_correct": true,
+        "historical_normalized_prediction": "gray",
+        "historical_raw_response": "gray\n",
+        "normalized_prediction_agreement": true,
+        "raw_response_agreement": true,
+        "rerun_correct": true,
+        "rerun_normalized_prediction": "gray",
+        "rerun_raw_response": "gray\n"
+      }
+    ]
+  },
+  "original_strong_path": {
+    "N": 200,
+    "expected_88_28_gate": true,
+    "original_composition_correct": 98,
+    "original_composition_failures": 102,
+    "original_strong_failures": 28,
+    "strong_path_ready": 88
+  },
+  "paired_statistics": {
+    "blur_only": {
+      "bootstrap": {
+        "confidence_interval_95": [
+          0.05499999999999994,
+          0.15999999999999998
+        ],
+        "observed_delta_accuracy": 0.10499999999999998,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id"
+      },
+      "mcnemar_exact": {
+        "b_original_correct_repair_wrong": 9,
+        "c_original_wrong_repair_correct": 30,
+        "discordant": 39,
+        "p_exact_two_sided": 0.0010650196345523
+      }
+    },
+    "decompose_only": {
+      "bootstrap": {
+        "confidence_interval_95": [
+          0.020000000000000018,
+          0.16000000000000003
+        ],
+        "observed_delta_accuracy": 0.08999999999999997,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id"
+      },
+      "mcnemar_exact": {
+        "b_original_correct_repair_wrong": 20,
+        "c_original_wrong_repair_correct": 38,
+        "discordant": 58,
+        "p_exact_two_sided": 0.024746035842440797
+      }
+    },
+    "full_dah": {
+      "bootstrap": {
+        "confidence_interval_95": [
+          0.06499999999999995,
+          0.19500000000000006
+        ],
+        "observed_delta_accuracy": 0.13,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id"
+      },
+      "mcnemar_exact": {
+        "b_original_correct_repair_wrong": 21,
+        "c_original_wrong_repair_correct": 47,
+        "discordant": 68,
+        "p_exact_two_sided": 0.0021862431776861705
+      }
+    },
+    "handoff_targetlock": {
+      "bootstrap": {
+        "confidence_interval_95": [
+          0.05499999999999994,
+          0.18500000000000005
+        ],
+        "observed_delta_accuracy": 0.12,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id"
+      },
+      "mcnemar_exact": {
+        "b_original_correct_repair_wrong": 21,
+        "c_original_wrong_repair_correct": 45,
+        "discordant": 66,
+        "p_exact_two_sided": 0.004272405031651673
+      }
+    }
+  },
+  "sanity": {
+    "frozen_i2c_questions_reused": true,
+    "frozen_rel2i_questions_reused": true,
+    "gt_bbox_never_used_to_select_target": true,
+    "no_attention_intervention": true,
+    "no_thinking": true,
+    "no_training": true,
+    "same_model_and_generation_config": true,
+    "stage2_fresh_context": true,
+    "stage2_no_stage1_history": true
+  },
+  "schema_version": "realbind_qwen35_dah_oracle_v1_summary_v1",
+  "status": "DAH_STRONG_SIGNAL",
+  "status_rule": {
+    "rule": "Full DaH observed accuracy exceeds Original, family-bootstrap delta CI lower bound > 0, and strong-failure rescue >= .5"
+  },
+  "strong_path_repair": {
+    "blur_only": {
+      "original_strong_failures_N": 28,
+      "original_success_preservation_rate": 0.9081632653061225,
+      "original_successes_N": 98,
+      "preserved_original_successes": 89,
+      "rescued_original_strong_failures": 15,
+      "strong_failure_rescue_bootstrap": {
+        "confidence_interval_95": [
+          0.34612068965517245,
+          0.72
+        ],
+        "denominator": 28,
+        "numerator": 15,
+        "observed_rate": 0.5357142857142857,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id",
+        "valid_bootstrap_draws": 10000,
+        "zero_denominator_draws": 0
+      },
+      "strong_failure_rescue_ci_high": 0.72,
+      "strong_failure_rescue_ci_low": 0.34612068965517245,
+      "strong_failure_rescue_rate": 0.5357142857142857,
+      "strong_path_ready_N": 88,
+      "strong_path_ready_final_failure_rate": 0.17045454545454544,
+      "strong_path_ready_final_failures": 15,
+      "variant": "blur_only",
+      "variant_label": "Blur-only"
+    },
+    "decompose_only": {
+      "original_strong_failures_N": 28,
+      "original_success_preservation_rate": 0.7959183673469388,
+      "original_successes_N": 98,
+      "preserved_original_successes": 78,
+      "rescued_original_strong_failures": 28,
+      "strong_failure_rescue_bootstrap": {
+        "confidence_interval_95": [
+          1.0,
+          1.0
+        ],
+        "denominator": 28,
+        "numerator": 28,
+        "observed_rate": 1.0,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id",
+        "valid_bootstrap_draws": 10000,
+        "zero_denominator_draws": 0
+      },
+      "strong_failure_rescue_ci_high": 1.0,
+      "strong_failure_rescue_ci_low": 1.0,
+      "strong_failure_rescue_rate": 1.0,
+      "strong_path_ready_N": 88,
+      "strong_path_ready_final_failure_rate": 0.0,
+      "strong_path_ready_final_failures": 0,
+      "variant": "decompose_only",
+      "variant_label": "Decompose-only"
+    },
+    "full_dah": {
+      "original_strong_failures_N": 28,
+      "original_success_preservation_rate": 0.7857142857142857,
+      "original_successes_N": 98,
+      "preserved_original_successes": 77,
+      "rescued_original_strong_failures": 25,
+      "strong_failure_rescue_bootstrap": {
+        "confidence_interval_95": [
+          0.76,
+          1.0
+        ],
+        "denominator": 28,
+        "numerator": 25,
+        "observed_rate": 0.8928571428571429,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id",
+        "valid_bootstrap_draws": 10000,
+        "zero_denominator_draws": 0
+      },
+      "strong_failure_rescue_ci_high": 1.0,
+      "strong_failure_rescue_ci_low": 0.76,
+      "strong_failure_rescue_rate": 0.8928571428571429,
+      "strong_path_ready_N": 88,
+      "strong_path_ready_final_failure_rate": 0.056818181818181816,
+      "strong_path_ready_final_failures": 5,
+      "variant": "full_dah",
+      "variant_label": "Full DaH"
+    },
+    "handoff_targetlock": {
+      "original_strong_failures_N": 28,
+      "original_success_preservation_rate": 0.7857142857142857,
+      "original_successes_N": 98,
+      "preserved_original_successes": 77,
+      "rescued_original_strong_failures": 25,
+      "strong_failure_rescue_bootstrap": {
+        "confidence_interval_95": [
+          0.76,
+          1.0
+        ],
+        "denominator": 28,
+        "numerator": 25,
+        "observed_rate": 0.8928571428571429,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id",
+        "valid_bootstrap_draws": 10000,
+        "zero_denominator_draws": 0
+      },
+      "strong_failure_rescue_ci_high": 1.0,
+      "strong_failure_rescue_ci_low": 0.76,
+      "strong_failure_rescue_rate": 0.8928571428571429,
+      "strong_path_ready_N": 88,
+      "strong_path_ready_final_failure_rate": 0.056818181818181816,
+      "strong_path_ready_final_failures": 5,
+      "variant": "handoff_targetlock",
+      "variant_label": "Handoff+TargetLock"
+    },
+    "original": {
+      "original_strong_failures_N": 28,
+      "original_success_preservation_rate": 1.0,
+      "original_successes_N": 98,
+      "preserved_original_successes": 98,
+      "rescued_original_strong_failures": 0,
+      "strong_failure_rescue_bootstrap": {
+        "confidence_interval_95": [
+          0.0,
+          0.0
+        ],
+        "denominator": 28,
+        "numerator": 0,
+        "observed_rate": 0.0,
+        "replicates": 10000,
+        "seed": 42,
+        "unit": "family_id",
+        "valid_bootstrap_draws": 10000,
+        "zero_denominator_draws": 0
+      },
+      "strong_failure_rescue_ci_high": 0.0,
+      "strong_failure_rescue_ci_low": 0.0,
+      "strong_failure_rescue_rate": 0.0,
+      "strong_path_ready_N": 88,
+      "strong_path_ready_final_failure_rate": 0.3181818181818182,
+      "strong_path_ready_final_failures": 28,
+      "variant": "original",
+      "variant_label": "Original"
+    }
+  },
+  "variants": {
+    "blur_only": {
+      "by_composition_type": {
+        "REL2C_LEFT": {
+          "N": 100,
+          "accuracy": 0.59,
+          "correct": 59,
+          "format_violation_count": 1,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 1,
+          "truncation_count": 0
+        },
+        "REL2C_RIGHT": {
+          "N": 100,
+          "accuracy": 0.6,
+          "correct": 60,
+          "format_violation_count": 0,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 0,
+          "truncation_count": 0
+        }
+      },
+      "decomposed": null,
+      "label": "Blur-only",
+      "pooled": {
+        "N": 200,
+        "accuracy": 0.595,
+        "correct": 119,
+        "format_violation_count": 1,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 1,
+        "truncation_count": 0
+      }
+    },
+    "decompose_only": {
+      "by_composition_type": {
+        "REL2C_LEFT": {
+          "N": 100,
+          "accuracy": 0.53,
+          "correct": 53,
+          "format_violation_count": 4,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 4,
+          "truncation_count": 0
+        },
+        "REL2C_RIGHT": {
+          "N": 100,
+          "accuracy": 0.63,
+          "correct": 63,
+          "format_violation_count": 4,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 4,
+          "truncation_count": 0
+        }
+      },
+      "decomposed": {
+        "N": 200,
+        "final": {
+          "N": 200,
+          "accuracy": 0.58,
+          "correct": 116,
+          "format_violation_count": 8,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 8,
+          "truncation_count": 0
+        },
+        "final_composition_accuracy": {
+          "denominator": 200,
+          "numerator": 116,
+          "rate": 0.58
+        },
+        "pipeline_failure_categories": {
+          "BIND_CORRECT_ATTR_CORRECT": 111,
+          "BIND_CORRECT_ATTR_WRONG": 45,
+          "BIND_WRONG_ATTR_CORRECT_FOR_WRONG_ENTITY": 25,
+          "BIND_WRONG_ATTR_OTHER": 19
+        },
+        "stage1_binding_accuracy": {
+          "denominator": 200,
+          "numerator": 156,
+          "rate": 0.78
+        },
+        "stage1_valid_rate": {
+          "denominator": 200,
+          "numerator": 200,
+          "rate": 1.0
+        },
+        "stage2_attribute_accuracy_given_binding_correct": {
+          "denominator": 156,
+          "numerator": 111,
+          "rate": 0.7115384615384616
+        },
+        "stage2_attribute_accuracy_given_binding_wrong": {
+          "denominator": 44,
+          "numerator": 25,
+          "rate": 0.5681818181818182
+        },
+        "wrong_binding_final_correct_count": 5,
+        "wrong_binding_final_correct_different_color_count": 5,
+        "wrong_binding_same_color_accidentally_correct_count": 0
+      },
+      "label": "Decompose-only",
+      "pooled": {
+        "N": 200,
+        "accuracy": 0.58,
+        "correct": 116,
+        "format_violation_count": 8,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 8,
+        "truncation_count": 0
+      }
+    },
+    "full_dah": {
+      "by_composition_type": {
+        "REL2C_LEFT": {
+          "N": 100,
+          "accuracy": 0.59,
+          "correct": 59,
+          "format_violation_count": 2,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 2,
+          "truncation_count": 0
+        },
+        "REL2C_RIGHT": {
+          "N": 100,
+          "accuracy": 0.65,
+          "correct": 65,
+          "format_violation_count": 1,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 1,
+          "truncation_count": 0
+        }
+      },
+      "decomposed": {
+        "N": 200,
+        "final": {
+          "N": 200,
+          "accuracy": 0.62,
+          "correct": 124,
+          "format_violation_count": 3,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 3,
+          "truncation_count": 0
+        },
+        "final_composition_accuracy": {
+          "denominator": 200,
+          "numerator": 124,
+          "rate": 0.62
+        },
+        "pipeline_failure_categories": {
+          "BIND_CORRECT_ATTR_CORRECT": 118,
+          "BIND_CORRECT_ATTR_WRONG": 46,
+          "BIND_WRONG_ATTR_CORRECT_FOR_WRONG_ENTITY": 21,
+          "BIND_WRONG_ATTR_OTHER": 15
+        },
+        "stage1_binding_accuracy": {
+          "denominator": 200,
+          "numerator": 164,
+          "rate": 0.82
+        },
+        "stage1_valid_rate": {
+          "denominator": 200,
+          "numerator": 200,
+          "rate": 1.0
+        },
+        "stage2_attribute_accuracy_given_binding_correct": {
+          "denominator": 164,
+          "numerator": 118,
+          "rate": 0.7195121951219512
+        },
+        "stage2_attribute_accuracy_given_binding_wrong": {
+          "denominator": 36,
+          "numerator": 21,
+          "rate": 0.5833333333333334
+        },
+        "wrong_binding_final_correct_count": 6,
+        "wrong_binding_final_correct_different_color_count": 6,
+        "wrong_binding_same_color_accidentally_correct_count": 0
+      },
+      "label": "Full DaH",
+      "pooled": {
+        "N": 200,
+        "accuracy": 0.62,
+        "correct": 124,
+        "format_violation_count": 3,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 3,
+        "truncation_count": 0
+      }
+    },
+    "handoff_targetlock": {
+      "by_composition_type": {
+        "REL2C_LEFT": {
+          "N": 100,
+          "accuracy": 0.57,
+          "correct": 57,
+          "format_violation_count": 2,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 2,
+          "truncation_count": 0
+        },
+        "REL2C_RIGHT": {
+          "N": 100,
+          "accuracy": 0.65,
+          "correct": 65,
+          "format_violation_count": 1,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 1,
+          "truncation_count": 0
+        }
+      },
+      "decomposed": {
+        "N": 200,
+        "final": {
+          "N": 200,
+          "accuracy": 0.61,
+          "correct": 122,
+          "format_violation_count": 3,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 3,
+          "truncation_count": 0
+        },
+        "final_composition_accuracy": {
+          "denominator": 200,
+          "numerator": 122,
+          "rate": 0.61
+        },
+        "pipeline_failure_categories": {
+          "BIND_CORRECT_ATTR_CORRECT": 116,
+          "BIND_CORRECT_ATTR_WRONG": 40,
+          "BIND_WRONG_ATTR_CORRECT_FOR_WRONG_ENTITY": 25,
+          "BIND_WRONG_ATTR_OTHER": 19
+        },
+        "stage1_binding_accuracy": {
+          "denominator": 200,
+          "numerator": 156,
+          "rate": 0.78
+        },
+        "stage1_valid_rate": {
+          "denominator": 200,
+          "numerator": 200,
+          "rate": 1.0
+        },
+        "stage2_attribute_accuracy_given_binding_correct": {
+          "denominator": 156,
+          "numerator": 116,
+          "rate": 0.7435897435897436
+        },
+        "stage2_attribute_accuracy_given_binding_wrong": {
+          "denominator": 44,
+          "numerator": 25,
+          "rate": 0.5681818181818182
+        },
+        "wrong_binding_final_correct_count": 6,
+        "wrong_binding_final_correct_different_color_count": 6,
+        "wrong_binding_same_color_accidentally_correct_count": 0
+      },
+      "label": "Handoff+TargetLock",
+      "pooled": {
+        "N": 200,
+        "accuracy": 0.61,
+        "correct": 122,
+        "format_violation_count": 3,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 3,
+        "truncation_count": 0
+      }
+    },
+    "original": {
+      "by_composition_type": {
+        "REL2C_LEFT": {
+          "N": 100,
+          "accuracy": 0.46,
+          "correct": 46,
+          "format_violation_count": 3,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 3,
+          "truncation_count": 0
+        },
+        "REL2C_RIGHT": {
+          "N": 100,
+          "accuracy": 0.52,
+          "correct": 52,
+          "format_violation_count": 0,
+          "hit_max_new_tokens_count": 0,
+          "invalid_count": 0,
+          "truncation_count": 0
+        }
+      },
+      "decomposed": null,
+      "label": "Original",
+      "pooled": {
+        "N": 200,
+        "accuracy": 0.49,
+        "correct": 98,
+        "format_violation_count": 3,
+        "hit_max_new_tokens_count": 0,
+        "invalid_count": 3,
+        "truncation_count": 0
+      }
+    }
+  },
+  "visual_interference_repair": {
+    "N": 11,
+    "by_variant": {
+      "blur_only": {
+        "all_visual_interference": {
+          "N": 11,
+          "accuracy": 0.5454545454545454,
+          "correct": 6
+        },
+        "rescue_reversal": {
+          "N": 6,
+          "correct": 2
+        },
+        "wrong_target_color": {
+          "N": 9,
+          "correct": 6,
+          "rescue_count": 6
+        }
+      },
+      "decompose_only": {
+        "all_visual_interference": {
+          "N": 11,
+          "accuracy": 1.0,
+          "correct": 11
+        },
+        "rescue_reversal": {
+          "N": 6,
+          "correct": 6
+        },
+        "wrong_target_color": {
+          "N": 9,
+          "correct": 9,
+          "rescue_count": 9
+        }
+      },
+      "full_dah": {
+        "all_visual_interference": {
+          "N": 11,
+          "accuracy": 0.9090909090909091,
+          "correct": 10
+        },
+        "rescue_reversal": {
+          "N": 6,
+          "correct": 5
+        },
+        "wrong_target_color": {
+          "N": 9,
+          "correct": 8,
+          "rescue_count": 8
+        }
+      },
+      "handoff_targetlock": {
+        "all_visual_interference": {
+          "N": 11,
+          "accuracy": 0.9090909090909091,
+          "correct": 10
+        },
+        "rescue_reversal": {
+          "N": 6,
+          "correct": 5
+        },
+        "wrong_target_color": {
+          "N": 9,
+          "correct": 8,
+          "rescue_count": 8
+        }
+      },
+      "original": {
+        "all_visual_interference": {
+          "N": 11,
+          "accuracy": 0.45454545454545453,
+          "correct": 5
+        },
+        "rescue_reversal": {
+          "N": 6,
+          "correct": 0
+        },
+        "wrong_target_color": {
+          "N": 9,
+          "correct": 5,
+          "rescue_count": 5
+        }
+      }
+    },
+    "rescue_reversal_N": 6,
+    "rescue_reversal_count": 6,
+    "selected_56_count": 56,
+    "source_interference_sha256": "753ae545e0e439dc47d7a6ab1b68007fde2c889637a908aa1ee6578c21c11d59",
+    "source_selected_sha256": "299f7322ad313ad7919018c9a18961207fdc09643d77416141df90b1390d2ea6",
+    "visual_interference_count": 11,
+    "wrong_target_color_N": 9,
+    "wrong_target_color_count": 9
+  }
+}

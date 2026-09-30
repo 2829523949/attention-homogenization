@@ -1,0 +1,7 @@
+model_id: InternVL3.5-8B
+adapter: internvl35
+path_key: internvl35_8b
+role: cross_model
+runtime: {device: cuda, dtype: bfloat16, max_new_tokens: 16}
+protocol: {baseline: full, vir: full, causal: none, strong_integrated_final: true}
+

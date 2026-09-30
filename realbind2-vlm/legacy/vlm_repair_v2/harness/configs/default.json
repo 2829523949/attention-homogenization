@@ -1,0 +1,24 @@
+{
+  "schema_version": "realbind_corrected_main_method_v1",
+  "method_id": "MAIN_HARD_HANDOFF",
+  "default_route": "DECOMPOSE_ACQUIRE_COUNTERFACTUAL_CERTIFY_MINIMAL_STATE_HARD_HANDOFF_REASON",
+  "legacy_generic_proposal_baseline": "preserved_but_not_default",
+  "acquisition_backend": "florence2",
+  "artifact_root": "/mnt/d/vlm_repair_v2",
+  "florence_task": "<OD>",
+  "florence_fallback_task": "<REGION_PROPOSAL>",
+  "generation": {
+    "dtype": "bfloat16",
+    "batch_size": 1,
+    "do_sample": false,
+    "use_cache": false,
+    "max_new_tokens": 16,
+    "enable_thinking": false
+  },
+  "defocus": {
+    "bbox_expand_frac": 0.1,
+    "blur_radius_fraction_of_min_dimension": 0.025,
+    "feather_radius_fraction_of_min_dimension": 0.01
+  },
+  "colors": ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "white", "gray"]
+}

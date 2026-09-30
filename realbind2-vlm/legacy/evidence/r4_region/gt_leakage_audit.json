@@ -1,0 +1,26 @@
+{
+  "color_inputs": "exact selected target crop plus fixed generic color prompt only",
+  "color_prompt_sha256_values_used": [
+    "1e6ed3e0146f802285d7a76110a53cfd82b68b638dd6ac38bbad3c312279a883"
+  ],
+  "detector_inputs": "frozen legal ReferentSpec phrase plus original image only",
+  "evaluator_join_occurs_only_in_analysis": true,
+  "expected_color_prompt_sha256": "1e6ed3e0146f802285d7a76110a53cfd82b68b638dd6ac38bbad3c312279a883",
+  "inference_artifact_forbidden_key_hits": [],
+  "invalid_initial_strong_run_kept_out_of_method_inference": "outputs/region_bottleneck_joint_repair/invalid_5_8_1_run",
+  "oracle_ceiling_evaluator_only": true,
+  "pass": true,
+  "question_side_gt_color_relation_answer_visibilities_to_selector": false,
+  "selector_inputs": "numbered candidate-crop grid plus frozen legal referent phrase only",
+  "selector_visibility_flags": {
+    "gt_provided": [
+      false
+    ],
+    "question_provided": [
+      false
+    ],
+    "target_side_provided": [
+      false
+    ]
+  }
+}

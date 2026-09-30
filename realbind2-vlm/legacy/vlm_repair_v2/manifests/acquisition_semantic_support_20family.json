@@ -1,0 +1,604 @@
+{
+  "families": [
+    {
+      "case_ids": [
+        "realbind_test_2368070_2368070003_2368070008__REL2C_LEFT",
+        "realbind_test_2368070_2368070003_2368070008__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2368070_2368070003_2368070008::2368070::A",
+        "realbind_test_2368070_2368070003_2368070008::2368070::B"
+      ],
+      "family_id": "realbind_test_2368070_2368070003_2368070008",
+      "image_id": "2368070",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2368070.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2397782_2397782000_2397782007__REL2C_LEFT",
+        "realbind_test_2397782_2397782000_2397782007__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2397782_2397782000_2397782007::2397782::A",
+        "realbind_test_2397782_2397782000_2397782007::2397782::B"
+      ],
+      "family_id": "realbind_test_2397782_2397782000_2397782007",
+      "image_id": "2397782",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2397782.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_val_2369344_2369344002_2369344001__REL2C_LEFT",
+        "realbind_val_2369344_2369344002_2369344001__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_val_2369344_2369344002_2369344001::2369344::A",
+        "realbind_val_2369344_2369344002_2369344001::2369344::B"
+      ],
+      "family_id": "realbind_val_2369344_2369344002_2369344001",
+      "image_id": "2369344",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2369344.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2316723_2316723000_2316723002__REL2C_LEFT",
+        "realbind_test_2316723_2316723000_2316723002__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2316723_2316723000_2316723002::2316723::A",
+        "realbind_test_2316723_2316723000_2316723002::2316723::B"
+      ],
+      "family_id": "realbind_test_2316723_2316723000_2316723002",
+      "image_id": "2316723",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2316723.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2380660_2380660001_2380660004__REL2C_LEFT",
+        "realbind_test_2380660_2380660001_2380660004__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2380660_2380660001_2380660004::2380660::A",
+        "realbind_test_2380660_2380660001_2380660004::2380660::B"
+      ],
+      "family_id": "realbind_test_2380660_2380660001_2380660004",
+      "image_id": "2380660",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2380660.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2347354_2347354005_2347354023__REL2C_LEFT",
+        "realbind_test_2347354_2347354005_2347354023__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2347354_2347354005_2347354023::2347354::A",
+        "realbind_test_2347354_2347354005_2347354023::2347354::B"
+      ],
+      "family_id": "realbind_test_2347354_2347354005_2347354023",
+      "image_id": "2347354",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2347354.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2366164_2366164002_2366164000__REL2C_LEFT",
+        "realbind_test_2366164_2366164002_2366164000__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2366164_2366164002_2366164000::2366164::A",
+        "realbind_test_2366164_2366164002_2366164000::2366164::B"
+      ],
+      "family_id": "realbind_test_2366164_2366164002_2366164000",
+      "image_id": "2366164",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2366164.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2381705_2381705000_2381705006__REL2C_LEFT",
+        "realbind_test_2381705_2381705000_2381705006__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2381705_2381705000_2381705006::2381705::A",
+        "realbind_test_2381705_2381705000_2381705006::2381705::B"
+      ],
+      "family_id": "realbind_test_2381705_2381705000_2381705006",
+      "image_id": "2381705",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2381705.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2316210_2316210004_2316210002__REL2C_LEFT",
+        "realbind_test_2316210_2316210004_2316210002__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2316210_2316210004_2316210002::2316210::A",
+        "realbind_test_2316210_2316210004_2316210002::2316210::B"
+      ],
+      "family_id": "realbind_test_2316210_2316210004_2316210002",
+      "image_id": "2316210",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2316210.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2362197_2362197010_2362197013__REL2C_LEFT",
+        "realbind_test_2362197_2362197010_2362197013__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2362197_2362197010_2362197013::2362197::A",
+        "realbind_test_2362197_2362197010_2362197013::2362197::B"
+      ],
+      "family_id": "realbind_test_2362197_2362197010_2362197013",
+      "image_id": "2362197",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2362197.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2327340_2327340003_2327340002__REL2C_LEFT",
+        "realbind_test_2327340_2327340003_2327340002__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2327340_2327340003_2327340002::2327340::A",
+        "realbind_test_2327340_2327340003_2327340002::2327340::B"
+      ],
+      "family_id": "realbind_test_2327340_2327340003_2327340002",
+      "image_id": "2327340",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2327340.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2374119_2374119000_2374119004__REL2C_LEFT",
+        "realbind_test_2374119_2374119000_2374119004__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2374119_2374119000_2374119004::2374119::A",
+        "realbind_test_2374119_2374119000_2374119004::2374119::B"
+      ],
+      "family_id": "realbind_test_2374119_2374119000_2374119004",
+      "image_id": "2374119",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2374119.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2381904_2381904006_2381904002__REL2C_LEFT",
+        "realbind_test_2381904_2381904006_2381904002__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2381904_2381904006_2381904002::2381904::A",
+        "realbind_test_2381904_2381904006_2381904002::2381904::B"
+      ],
+      "family_id": "realbind_test_2381904_2381904006_2381904002",
+      "image_id": "2381904",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2381904.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2383540_2383540002_2383540001__REL2C_LEFT",
+        "realbind_test_2383540_2383540002_2383540001__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2383540_2383540002_2383540001::2383540::A",
+        "realbind_test_2383540_2383540002_2383540001::2383540::B"
+      ],
+      "family_id": "realbind_test_2383540_2383540002_2383540001",
+      "image_id": "2383540",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2383540.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2319488_2319488001_2319488002__REL2C_LEFT",
+        "realbind_test_2319488_2319488001_2319488002__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2319488_2319488001_2319488002::2319488::A",
+        "realbind_test_2319488_2319488001_2319488002::2319488::B"
+      ],
+      "family_id": "realbind_test_2319488_2319488001_2319488002",
+      "image_id": "2319488",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2319488.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2384340_2384340003_2384340005__REL2C_LEFT",
+        "realbind_test_2384340_2384340003_2384340005__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2384340_2384340003_2384340005::2384340::A",
+        "realbind_test_2384340_2384340003_2384340005::2384340::B"
+      ],
+      "family_id": "realbind_test_2384340_2384340003_2384340005",
+      "image_id": "2384340",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2384340.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2373801_2373801029_2373801022__REL2C_LEFT",
+        "realbind_test_2373801_2373801029_2373801022__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2373801_2373801029_2373801022::2373801::A",
+        "realbind_test_2373801_2373801029_2373801022::2373801::B"
+      ],
+      "family_id": "realbind_test_2373801_2373801029_2373801022",
+      "image_id": "2373801",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K/2373801.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2386641_2386641002_2386641000__REL2C_LEFT",
+        "realbind_test_2386641_2386641002_2386641000__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2386641_2386641002_2386641000::2386641::A",
+        "realbind_test_2386641_2386641002_2386641000::2386641::B"
+      ],
+      "family_id": "realbind_test_2386641_2386641002_2386641000",
+      "image_id": "2386641",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2386641.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2408386_2408386004_2408386009__REL2C_LEFT",
+        "realbind_test_2408386_2408386004_2408386009__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2408386_2408386004_2408386009::2408386::A",
+        "realbind_test_2408386_2408386004_2408386009::2408386::B"
+      ],
+      "family_id": "realbind_test_2408386_2408386004_2408386009",
+      "image_id": "2408386",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2408386.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    },
+    {
+      "case_ids": [
+        "realbind_test_2413686_2413686004_2413686003__REL2C_LEFT",
+        "realbind_test_2413686_2413686004_2413686003__REL2C_RIGHT"
+      ],
+      "entity_units": [
+        "realbind_test_2413686_2413686004_2413686003::2413686::A",
+        "realbind_test_2413686_2413686004_2413686003::2413686::B"
+      ],
+      "family_id": "realbind_test_2413686_2413686004_2413686003",
+      "image_id": "2413686",
+      "image_path": "/mnt/d/datasets/RealBind/vg/images/VG_100K_2/2413686.jpg",
+      "qa_types": [
+        "REL2C_LEFT",
+        "REL2C_RIGHT"
+      ]
+    }
+  ],
+  "n_families": 20,
+  "n_rel2c_cases": 40,
+  "schema_version": "acquisition_semantic_support_20family_v1",
+  "selection_rule": "Iterate frozen QA file order; group by family_id; select the first 20 families that contain both REL2C_LEFT and REL2C_RIGHT. No GT/object/color/answer field is used for selection.",
+  "source_frozen_files": {
+    "dependency_spec": {
+      "path": "/mnt/d/datasets/RealBind/realbind/qa/pair_direct_v1_1_dependency_spec.json",
+      "sha256": "9238308038aa552f307b8cbb25058a373e0d979dd408656dacc82ace7e57cdf9"
+    },
+    "families": {
+      "path": "/mnt/d/datasets/RealBind/realbind/families/dryrun_100_pair_direct_v1_1_frozen.jsonl",
+      "sha256": "b8d366c296403646a8c9a71c09cf8dd8ba007eea2d1d7a3c930cd95edd1816ee"
+    },
+    "qa": {
+      "path": "/mnt/d/datasets/RealBind/realbind/qa/dryrun_100_pair_direct_v1_1.jsonl",
+      "sha256": "433ccc24f7a7070ae56f756e8936f10c181105e6fa31b3fa9bf206fcf06c3c87"
+    }
+  },
+  "unique_entity_units": [
+    {
+      "entity_unit_id": "realbind_test_2368070_2368070003_2368070008::2368070::A",
+      "family_id": "realbind_test_2368070_2368070003_2368070008",
+      "image_id": "2368070",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2368070_2368070003_2368070008::2368070::B",
+      "family_id": "realbind_test_2368070_2368070003_2368070008",
+      "image_id": "2368070",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2397782_2397782000_2397782007::2397782::A",
+      "family_id": "realbind_test_2397782_2397782000_2397782007",
+      "image_id": "2397782",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2397782_2397782000_2397782007::2397782::B",
+      "family_id": "realbind_test_2397782_2397782000_2397782007",
+      "image_id": "2397782",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_val_2369344_2369344002_2369344001::2369344::A",
+      "family_id": "realbind_val_2369344_2369344002_2369344001",
+      "image_id": "2369344",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_val_2369344_2369344002_2369344001::2369344::B",
+      "family_id": "realbind_val_2369344_2369344002_2369344001",
+      "image_id": "2369344",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2316723_2316723000_2316723002::2316723::A",
+      "family_id": "realbind_test_2316723_2316723000_2316723002",
+      "image_id": "2316723",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2316723_2316723000_2316723002::2316723::B",
+      "family_id": "realbind_test_2316723_2316723000_2316723002",
+      "image_id": "2316723",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2380660_2380660001_2380660004::2380660::A",
+      "family_id": "realbind_test_2380660_2380660001_2380660004",
+      "image_id": "2380660",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2380660_2380660001_2380660004::2380660::B",
+      "family_id": "realbind_test_2380660_2380660001_2380660004",
+      "image_id": "2380660",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2347354_2347354005_2347354023::2347354::A",
+      "family_id": "realbind_test_2347354_2347354005_2347354023",
+      "image_id": "2347354",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2347354_2347354005_2347354023::2347354::B",
+      "family_id": "realbind_test_2347354_2347354005_2347354023",
+      "image_id": "2347354",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2366164_2366164002_2366164000::2366164::A",
+      "family_id": "realbind_test_2366164_2366164002_2366164000",
+      "image_id": "2366164",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2366164_2366164002_2366164000::2366164::B",
+      "family_id": "realbind_test_2366164_2366164002_2366164000",
+      "image_id": "2366164",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2381705_2381705000_2381705006::2381705::A",
+      "family_id": "realbind_test_2381705_2381705000_2381705006",
+      "image_id": "2381705",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2381705_2381705000_2381705006::2381705::B",
+      "family_id": "realbind_test_2381705_2381705000_2381705006",
+      "image_id": "2381705",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2316210_2316210004_2316210002::2316210::A",
+      "family_id": "realbind_test_2316210_2316210004_2316210002",
+      "image_id": "2316210",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2316210_2316210004_2316210002::2316210::B",
+      "family_id": "realbind_test_2316210_2316210004_2316210002",
+      "image_id": "2316210",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2362197_2362197010_2362197013::2362197::A",
+      "family_id": "realbind_test_2362197_2362197010_2362197013",
+      "image_id": "2362197",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2362197_2362197010_2362197013::2362197::B",
+      "family_id": "realbind_test_2362197_2362197010_2362197013",
+      "image_id": "2362197",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2327340_2327340003_2327340002::2327340::A",
+      "family_id": "realbind_test_2327340_2327340003_2327340002",
+      "image_id": "2327340",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2327340_2327340003_2327340002::2327340::B",
+      "family_id": "realbind_test_2327340_2327340003_2327340002",
+      "image_id": "2327340",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2374119_2374119000_2374119004::2374119::A",
+      "family_id": "realbind_test_2374119_2374119000_2374119004",
+      "image_id": "2374119",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2374119_2374119000_2374119004::2374119::B",
+      "family_id": "realbind_test_2374119_2374119000_2374119004",
+      "image_id": "2374119",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2381904_2381904006_2381904002::2381904::A",
+      "family_id": "realbind_test_2381904_2381904006_2381904002",
+      "image_id": "2381904",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2381904_2381904006_2381904002::2381904::B",
+      "family_id": "realbind_test_2381904_2381904006_2381904002",
+      "image_id": "2381904",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2383540_2383540002_2383540001::2383540::A",
+      "family_id": "realbind_test_2383540_2383540002_2383540001",
+      "image_id": "2383540",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2383540_2383540002_2383540001::2383540::B",
+      "family_id": "realbind_test_2383540_2383540002_2383540001",
+      "image_id": "2383540",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2319488_2319488001_2319488002::2319488::A",
+      "family_id": "realbind_test_2319488_2319488001_2319488002",
+      "image_id": "2319488",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2319488_2319488001_2319488002::2319488::B",
+      "family_id": "realbind_test_2319488_2319488001_2319488002",
+      "image_id": "2319488",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2384340_2384340003_2384340005::2384340::A",
+      "family_id": "realbind_test_2384340_2384340003_2384340005",
+      "image_id": "2384340",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2384340_2384340003_2384340005::2384340::B",
+      "family_id": "realbind_test_2384340_2384340003_2384340005",
+      "image_id": "2384340",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2373801_2373801029_2373801022::2373801::A",
+      "family_id": "realbind_test_2373801_2373801029_2373801022",
+      "image_id": "2373801",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2373801_2373801029_2373801022::2373801::B",
+      "family_id": "realbind_test_2373801_2373801029_2373801022",
+      "image_id": "2373801",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2386641_2386641002_2386641000::2386641::A",
+      "family_id": "realbind_test_2386641_2386641002_2386641000",
+      "image_id": "2386641",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2386641_2386641002_2386641000::2386641::B",
+      "family_id": "realbind_test_2386641_2386641002_2386641000",
+      "image_id": "2386641",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2408386_2408386004_2408386009::2408386::A",
+      "family_id": "realbind_test_2408386_2408386004_2408386009",
+      "image_id": "2408386",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2408386_2408386004_2408386009::2408386::B",
+      "family_id": "realbind_test_2408386_2408386004_2408386009",
+      "image_id": "2408386",
+      "logical_ref": "B"
+    },
+    {
+      "entity_unit_id": "realbind_test_2413686_2413686004_2413686003::2413686::A",
+      "family_id": "realbind_test_2413686_2413686004_2413686003",
+      "image_id": "2413686",
+      "logical_ref": "A"
+    },
+    {
+      "entity_unit_id": "realbind_test_2413686_2413686004_2413686003::2413686::B",
+      "family_id": "realbind_test_2413686_2413686004_2413686003",
+      "image_id": "2413686",
+      "logical_ref": "B"
+    }
+  ]
+}
