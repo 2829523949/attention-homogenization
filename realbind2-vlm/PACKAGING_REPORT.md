@@ -7,9 +7,11 @@ Generated: 2026-09-30 CST.
 - Parent workspace: `/root/Qwen3-VL`
 - Packaged project root: `/root/Qwen3-VL/realbind2-vlm`
 - Git branch: `realbind2-packaging`
-- Latest commit: `HEAD` (the packaging commit containing this report)
+- Packaging commit: `9c8474c` (parent branch; this report is included)
+- Standalone publication branch: `realbind2-release`
 - Existing parent remote: `git@github.com:2829523949/attention-homogenization.git` (unrelated; not used for publishing)
-- GitHub private remote: pending final `gh auth status` / private repository creation
+- GitHub private remote: not created; `gh` is not installed in this environment
+- Publication status: `GITHUB_PUSH_BLOCKED_AUTH`
 
 ## Data integrity
 
@@ -109,4 +111,3 @@ parent workspace as `UNKNOWN_LEGACY`.
    pass.
 6. Historical source snapshots retain original absolute paths and are not
    official runnable entrypoints.
-
