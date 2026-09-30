@@ -1,0 +1,98 @@
+{
+  "data": {
+    "composition_case_count": 200,
+    "composition_types": [
+      "REL2C_LEFT",
+      "REL2C_RIGHT"
+    ],
+    "dependency": "/mnt/d/datasets/RealBind/realbind/qa/pair_direct_v1_1_dependency_spec.json",
+    "families": "/mnt/d/datasets/RealBind/realbind/families/dryrun_100_pair_direct_v1_1_frozen.jsonl",
+    "family_count": 100,
+    "modify_frozen_inputs": false,
+    "qa": "/mnt/d/datasets/RealBind/realbind/qa/dryrun_100_pair_direct_v1_1.jsonl"
+  },
+  "experiment": "REALBIND DaH ORACLE PILOT",
+  "forbidden": [
+    "training",
+    "attention intervention",
+    "AB/BA consistency gate",
+    "automatic grounding",
+    "DeepSeek",
+    "CoT",
+    "thinking",
+    "prompt search",
+    "test-time optimization",
+    "answer history in Stage 2"
+  ],
+  "generation": {
+    "batch_size": 1,
+    "direct": true,
+    "do_sample": false,
+    "dtype": "bfloat16",
+    "enable_thinking": false,
+    "generation_config_hash": "d801465acf348392db62d9a7825247cfc871c725db8cf71145fbe5ed38c30af1",
+    "independent_request": true,
+    "max_new_tokens": 16,
+    "use_cache": false
+  },
+  "input_hashes": {
+    "dependency": {
+      "exists": true,
+      "path": "/mnt/d/datasets/RealBind/realbind/qa/pair_direct_v1_1_dependency_spec.json",
+      "sha256": "9238308038aa552f307b8cbb25058a373e0d979dd408656dacc82ace7e57cdf9",
+      "size_bytes": 130804
+    },
+    "families": {
+      "exists": true,
+      "path": "/mnt/d/datasets/RealBind/realbind/families/dryrun_100_pair_direct_v1_1_frozen.jsonl",
+      "sha256": "b8d366c296403646a8c9a71c09cf8dd8ba007eea2d1d7a3c930cd95edd1816ee",
+      "size_bytes": 201345
+    },
+    "qa": {
+      "exists": true,
+      "path": "/mnt/d/datasets/RealBind/realbind/qa/dryrun_100_pair_direct_v1_1.jsonl",
+      "sha256": "433ccc24f7a7070ae56f756e8936f10c181105e6fa31b3fa9bf206fcf06c3c87",
+      "size_bytes": 1470339
+    }
+  },
+  "model": {
+    "identifier": "Qwen/Qwen3.5-4B",
+    "loader": "experiments.realbind_phase2.atomic_composition_baseline.load_frozen_model -> qwen35_stage2d_behavior_audit.load_behavior_model",
+    "model_hash": "ef8aca80440bcc9544ef1e423cf5f91f7d76f8aecfc36bde2c1544246c82f287",
+    "path": "/root/Qwen3-VL/models/Qwen3.5-4B",
+    "renderer": "experiments.qwen35_kv_gdn_factorial_pilot.render_chat + encode_single"
+  },
+  "protocol": "frozen RealBind pair-direct v1.1; oracle-bbox pilot",
+  "randomness": {
+    "family_bootstrap_replicates": 10000,
+    "family_bootstrap_seed": 42,
+    "visual_audit_families": 20,
+    "visual_audit_seed": 42
+  },
+  "schema_version": "realbind_qwen35_dah_oracle_v1_config_v1",
+  "scoring": {
+    "llm_judge": false,
+    "revision": "realbind_pair_direct_v1_1_semantic_vocab_v2",
+    "scorer_file": "/root/Qwen3-VL/experiments/realbind_phase2/pair_direct_v1_1_baseline.py",
+    "scorer_sha256": "841f6b0dfbbd1710e9c1e74ed583fc609a5113740ad83cf9090ad71bc237f18e",
+    "semantic_vocabulary": "frozen project vocabulary: all canonical colors and all canonical identities in frozen families"
+  },
+  "transforms": {
+    "bbox_expand_frac": 0.1,
+    "blur_radius_fraction_of_min_dimension": 0.025,
+    "blur_radius_unit": "pixels after reading original image resolution",
+    "crop": false,
+    "draw_annotations": false,
+    "feather_radius_fraction_of_min_dimension": 0.01,
+    "mask": "soft grayscale mask; union by ImageChops.lighter; Gaussian feather",
+    "output_format": "PNG",
+    "resize": "none in transform; normal processor behavior only"
+  },
+  "variants": {
+    "blur_only": "Blur-only",
+    "decompose_only": "Decompose-only",
+    "full_dah": "Full DaH",
+    "handoff_targetlock": "Handoff+TargetLock",
+    "original": "Original"
+  }
+}

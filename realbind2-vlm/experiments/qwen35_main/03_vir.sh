@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-echo "VIR_BLOCKED_UNFROZEN_DEFOCUS_PROTOCOL: freeze the RealBind2 defocus implementation hash before formal execution." >&2
+python scripts/verify_hashes.py --root .
+echo "VIR_BLOCKED_DATASET_NOT_FROZEN: historical DEFOCUS is certified, but formal VIR requires a human-accepted frozen RealBind2 export." >&2
 exit 2
-

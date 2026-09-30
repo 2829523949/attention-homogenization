@@ -7,11 +7,17 @@
     "configs/qwen35_9b.yaml": "c9a8abbe619c313d82f38e9fe2119816ba038d6bcee83240620c79b101ee5b9c",
     "configs/qwen3vl_4b.yaml": "834e883a2782fe7c280b93140df9ca7e40c57afcb9eda9c50d4fd4af60034dbe",
     "configs/qwen3vl_8b.yaml": "1232f99acc0c4a078bd7c584ca613a9c7cc2dafeb939086706088b7a84834266",
+    "configs/server_paths.example.yaml": "4c2c8d4f676f39e388ed53df41a4fe1834428be063e9eb5de089d73958a0e936",
+    "data/DEFOCUS_PROTOCOL.sha256": "9abf77b797b1663bd14c2d114148670bb4968d6a33f66fe5cad47717ed7f979a",
     "data/prompt_templates/realbind2.json": "213fb50e03034146b832c6bde95478776316008f64fd1992912d6d33164e783e",
     "data/prompt_templates/visual_interference.json": "40ac587bdcf212ea6db6fa44b1434f590aee1e5916743f9344a43852cfee26db",
-    "data/realbind2_manifest.json": "bee5058761c13221bb778d669e06668bbddcdde3e3fb6fb5dea8e9544b7b47d0",
+    "data/realbind2_manifest.json": "4aba2fc2cf09f28f0e12379d5543a29cfb70214e30558aca551c3064426e250b",
+    "data/smoke_cases.json": "ddabe5a825046af10ee016674a312905caee4e5b3cb63dd378e949be8d0d68c8",
+    "scripts/build_realbind2_cohorts.py": "501777f20baffb9f02d4bf7b5dd7cc91cfc1a5541192ec5313ad53dda39e39d6",
+    "scripts/server_live_certification.py": "db53c00d4145e8310ace1f6d89e599faacdb35edc52b8837ad131cfc311b75e0",
     "src/common/prompts.py": "d5e8be404bc97fb86579f8177d69cae8e42b91dd940936e7f0301f3742e2e005",
     "src/common/scorer.py": "cb8eae53264f5448b06600c6d3ff8bf8bcbb7e2d31d6b6777ff1e68565536cb3",
-    "src/repair/strong_integrated/pipeline.py": "e0c2f1c06b484bb73b036d168c4cb84c08d5b6e02c904e4f1e07dd6bfee5c42d"
+    "src/failure/defocus_frozen.py": "22f24ba28151092968824567566df8aaa896028bbd95b5e57e63f370f81baecd",
+    "src/repair/strong_integrated/pipeline.py": "0df4d7edd6a5aa1d9518e84b39906f44e7e0f75147cc01788d78306c7495a12e"
   }
 }

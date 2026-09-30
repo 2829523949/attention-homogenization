@@ -1,5 +1,7 @@
 paths.yaml
+server_paths.yaml
 .env
+.venvs/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -26,4 +28,3 @@ data/**/*.png
 *.onnx
 *.sqlite*
 *.log
-

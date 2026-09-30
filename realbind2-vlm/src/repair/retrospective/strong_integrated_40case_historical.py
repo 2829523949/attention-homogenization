@@ -28,7 +28,11 @@ from statistics import mean, median
 
 from PIL import Image, ImageFilter
 
-ROOT = Path("/mnt/d/vlm_repair_v2")
+ROOT = Path(
+    os.environ.get(
+        "VLM_REPAIR_V2_ROOT", Path(__file__).resolve().parents[3] / "legacy" / "vlm_repair_v2"
+    )
+)
 sys.path.insert(0, str(ROOT))
 from harness.processors.crop_policy import deterministic_crop_box  # noqa: E402
 
@@ -196,7 +200,7 @@ def stage_prepare():
         "sam3_model_sha256": file_sha(SAM3_MODEL / "model.safetensors"),
         "sam3_threshold": SAM3_CAND_THRESHOLD,
         "sam3_candidate_cap": SAM3_CAP,
-        "qwen_model": "/root/Qwen3-VL/models/Qwen3.5-4B",
+        "qwen_model": str(Path(os.environ.get("QWEN35_4B_PATH", ROOT / "models" / "Qwen3.5-4B"))),
         "qwen_generation": {"do_sample": False, "use_cache": False, "max_new_tokens": 16, "batch_size": 1, "enable_thinking": False},
         "fallback": "R4 MM-GDINO-L + Qwen selector selected bbox if SAM3 pool is empty or invalid",
         "selector_prompt": SELECTOR_PROMPT,

@@ -1,0 +1,57 @@
+{
+  "schema_version": "realbind2_server_smoke_v1",
+  "selection_basis": "Deterministic metadata-only greedy selection from candidate_family_id order: alternate left_is_A, require a previously unseen color and category, and require cross-category pairs. No model output was inspected.",
+  "source_construction_database_sha256": "3e1981cdf2cd4a81c714954069e7e2d1f6722936d7f2c6f93e7b2240ddc030c0",
+  "requires_presence_in_frozen_export": true,
+  "families": [
+    {
+      "candidate_family_id": "vg1007_1007000_1007003",
+      "image_id": "1007",
+      "left_entity": "A",
+      "A": {"category": "curtain", "color": "white"},
+      "B": {"category": "table", "color": "brown"},
+      "qa_types": ["REL2C_LEFT", "REL2C_RIGHT"]
+    },
+    {
+      "candidate_family_id": "vg1000_1000001_1000002",
+      "image_id": "1000",
+      "left_entity": "B",
+      "A": {"category": "floor", "color": "white"},
+      "B": {"category": "counter", "color": "yellow"},
+      "qa_types": ["REL2C_LEFT", "REL2C_RIGHT"]
+    },
+    {
+      "candidate_family_id": "vg101_101004_101005",
+      "image_id": "101",
+      "left_entity": "A",
+      "A": {"category": "car", "color": "gray"},
+      "B": {"category": "tree", "color": "green"},
+      "qa_types": ["REL2C_LEFT", "REL2C_RIGHT"]
+    },
+    {
+      "candidate_family_id": "vg1016_1016000_1016002",
+      "image_id": "1016",
+      "left_entity": "B",
+      "A": {"category": "line", "color": "yellow"},
+      "B": {"category": "sky", "color": "blue"},
+      "qa_types": ["REL2C_LEFT", "REL2C_RIGHT"]
+    },
+    {
+      "candidate_family_id": "vg107899_107899021_107899022",
+      "image_id": "107899",
+      "left_entity": "A",
+      "A": {"category": "snowboard", "color": "red"},
+      "B": {"category": "building", "color": "brown"},
+      "qa_types": ["REL2C_LEFT", "REL2C_RIGHT"]
+    },
+    {
+      "candidate_family_id": "vg1022_1022000_1022004",
+      "image_id": "1022",
+      "left_entity": "B",
+      "A": {"category": "sweater", "color": "black"},
+      "B": {"category": "jacket", "color": "blue"},
+      "qa_types": ["REL2C_LEFT", "REL2C_RIGHT"]
+    }
+  ]
+}
+

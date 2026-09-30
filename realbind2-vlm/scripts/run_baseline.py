@@ -30,13 +30,18 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--num-shards", type=int, default=1)
     parser.add_argument("--shard-index", type=int, default=0)
+    parser.add_argument("--shard-by", choices=("family", "qa"), default="family")
     parser.add_argument("--limit", type=int)
     args = parser.parse_args()
 
     config, paths = load_yaml(args.config), load_yaml(args.paths)
     dataset_root = Path(paths["data"]["realbind2"])
     dataset = RealBind2Dataset(dataset_root)
-    rows = dataset.shard(args.num_shards, args.shard_index)
+    rows = (
+        dataset.family_shard(args.num_shards, args.shard_index)
+        if args.shard_by == "family"
+        else dataset.shard(args.num_shards, args.shard_index)
+    )
     if args.limit is not None:
         rows = rows[: args.limit]
     model_key = str(config["adapter"])
@@ -80,6 +85,7 @@ def main() -> int:
                 "scorer_version": SCORER_VERSION,
                 "shard_index": args.shard_index,
                 "num_shards": args.num_shards,
+                "shard_by": args.shard_by,
             })
         except Exception as exc:
             failed.append({
@@ -95,10 +101,10 @@ def main() -> int:
                 "config_hash": config_hash,
                 "dataset_hash": dataset_hash,
             })
-    print(f"BASELINE_COMPLETE completed={len(log.completed)} failed_rows={failed.path}")
-    return 0
+    incomplete = {str(row["qa_id"]) for row in rows} - log.completed
+    print(f"BASELINE_COMPLETE completed={len(log.completed)} incomplete={len(incomplete)} failed_rows={failed.path}")
+    return 2 if incomplete else 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -1,0 +1,35 @@
+{
+  "audit_scope": [
+    "AUTO_VALID",
+    "HUMAN_PENDING",
+    "HUMAN_ACCEPTED",
+    "FROZEN"
+  ],
+  "construction_database": "state/construction_state.sqlite",
+  "construction_database_sha256": "3e1981cdf2cd4a81c714954069e7e2d1f6722936d7f2c6f93e7b2240ddc030c0",
+  "dataset_freeze_events": 0,
+  "duplicate_family_ids": [],
+  "duplicate_ordered_entity_pair_ids": [],
+  "duplicate_qa_ids": [],
+  "duplicate_unordered_entity_pair_ids": [],
+  "families_per_image_distribution": {
+    "1": 546,
+    "2": 427
+  },
+  "family_status_counts_all": {
+    "AUTO_VALID": 1400,
+    "METADATA_VALID": 11902
+  },
+  "image_status_counts_all": {
+    "AUTO_ACCEPTED": 973,
+    "METADATA_REJECTED": 98821,
+    "PENDING_DOWNLOAD": 8283
+  },
+  "max_families_per_image": 2,
+  "num_families": 1400,
+  "num_integrity_fail": 0,
+  "num_integrity_pass": 1400,
+  "num_referent_human_review_required": 1400,
+  "num_unique_images": 973,
+  "realbind2_unit": "family"
+}

@@ -36,7 +36,11 @@ if not _DXG.exists() and Path("/proc/1/root/dev/dxg").exists():
     except OSError:
         pass
 
-ROOT = Path("/mnt/d/vlm_repair_v2")
+ROOT = Path(
+    os.environ.get(
+        "VLM_REPAIR_V2_ROOT", Path(__file__).resolve().parents[3] / "legacy" / "vlm_repair_v2"
+    )
+)
 sys.path.insert(0, str(ROOT))
 OUT = ROOT / "outputs/sam3_instance_hypothesis_binding"
 RAW_CACHE = OUT / "raw_cache"

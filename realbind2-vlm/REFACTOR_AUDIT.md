@@ -1,15 +1,15 @@
 # Refactor audit
 
-Audit date: 2026-09-30 CST. Source workspace: `/root/Qwen3-VL`.
+Audit date: 2026-09-30 CST. Source workspace paths are described by role so
+local mount and account names are not published.
 
 ## Workspace state
 
 The parent repository is a 45GB long-running Qwen-VL research tree with an
-existing Git history and a dirty worktree. Its `origin` points to the unrelated
-public `attention-homogenization` repository. No existing output was edited or
-deleted. The integrated repair development workspace was found separately at
-`/mnt/d/vlm_repair_v2`; the RealBind2 construction root is
-`/mnt/d/datasets/RealBind_v2`.
+existing Git history and a dirty worktree. Its `origin` points to an unrelated
+public repository. No existing output was edited or deleted. The integrated
+repair development workspace and RealBind2 construction root were separate
+local trees.
 
 Relevant current structure:
 
@@ -17,11 +17,11 @@ Relevant current structure:
 - `experiments/realbind_phase2/`: RealBind v1.1 baseline, VIR, causal, DaH, and
   routing studies.
 - `experiments/qwen35_*` and matching `outputs/qwen35_*`: mechanism history.
-- `/mnt/d/vlm_repair_v2/harness/`: repair development harness.
-- `/mnt/d/vlm_repair_v2/outputs/region_bottleneck_joint_repair/`: corrected R4.
-- `/mnt/d/vlm_repair_v2/outputs/strong_integrated_repair/`: completed 40-case
+- repair workspace `harness/`: repair development harness.
+- repair workspace `outputs/region_bottleneck_joint_repair/`: corrected R4.
+- repair workspace `outputs/strong_integrated_repair/`: completed 40-case
   Strong Integrated development audit.
-- `/mnt/d/vlm_repair_v2/outputs/sam3_instance_hypothesis_binding/`: failed
+- repair workspace `outputs/sam3_instance_hypothesis_binding/`: failed
   SAM3 direct-selection/consolidation branch.
 
 ## Entrypoints and active use
@@ -40,8 +40,8 @@ runners are snapshots and are not called by the official pipeline.
 The construction database has 1,400 `AUTO_VALID` families, 11,902 remaining
 `METADATA_VALID` candidates, 973 unique accepted source images, zero
 `HUMAN_ACCEPTED`, and zero `FROZEN` families. No `frozen/families.jsonl` or
-`frozen/questions.jsonl` exists. Thus the claimed formal 1,400-image / 9,800-QA
-benchmark cannot yet be independently verified or executed. The packaged
+`frozen/questions.jsonl` exists. The 1,400-family snapshot is locally certified
+at 9,800 QA; release membership and execution remain blocked. The packaged
 manifest records the expected protocol and all current family/image IDs, marks
 `formal_run_allowed=false`, and does not fabricate split IDs or QA rows.
 
@@ -61,10 +61,10 @@ manifest records the expected protocol and all current family/image IDs, marks
 
 ## Hard-coded paths
 
-Historical code contains `/root/Qwen3-VL`, `/mnt/d/vlm_repair_v2`, and
-`/mnt/d/datasets/RealBind`. Those copies are preserved under `legacy/` or
-`src/repair/retrospective/` and are not official entrypoints. New code reads
-`configs/paths.yaml` or explicit CLI paths. `paths.yaml` is ignored by Git.
+Historical provenance used machine-specific paths. Packaged runnable copies
+use configuration, explicit CLI paths, or environment variables. Original
+snapshots under `legacy/` are not official entrypoints. `paths.yaml` is
+ignored by Git.
 
 ## Required dependency boundaries
 
@@ -95,11 +95,9 @@ algorithmically modified.
 ## Blocking gaps found
 
 1. Human review and frozen RealBind2 export are incomplete.
-2. RealBind2 VIR defocus semantics have no located frozen implementation/hash;
-   the formal VIR entrypoint fails closed rather than inventing one.
+2. Historical VIR/DaH DEFOCUS semantics are recovered and regression
+   certified; formal VIR remains blocked only by the missing frozen dataset.
 3. The dataset-scale causal and retrospective runners cannot be certified
    before F0/F1 exist; their shell entrypoints fail closed.
 4. A fresh unified live smoke spanning Qwen, MM-GDINO-L, SAM3, and self-patch
-   has not been implemented against frozen RealBind2. Artifact-backed smoke is
-   available and clearly labeled.
-
+   is prepared for the server but has not been run locally by design.

@@ -23,6 +23,12 @@ FILES = (
     "configs/internvl35_8b.yaml",
     "configs/llava_next_7b.yaml",
     "src/repair/strong_integrated/pipeline.py",
+    "src/failure/defocus_frozen.py",
+    "data/DEFOCUS_PROTOCOL.sha256",
+    "data/smoke_cases.json",
+    "configs/server_paths.example.yaml",
+    "scripts/server_live_certification.py",
+    "scripts/build_realbind2_cohorts.py",
 )
 
 

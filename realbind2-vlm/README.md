@@ -42,9 +42,10 @@ pytest
 bash experiments/qwen35_main/00_smoke.sh
 ```
 
-Artifact smoke is self-contained. Before a formal run, use
-`SMOKE_MODE=live`; it fails until the frozen dataset and live one-case executor
-are certified. Follow [RUNBOOK.md](RUNBOOK.md) for the ordered workflow.
+Artifact smoke is self-contained. Server setup and live certification are in
+[SERVER_HANDOFF.md](SERVER_HANDOFF.md). The current dataset remains blocked
+pending human acceptance and frozen export; see
+[PRE_SERVER_STATUS.md](PRE_SERVER_STATUS.md).
 
 For two L20 GPUs, launch the paired scripts under
 `experiments/server_2xl20/`. They use independent jobs and deterministic
@@ -54,4 +55,3 @@ shards; no tensor parallelism is enabled. Outputs are append-only under
 Integrity checks are `scripts/verify_hashes.py`, `scripts/audit_dataset.py`,
 and `scripts/audit_outputs.py`. Dataset and weight setup is in
 [DATA_SETUP.md](DATA_SETUP.md).
-

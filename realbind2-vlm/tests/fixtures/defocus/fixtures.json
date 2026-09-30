@@ -1,0 +1,51 @@
+{
+  "historical_experiment": "qwen35_dah_oracle_v1",
+  "historical_transform_audit_sha256": "ee1093101ccb23499050eb571d91a02e2b7c7f45a6dd4f4cd4ca2b8a09ce1e15",
+  "cases": [
+    {
+      "family_id": "realbind_test_2368070_2368070003_2368070008",
+      "bbox_A": [27.5, 67.5, 42.66666666666667, 116.83333333333331],
+      "bbox_B": [370.0, 155.83333333333331, 65.16666666666663, 88.50000000000003],
+      "input": "realbind_test_2368070_2368070003_2368070008/input.jpg",
+      "expected": "realbind_test_2368070_2368070003_2368070008/expected.png",
+      "input_sha256": "77d479f7c5404a66b8195f6d3624915e316b2a85bd7cfcc6371ba28a7a6d232a",
+      "expected_sha256": "8aa3b3e5684932970ec42afd599e8bc9052824ff4c7a34756cfe374154ebe27e"
+    },
+    {
+      "family_id": "realbind_test_2397782_2397782000_2397782007",
+      "bbox_A": [239.16666666666666, 159.16666666666669, 70.99999999999997, 152.66666666666669],
+      "bbox_B": [0.0, 8.333333333333334, 343.5, 28.5],
+      "input": "realbind_test_2397782_2397782000_2397782007/input.jpg",
+      "expected": "realbind_test_2397782_2397782000_2397782007/expected.png",
+      "input_sha256": "494604cfc48b3a46e3872e7067605c589cfbd7e7526dbec5a1bf11ec34d5418e",
+      "expected_sha256": "4643005ddf812b055521de3f79e4ef03c3397714e28d4291586f2ee3a37aec09"
+    },
+    {
+      "family_id": "realbind_val_2369344_2369344002_2369344001",
+      "bbox_A": [240.0, 219.33333333333334, 141.0, 231.66666666666666],
+      "bbox_B": [122.0, 46.0, 79.0, 65.0],
+      "input": "realbind_val_2369344_2369344002_2369344001/input.jpg",
+      "expected": "realbind_val_2369344_2369344002_2369344001/expected.png",
+      "input_sha256": "f00a3c066e839de73e4528aef5c24776b18aaccb56ffc3d40d701cafd784c74d",
+      "expected_sha256": "cbf53f16c0074d7ec5447841dd2d2037de52b1dcbab6a41d26da096a28915771"
+    },
+    {
+      "family_id": "realbind_test_2316723_2316723000_2316723002",
+      "bbox_A": [3.0, 226.0, 281.0, 148.0],
+      "bbox_B": [333.0, 1.0, 165.0, 371.0],
+      "input": "realbind_test_2316723_2316723000_2316723002/input.jpg",
+      "expected": "realbind_test_2316723_2316723000_2316723002/expected.png",
+      "input_sha256": "cdfd099894f915c494511cae43181518fcc2916303a24ebf8ae22a2c2825baf9",
+      "expected_sha256": "70b83d56a0a01096f16aff37ee32ed85431d2581cde0d008a5201effb8cd1f35"
+    },
+    {
+      "family_id": "realbind_test_2380660_2380660001_2380660004",
+      "bbox_A": [0.0, 19.166666666666664, 61.0, 61.833333333333336],
+      "bbox_B": [381.0, 160.0, 116.0, 170.0],
+      "input": "realbind_test_2380660_2380660001_2380660004/input.jpg",
+      "expected": "realbind_test_2380660_2380660001_2380660004/expected.png",
+      "input_sha256": "0c3325f1a2ae020370bc51e71794224755443838f2edcc1a59a54c97df5f2752",
+      "expected_sha256": "f9e1e5c3a9dc9c8011b961a79c7224883df59822e71a2dfab8815ed2b913b804"
+    }
+  ]
+}

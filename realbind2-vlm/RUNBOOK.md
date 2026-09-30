@@ -117,9 +117,10 @@ Expected after certification: one condition-level JSONL row for every one of
 defocus+correct-facts; original comes from baseline and is never regenerated.
 PASS: paired injected-text hashes match, 8,400 new rows are unique, and summary
 reports VIR, fact rescue, image-induced regression, competitor-attribute,
-third-value, and invalid/error rates. At packaging time this step is blocked
-because the requested RealBind2 defocus implementation has no located frozen
-hash. Freeze the existing intended implementation; do not invent a blur.
+third-value, and invalid/error rates. Historical DEFOCUS is now recovered,
+hashed, and exact-regression certified; see `DEFOCUS_CERTIFICATION.md`.
+This formal step remains blocked by the missing human-accepted frozen dataset
+and the uncertified dataset-scale VIR execution path.
 
 ## 8. Qwen3.5 causal mechanism
 
@@ -202,4 +203,3 @@ and LLaVA reduced causal replication uses only configured normalized depths;
 never copy the 32-layer Qwen3.5 sweep. Cross-model runs may consume the frozen
 minimal state but cannot change grounding, isolation, reader, prompt, scorer,
 or repair policy.
-

@@ -1,0 +1,18 @@
+{
+  "all_families_exactly_seven_qa": true,
+  "all_family_integrity_pass": true,
+  "certification_scope": "AUTO_VALID_CONSTRUCTION_SNAPSHOT_NOT_FROZEN_RELEASE",
+  "num_I2C_A": 1400,
+  "num_I2C_B": 1400,
+  "num_PAIR_REL": 1400,
+  "num_QA_total": 9800,
+  "num_REL2C_LEFT": 1400,
+  "num_REL2C_RIGHT": 1400,
+  "num_REL2I_LEFT": 1400,
+  "num_REL2I_RIGHT": 1400,
+  "num_composition": 2800,
+  "num_families": 1400,
+  "num_unique_images": 973,
+  "qa_id_uniqueness_pass": true,
+  "source": "deterministically regenerated from current construction family payloads"
+}

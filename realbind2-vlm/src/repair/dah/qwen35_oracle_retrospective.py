@@ -55,7 +55,9 @@ from generate_pair_direct_qa_v1_1 import dependency_fields  # noqa: E402
 from experiments.realbind_phase2 import pair_direct_v1_1_baseline as frozen_scorer  # noqa: E402
 
 
-REALBIND_ROOT = Path("/mnt/d/datasets/RealBind/realbind")
+REALBIND_ROOT = Path(
+    os.environ.get("REALBIND_V1_ROOT", ROOT / "external_data" / "RealBind" / "realbind")
+)
 DEFAULT_FAMILIES = REALBIND_ROOT / "families" / "dryrun_100_pair_direct_v1_1_frozen.jsonl"
 DEFAULT_QA = REALBIND_ROOT / "qa" / "dryrun_100_pair_direct_v1_1.jsonl"
 DEFAULT_DEPENDENCY = REALBIND_ROOT / "qa" / "pair_direct_v1_1_dependency_spec.json"

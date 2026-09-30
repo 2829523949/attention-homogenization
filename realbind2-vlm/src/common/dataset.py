@@ -85,3 +85,17 @@ class RealBind2Dataset:
             raise ValueError("invalid deterministic shard")
         return [row for i, row in enumerate(self.questions()) if i % num_shards == shard_index]
 
+    def family_shard(self, num_shards: int, shard_index: int) -> list[dict]:
+        """Assign every QA from one family to ``family_index % num_shards``."""
+
+        if num_shards <= 0 or not 0 <= shard_index < num_shards:
+            raise ValueError("invalid deterministic shard")
+        family_ids = [str(row["family_id"]) for row in self.families()]
+        if len(family_ids) != len(set(family_ids)):
+            raise ValueError("duplicate family IDs prevent deterministic family sharding")
+        selected = {
+            family_id
+            for family_index, family_id in enumerate(family_ids)
+            if family_index % num_shards == shard_index
+        }
+        return [row for row in self.questions() if str(row["family_id"]) in selected]

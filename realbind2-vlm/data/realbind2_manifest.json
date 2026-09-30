@@ -1,7 +1,10 @@
 {
   "benchmark_name": "RealBind2",
   "construction_snapshot": {
-    "caveat": "1400 AUTO_VALID families currently map to 973 unique VG source images; no frozen export exists.",
+    "caveat": "The benchmark unit is family. Current AUTO_VALID families map to fewer unique VG source images because the frozen protocol permits at most two entity-pair families per image. No frozen export exists.",
+    "construction_database_sha256": "3e1981cdf2cd4a81c714954069e7e2d1f6722936d7f2c6f93e7b2240ddc030c0",
+    "deterministically_regenerated_composition_count": 2800,
+    "deterministically_regenerated_qa_count": 9800,
     "family_status_counts": {
       "AUTO_VALID": 1400,
       "METADATA_VALID": 11902
@@ -11,6 +14,7 @@
     "selected_family_count": 1400,
     "unique_source_image_count": 973
   },
+  "dataset_unit": "family",
   "dataset_version": "RealBind-v2.0",
   "family_ids": [
     "vg1000_1000001_1000002",
@@ -1415,7 +1419,9 @@
     "vg2_2002_2012"
   ],
   "formal_run_allowed": false,
+  "freeze_basis": null,
   "freeze_status": "HUMAN_REVIEW_PENDING",
+  "frozen": false,
   "image_ids": [
     "1000",
     "1002",
@@ -2403,22 +2409,23 @@
   },
   "protocol_expected": {
     "composition_qa": 2800,
-    "core_qa_per_image": 7,
     "core_structure": [
       "2xI2C",
       "1xPAIR_REL",
       "2xREL2I",
       "2xREL2C"
     ],
-    "images": 1400,
-    "qa": 9800
+    "families": 1400,
+    "qa": 9800,
+    "qa_per_family": 7
   },
   "scorer": {
     "sha256": "cb8eae53264f5448b06600c6d3ff8bf8bcbb7e2d31d6b6777ff1e68565536cb3",
     "version": "realbind2-semantic-v1"
   },
   "source_annotation_hashes": {},
-  "source_snapshot": "/mnt/d/datasets/RealBind_v2/state/construction_state.sqlite",
+  "source_snapshot": "state/construction_state.sqlite",
+  "source_snapshot_sha256": "3e1981cdf2cd4a81c714954069e7e2d1f6722936d7f2c6f93e7b2240ddc030c0",
   "split_information": {
     "policy": "group_by_visual_genome_image_id; validation_20_percent; test_80_percent",
     "status": "unassigned_until_frozen_export"

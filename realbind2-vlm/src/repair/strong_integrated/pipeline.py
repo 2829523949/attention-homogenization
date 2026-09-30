@@ -113,7 +113,7 @@ def run_final(dataset_root: Path, output_root: Path, model_key: str, model_path:
         if log.is_complete(case_id):
             continue
         assert_final_handoff(state)
-        prompt = state["minimal_state"] + "\n\n" + state["question"]
+        prompt = state["question"] + "\n\nAcquired visual facts:\n" + state["minimal_state"]
         started = time.monotonic()
         raw = adapter.generate(adapter.prepare_prompt(prompt, image_path=None))
         scored = score_prediction(raw, qa[case_id]["ground_truth"], qa[case_id]["answer_type"])
@@ -162,4 +162,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
