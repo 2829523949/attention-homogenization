@@ -1,0 +1,16 @@
+{
+  "case_count": 500,
+  "cases_sha256": "2e254176756e486af7d8181d1b6d95b024837a291a1cb745c8a1965d5ba680e6",
+  "conditions": [
+    "facts_only",
+    "image_plus_facts"
+  ],
+  "contact_sheet": "contact_sheet.jpg",
+  "images": 500,
+  "package_audit_passed": true,
+  "package_audit_sha256": "fcfa078a0dad50d731320e7afe260c06997065bdb3f0aa6a716265a6b1344b8a",
+  "package_name": "RealBind2_FactsImage500_v1",
+  "zip_bytes": 95404598,
+  "zip_path": "/root/Qwen3-VL/realbind2-vlm/experiments/facts_image_500/output/package/RealBind2_FactsImage500_v1.zip",
+  "zip_sha256": "c48c209364b2395682e1a3018236295e22e4901d4b8fef78aca3084086cd01b3"
+}

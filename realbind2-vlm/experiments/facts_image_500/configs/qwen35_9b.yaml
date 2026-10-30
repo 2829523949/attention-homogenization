@@ -1,0 +1,7 @@
+model_id: Qwen3.5-9B
+adapter: qwen35
+path_key: qwen35_9b
+role: cross_model
+runtime: {device: cuda, dtype: bfloat16, use_cache: false, max_new_tokens: 16}
+protocol: {baseline: full, vir: full, causal: none, strong_integrated_final: true}
+

@@ -1,0 +1,12 @@
+# Generated run logs and per-model outputs
+outputs/
+*.failed.jsonl
+*.run_meta.json
+
+# Unzipped staging copy of the delivered package (the ZIP is tracked)
+output/package/RealBind2_FactsImage500_v1/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo

@@ -1,0 +1,7 @@
+model_id: Qwen3-VL-8B
+adapter: qwen3vl
+path_key: qwen3vl_8b
+role: scaling_control
+runtime: {device: cuda, dtype: bfloat16, use_cache: false, max_new_tokens: 16}
+protocol: {baseline: full, vir: none, causal: none, strong_integrated_final: optional}
+

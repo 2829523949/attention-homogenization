@@ -1,0 +1,78 @@
+{
+  "cases_sha256": "2e254176756e486af7d8181d1b6d95b024837a291a1cb745c8a1965d5ba680e6",
+  "checks": {
+    "all_selected_images_exist": true,
+    "all_target_colors_match_qa_ground_truth": true,
+    "all_text_prompt_hashes_recorded": true,
+    "exact_side_balance": true,
+    "no_same_referent_cases": true,
+    "one_case_per_image": true
+  },
+  "counts": {
+    "families_on_source_image": {
+      "1": 292,
+      "2": 208
+    },
+    "left_is_A": {
+      "False": 255,
+      "True": 245
+    },
+    "qa_type": {
+      "REL2C_LEFT": 250,
+      "REL2C_RIGHT": 250
+    },
+    "qa_type_x_left_is_A": {
+      "REL2C_LEFT|left_is_A=False": 128,
+      "REL2C_LEFT|left_is_A=True": 122,
+      "REL2C_RIGHT|left_is_A=False": 127,
+      "REL2C_RIGHT|left_is_A=True": 123
+    },
+    "same_category": {
+      "False": 456,
+      "True": 44
+    },
+    "split": {
+      "test": 500
+    },
+    "target_color": {
+      "black": 78,
+      "blue": 67,
+      "brown": 56,
+      "gray": 33,
+      "green": 65,
+      "orange": 14,
+      "pink": 11,
+      "purple": 3,
+      "red": 39,
+      "white": 114,
+      "yellow": 20
+    }
+  },
+  "dataset": {
+    "data_root": "/mnt/d/datasets/RealBind_v2",
+    "eligible_families": 1057,
+    "eligible_unique_images": 750,
+    "families": 1400,
+    "questions": 9800,
+    "source_hashes": {
+      "construction_stats.json": "648fe60f8e3e97b25642168c0b6e727f5747a772b41ca4f073fe9d28bb4a51f9",
+      "families.jsonl": "0cf3359f7c75b80c650e9bbaf7e0c74b28af50ec72b1f2bf69c007830943abd4",
+      "questions.jsonl": "9950ccd8339db78683b8af2e4fa7cf72cf6c87618e20a7a8ae90e41896b0ee93",
+      "splits.json": "a658df602bcc5d919011424059b21edd29b95906dd001e7878a917d7739a58cd"
+    }
+  },
+  "exclusions": {
+    "missing_composition_qa": 0,
+    "rule": "exclude families whose normalized referent_A and referent_B strings are identical unless --keep-same-referent is passed",
+    "same_referent": 75,
+    "split_mismatch": 268
+  },
+  "passed": true,
+  "previous_v1_1_pilot_overlap_count": 0,
+  "previous_v1_1_pilot_overlap_images": [],
+  "requested_cases": 500,
+  "schema_version": "realbind2_facts_image_500_selection_audit_v1",
+  "selected_cases": 500,
+  "selected_unique_images": 500,
+  "selection_seed": "realbind2-facts-image-500-v1-20261030"
+}

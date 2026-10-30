@@ -1,0 +1,33 @@
+{
+  "case_count": 500,
+  "cases_sha256": "2e254176756e486af7d8181d1b6d95b024837a291a1cb745c8a1965d5ba680e6",
+  "conditions": [
+    "facts_only",
+    "image_plus_facts"
+  ],
+  "dataset": "RealBind2",
+  "dataset_version": "RealBind-v2.0",
+  "facts_only_image_present": false,
+  "image_plus_facts_image_present": true,
+  "image_plus_facts_source": "original full image, no crop, bbox, mark, arrow, or label",
+  "model_ids": [
+    "Qwen3.5-4B",
+    "Qwen3-VL-4B",
+    "Qwen3-VL-8B",
+    "InternVL3.5-8B",
+    "LLaVA-NeXT-7B"
+  ],
+  "paired_text_contract": "facts_only.text_prompt_sha256 == image_plus_facts.text_prompt_sha256; only the image content block differs",
+  "protocol": "realbind2_facts_only_vs_image_plus_facts",
+  "schema_version": "realbind2_facts_image_500_manifest_v1",
+  "selection_audit_sha256": "87a55bf7027f956e5a2999869ec330d9cd1f853fb177c27a5acb3c025b932e31",
+  "selection_seed": "realbind2-facts-image-500-v1-20261030",
+  "source_hashes": {
+    "construction_stats.json": "648fe60f8e3e97b25642168c0b6e727f5747a772b41ca4f073fe9d28bb4a51f9",
+    "families.jsonl": "0cf3359f7c75b80c650e9bbaf7e0c74b28af50ec72b1f2bf69c007830943abd4",
+    "questions.jsonl": "9950ccd8339db78683b8af2e4fa7cf72cf6c87618e20a7a8ae90e41896b0ee93",
+    "splits.json": "a658df602bcc5d919011424059b21edd29b95906dd001e7878a917d7739a58cd"
+  },
+  "split_policy": "test",
+  "unique_image_count": 500
+}
