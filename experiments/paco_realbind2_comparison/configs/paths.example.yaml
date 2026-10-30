@@ -1,0 +1,25 @@
+# Copy to configs/paths.yaml and edit for your machine.
+release_root: /path/to/realbind2-vlm-repair
+dataset_root: /path/to/paco_lvis_candidates_test_val_4k
+output_root: /path/to/outputs/paco_realbind2_comparison
+
+models:
+  qwen35_4b: /path/to/Qwen3.5-4B
+  qwen35_9b: /path/to/Qwen3.5-9B
+  qwen3vl_4b: /path/to/Qwen3-VL-4B-Instruct
+  qwen3vl_8b: /path/to/Qwen3-VL-8B-Instruct
+  internvl35_8b: /path/to/InternVL3.5-8B
+  llava_next_7b: /path/to/LLaVA-NeXT-7B
+  mm_gdino_l: /path/to/mm_grounding_dino_large_all
+
+runtime:
+  device: cuda
+  mm_dtype: float32
+  mm_threshold: 0.25
+  mm_text_threshold: 0.25
+  mm_top_k: 16
+
+conditioning:
+  # Strict RealBind2 rule: R4-predicted A/B IoU strictly below this value.
+  predicted_ab_iou_strictly_less_than: 0.1
+  primary_selector_tag: qwen35_4b

@@ -1,0 +1,80 @@
+{
+  "candidate_pool": {
+    "decisions": {
+      "EXCLUDE": 1046,
+      "KEEP": 2138
+    },
+    "exclusion_reasons": {
+      "ambiguous_referent_without_color": 92,
+      "annotation_iou_ge_threshold": 290,
+      "bbox_area_below_threshold": 487,
+      "containment_ge_threshold": 177
+    },
+    "families": 2138,
+    "qa_types": {
+      "REL2C_LEFT": 2138,
+      "REL2C_RIGHT": 2138
+    },
+    "questions": 4276,
+    "split_counts": {
+      "test": 4276
+    },
+    "splits": [
+      "test"
+    ],
+    "unique_images": 1335
+  },
+  "code_identity": {
+    "files": {
+      "scripts/aggregate_results.py": "5123052cfa7f08ff1ca7f890cf810def1f4d522a1346e976fefb92ca5ce525a9",
+      "scripts/audit_paco_annotations.py": "f2f7a90f1d1fcf75de534bb31fa989c25c5739590e69746af5c69f916672cc98",
+      "scripts/build_benchmark.py": "ce11cc6c785e30f9d916a5f710cedcaebc09b96bd65295163abd73aeb7b6f4d4",
+      "scripts/common.py": "a0037b4cde4d630fca28be6c3b8d69ca84d04a17953ce2bc335774f253647031",
+      "scripts/finalize_conditioned_set.py": "212fe4096a219f6aa652363331fc5025fa6c85eea6a5a24101fe13bc1d9d4301",
+      "scripts/make_annotation_previews.py": "dbcdaa85f258a24340915f0b54d97ee0016bba9d569aa4acf474f0bd2c214171",
+      "scripts/run_direct.py": "98a98b9fc06745d05a87565b254463f615f8172fec2f4ff3195b10cac5fb6db2",
+      "scripts/run_r4_only.py": "97871f4b8e0e4e1fef7e524a185040301bba18ac307e06567e5d7ffbc6ead981",
+      "scripts/stage_mm_gdino.py": "e266457a685d7db26f8f2a3f5f48b47632e9fb16d8cc1efba4cd4e777cfb5ac8",
+      "scripts/stage_selector.py": "84cba64b03fc3ee328dfcf076781df8ec985b8db55665889b12c73ec759cb99e",
+      "scripts/verify_conditioned_set.py": "9c8dc4ceb4cb293659634c36fa0d728077c0c19c02892cfee828ab989cb1b257"
+    },
+    "hash": "41ebd8500070e06a6cc0bc3825776ec8ea305b0c29b47977dfe151160f4f87a9"
+  },
+  "curation": {
+    "max_annotation_iou_strictly_less_than": 0.1,
+    "max_containment_fraction_strictly_less_than": 0.5,
+    "min_bbox_area_ratio": 0.005,
+    "question_color_semantics": "dominant",
+    "referent_mode": "unique_category_or_unique_noncolor_attribute"
+  },
+  "curation_mode": "quality",
+  "files": {
+    "benchmark_all.jsonl": "7633eaa6b8d3e4d4aeff96a5ff4a2483f262d31408c2a5a065dd5fa610c2839e",
+    "curation_audit.jsonl": "8694dd8188a34ce796b4e4ede5427793ffd59c1f317b8b3b7a2e5ef778e15ffc",
+    "families_all.jsonl": "6d53b836d2e86030c96abb97688b4d784e4590508db64f4fdc1a48889463bc77",
+    "questions_all.jsonl": "7633eaa6b8d3e4d4aeff96a5ff4a2483f262d31408c2a5a065dd5fa610c2839e"
+  },
+  "schema": "paco-realbind2-benchmark-v2",
+  "selection_rule": {
+    "r4_predicted_A_B_IoU_strictly_less_than": 0.1,
+    "ref_A_ne_ref_B": true
+  },
+  "source": {
+    "annotations": {
+      "test": "8d061428b86dc9a0e5c206f330ed579c61319c7d6884402e540ac33faed3d2a6"
+    },
+    "candidate_manifest": "/root/Qwen3-VL/data/paco_lvis_candidates_test_val_4k/manifests/candidate_families_test_val.jsonl",
+    "candidate_manifest_sha256": "a076cab829bc6f025ef96b31f55738777f70fd0de92360e57aa8e9fef4ea5d06",
+    "image_checksums": "/root/Qwen3-VL/data/paco_lvis_candidates_test_val_4k/manifests/image_checksums.csv",
+    "image_checksums_sha256": "f887cf919de005d90b3629934f3d0fd30d9ee5e04c44bfa418945481e2477389",
+    "release_root": "/root/Qwen3-VL/repair-github/realbind2-final-delivery"
+  },
+  "task_semantics": {
+    "attribute_prompt": "What is the dominant color of the main object or region shown?\nAnswer with only one color from this list: red, orange, yellow, green, blue, purple, pink, brown, black, white, gray.",
+    "question_color_semantics": "dominant",
+    "question_templates": {
+      "REL2C_LEFT": "Between {A} and {B}, what is the dominant color of the one on the LEFT? Answer with one color.",
+      "REL2C_RIGHT": "Between {A} and {B}, what is the dominant color of the one on the RIGHT? Answer with one color."
+    }
+  }
+}

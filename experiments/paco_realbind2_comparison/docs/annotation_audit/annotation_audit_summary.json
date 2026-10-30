@@ -1,0 +1,71 @@
+{
+  "all_candidates": 4011,
+  "by_split": {
+    "test": {
+      "A_bbox_lt_0.5pct": 287,
+      "A_contains_B_ge_0.5": 405,
+      "B_bbox_lt_0.5pct": 270,
+      "annotation_iou_ge_0.1": 290,
+      "annotation_iou_ge_0.3": 90,
+      "annotation_iou_ge_0.5": 33,
+      "candidates": 3184,
+      "flag_counts": {
+        "A_bbox_lt_0.5pct": 287,
+        "A_bbox_touches_border": 926,
+        "A_category_duplicate": 1379,
+        "A_contains_B_ge_0.5": 220,
+        "A_multi_color_attributes": 1402,
+        "A_other_iou_ge_0.5": 155,
+        "B_bbox_lt_0.5pct": 270,
+        "B_bbox_touches_border": 933,
+        "B_category_duplicate": 1367,
+        "B_contains_A_ge_0.5": 185,
+        "B_multi_color_attributes": 1240,
+        "B_other_iou_ge_0.5": 147,
+        "annotation_iou_ge_0.1": 290,
+        "annotation_iou_ge_0.3": 90,
+        "annotation_iou_ge_0.5": 33
+      },
+      "referent_unique_by_category": 1105,
+      "strict_high_quality_candidates": 276,
+      "unique_images": 1825
+    },
+    "val": {
+      "A_bbox_lt_0.5pct": 63,
+      "A_contains_B_ge_0.5": 116,
+      "B_bbox_lt_0.5pct": 56,
+      "annotation_iou_ge_0.1": 77,
+      "annotation_iou_ge_0.3": 25,
+      "annotation_iou_ge_0.5": 13,
+      "candidates": 827,
+      "flag_counts": {
+        "A_bbox_lt_0.5pct": 63,
+        "A_bbox_touches_border": 241,
+        "A_category_duplicate": 328,
+        "A_contains_B_ge_0.5": 59,
+        "A_multi_color_attributes": 263,
+        "A_other_iou_ge_0.5": 40,
+        "B_bbox_lt_0.5pct": 56,
+        "B_bbox_touches_border": 249,
+        "B_category_duplicate": 359,
+        "B_contains_A_ge_0.5": 57,
+        "B_multi_color_attributes": 280,
+        "B_other_iou_ge_0.5": 30,
+        "annotation_iou_ge_0.1": 77,
+        "annotation_iou_ge_0.3": 25,
+        "annotation_iou_ge_0.5": 13
+      },
+      "referent_unique_by_category": 304,
+      "strict_high_quality_candidates": 107,
+      "unique_images": 462
+    }
+  },
+  "candidate_manifest": "/root/Qwen3-VL/data/paco_lvis_candidates_test_val_4k/manifests/candidate_families_test_val.jsonl",
+  "candidate_manifest_sha256": "a076cab829bc6f025ef96b31f55738777f70fd0de92360e57aa8e9fef4ea5d06",
+  "schema": "paco-annotation-audit-v1",
+  "source_annotations": {
+    "test": "8d061428b86dc9a0e5c206f330ed579c61319c7d6884402e540ac33faed3d2a6",
+    "val": "25cddcf6fe4fb5fc46913c9d7092a9f027944be0985aaad0e0aa46f433eae20a"
+  },
+  "strict_high_quality_candidates": 383
+}

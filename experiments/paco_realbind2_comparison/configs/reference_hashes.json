@@ -1,0 +1,34 @@
+{
+  "protocol": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/src/repair/strong_integrated/protocol.py",
+    "sha256": "26a7f6c4e6ead580ce324eee221bf8f2167f86f2758044987b1db11d35a2046d"
+  },
+  "execution": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/src/repair/strong_integrated/execution.py",
+    "sha256": "018e44d4e6606473aab4f8f9b20495ff8c207ff638d0d5e6a3b7129c7d0e6b8b"
+  },
+  "scorer": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/src/common/scorer.py",
+    "sha256": "cb8eae53264f5448b06600c6d3ff8bf8bcbb7e2d31d6b6777ff1e68565536cb3"
+  },
+  "prompts": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/src/common/prompts.py",
+    "sha256": "d5e8be404bc97fb86579f8177d69cae8e42b91dd940936e7f0301f3742e2e005"
+  },
+  "statistics": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/src/repair/strong_integrated/statistics.py",
+    "sha256": "52ad5de72a10e1f0ec5c9659d3e2cd99804ee5e1bf7785c5ddc15a159ec5f788"
+  },
+  "mm_worker": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/scripts/repair_component_worker.py",
+    "sha256": "4ecc85bfa30fed0bee58c892192063346ed5d5dc4e06421b17d625ecbbbe51d6"
+  },
+  "server_grid": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/scripts/server_live_certification.py",
+    "sha256": "b6c3632e08a7847ef281368b6fa8645c0bea03732020f9c126ce79e93c9ca6dc"
+  },
+  "model_base": {
+    "path": "/root/Qwen3-VL/repair-github/realbind2-final-delivery/src/models/base.py",
+    "sha256": "f2f88a7362debbb666409a3fe21527b5d506db4edd23842a3227bb3510224f4b"
+  }
+}
